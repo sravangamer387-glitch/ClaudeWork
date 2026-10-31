@@ -1,44 +1,38 @@
-# PCB designs for the Tier A electronic tools (rev A)
+# PCB designs for the Tier A electronic tools - rev B (engineering release)
 
-Boards: **Seeti Counter** (60×40 mm), **Bijli Meter Reader** (48×34 mm), **Rain Alert Bell** indoor unit (56×38 mm) and its **rain plate** (36×58 mm). The two laser-cut Tier A tools (Masala Rack, Laptop Stand) have no PCB.
+Boards: **Seeti Counter** (64 x 44 mm), **Bijli Meter Reader** (52 x 38 mm, USB-C), **Rain Alert Bell** indoor unit (60 x 42 mm) and its **rain plate** (38 x 60 mm). The two laser-cut Tier A tools (Masala Rack, Laptop Stand) have no PCB.
 
-**Status: first-draft layouts generated and checked by software; NOT reviewed by an electronics engineer, NOT prototyped, NOT manufacturer-DFM-checked.** Treat them as a head start for the engineer you hire, not as ready-to-order boards. Order 5 prototype boards first.
+**Status: software-verified engineering release. Nothing here has been built, reviewed by a second engineer, or sent to a fab. Before ordering, an electronics engineer must complete `REVIEW_CHECKLIST.md`.** Order 5 prototypes first.
 
-## What is here
-| Folder | Contents |
+## What rev B adds over the first draft
+Reverse-battery protection (P-MOSFET), TVS surge protection on the USB-C VBUS line and on the rain-plate cable, PTC fuse, correct USB-C sink resistors (HRO Type-C receptacle, 5.1 k on CC1/CC2), test points, four M2.5 mounting holes and two fiducials per board, rounded corners, ground pours on both layers with stitching vias, power traces 0.4 mm, JLCPCB-format BOM/CPL with LCSC numbers (the ones I could verify are marked), a 3D STEP model, fabrication-notes PDF, assembly drawing PDF, a parametric enclosure shell generated from the finished board with a collision check, SPICE simulations of the analog stages, and a readable schematic with real wires where it was safe to draw them. Two **design errors were found by simulation and fixed**: the microphone amplifier's feedback return into a weakly bypassed bias node had destroyed the low-frequency gain (fixed with a 10 uF bypass), and its first gain/bandwidth claim (101x, 9 kHz) did not match the final component values (34x, 26 kHz, so an anti-alias filter was added).
+
+## Verification summary (all software)
+| Board | Parts / nets | Own ERC errors | KiCad DRC errors | Unconnected | Schematic netlist = PCB netlist | Router failures |
+|---|---|---|---|---|---|---|
+| seeti_counter | 36 / 24 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| bijli_meter_reader | 23 / 17 | 0 | 0 (1 warnings) | 0 | yes | 0 |
+| rain_alert_main | 27 / 19 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| rain_plate | 1 / 2 | 0 | 0 (2 warnings) | 0 | yes | 0 |
+
+How it was checked: (1) own ERC on the netlist (unconnected pins, single-pin nets, output conflicts, unpowered supply nets, symbol-to-footprint pin match; KiCad 7's command line has no ERC); (2) KiCad 7 DRC through its Python API (clearance, hole spacing, courtyards, mask bridges, silkscreen); (3) schematic export compared pin-group by pin-group with the PCB netlist (this caught an accidental short that my own auto-wiring had drawn between CC2 and VBUS); (4) independent Gerber parse with a second library (gerbonara): layers read, outline size equals the design; (5) SPICE (ngspice) for the Seeti amplifier and rain-plate sense; arithmetic model for the Bijli sensor head. The rain plate's mask-bridge errors are waived on purpose (one mask opening spans both gold electrodes).
+
+## Folder map
+| Path | Contents |
 |---|---|
-| `release/<board>/` | `.kicad_pcb`, `.kicad_sch` (KiCad 7), Gerbers + drill (zip), BOM CSV (with suggested parts to verify), pick-and-place CSV, schematic PDF, board PNG, netlist |
-| `boards/*.py` | the design source: parts, footprints, positions, nets (edit these, then re-run) |
-| `build.py`, `route.py`, `schematic.py`, `package.py` | toolchain: netlist → KiCad schematic, placement, own two-layer grid router, ground pour, DRC, Gerber/drill/CPL export, netlist cross-check |
+| `release/<board>/` | everything to review or order: KiCad 7 project, Gerber zip, JLC BOM/CPL, full BOM with LCSC status, STEP, schematic PDF, assembly and copper PDFs, fab-notes PDF, enclosure STLs, board images, board README (design notes, simulations, bring-up) |
+| `boards/*.py` | design source: parts, positions, nets, schematic layout, enclosure cut-outs |
+| `build.py` `route.py` `sch2.py` `erc.py` `placecheck.py` `retouch.py` | toolchain: schematic writer, 0.05 mm-grid two-layer router, placement check, silkscreen touch-up |
+| `outputs.py` `package.py` `docgen.py` `fabdoc.py` `enclosure.py` `gerbercheck.py` | verification and manufacturing outputs |
+| `sim/` | SPICE decks and results |
+| `REVIEW_CHECKLIST.md` | engineer sign-off list |
 
-Rebuild: `python3 package.py` (system Python with KiCad 7 `pcbnew`, `kicad-cli`; PNGs need cairosvg).
+Rebuild one board: `python3 build.py seeti` (3-8 minutes for the largest), then `python3 package.py seeti` (system Python with KiCad 7 `pcbnew`; the PNG/PDF/STL steps use a venv with cairosvg, matplotlib, trimesh, gerbonara).
 
-## Verification results (software only)
-| Board | Parts / nets | DRC errors | Unconnected | Schematic netlist = PCB netlist | DRC warnings |
-|---|---|---|---|---|---|
-| Seeti Counter | 27 / 20 | 0 | 0 | yes | 29 (footprint-library link, 1 silkscreen overlap) |
-| Bijli Meter Reader | 16 / 14 | 0 | 0 | yes | 17 (footprint-library link, silkscreen near edge) |
-| Rain Alert indoor | 20 / 17 | 0 | 0 | yes | 30 (library link, silkscreen, 1 stub) |
-| Rain plate | 1 / 2 | 0 | 0 | yes | 47 (45 = open comb-finger ends, intentional) |
-
-DRC = KiCad 7 `WriteDRCReport` with default 0.2 mm clearance, 0.25 mm tracks, 0.6/0.3 mm vias. **No schematic ERC was run** (KiCad 7's command line has no ERC); instead the exported schematic netlist is compared pin-by-pin with the PCB netlist (identical for all four boards). The schematic is **netlist-style** (every pin has a labelled stub), not a hand-drawn functional schematic: readable by tools, tedious for humans; have the engineer redraw it.
-
-Problems found while building: the first router version put via coordinates in grid units (23 false "unconnected" errors); unused-pin clearance was not modelled (22 clearance errors); round pads were reached at their bounding-box corners (dangling copper); the USB-C connector could not be fanned out (0.3 mm gaps between pads, no room for vias), so Bijli uses a **Micro-USB B** receptacle instead; two ground vias 0.3 mm apart violated hole spacing.
-
-## Circuit notes
-**Seeti Counter** (2×AAA = 3.0 V, ATmega328P at its internal 8 MHz RC, no crystal): electret mic biased by 2.2 kΩ → 1 µF AC coupling → MCP6001 non-inverting amplifier biased at VCC/2 (2×100 kΩ), gain 1+100k/1k = **101** (AC, 16 Hz high-pass from 1 kΩ·10 µF), op-amp bandwidth about 1 MHz/101 ≈ **9.9 kHz**, enough for a 2.8 kHz whistle. Output rests at 1.5 V (ADC ≈ 512 at 3 V reference, matching the firmware's `-512` offset). Buzzer 3 V through an NPN with a flyback diode; ISP header; target button on PD2; LED on PD7. **Firmware:** the demo build uses 16 MHz timing; for this board compile with `F_CPU=8000000` and set the fuses for the internal 8 MHz oscillator; at 3 V the ADC reference is the supply (it falls as the batteries age: consider the internal 1.1 V reference).
-**Bijli Meter Reader** (5 V from a Micro-USB adapter or power bank, 0.5 A PTC fuse): head connector J3 (+5 V, SIG, GND) with a **phototransistor between SIG and GND and a 10 kΩ pull-up on the board**; SIG goes low when the meter LED lights (the demo firmware is written for this polarity); 100 nF filters spikes; TM1637 4-digit display module on J4; reset-bill button; ISP header. The head (phototransistor in a black clip) is not a separate board here.
-**Rain Alert Bell** (3×AA = 4.5 V): the plate is **pulsed** (DRV pin driven about 2 ms per reading, SENSE pulled down by 100 kΩ with 10 nF filtering) so DC does not sit on the plate and corrode it; the demo firmware does this on D5. Loud 4.5 V buzzer through an NPN, mute button, LED, ISP. **Plate:** two interleaved 0.4 mm comb traces on a 36×58 mm board (0.4 mm gaps, 44 fingers), order **ENIG** (gold) finish; unvarnished copper corrodes within weeks outdoors; add a conformal coat on the spines and cable pads only, never over the fingers.
-
-## Known limits and things a reviewer must check
-1. **Placement is automatic and rough**; long ISP routes, no thermal/EMC optimisation. The MCP6001 input node is routed on the same layer as digital lines: review analog routing and add a guard ring if noisy.
-2. **Ground pour** on the bottom layer with vias to it; the SMD ground pads connect through single vias.
-3. **USB connector (Bijli):** footprint mechanics versus the enclosure edge are unverified; a Micro-USB B receptacle is chosen for routability, USB-C needs an engineer's fan-out (via-in-pad or 4 layers).
-4. **Battery boards have no reverse-polarity protection and no low-battery detection** (the firmware has a low-battery input unused here). Add a P-MOSFET or Schottky if users will swap cells.
-5. **Parts:** "suggested part" column in each BOM is from memory/typical choices: verify stock, price and footprints with the assembler. No cost quote was obtained.
-6. No ESD protection, no EMC testing, no regulatory work; the Bijli adapter must be a BIS-registered one bought in.
-7. Fab limits assumed: 0.2 mm clearance/track, 0.3 mm drill vias (standard 2-layer service). Confirm with the PCB vendor.
-8. Mounting holes are not included: add them to match the enclosure STL (`../0X-*/enclosure_*.stl` are prototype shells with different dimensions: re-fit after layout is frozen).
-
-## Next steps for the owner
-Hire an electronics engineer for a 1–2 day review per board (check list above), then order 5 boards each from a PCB house + stencil, assemble by hand or via an EMS, flash `../firmware/release/*.hex` (adjust F_CPU for Seeti), run the end-of-line tests in each tool README.
+## Honest limits
+1. **Routing and placement are software-generated** (my own router; Freerouting could not be used here). The result passes every rule check, but a person should look at the analog routing, ground return paths and connector mechanics.
+2. **Schematics are structured and partly wired, but not hand-drawn quality**; the engineer should tidy them for presentation.
+3. **Parts:** LCSC numbers marked `verified` were found by web search (ATmega328P-AU C14877, MCP6001T-I/OT C116490, MMBT3904 C20526, 1N4148WS C2128, AO3401A C15127, TYPE-C-31-M-12 C165948); passive numbers are from memory and **must be checked**; connectors, switches, buzzer and TVS/PTC parts have no number yet. No price or stock was checked.
+4. **Clock/voltage:** the 2 x AAA board must run at 4 MHz (8 MHz needs 2.7 V); the board README gives fuse values; confirm against the current ATmega328P datasheet.
+5. **Not verified:** real sensor behaviour (microphone capsule, meter LED coupling, plate resistance in real rain), EMC/ESD tests, battery life (estimates only), thermal, mechanical fit of the enclosure with real parts (the STEP uses KiCad's stock 3D models).
+6. Seeti's anti-alias filter is first-order only (about 8 dB at 16 kHz); production firmware should use timer-triggered ADC sampling at 16 kS/s.

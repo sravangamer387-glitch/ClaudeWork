@@ -1,0 +1,3 @@
+Closed-loop gain at 2.8 kHz: 32.8x
+VCC 3.0 V: output can swing +/-1.47 V around VMID -> undistorted mic input up to 45 mV peak; a 3 mV peak whistle gives 98 mV peak = 34 ADC counts peak
+VCC 2.0 V: output can swing +/-0.97 V around VMID -> undistorted mic input up to 30 mV peak; a 3 mV peak whistle gives 98 mV peak = 50 ADC counts peak

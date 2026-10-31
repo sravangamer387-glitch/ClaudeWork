@@ -5,7 +5,7 @@
  * 4 Bijli Meter Reader: photodiode/LDR + comparator or divider on A0 pointing at the meter's pulse LED, LED D13; set IMP_PER_KWH from the meter label
  * 5 Bijli Log      : mains-present sense D2 (5 V USB adapter through a divider, HIGH = mains ok), prints each cut
  * 6 Chulha Timers  : buttons D2..D5 add 1 minute to channels 1..4 (hold 1 s = acknowledge/clear), buzzer D9, serial display
- * 7 Rain Alert     : plate drive D5 (pulsed), plate sense A0 (higher = wetter, 100k pull-down), mute button D2, buzzer D9
+ * 7 Rain Alert     : plate drive A2/PC2 (pulsed), plate sense A0 (higher = wetter, 100k pull-down), mute button D2, buzzer D9
  * 8 Tap Litre Meter: YF-S201-type hall flow sensor on D3 (interrupt), K = pulses per litre (set after a bucket test) */
 #include <Arduino.h>
 #include "utilcore.h"
@@ -15,7 +15,20 @@
 static void beep(int ms) { tone(9, 2400, ms); }
 #if TOOL == 1
 static seeti_t S; static uint8_t target = 3;
-void setup() { Serial.begin(115200); pinMode(2, INPUT_PULLUP); pinMode(13, OUTPUT); seeti_init(&S, target); ADCSRA = (ADCSRA & 0xF8) | 0x04; /* ADC clock /16: ~60 kS/s raw, loop below paces to ~9 kHz */ }
+#include <avr/power.h>
+void setup() {
+#if F_CPU == 4000000UL
+    clock_prescale_set(clock_div_2);                        /* board 'Seeti Counter': 8 MHz RC divided by 2 so it works down to 1.8 V */
+#endif
+    Serial.begin(115200); pinMode(2, INPUT_PULLUP); pinMode(13, OUTPUT); seeti_init(&S, target);
+#if F_CPU >= 16000000UL
+    ADCSRA = (ADCSRA & 0xF8) | 0x05;                       /* ADC clock 500 kHz */
+#elif F_CPU >= 8000000UL
+    ADCSRA = (ADCSRA & 0xF8) | 0x04;
+#else
+    ADCSRA = (ADCSRA & 0xF8) | 0x03;
+#endif
+}
 void loop() {
     static int16_t buf[128]; const float fs = 8000; uint32_t t0 = micros();
     for (int i = 0; i < 128; i++) { buf[i] = (int16_t)analogRead(A0) - 512; while ((micros() - t0) < (uint32_t)((i + 1) * 125)) {} }
@@ -62,10 +75,23 @@ void loop() {
     static uint32_t nx = 0; if (now > nx) { nx = now + 1000; for (uint8_t i = 0; i < 4; i++) { uint32_t s = ct_remaining_s(&C, i, now); Serial.print(i + 1); Serial.print(':'); Serial.print(s / 60); Serial.print('m'); Serial.print(s % 60); Serial.print(F("s ")); } Serial.println(); }
 }
 #elif TOOL == 7
-static rain_t R;
-void setup() { pinMode(2, INPUT_PULLUP); pinMode(9, OUTPUT); rain_init(&R); R.wet_thr = 400; R.dry_thr = 250; /* TODO tune on your plate */ }
-void loop() { pinMode(5, OUTPUT); digitalWrite(5, HIGH); delay(2); uint16_t v = analogRead(A0); digitalWrite(5, LOW);          /* board rev A drives the plate only for ~2 ms per reading (limits corrosion) */
-    rain_step(&R, millis(), v, digitalRead(2) == LOW); if (R.alert && (millis() / 400) % 2) tone(9, 1800); else noTone(9); delay(20); }
+#include <avr/sleep.h>
+#include <avr/wdt.h>
+#include <avr/interrupt.h>
+static rain_t R; static uint32_t vnow = 0;                   /* virtual clock: millis() stops in power-down, so time is counted per sleep */
+ISR(WDT_vect) {}
+static void sleep_1s() {
+    cli(); wdt_reset(); MCUSR &= ~_BV(WDRF); WDTCSR |= _BV(WDCE) | _BV(WDE); WDTCSR = _BV(WDIE) | _BV(WDP2) | _BV(WDP1); /* interrupt-only watchdog, 1 s */
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN); sleep_enable(); ADCSRA &= ~_BV(ADEN); sei(); sleep_cpu(); sleep_disable(); ADCSRA |= _BV(ADEN); wdt_disable();
+    vnow += 1000;
+}
+void setup() { pinMode(2, INPUT_PULLUP); pinMode(A2, OUTPUT); pinMode(9, OUTPUT); rain_init(&R); R.wet_thr = 400; R.dry_thr = 250; /* TODO tune on your plate: see pcb/sim/rain_sense_results.md */ }
+void loop() {
+    digitalWrite(A2, HIGH); delay(2); uint16_t v = analogRead(A0); digitalWrite(A2, LOW);                    /* plate driven ~2 ms per reading (limits corrosion), average current tens of microamps */
+    rain_step(&R, vnow, v, digitalRead(2) == LOW);
+    if (R.alert) { for (int i = 0; i < 25; i++) { if ((vnow / 400) % 2) tone(9, 1800); else noTone(9); delay(20); vnow += 20; rain_step(&R, vnow, v, digitalRead(2) == LOW); if (!R.alert) break; } noTone(9); }
+    else sleep_1s();                                                                                         /* about 1 reading per second */
+}
 #else
 static tap_t T; static volatile uint32_t pulses;
 static void isr() { pulses++; }

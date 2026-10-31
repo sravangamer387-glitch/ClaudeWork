@@ -2,16 +2,16 @@
 <export version="E">
   <design>
     <source>/home/user/ClaudeWork/utility10/pcb/out/seeti/seeti_counter.kicad_sch</source>
-    <date>Sat Oct 31 18:50:21 2026</date>
+    <date>Sat Oct 31 19:58:39 2026</date>
     <tool>Eeschema 7.0.11+dfsg-1build4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>Seeti Counter main board</title>
+        <title>Seeti Counter - main board</title>
         <company>ClaudeWork</company>
-        <rev/>
-        <date/>
+        <rev>B</rev>
+        <date>2026-11-01</date>
         <source>seeti_counter.kicad_sch</source>
-        <comment number="1" value=""/>
+        <comment number="1" value="First engineering release; see pcb/README.md for status and limits"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -33,7 +33,7 @@
       <property name="ki_description" value="Buzzer, polarized"/>
       <property name="ki_keywords" value="quartz resonator ceramic"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>35f99a0e-22c9-405c-93d2-2948f7c20113</tstamps>
+      <tstamps>b1ff9a2a-99a1-4018-befb-d477037f7b8c</tstamps>
     </comp>
     <comp ref="C1">
       <value>100n</value>
@@ -44,7 +44,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0475c2d0-a80e-4cab-8c25-0b7a22102650</tstamps>
+      <tstamps>40604508-9b37-4421-9f97-13dcad5d351a</tstamps>
     </comp>
     <comp ref="C2">
       <value>100n</value>
@@ -55,7 +55,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f01cd653-3e0a-4d94-a4e6-412e66181a60</tstamps>
+      <tstamps>5dd0e910-2e54-4a47-80e3-65ca5d3bba01</tstamps>
     </comp>
     <comp ref="C3">
       <value>100n</value>
@@ -66,7 +66,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f9ca29a2-eade-491d-be90-98aab047218e</tstamps>
+      <tstamps>555d38c1-fa50-4218-b56c-d9b5803dbba0</tstamps>
     </comp>
     <comp ref="C4">
       <value>10u</value>
@@ -77,7 +77,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>57cb45ac-aabb-43bb-bd63-af0d29731d0c</tstamps>
+      <tstamps>5b04a0ca-5fe5-4556-8a19-4f4309ab7b62</tstamps>
     </comp>
     <comp ref="C5">
       <value>1u</value>
@@ -88,9 +88,20 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>71b5350d-71bd-424c-ba2e-af7ac6f32839</tstamps>
+      <tstamps>c77a25d2-bf48-4ed3-a0ce-76900c716c6e</tstamps>
     </comp>
     <comp ref="C6">
+      <value>220n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0cd9defe-08b5-4232-a363-75aeb8f8ee59</tstamps>
+    </comp>
+    <comp ref="C7">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
@@ -99,9 +110,9 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>38849a49-3f1d-4d1e-a032-07956eb35cd9</tstamps>
+      <tstamps>af08a0d3-c548-425d-9196-06ab263ce490</tstamps>
     </comp>
-    <comp ref="C7">
+    <comp ref="C8">
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
@@ -110,7 +121,18 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d3eb912d-7e90-43e5-b9d1-883530162ff1</tstamps>
+      <tstamps>11d79e07-a126-446c-9bec-8a8d1c4359e9</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>22n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e192ce6-38e9-4639-a5a5-a4df4007548c</tstamps>
     </comp>
     <comp ref="D1">
       <value>Green</value>
@@ -121,7 +143,7 @@
       <property name="ki_description" value="Light emitting diode"/>
       <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bbb1698e-72c1-4f03-934d-4195872c7e8a</tstamps>
+      <tstamps>7e325436-1c79-4388-847b-3280ffb91d0e</tstamps>
     </comp>
     <comp ref="D2">
       <value>1N4148WS</value>
@@ -132,10 +154,10 @@
       <property name="ki_description" value="Diode"/>
       <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a77d0ec3-01f7-4a66-9ce4-3fbadb0f96b4</tstamps>
+      <tstamps>a3832886-4f2d-41b2-be92-ef4b9bbd893b</tstamps>
     </comp>
     <comp ref="J1">
-      <value>2xAAA</value>
+      <value>BATT 2xAAA</value>
       <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -143,7 +165,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d7a89732-3a0f-4e9a-a7ae-913738275851</tstamps>
+      <tstamps>2c3ce1fb-9b2a-405e-915f-0aafbcf68e90</tstamps>
     </comp>
     <comp ref="J2">
       <value>ISP</value>
@@ -154,18 +176,29 @@
       <property name="ki_description" value="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2471ea32-b1d4-455a-9be7-3defd9422db5</tstamps>
+      <tstamps>1fcc71f8-dd92-4448-a70a-ee2d07d12156</tstamps>
     </comp>
     <comp ref="J3">
-      <value>Electret mic</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <value>MIC electret</value>
+      <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>20a712f6-d255-427c-81b4-2b3fe721731e</tstamps>
+      <tstamps>6df6c610-2756-4fd2-8322-02ee3d69b16c</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>UART</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5c0731c-5a9f-44e8-b201-36a1fa8ca190</tstamps>
     </comp>
     <comp ref="Q1">
       <value>MMBT3904</value>
@@ -176,7 +209,18 @@
       <property name="ki_description" value="NPN transistor, base/emitter/collector"/>
       <property name="ki_keywords" value="transistor NPN"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e13aa0d8-4b83-4f91-8764-d151682a60f7</tstamps>
+      <tstamps>c70ecf4d-5691-4105-b48b-1a4125f1dd19</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>AO3401A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <libsource lib="Device" part="Q_PMOS_GSD" description="P-MOSFET transistor, gate/source/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="P-MOSFET transistor, gate/source/drain"/>
+      <property name="ki_keywords" value="transistor PMOS P-MOS P-MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5dbcd193-a635-462d-9d63-427eba29548c</tstamps>
     </comp>
     <comp ref="R1">
       <value>2.2k</value>
@@ -187,7 +231,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1bd5b339-b019-48c0-9191-2526174e24c6</tstamps>
+      <tstamps>8f2fd3a8-78e3-4b79-8d21-8d523baa9a30</tstamps>
     </comp>
     <comp ref="R2">
       <value>100k</value>
@@ -198,7 +242,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>96be2263-b37b-458e-aeb7-dc2a4d330b24</tstamps>
+      <tstamps>d963b6dd-6d9f-4ed9-9805-c0a2ebb029fd</tstamps>
     </comp>
     <comp ref="R3">
       <value>100k</value>
@@ -209,7 +253,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>64bd82c3-9e17-4362-80a6-fdc31949b232</tstamps>
+      <tstamps>3992399c-168c-4e30-b057-edfccd717c24</tstamps>
     </comp>
     <comp ref="R4">
       <value>100k</value>
@@ -220,7 +264,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>877f49e1-3993-4ed4-b6b7-76888d3791b1</tstamps>
+      <tstamps>a4e5b22b-2304-40a1-a37d-11e07a6bcf6b</tstamps>
     </comp>
     <comp ref="R5">
       <value>1k</value>
@@ -231,7 +275,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bc012066-2173-46b1-9f5d-95430653c495</tstamps>
+      <tstamps>c8cfd48a-878e-4d1a-aefd-d8ef57f3ca43</tstamps>
     </comp>
     <comp ref="R6">
       <value>1k</value>
@@ -242,7 +286,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b22972c5-bc1e-4678-b34a-ca069a686d1b</tstamps>
+      <tstamps>437b78f0-c22b-480a-9f83-80ee6cb5d6a2</tstamps>
     </comp>
     <comp ref="R7">
       <value>10k</value>
@@ -253,10 +297,10 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0e2d26f9-4205-4c11-9617-74b857349317</tstamps>
+      <tstamps>2593747f-fff6-4c48-906b-277c35f302e4</tstamps>
     </comp>
     <comp ref="R8">
-      <value>100k</value>
+      <value>33k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -264,7 +308,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7ec3affc-ca9f-459d-a14c-1b0017da8193</tstamps>
+      <tstamps>520bd4fc-74cd-46b1-b795-c122328d92cd</tstamps>
     </comp>
     <comp ref="R9">
       <value>1k</value>
@@ -275,7 +319,18 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>401bd4a2-c587-4299-97c0-a622598ec266</tstamps>
+      <tstamps>7d28075c-6e11-43b0-b605-90127d702727</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60f1c17c-972c-420b-af0e-40bb5881baeb</tstamps>
     </comp>
     <comp ref="SW1">
       <value>Power</value>
@@ -286,7 +341,7 @@
       <property name="ki_description" value="Switch, single pole double throw"/>
       <property name="ki_keywords" value="switch single-pole double-throw spdt ON-ON"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2894e399-eb0b-4fbc-9c29-e0c2261d7160</tstamps>
+      <tstamps>8c769877-49e3-4561-a41e-1b8afbe73d62</tstamps>
     </comp>
     <comp ref="SW2">
       <value>Target</value>
@@ -297,7 +352,51 @@
       <property name="ki_description" value="Push button switch, generic, two pins"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dcb5455f-1fd3-48c3-b479-d0c9efddc626</tstamps>
+      <tstamps>96ee8908-20c8-4eb0-829f-dabffc7125dd</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3f4a245-ed94-4295-8ee3-b4aa8a7373d6</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8dedf03-be00-4956-afa9-002838dc1008</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e0f61cc-0fe2-4675-b054-be1def80678e</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="seeti_counter.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5da8b3a-37dd-4126-aa45-0a29891381fd</tstamps>
     </comp>
     <comp ref="U1">
       <value>ATmega328P-AU</value>
@@ -308,7 +407,7 @@
       <property name="ki_description" value="20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32"/>
       <property name="ki_keywords" value="AVR 8bit Microcontroller MegaAVR PicoPower"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>892a2329-8c25-4441-8448-9f2a5441dbdc</tstamps>
+      <tstamps>3c7a46eb-c7e8-4081-92f0-a29954c199a5</tstamps>
     </comp>
     <comp ref="U2">
       <value>MCP6001</value>
@@ -319,7 +418,7 @@
       <property name="ki_description" value="1MHz, Low-Power Op Amp, SOT-23-5"/>
       <property name="ki_keywords" value="single opamp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3caeeb5-1079-4967-97ee-44c0c4335f75</tstamps>
+      <tstamps>86caa3de-8f69-45cb-8701-38707b6b77f2</tstamps>
     </comp>
   </components>
   <libparts>
@@ -343,6 +442,22 @@
         <pin num="5" name="V+" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x02">
       <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
@@ -357,6 +472,24 @@
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
         <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
@@ -464,6 +597,20 @@
         <pin num="3" name="C" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="Q_PMOS_GSD">
+      <description>P-MOSFET transistor, gate/source/drain</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GSD</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <docs>~</docs>
@@ -555,175 +702,215 @@
       </pins>
     </libpart>
   </libparts>
-  <libraries/>
+  <libraries>
+    <library logical="Amplifier_Operational">
+      <uri>/usr/share/kicad/symbols/Amplifier_Operational.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols/Device.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Microchip_ATmega">
+      <uri>/usr/share/kicad/symbols/MCU_Microchip_ATmega.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad/symbols/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
   <nets>
-    <net code="1" name="/+3V0">
+    <net code="1" name="+3V3">
       <node ref="BZ1" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
-      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="18" pinfunction="AVCC" pintype="power_in"/>
       <node ref="U1" pin="4" pinfunction="VCC" pintype="power_in"/>
       <node ref="U1" pin="6" pinfunction="VCC" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="V+" pintype="power_in"/>
     </net>
-    <net code="2" name="/AREF">
-      <node ref="C3" pin="1" pintype="passive"/>
-      <node ref="U1" pin="20" pinfunction="AREF" pintype="passive"/>
-    </net>
-    <net code="3" name="/BAT_P">
+    <net code="2" name="+BATT">
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="4" name="/BTN">
+    <net code="3" name="/ADC_IN">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="PC0" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/AREF">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="AREF" pintype="passive"/>
+    </net>
+    <net code="6" name="/BAT_SW">
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="7" name="/BTN">
       <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="32" pinfunction="PD2" pintype="bidirectional"/>
     </net>
-    <net code="5" name="/BUZ">
+    <net code="8" name="/BUZ">
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U1" pin="13" pinfunction="PB1" pintype="bidirectional"/>
     </net>
-    <net code="6" name="/BUZ_B">
+    <net code="9" name="/BUZ_B">
       <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
       <node ref="R6" pin="2" pintype="passive"/>
     </net>
-    <net code="7" name="/BZ_N">
+    <net code="10" name="/BZ_N">
       <node ref="BZ1" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
     </net>
-    <net code="8" name="/FB">
+    <net code="11" name="/FB">
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="-" pintype="input"/>
     </net>
-    <net code="9" name="/FBN">
+    <net code="12" name="/FBN">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
     </net>
-    <net code="10" name="/GND">
-      <node ref="C1" pin="2" pintype="passive"/>
-      <node ref="C2" pin="2" pintype="passive"/>
-      <node ref="C3" pin="2" pintype="passive"/>
-      <node ref="C4" pin="2" pintype="passive"/>
-      <node ref="C7" pin="2" pintype="passive"/>
-      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
-      <node ref="R3" pin="2" pintype="passive"/>
-      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="U1" pin="21" pinfunction="GND" pintype="passive"/>
-      <node ref="U1" pin="3" pinfunction="GND" pintype="power_in"/>
-      <node ref="U1" pin="5" pinfunction="GND" pintype="passive"/>
-      <node ref="U2" pin="2" pinfunction="V-" pintype="power_in"/>
-    </net>
-    <net code="11" name="/LED">
+    <net code="13" name="/LED">
       <node ref="R5" pin="1" pintype="passive"/>
       <node ref="U1" pin="11" pinfunction="PD7" pintype="bidirectional"/>
     </net>
-    <net code="12" name="/LED_A">
+    <net code="14" name="/LED_A">
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
-    <net code="13" name="/MIC_AC">
+    <net code="15" name="/MIC_AC">
       <node ref="C5" pin="2" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="+" pintype="input"/>
     </net>
-    <net code="14" name="/MIC_OUT">
+    <net code="16" name="/MIC_OUT">
+      <node ref="R10" pin="1" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
-      <node ref="U1" pin="23" pinfunction="PC0" pintype="bidirectional"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="1" pintype="output"/>
     </net>
-    <net code="15" name="/MIC_P">
+    <net code="17" name="/MIC_P">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="16" name="/MISO">
+    <net code="18" name="/MISO">
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U1" pin="16" pinfunction="PB4" pintype="bidirectional"/>
     </net>
-    <net code="17" name="/MOSI">
+    <net code="19" name="/MOSI">
       <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="PB3" pintype="bidirectional"/>
     </net>
-    <net code="18" name="/RESET">
+    <net code="20" name="/RESET">
       <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U1" pin="29" pinfunction="~{RESET}/PC6" pintype="bidirectional"/>
     </net>
-    <net code="19" name="/SCK">
+    <net code="21" name="/RXD">
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="PD0" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="/SCK">
       <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="U1" pin="17" pinfunction="PB5" pintype="bidirectional"/>
     </net>
-    <net code="20" name="/VMID">
+    <net code="23" name="/TXD">
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="31" pinfunction="PD1" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="/VMID">
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
-    <net code="21" name="unconnected-(SW1-C-Pad3)">
+    <net code="25" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="V-" pintype="power_in"/>
+    </net>
+    <net code="26" name="unconnected-(SW1-C-Pad3)">
       <node ref="SW1" pin="3" pinfunction="C" pintype="passive+no_connect"/>
     </net>
-    <net code="22" name="unconnected-(U1-ADC6-Pad19)">
+    <net code="27" name="unconnected-(U1-ADC6-Pad19)">
       <node ref="U1" pin="19" pinfunction="ADC6" pintype="input+no_connect"/>
     </net>
-    <net code="23" name="unconnected-(U1-ADC7-Pad22)">
+    <net code="28" name="unconnected-(U1-ADC7-Pad22)">
       <node ref="U1" pin="22" pinfunction="ADC7" pintype="input+no_connect"/>
     </net>
-    <net code="24" name="unconnected-(U1-PB0-Pad12)">
+    <net code="29" name="unconnected-(U1-PB0-Pad12)">
       <node ref="U1" pin="12" pinfunction="PB0" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="25" name="unconnected-(U1-PB2-Pad14)">
+    <net code="30" name="unconnected-(U1-PB2-Pad14)">
       <node ref="U1" pin="14" pinfunction="PB2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="26" name="unconnected-(U1-PC1-Pad24)">
+    <net code="31" name="unconnected-(U1-PC1-Pad24)">
       <node ref="U1" pin="24" pinfunction="PC1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(U1-PC2-Pad25)">
+    <net code="32" name="unconnected-(U1-PC2-Pad25)">
       <node ref="U1" pin="25" pinfunction="PC2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(U1-PC3-Pad26)">
+    <net code="33" name="unconnected-(U1-PC3-Pad26)">
       <node ref="U1" pin="26" pinfunction="PC3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U1-PC4-Pad27)">
+    <net code="34" name="unconnected-(U1-PC4-Pad27)">
       <node ref="U1" pin="27" pinfunction="PC4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U1-PC5-Pad28)">
+    <net code="35" name="unconnected-(U1-PC5-Pad28)">
       <node ref="U1" pin="28" pinfunction="PC5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U1-PD0-Pad30)">
-      <node ref="U1" pin="30" pinfunction="PD0" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="32" name="unconnected-(U1-PD1-Pad31)">
-      <node ref="U1" pin="31" pinfunction="PD1" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="33" name="unconnected-(U1-PD3-Pad1)">
+    <net code="36" name="unconnected-(U1-PD3-Pad1)">
       <node ref="U1" pin="1" pinfunction="PD3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(U1-PD4-Pad2)">
+    <net code="37" name="unconnected-(U1-PD4-Pad2)">
       <node ref="U1" pin="2" pinfunction="PD4" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U1-PD5-Pad9)">
+    <net code="38" name="unconnected-(U1-PD5-Pad9)">
       <node ref="U1" pin="9" pinfunction="PD5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(U1-PD6-Pad10)">
+    <net code="39" name="unconnected-(U1-PD6-Pad10)">
       <node ref="U1" pin="10" pinfunction="PD6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(U1-XTAL1{slash}PB6-Pad7)">
+    <net code="40" name="unconnected-(U1-XTAL1{slash}PB6-Pad7)">
       <node ref="U1" pin="7" pinfunction="XTAL1/PB6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(U1-XTAL2{slash}PB7-Pad8)">
+    <net code="41" name="unconnected-(U1-XTAL2{slash}PB7-Pad8)">
       <node ref="U1" pin="8" pinfunction="XTAL2/PB7" pintype="bidirectional+no_connect"/>
     </net>
   </nets>

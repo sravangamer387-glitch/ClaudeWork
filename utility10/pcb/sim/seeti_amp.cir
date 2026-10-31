@@ -1,0 +1,45 @@
+* Seeti Counter microphone front end (rev B values). Op-amp: MCP6001-class macro model (GBW 1 MHz, rail-to-rail, 90 dB, Rout 100 ohm)
+.param VCC=3.0
+VCC vcc 0 DC {VCC}
+* electret capsule: current source model (2.2 kohm bias), sound = AC source 20 mVpk across ~2.2 kohm equivalent -> 9 uA pk
+Vsnd snd 0 DC 0 AC 1 SIN(0 0.0000 2800)
+Gmic mic_p 0 value = {V(snd)/2200}
+Cmic mic_p 0 5p
+R1 vcc mic_p 2.2k
+C5 mic_p mic_ac 1u
+R2 vcc vmid 100k
+R3 vmid 0 100k
+C7 vmid 0 10u
+R4 vmid mic_ac 100k
+* op-amp macro model: open-loop gain 90000 (single pole 11 Hz -> GBW 1 MHz), output limited to the rails
+Eop opi 0 value = {90000*(V(mic_ac)-V(fb))}
+Rgbw opi gb 15.9k
+Cgbw gb 0 1u
+Eout out0 0 value = {V(gb)}
+Rout out0 mic_out 100
+R8 mic_out fb 33k
+R9 fb fbn 1k
+C6 fbn vmid 220n
+Cl mic_out 0 10p
+R10 mic_out adc_in 1k
+C9 adc_in 0 22n
+.nodeset v(mic_out)=1.5 v(fb)=1.5 v(gb)=1.5 v(out0)=1.5
+.control
+op
+print v(vmid) v(mic_out) v(mic_p) v(mic_ac)
+ac dec 40 1 1e6
+meas ac gmid find vdb(mic_out) at=1000
+meas ac glow find vdb(mic_out) at=30
+meas ac g2800 find vdb(mic_out) at=2800
+meas ac ghi find vdb(mic_out) at=10000
+meas ac g30k find vdb(mic_out) at=30000
+meas ac f3lo when vdb(mic_out)=27.3 rise=1
+meas ac f3hi when vdb(mic_out)=27.3 fall=1
+meas ac a2800 find vdb(adc_in) at=2800
+meas ac a8000 find vdb(adc_in) at=8000
+meas ac a12000 find vdb(adc_in) at=12000
+meas ac a16000 find vdb(adc_in) at=16000
+print gmid glow g2800 ghi g30k f3lo f3hi a2800 a8000 a12000 a16000
+wrdata /tmp/seeti_ac.txt vdb(adc_in)
+.endc
+.end

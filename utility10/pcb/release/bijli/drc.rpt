@@ -1,0 +1,13 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/bijli/bijli_meter_reader.kicad_pcb **
+** Created on 2026-10-31 19:58:47 **
+
+** Found 1 DRC violations **
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(42.0000 mm, 21.8750 mm): Reference 'R6'
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

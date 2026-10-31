@@ -18,7 +18,7 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (80×50×22 mm, 2.4 mm wal
 
 End-of-line test: Flash a 1 Hz LED at the head: count = 1/s; cover with ambient light: no spurious counts.
 
-## PCB (rev A, first draft)
+## PCB (rev B, engineering release)
 See `../pcb/README.md`; files in `../pcb/release/bijli/`.
 
 ## Prototype budget (Rs 900, limit Rs 3,000)

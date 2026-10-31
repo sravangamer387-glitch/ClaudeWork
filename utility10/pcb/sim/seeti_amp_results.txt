@@ -1,0 +1,7 @@
+Closed-loop small-signal response of the Seeti microphone amplifier (Rf = 33k, Rg = 1k, Cg = 220 nF, ideal capsule current source into R1 = 2.2k; MCP6001-class op-amp macro model, GBW 1 MHz) followed by the anti-alias filter R10 1k / C9 22n (-3 dB at 7.2 kHz):
+gain at 30 Hz        = 4.4 dB
+gain at 1 kHz         = 28.7 dB
+gain at 2.8 kHz at amplifier output = 30.4 dB (32.9x); at the ADC pin = 29.7 dB
+amplifier -3 dB band  = 700 Hz ... 26.1 kHz (relative to the 30.3 dB passband)
+at the ADC pin: 8 kHz = 26.9 dB, 12 kHz = 24.1 dB, 16 kHz = 21.5 dB (relative to 0 dB input)
+Production firmware should sample at 16 kS/s (Nyquist 8 kHz): the filter then removes about 8 dB of anything near 16 kHz relative to the 2.8 kHz whistle band. The 8 kS/s demo firmware has little anti-aliasing and relies on the narrow Goertzel bin.
