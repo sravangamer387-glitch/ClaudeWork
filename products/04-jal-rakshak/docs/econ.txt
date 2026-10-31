@@ -1,0 +1,7 @@
+Designed BOM: Rs 660  (earlier top-down guess: Rs 395)
+  price Rs 1299: as designed: contribution Rs -25 (-2%)
+  price Rs 1299: BOM +30 %: contribution Rs -256 (-23%)
+  price Rs 1799: as designed: contribution Rs 308 (20%)
+  price Rs 1799: BOM +30 %: contribution Rs 77 (5%)
+  price Rs 2199: as designed: contribution Rs 574 (31%)
+  price Rs 2199: BOM +30 %: contribution Rs 343 (18%)

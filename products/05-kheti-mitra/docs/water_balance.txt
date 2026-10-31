@@ -1,0 +1,9 @@
+90-day soil water balance (loam, 300 mm root zone, valve 0.25 mm/min)
+  average over 10 weather seeds (90 days each):
+  | Strategy | Water applied mm | Deep percolation loss mm | Days below 50 % available water | Plant water use as % of potential |
+  |---|---|---|---|---|
+  | Kheti-Mitra controller | 256 | 27 | 0.5 | 100.0 % |
+  | Timer 20 min every day | 450 | 233 | 0.0 | 100.0 % |
+  | Timer 10 min every day | 225 | 69 | 32.1 | 90.2 % |
+  | No irrigation | 0 | 15 | 70.8 | 56.6 % |
+  controller: longest single watering 20 min, most on-time in one day 40 min

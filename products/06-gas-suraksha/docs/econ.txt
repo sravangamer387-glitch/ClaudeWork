@@ -1,0 +1,10 @@
+Designed BOM: Rs 515
+  price Rs 799: as designed: contribution Rs -125 (-18%)
+  price Rs 799: BOM +30 %: contribution Rs -305 (-45%)
+  price Rs 1299: as designed: contribution Rs 144 (13%)
+  price Rs 1299: BOM +30 %: contribution Rs -36 (-3%)
+  price Rs 1799: as designed: contribution Rs 477 (31%)
+  price Rs 1799: BOM +30 %: contribution Rs 297 (19%)
+  price Rs 2299: as designed: contribution Rs 810 (42%)
+  price Rs 2299: BOM +30 %: contribution Rs 630 (32%)
+Excludes: certification/testing (lab quote needed), product liability insurance, returns from false alarms, warranty.

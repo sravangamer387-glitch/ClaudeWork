@@ -1,0 +1,7 @@
+Production BOM (designed, ~1,000 kits): Rs 2,580
+  price Rs 7,999, as designed: contribution Rs 2,337 (34%)
+  price Rs 7,999, BOM +30 %: contribution Rs 1,501 (22%)
+  price Rs 5,999, as designed: contribution Rs 981 (19%)
+  price Rs 5,999, BOM +30 %: contribution Rs 145 (3%)
+  earlier proposal guess BOM Rs 3,200 at Rs 7,999: contribution Rs 1,667 (25%)
+Prototype budget: Rs 1,790 (cap Rs 3,000) -> OK

@@ -2,3 +2,4 @@ electronics-toys/wave1/firmware/build/
 __pycache__/
 venv/
 prototypes/firmware/build/
+products/*/firmware/build/
