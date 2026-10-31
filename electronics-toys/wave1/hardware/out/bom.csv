@@ -1,0 +1,93 @@
+Product,Item,Qty,Unit INR @1k (estimate),Line INR,Note
+"P1 Rhymes player (SD card, 100 rhymes/lang)",2-layer PCB ~90x60 mm,1,30,30,India fab at ~1k: unverified
+"P1 Rhymes player (SD card, 100 rhymes/lang)",LDO 3.3 V low-Iq (HT7533-class),1,4,4,alt: any 3.3 V 250 mA LDO
+"P1 Rhymes player (SD card, 100 rhymes/lang)",P-MOSFET reverse protection (AO3401-class),1,3,3,
+"P1 Rhymes player (SD card, 100 rhymes/lang)","Passives (caps, resistors, divider)",1,12,12,lot price
+"P1 Rhymes player (SD card, 100 rhymes/lang)",Slide switch,1,5,5,
+"P1 Rhymes player (SD card, 100 rhymes/lang)",Battery holder 3xAA/AAA with leads,1,18,18,
+"P1 Rhymes player (SD card, 100 rhymes/lang)","Screws, bosses, battery-door hardware",1,5,5,captive M3 screw
+"P1 Rhymes player (SD card, 100 rhymes/lang)",MCU Cortex-M0+ 32-pin,1,45,45,e.g. STM32G0 / PY32 class
+"P1 Rhymes player (SD card, 100 rhymes/lang)",MP3 module (YX5200 / DFPlayer-style),1,70,70,alt: bare YX5200 chip at volume
+"P1 Rhymes player (SD card, 100 rhymes/lang)","microSD 4 GB, preloaded",1,130,130,dominant cost - see variant B
+"P1 Rhymes player (SD card, 100 rhymes/lang)",Speaker 3 W 4 ohm 40 mm,1,28,28,
+"P1 Rhymes player (SD card, 100 rhymes/lang)",Tactile buttons x7 + caps,1,14,14,
+"P1 Rhymes player (SD card, 100 rhymes/lang)",LEDs x2 + resistors,1,3,3,
+"P1 Rhymes player (SD card, 100 rhymes/lang)","Enclosure ABS, 3 parts (150 g resin + moulding)",1,48,48,from enclosure/checks.md mass
+"P1 Rhymes player (SD card, 100 rhymes/lang)","Tooling amortisation (Rs 3 lakh / 5,000 units)",1,60,60,assumption
+"P1 Rhymes player (SD card, 100 rhymes/lang)","Packaging (window box, insert, manual)",1,40,40,
+"P1 Rhymes player (SD card, 100 rhymes/lang)",Assembly + functional test labour,1,35,35,
+"P1 Rhymes player (SD card, 100 rhymes/lang)","TOTAL BOM (incl. tooling amortisation, packaging, assembly)",,,550,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",2-layer PCB ~90x60 mm,1,30,30,India fab at ~1k: unverified
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",LDO 3.3 V low-Iq (HT7533-class),1,4,4,alt: any 3.3 V 250 mA LDO
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",P-MOSFET reverse protection (AO3401-class),1,3,3,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","Passives (caps, resistors, divider)",1,12,12,lot price
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",Slide switch,1,5,5,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",Battery holder 3xAA/AAA with leads,1,18,18,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","Screws, bosses, battery-door hardware",1,5,5,captive M3 screw
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",MCU Cortex-M0+ 32-pin,1,45,45,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",MP3 chip module with SPI-flash support (WT2003-class),1,85,85,needs verification
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","SPI NOR flash 128 Mbit, programmed",1,45,45,~16 MB: ~30 rhymes at 32 kbps
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",Speaker 3 W 4 ohm 40 mm,1,28,28,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",Tactile buttons x7 + caps,1,14,14,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",LEDs x2 + resistors,1,3,3,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","Enclosure ABS, 3 parts (150 g resin + moulding)",1,48,48,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","Tooling amortisation (Rs 3 lakh / 5,000 units)",1,60,60,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","Packaging (window box, insert, manual)",1,40,40,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)",Assembly + functional test labour,1,35,35,
+"P1b Rhymes player (SPI flash, 30 rhymes @32 kbps)","TOTAL BOM (incl. tooling amortisation, packaging, assembly)",,,480,
+P3 Star projector lamp,2-layer PCB ~90x60 mm,1,30,30,India fab at ~1k: unverified
+P3 Star projector lamp,LDO 3.3 V low-Iq (HT7533-class),1,4,4,alt: any 3.3 V 250 mA LDO
+P3 Star projector lamp,P-MOSFET reverse protection (AO3401-class),1,3,3,
+P3 Star projector lamp,"Passives (caps, resistors, divider)",1,12,12,lot price
+P3 Star projector lamp,Slide switch,1,5,5,
+P3 Star projector lamp,Battery holder 3xAA/AAA with leads,1,18,18,
+P3 Star projector lamp,"Screws, bosses, battery-door hardware",1,5,5,captive M3 screw
+P3 Star projector lamp,MCU Cortex-M0+ 20-pin,1,35,35,
+P3 Star projector lamp,MP3 module (YX5200-style),1,70,70,
+P3 Star projector lamp,microSD 1 GB (8 lullabies),1,70,70,
+P3 Star projector lamp,Speaker 2 W 36 mm,1,20,20,
+P3 Star projector lamp,RGB LEDs 3 x 0.5 W + driver NPN x3,1,22,22,
+P3 Star projector lamp,Projection lens + star film,1,25,25,
+P3 Star projector lamp,Rotor motor + gear,1,14,14,
+P3 Star projector lamp,Buttons x3,1,5,5,
+P3 Star projector lamp,Enclosure ABS + silicone shell,1,55,55,
+P3 Star projector lamp,"Tooling amortisation (Rs 4 lakh / 5,000 units)",1,80,80,
+P3 Star projector lamp,Packaging,1,40,40,
+P3 Star projector lamp,Assembly + functional test labour,1,35,35,
+P3 Star projector lamp,"TOTAL BOM (incl. tooling amortisation, packaging, assembly)",,,548,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",2-layer PCB ~90x60 mm,1,30,30,India fab at ~1k: unverified
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",LDO 3.3 V low-Iq (HT7533-class),1,4,4,alt: any 3.3 V 250 mA LDO
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",P-MOSFET reverse protection (AO3401-class),1,3,3,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)","Passives (caps, resistors, divider)",1,12,12,lot price
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Slide switch,1,5,5,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Battery holder 3xAA/AAA with leads,1,18,18,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)","Screws, bosses, battery-door hardware",1,5,5,captive M3 screw
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",MCU Cortex-M0+ 20-pin,1,35,35,firmware: GPIO-triggered voice chip instead of UART
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",OTP voice IC with 3 lullabies (60 s class) + small amp,1,22,22,needs verification; content fixed at factory
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Speaker 2 W 36 mm,1,20,20,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",RGB LEDs 3 x 0.5 W + driver NPN x3,1,22,22,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Projection lens + star film,1,25,25,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Rotor motor + gear,1,14,14,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Buttons x3,1,5,5,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Enclosure ABS + silicone shell,1,55,55,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)","Tooling amortisation (Rs 4 lakh / 5,000 units)",1,80,80,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Packaging,1,40,40,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)",Assembly + functional test labour,1,35,35,
+"P3b Star lamp, low-cost (OTP voice chip, 3 lullabies, no SD)","TOTAL BOM (incl. tooling amortisation, packaging, assembly)",,,430,
+P4 Cricket game,2-layer PCB ~90x60 mm,1,30,30,
+P4 Cricket game,LDO 3.3 V low-Iq,1,4,4,
+P4 Cricket game,P-MOSFET reverse protection,1,3,3,
+P4 Cricket game,Passives lot,1,12,12,
+P4 Cricket game,Slide switch,1,5,5,
+P4 Cricket game,Battery holder 3xAAA,1,14,14,
+P4 Cricket game,MCU Cortex-M0+ 32-pin,1,45,45,
+P4 Cricket game,74HC595 x2,1,10,10,
+P4 Cricket game,4-digit 7-segment display,1,30,30,
+P4 Cricket game,LEDs x7 + resistors,1,8,8,
+P4 Cricket game,Piezo buzzer + NPN,1,8,8,
+P4 Cricket game,Buttons x2,1,4,4,
+P4 Cricket game,Enclosure ABS 2-part (87 g resin + moulding),1,32,32,
+P4 Cricket game,"Tooling amortisation (Rs 2.5 lakh / 5,000 units)",1,50,50,
+P4 Cricket game,Packaging + rules card,1,35,35,
+P4 Cricket game,Assembly + functional test labour,1,25,25,
+P4 Cricket game,"TOTAL BOM (incl. tooling amortisation, packaging, assembly)",,,315,

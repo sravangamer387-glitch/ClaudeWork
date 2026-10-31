@@ -1,0 +1,8 @@
+Net,Connections
+VBAT,"Battery+ -> slide switch -> Q1 (P-FET, reverse-polarity) -> VBAT_SW"
+VBAT_SW,"U2 LDO in, MP3 module VCC, amp rail, divider R1/R2 top"
+3V3,"U2 LDO out, MCU VDD, pull-ups, 74HC595 VCC"
+GND,"Battery-, all grounds, speaker return"
+SPK+/SPK-,"MP3 module speaker out -> speaker (P1, P3)"
+UART,"MCU PA0/PA1 <-> MP3 module RX/TX, 1k series each"
+VBAT_SENSE,R1 100k / R2 100k divider -> PC6 (ADC); ratio 0.5
