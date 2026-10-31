@@ -7,8 +7,9 @@ static int fails = 0, checks = 0;
 static uint32_t rs = 1234567; static double rn(void) { rs = rs * 1664525u + 1013904223u; return ((rs >> 8) & 0xFFFF) / 65536.0 - 0.5; }
 
 /* synthetic kitchen audio at 8 kHz: noise + 100 Hz hum + optional tone */
+static double g_fs = 8000; static int g_N = 256;
 static int run_audio(double f_detect, double f_whistle, const double *starts, const double *lens, int nw, double total_s, double amp_tone, double amp_noise, uint16_t target, seeti_t *s) {
-    const int N = 256; const double fs = 8000; int16_t blk[256]; seeti_init(s, target); long sample = 0;
+    const int N = g_N; const double fs = g_fs; int16_t blk[512]; seeti_init(s, target); long sample = 0;
     for (double t = 0; t < total_s; t += N / fs) {
         double t0 = t; int on = 0; for (int w = 0; w < nw; w++) if (t0 >= starts[w] && t0 < starts[w] + lens[w]) on = 1;
         for (int i = 0; i < N; i++, sample++) { double tt = sample / fs; double v = amp_noise * 2 * rn() + 150 * sin(2 * 3.14159265 * 100 * tt) + (on ? amp_tone * sin(2 * 3.14159265 * f_whistle * tt) : 0); blk[i] = (int16_t)v; }
@@ -29,6 +30,14 @@ int main(void) {
     int masked = run_audio(2800, 2800, st, ln, 3, 30, 300, 1200, 3, &s); printf("LIMIT: whistle amplitude 300 against noise amplitude 1200 counts %d of 3 whistles\n", masked);
     int off = 0; for (double f = 1500; f <= 4500; f += 500) { run_audio(2800, f, st, ln, 3, 30, 900, 400, 9, &s); (void)off; }
     CHECK(run_audio(2800, 1000, st, ln, 3, 30, 900, 400, 3, &s) == 0, "a 1 kHz tone (not the whistle frequency) is ignored, got %d", s.count);
+    /* production configuration of the rev B board: 16 kS/s, 128-sample blocks */
+    g_fs = 16000; g_N = 128;
+    CHECK(run_audio(2800, 2800, st, ln, 3, 30, 900, 400, 3, &s) == 3 && s.done, "16 kS/s/128: 3 whistles counted, got %d", s.count);
+    CHECK(run_audio(2800, 2800, st, ln, 3, 30, 1500, 1500, 3, &s) == 3, "16 kS/s/128: whistle in loud noise, got %d", s.count);
+    CHECK(run_audio(2800, 2800, st, ln, 0, 30, 0, 1500, 3, &s) == 0, "16 kS/s/128: noise only gives no count, got %d", s.count);
+    CHECK(run_audio(2800, 3300, st, ln, 3, 30, 900, 400, 3, &s) == 0, "16 kS/s/128: a 3.3 kHz tone is ignored by the 2.8 kHz detector, got %d", s.count);
+    CHECK(run_audio(3300, 3300, st, ln, 3, 30, 900, 400, 3, &s) == 3, "retuned to 3.3 kHz (what the scan mode stores) it counts, got %d", s.count);
+    g_fs = 8000; g_N = 256;
     /* ---- Gas Taraju ---- */
     gas_scale_t g; gs_init(&g, 0, 1000, 0, 14.2f);
     gs_calibrate(&g, 8000, 8000 + 20000, 20.0f); CHECK(fabs(g.counts_per_kg - 1000) < 1e-3 && g.zero_counts == 8000, "calibration");

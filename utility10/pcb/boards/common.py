@@ -2,8 +2,8 @@
 LCSC = {  # value/footprint key -> (lcsc, status, mpn)
  "ATmega328P-AU": ("C14877", "verified", "ATMEGA328P-AU"), "MCP6001": ("C116490", "verified", "MCP6001T-I/OT"), "MMBT3904": ("C20526", "verified", "MMBT3904 (JSCJ)"),
  "1N4148WS": ("C2128", "verified", "1N4148WS (JSCJ)"), "AO3401A": ("C15127", "verified", "AO3401A (AOS)"), "USB-C": ("C165948", "verified", "TYPE-C-31-M-12 (Korean Hroparts)"),
- "100n": ("C14663", "memory", "0603 100nF X7R"), "1u": ("C15849", "memory", "0603 1uF X7R"), "10u": ("C15850", "memory", "0805 10uF X5R"), "10n": ("C57112", "memory", "0603 10nF X7R"),
- "1k": ("C21190", "memory", "0603 1k 1%"), "2.2k": ("C4190", "memory", "0603 2.2k 1%"), "5.1k": ("C23186", "memory", "0603 5.1k 1%"), "10k": ("C25804", "memory", "0603 10k 1%"), "100k": ("C25803", "memory", "0603 100k 1%"), "4.7k": ("C23162", "memory", "0603 4.7k 1%"),
+ "100n": ("C14663", "verified", "0603 100nF X7R"), "1u": ("C15849", "verified", "0603 1uF X7R"), "10u": ("C15850", "memory", "0805 10uF X5R"), "10n": ("C57112", "verified", "0603 10nF X7R"),
+ "1k": ("C21190", "verified", "0603 1k 1%"), "2.2k": ("C4190", "memory", "0603 2.2k 1%"), "5.1k": ("C23186", "memory", "0603 5.1k 1%"), "10k": ("C25804", "verified", "0603 10k 1%"), "100k": ("C25803", "verified", "0603 100k 1%"), "4.7k": ("C23162", "memory", "0603 4.7k 1%"),
 }
 def _l(d, key):
     if key in LCSC: d["lcsc"], d["lcsc_status"], d["mpn"] = LCSC[key]
