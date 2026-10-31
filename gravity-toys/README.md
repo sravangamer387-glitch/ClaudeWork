@@ -26,6 +26,13 @@ IP-led puzzle (2) that earns the injection-mould investment only after validatio
 3. **Ramp Racers** (school lab channel)
 4. **Drop Quest** (injection v2 once v1 sells)
 
+## Business launch pack (`business/`)
+- `01-business-plan.md` – recommendation, unit economics, compliance, 12-week plan, budget
+- `02-manufacturer-rfq-pack.md` – RFQ email, vendor scorecard, product spec annexes, QC checklist
+- `03-listing-copy-pack.md` – Amazon/Etsy listing copy and compliance fields
+- `05-unit-economics.csv` – marketplace margin model (formulas)
+- **Note:** the unit economics show the original retail prices lose money on Amazon; use the prices in the business plan.
+
 ## Files
 - `cad/generate_laser_svgs.py` – parametric laser-cut files (`python3 -I cad/generate_laser_svgs.py cad/out`);
   outputs in `cad/out/` (Galton front/back, tower plate, racer ramp). Includes asserts that guard

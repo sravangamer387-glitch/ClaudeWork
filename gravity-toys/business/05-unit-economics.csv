@@ -1,0 +1,7 @@
+Product,Price incl GST (INR),GST %,Net revenue,Landed COGS,Referral %,Referral fee,Closing fee,Ship & handling,Returns rate,Returns cost,Ads % of net revenue,Ads cost,Misc,Contribution per unit,Contribution %
+Galton Board,999,0.05,=B2/(1+C2),480,0,=B2*F2,30,120,0.06,=J2*(E2+I2),0.12,=D2*L2,15,=D2-E2-G2-H2-I2-K2-M2-N2,=O2/D2
+Santulan Balance Set,699,0.05,=B3/(1+C3),320,0,=B3*F3,30,70,0.06,=J3*(E3+I3),0.12,=D3*L3,15,=D3-E3-G3-H3-I3-K3-M3-N3,=O3/D3
+Timber Tower Marble Run,1799,0.05,=B4/(1+C4),650,0.08,=B4*F4,30,110,0.06,=J4*(E4+I4),0.12,=D4*L4,15,=D4-E4-G4-H4-I4-K4-M4-N4,=O4/D4
+Ramp Racers Lab,1799,0.05,=B5/(1+C5),730,0.08,=B5*F5,30,180,0.06,=J5*(E5+I5),0.12,=D5*L5,15,=D5-E5-G5-H5-I5-K5-M5-N5,=O5/D5
+
+Notes: Amazon India marketplace view. All fees/costs are planning assumptions. Verify in Seller Central: GST (5% assumed for non-electric toys since 22 Sep 2025); closing fee; shipping/FBA fees; toys referral % (0% assumed below INR 1000 per Mar 2026 announcement; 8% is a placeholder above). Original design-doc prices (799/599/1499/1299) lose money or are thin at these costs - use prices in this sheet.

@@ -56,3 +56,27 @@ Mirrors GitHub issues #1–#7 in sravangamer387-glitch/ClaudeWork. Vendor names 
 - [ ] BIS licence application per product family (Rs 1.5–4 lakh, 3–5 months – estimate)
 - [ ] Age-grade labels and warnings for all ball-based toys
 - [ ] EN 71 / ASTM F963 if exporting
+
+## #8 Business setup: brand, registrations, accounts (week 1)
+- [ ] Choose brand name; trademark search + filing
+- [ ] Udyam registration; GST registration; current account
+- [ ] Ask CA: GST rate for toys (5% assumed), Legal Metrology labelling duties
+- [ ] Barcodes (GS1 India)
+- [ ] Open Amazon.in / Flipkart seller accounts; Shopify + Razorpay; Etsy shop
+- [ ] Product-liability insurance quote
+- [ ] Decide BIS route A/B/C (business plan section 4)
+
+## #9 Send RFQs to manufacturers (week 1–2)
+- [ ] Timber Tower: 3 woodworking/laser vendors
+- [ ] Santulan: Channapatna units + Nirmal co-operative
+- [ ] Galton: 3 Hyderabad laser shops
+- [ ] Ask every vendor for BIS licence number/scope and tooling-ownership agreement
+- [ ] Fill vendor scorecard; shortlist; visit factories
+- [ ] Order 3 samples each; run incoming QC checklist
+
+## #10 Listing assets: photos, videos, A+ content (weeks 3–6)
+- [ ] Photograph 7 images per product + 15–30 s video
+- [ ] Finalise titles/bullets after measuring real dimensions and weights
+- [ ] Remove any claim not backed by a test report
+- [ ] Manuals (English + Hindi) and challenge cards
+- [ ] Rebuild unit economics sheet with real fees and quotes
