@@ -2,7 +2,7 @@
 import os, sys, shutil, subprocess, zipfile, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import outputs, docgen
-BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti"]
+BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra"]
 summary = []
 for mod in BOARDS:
     if mod != "rainplate": subprocess.run([sys.executable, os.path.join(HERE, "prune.py"), mod], capture_output=True, text=True)

@@ -41,6 +41,13 @@ NOTES.update({
  "kheti": dict(desc="Kheti-Mitra irrigation controller: 12 V DC input, 5 V regulator, solenoid-valve driver, two capacitive soil sensors, rain sensor.", circuit=["12 V jack -> 1 A PTC -> SMBJ15A TVS -> reverse-polarity PMOS -> +12V; AMS1117-5.0 -> +5V (about 0.3 W at 40 mA).", "Valve: AO3400A low-side switch with 100 ohm gate resistor, 100 k pull-down and SS14 flyback diode; soil sensors on ADC0/ADC1 through 1 k + 100 nF; rain digital input with pull-up."], sims=[], power="Idle about 15 mA at 5 V from 12 V (0.2 W); valve 12 V x 0.3 A during watering.", bringup=["Jack: +12V = 11.9 V, +5V = 5.0 V.", "Force VALVE_G high from the ISP: the valve switches and the Schottky catches the flyback.", "Soil sensors: dry about 520 counts / wet about 260 counts (to be calibrated)."]),
 })
 
+NOTES["jalnetra"] = dict(desc="Jal-Netra main board: STM32G431 transit-time measurement (bridge-driven piezo, input mux, two-stage low-noise receive chain, gain select, 12-bit 4 MS/s ADC), USB-C powered, OLED/UART/SWD.",
+  circuit=["**Transmit:** TIM3 channels on PA6/PA4 (transducer A) and PB0/PB1 (transducer B) generate a 6-cycle 1 MHz burst; the second pin of each pair is inverted for bridge drive (6.6 Vpp). 22 ohm series resistors protect the pins; on receive one leg is held low by its timer pin and the other is high-impedance.",
+           "**Receive:** 10 nF + 1 k tap from the transducer's high leg, BAV99 clamp to the rails, TS5A3159 selects transducer A or B into LNA1 (OPA356, x10.2) and LNA2 (x10.2); TS5A3159 U7 selects 20 dB or 40 dB into a 33 ohm / 22 pF filter and ADC1 (PA0). Mid-supply bias 1.65 V from AVDD (ferrite-filtered 3.3 V).",
+           "**Rest:** STM32G431CBT6 with 8 MHz crystal, SWD header, boot0 pull-down, USB-C power-only (5.1 k CC, PTC, TVS), AP2112K-3.3, OLED and UART headers, buzzer, LED, test button, test points on the receive chain."],
+  sims=["../../jal-netra/sim/lna_results.txt"], power="MCU 170 MHz about 35 mA while measuring (0.5 s per measurement), LNAs 2 x 8 mA: USB powered only (about 0.1 W average with a 10 s idle period).",
+  bringup=["USB-C 5 V: +3V3 = 3.3 V, AVDD = 3.28 V, VMID = 1.64 V.", "Flash over SWD; with the spool dry nothing should be received (amplitude near zero); fill with water: a burst of amplitude A appears at ADC_IN 40.5 us after the transmit edge (TP5).", "Follow `jal-netra/docs/TEST_PLAN.md` gates 1-3."])
+
 def gen(mod):
     B = importlib.import_module("boards." + mod).BOARD; N = NOTES[mod]; name = B["name"]; out = os.path.join(HERE, "out", mod); V = json.load(open(os.path.join(out, "verification.json")))
     W, H = B["size"]

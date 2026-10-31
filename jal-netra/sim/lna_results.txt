@@ -1,10 +1,5 @@
-f_hi1 2.016790e+07
-f_hi1 2.016790e+07
-f_hi2 1.432814e+07
-f_hi2 1.432814e+07
-f_lo2 1.539792e+03
-f_lo2 1.539792e+03
-g1_1m 2.010795e+01
-g1_1m 2.010795e+01
-g2_1m 4.092155e+01
-g2_1m 4.092155e+01
+SPICE (ngspice) of the receive chain, source impedance 270 ohm (piezo at 1 MHz), OPA356-class model (A0 1e5, GBW 200 MHz):
+stage 1 gain at 1 MHz        = 20.1 dB (target 20 dB)
+stage 1 + 2 gain at 1 MHz   = 40.9 dB (target 40 dB)
+stage 1 upper -3 dB          = 20 MHz
+stage 1 + 2 band (-3 dB)      = 1.5 kHz ... 14 MHz

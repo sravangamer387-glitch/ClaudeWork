@@ -15,9 +15,9 @@ def load_fp(spec):
 def text_rect(x, y, s, size):                       # rough bounding box of reference text
     w = 0.62 * size * len(s); h = size; return (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
 def hit(a, b, m=0.0): return a[0] < b[2] + m and b[0] < a[2] + m and a[1] < b[3] + m and b[1] < a[3] + m
-def build(modname, boost=()):
+def build(modname, boost=(), seed=None, outdir=None):
     B = importlib.import_module("boards." + modname).BOARD
-    out = os.path.join(HERE, "out", modname); os.makedirs(out, exist_ok=True); name = B["name"]; W, H = B["size"]; CR = B.get("corner", 2.0)
+    out = outdir or os.path.join(HERE, "out", modname); os.makedirs(out, exist_ok=True); name = B["name"]; W, H = B["size"]; CR = B.get("corner", 2.0)
     for f in os.listdir(out):
         fp_ = os.path.join(out, f)
         if os.path.isfile(fp_): os.remove(fp_)
@@ -95,6 +95,25 @@ def build(modname, boost=()):
             c = rt.cell(x, y); done[pr["net"]].add((pr["layer"], c[0], c[1]))
     for (n, x, y) in B.get("pre_vias", []):
         rt.commit_via(netid[n], x, y); add_via(x, y, n); c = rt.cell(x, y); done[n] |= {(0, c[0], c[1]), (1, c[0], c[1])}
+    esc_cells = {}
+    # escape stubs: every used pad of a fine-pitch part (>= 24 pads) gets a short outward track first, so later nets cannot wall it in
+    for ref_, fp_ in fps.items():
+        pads_ = list(fp_.Pads())
+        if len(pads_) < 24 or ref_.startswith("J"): continue
+        cx_, cy_ = ToMM(fp_.GetPosition().x), ToMM(fp_.GetPosition().y)
+        for pidx_, pad_ in enumerate(pads_):
+            n_ = pad_.GetNetname()
+            if not n_ or n_ == "GND" or n_ not in netid: continue
+            px_, py_ = ToMM(pad_.GetPosition().x), ToMM(pad_.GetPosition().y); dx_, dy_ = px_ - cx_, py_ - cy_
+            d_ = (1 if dx_ > 0 else -1, 0) if abs(dx_) > abs(dy_) else (0, 1 if dy_ > 0 else -1)
+            k_ = rt.cls(widths.get(n_, 0.2)); nid_ = netid[n_]; pts_ = [(px_, py_)]
+            for step_ in range(1, 25):                                                  # up to 1.2 mm in 0.05 mm steps while the cells are free
+                x_, y_ = px_ + d_[0] * step_ * R.G, py_ + d_[1] * step_ * R.G; ix_, iy_ = rt.cell(x_, y_)
+                if not (rt._free(k_, 0, ix_, iy_, nid_)): break
+                pts_.append((x_, y_))
+            if len(pts_) < 8: continue                                                    # not even 0.35 mm: skip
+            end_ = pts_[-1]; rt.commit_trace(nid_, 0, [pts_[0], end_], widths.get(n_, 0.2)); add_track(0, pts_[0], end_, n_, widths.get(n_, 0.2)); ex_, ey_ = rt.cell(*end_)
+            esc_cells.setdefault(n_, set()).add((0, ex_, ey_))
     order = {}
     for kk, v in pad_info.items(): order.setdefault(v[0], []).append(kk)
     def cells_in(bbox, layer, padobj, ctr):
@@ -109,15 +128,27 @@ def build(modname, boost=()):
     gnd = "GND"; first_nets = [n for n in list(boost) + list(B.get("first", [])) if n in order]; first_nets = list(dict.fromkeys(first_nets))
     sig = [n for n in order if n != gnd and n not in first_nets]
     pw = [n for n in sig if widths.get(n, 0.2) > 0.2 or n.startswith("+") or n == "VBUS"]; sig = [n for n in sig if n not in pw]
-    sig.sort(key=lambda n: (len(order[n]) > 3, len(order[n])))
+    def tightness(n):                                    # fewest free cells around any pad of the net (2 mm square, top layer) = most constrained
+        k = rt.cls(widths.get(n, 0.2)); best = 10 ** 9; nid_ = netid[n]
+        for pk_ in order[n]:
+            cx, cy = rt.cell(*pad_info[pk_][3]); r_ = int(2.0 / R.G); sub = rt.owner[k][0][max(cy - r_, 0):cy + r_ + 1, max(cx - r_, 0):cx + r_ + 1]
+            best = min(best, int(((sub == -1) | (sub == nid_)).sum()))
+        return best
+    import random; rnd_ = random.Random(seed)
+    jit = (lambda: 1.0 + 0.9 * rnd_.random()) if seed is not None else (lambda: 1.0)
+    sig.sort(key=lambda n: (len(order[n]) > 3, tightness(n) * jit()))
+    if seed is not None: pw.sort(key=lambda n: rnd_.random())
     skip_gnd_tht = True
+    only = os.environ.get("ONLY_NETS")
+    for n_, cs_ in esc_cells.items(): done[n_] |= cs_
     for n in first_nets + ([gnd] if gnd in order else []) + pw + sig:
+        if only and n not in only.split(","): continue
         nid = netid[n]; w = widths.get(n, 0.2); first = not done[n]
         for pk in order[n]:
             _, layers, bbox, ctr, tht, circ = pad_info[pk]
             starts = [c for l in layers for c in cells_in(bbox, l, circ, ctr) if rt._free(rt.cls(w), l, c[1], c[2], nid)]
             if not starts: failures.append((n, pk, "no free start cell")); continue
-            if n == gnd and tht: continue
+            if n == gnd and (tht or B.get("gnd_pour_only")): continue                  # ground reaches SMD pads through the top pour / stitching vias
             if first and n != gnd and not done[n]: first = False; done[n] |= set(starts); continue
             if n == gnd and any(c in done[n] for c in starts): continue
             # window around the pad and the nearest goals
@@ -132,10 +163,10 @@ def build(modname, boost=()):
                 path, via_end = rt.route(nid, w, starts, done[n], goal_via=True, window=small)
                 if path is None: path, via_end = rt.route(nid, w, starts, done[n], goal_via=True, window=(min(sx) - int(7 / R.G), min(sy) - int(7 / R.G), max(sx) + int(7 / R.G), max(sy) + int(7 / R.G)))
             else:
-                path, via_end = rt.route(nid, w, starts, done[n], window=win)
-                if path is None: path, via_end = rt.route(nid, w, starts, done[n], window=(min(sx) - int(14 / R.G), min(sy) - int(14 / R.G), max(sx) + int(14 / R.G), max(sy) + int(14 / R.G)))
-                if path is None: path, via_end = rt.route(nid, w, starts, done[n])                                  # last resort: whole board
-            if path is None: failures.append((n, pk, "no route")); continue
+                path, via_end = rt.route(nid, w, starts, done[n], window=win, eps=2.5, max_nodes=500000)
+                if path is None: path, via_end = rt.route(nid, w, starts, done[n], window=(min(sx) - int(14 / R.G), min(sy) - int(14 / R.G), max(sx) + int(14 / R.G), max(sy) + int(14 / R.G)), eps=4.0, max_nodes=900000)
+                if path is None: path, via_end = rt.route(nid, w, starts, done[n], eps=5.0, max_nodes=3000000)         # last resort: whole board, greedier
+            if path is None: failures.append((n, pk, "no route")); (os.environ.get("ROUTE_DEBUG") and __import__('numpy').savez(os.path.join(out, "dbg_%s.npz" % n.replace('+','p')), o0=rt.owner[rt.cls(w)][0], o1=rt.owner[rt.cls(w)][1], starts=__import__('numpy').array(starts), goals=__import__('numpy').array(list(done[n])), nid=nid)); print("  no route:", n, pk[:2], "starts", len(starts), "free_layers", sorted({c[0] for c in starts}), flush=True); continue
             rt.commit(nid, path, w)
             if via_end:
                 l, ix, iy = path[-1]; x, y = rt.xy(ix, iy); rt.commit_via(nid, x, y); add_via(x, y, n)
@@ -218,9 +249,12 @@ def build(modname, boost=()):
     bd = pcbnew.LoadBoard(pcb_path); filler = pcbnew.ZONE_FILLER(bd); filler.Fill(bd.Zones()); bd.Save(pcb_path)
     report["route_failures"] = [list(map(str, f_)) for f_ in failures]; report["tracks"] = len(list(bd.GetTracks()))
     json.dump(report, open(os.path.join(out, "route_report.json"), "w"), indent=1); return report
+if __name__ == "__main__" and len(sys.argv) >= 4 and sys.argv[2] == "seed":            # python3 build.py <board> seed <n> : one randomised-order attempt into out/<board>_s<n>
+    r = build(sys.argv[1], (), int(sys.argv[3]), os.path.join(HERE, "out", f"{sys.argv[1]}_s{sys.argv[3]}")); print("RESULT", len(r.get("route_failures", [])))
+    sys.exit(0)
 if __name__ == "__main__":
     boost = []
-    for attempt in range(5):                                  # if some nets fail, route those first on the next attempt
+    for attempt in range(1 if os.environ.get("ROUTE_DEBUG") else 5):                                  # if some nets fail, route those first on the next attempt
         r = build(sys.argv[1], tuple(boost))
         fails = [f[0] for f in r.get("route_failures", [])]
         if not fails: break

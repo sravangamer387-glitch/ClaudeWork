@@ -1,5 +1,5 @@
 """Two-layer grid router v2: 0.05 mm grid, per-net trace widths (two classes), exact per-class obstacle inflation, windowed weighted A*, vias."""
-import heapq, math
+import heapq, math, os
 import numpy as np
 G = 0.05
 class Router:
@@ -65,7 +65,7 @@ class Router:
             tot = ii[y1][:, x1] - ii[y0][:, x1] - ii[y1][:, x0] + ii[y0][:, x0]
             ok = (tot == 0) if ok is None else (ok & (tot == 0))
         return ok
-    def route(self, net, w, starts, goals, allow_via=True, via_cost=40, goal_via=False, window=None, eps=1.3):
+    def route(self, net, w, starts, goals, allow_via=True, via_cost=40, goal_via=False, window=None, eps=1.3, max_nodes=600000):
         k = self.cls(w); nx_ = self.nx; ny_ = self.ny
         own = [self.owner[k][l].ravel().tolist() for l in (0, 1)]
         vok = self.via_map(k, net).ravel().tolist() if allow_via or goal_via else None
@@ -89,7 +89,12 @@ class Router:
         x0, y0, x1, y1 = max(x0, 0), max(y0, 0), min(x1, nx_ - 1), min(y1, ny_ - 1)
         def free(l, ix, iy):
             o = own[l][iy * nx_ + ix]; return o == -1 or o == net
+        popped = 0
         while open_:
+            popped += 1
+            if popped > max_nodes:
+                if os.environ.get("ROUTE_DEBUG"): print("   route: node limit", max_nodes, "eps", eps, "window", window, flush=True)
+                return None, False
             _, g, cur = heapq.heappop(open_)
             if g > best.get(cur, 1e18) + 1e-9: continue
             l, ix, iy = cur
@@ -108,6 +113,7 @@ class Router:
             if allow_via and vok[iy * nx_ + ix] and free(1 - l, ix, iy) and far(ix, iy, 0.8):
                 nc = (1 - l, ix, iy); ng = g + via_cost
                 if ng < best.get(nc, 1e18): best[nc] = ng; prev[nc] = cur; pdir[nc] = None; heapq.heappush(open_, (ng + h(nc), ng, nc))
+        if os.environ.get("ROUTE_DEBUG"): print("   route: exhausted after", popped, "pops; reached cells", len(best), "window", window, "goals", len(goals), flush=True)
         return None, False
     def commit_trace(self, net, layer, pts, w):
         """mark a polyline (list of (x,y) mm) as copper of the net"""

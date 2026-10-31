@@ -5,7 +5,7 @@ def mcu(vcc, nets, x, y, ref="U1", nc="rest"):
     base = {"4": vcc, "6": vcc, "18": vcc, "3": "GND", "5": "GND", "21": "GND", "20": "AREF", "29": "RESET", "15": "MOSI", "16": "MISO", "17": "SCK"}
     base.update(nets)
     return [dict(ref=ref, sym="MCU_Microchip_ATmega:ATmega328P-A", fp="Package_QFP:TQFP-32_7x7mm_P0.8mm", value="ATmega328P-AU", x=x, y=y, rot=0, mpn="ATMEGA328P-AU", lcsc="C14877", lcsc_status="verified", nc=nc, nets=base),
-            C("C1", "100n", x - 10, y - 3, vcc, "GND", 90), C("C2", "100n", x + 8, y + 4, vcc, "GND", 90), C("C3", "100n", x + 8, y - 4, "AREF", "GND", 90), R("R7", "10k", x - 7, y - 15, vcc, "RESET")]
+            C("C1", "100n", x - 7.5, y + 7.5, vcc, "GND", 90), C("C2", "100n", x + 7.5, y + 7.5, vcc, "GND", 90), C("C3", "100n", x + 7.5, y - 7.5, "AREF", "GND", 90), R("R7", "10k", x - 7.5, y - 7.5, vcc, "RESET", 90)]
 def isp(vcc, x, y, rot=0): return [dict(ref="J2", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="ISP", x=x, y=y, rot=rot, nets={"1": "MISO", "2": vcc, "3": "SCK", "4": "MOSI", "5": "RESET", "6": "GND"})]
 def batt_input(vcc, x, y, label="BATT"):
     """JST battery connector, slide switch, reverse-polarity PMOS (drain = battery side) -> vcc"""
