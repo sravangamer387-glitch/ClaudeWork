@@ -40,3 +40,9 @@ IP-led puzzle (2) that earns the injection-mould investment only after validatio
   secondary sources; confirm in IS 9873 (Part 1):2025 / EN 71 / ASTM F963 before freezing dimensions.
 - `Drop Quest` is intentionally an original mechanism; get an IP/patent review before launch.
 - Products in the CAD folder are 2D starting files, not production-validated drawings.
+
+## Mirroring rule
+Every file in this folder is kept in two places: this repo and the Google Drive folder "Gravity Toys"
+(owner sravank387@gmail.com). Docs in Drive are Google Docs converted from these markdown files; SVGs and
+the script are stored as-is. Task checklists live in GitHub issues #1–#7 and in `TASKS.md` (and its Drive twin).
+When one side changes, update the other in the same working session.
