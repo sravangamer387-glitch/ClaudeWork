@@ -10,3 +10,5 @@
 | 6 | [Gas-Suraksha](06-gas-suraksha/README.md) | 34 checks, leak-time model | **loses money below about Rs 1,300**; safety-critical | design study; do not sell without certification |
 
 Run any firmware test with `make test` in the product's `firmware/` folder; `make hex` needs gcc-avr, avr-libc, arduino-core-avr. Everything is a prototype design: no physical hardware has been built or tested.
+
+**See [HANDOFF.md](HANDOFF.md) for the list of what needs people, hardware or a lab.**
