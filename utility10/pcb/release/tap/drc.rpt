@@ -1,0 +1,16 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/tap/tap_litre_meter.kicad_pcb **
+** Created on 2026-10-31 20:31:34 **
+
+** Found 2 DRC violations **
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(47.0000 mm, 17.8750 mm): Reference 'R10'
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; Severity: warning
+    @(50.0000 mm, 17.8750 mm): Reference 'R11'
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (60×30×18 mm, 2.4 mm wal
 
 End-of-line test: Magnet near reed: silent; magnet away 65 s: chirp; 185 s: continuous.
 
+## PCB (rev B, engineering release)
+See `../pcb/README.md`; files in `../pcb/release/fridge/`.
+
 ## Prototype budget (Rs 610, limit Rs 3,000)
 | Item | Rs |
 |---|---|

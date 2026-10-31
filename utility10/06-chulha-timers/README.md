@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (100×55×22 mm, 2.4 mm wa
 
 End-of-line test: Set 1:00 on each channel, check four independent rings within ±1 s.
 
+## PCB (rev B, engineering release)
+See `../pcb/README.md`; files in `../pcb/release/chulha/`.
+
 ## Prototype budget (Rs 970, limit Rs 3,000)
 | Item | Rs |
 |---|---|

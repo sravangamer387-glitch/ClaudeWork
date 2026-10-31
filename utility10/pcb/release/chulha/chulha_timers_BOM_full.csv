@@ -1,0 +1,23 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,C14877,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,,,,hand/THT
+J1,BATT 3xAAA,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,,,,hand/THT
+SW1,Power,Button_Switch_SMD:SW_SPDT_PCM12,,,,hand/THT
+Q2,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
+C4,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,memory,SMT (JLC)
+BZ1,Buzzer,Buzzer_Beeper:Buzzer_12x9.5RM7.6,,,,hand/THT
+Q1,MMBT3904,Package_TO_SOT_SMD:SOT-23,MMBT3904,C20526,verified,SMT (JLC)
+D2,1N4148WS,Diode_SMD:D_SOD-323,1N4148WS,C2128,verified,SMT (JLC)
+R6,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+SW2,CH1,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
+SW3,CH2,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
+SW4,CH3,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
+SW5,CH4,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
+J4,TM1637 display,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,,,,hand/THT
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT

@@ -1,0 +1,22 @@
+{
+ "body_watertight": true,
+ "fluid_volume_ml": 19.97,
+ "overall_length_mm": 99.0,
+ "overall_height_mm": 64.0,
+ "min_wall_mm": 4.0,
+ "hoop_stress_mpa_at_10bar": 2.5,
+ "dp_kpa": {
+  "1": 0.03,
+  "5": 0.71,
+  "10": 2.82,
+  "20": 11.29,
+  "30": 25.41
+ },
+ "velocity_m_s": {
+  "1": 0.15,
+  "5": 0.74,
+  "10": 1.47,
+  "20": 2.95,
+  "30": 4.42
+ }
+}

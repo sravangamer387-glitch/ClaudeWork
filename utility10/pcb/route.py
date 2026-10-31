@@ -69,9 +69,13 @@ class Router:
         k = self.cls(w); nx_ = self.nx; ny_ = self.ny
         own = [self.owner[k][l].ravel().tolist() for l in (0, 1)]
         vok = self.via_map(k, net).ravel().tolist() if allow_via or goal_via else None
-        vias_xy = list(self.vias)
-        def far(ix, iy, d):
-            x, y = ix * G, iy * G; return all(math.hypot(x - vx, y - vy) >= d for _, vx, vy in vias_xy)
+        nv = {}
+        for d_ in (0.8, 1.0):
+            a_ = np.zeros((self.ny, self.nx), dtype=bool); r_ = int(d_ / G)
+            for _, vx, vy in self.vias:
+                cx, cy = self.cell(vx, vy); a_[max(cy - r_, 0):cy + r_ + 1, max(cx - r_, 0):cx + r_ + 1] = True
+            nv[d_] = a_.ravel().tolist()
+        def far(ix, iy, d): return not nv[d][iy * nx_ + ix]
         open_, best, prev, pdir = [], {}, {}, {}
         for s in starts: heapq.heappush(open_, (0.0, 0.0, s)); best[s] = 0.0
         dirs = [(1, 0, 1.0), (-1, 0, 1.0), (0, 1, 1.0), (0, -1, 1.0), (1, 1, 1.414), (1, -1, 1.414), (-1, 1, 1.414), (-1, -1, 1.414)]

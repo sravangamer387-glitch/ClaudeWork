@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×50×24 mm, 2.4 mm wal
 
 End-of-line test: Remove 5 V for 10 s: one cut of 10 s ±1 logged; restore.
 
+## PCB (rev B, engineering release)
+See `../pcb/README.md`; files in `../pcb/release/bijlilog/`.
+
 ## Prototype budget (Rs 1220, limit Rs 3,000)
 | Item | Rs |
 |---|---|

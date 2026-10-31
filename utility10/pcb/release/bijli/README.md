@@ -61,15 +61,15 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 | D1 | Green | LED_0603_1608Metric |  |  |  |
 | R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
 | R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
-| R3 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | memory |
-| R4 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | memory |
-| R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | memory |
+| R3 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
+| R4 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
+| R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R6 | 100 | R_0603_1608Metric |  |  |  |
 | C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | memory |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | memory |
-| C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | memory |
-| C5 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | memory |
+| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C5 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -79,7 +79,7 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 ## Assembly notes
 - Reflow (JLCPCB SMT): all SMD parts with an LCSC number. Hand-solder: JST connectors, pin headers, buzzer, switches, test points as listed in the BOM. Fiducials and mounting holes are in the Gerbers.
 - Polarity: LED cathode toward GND (silk marks), electrolytic none, diode D2 cathode to +V, Q2 orientation as footprint (SOT-23 pin 1 = gate).
-- Programming: ISP header J2 (pin 1 = MISO, square pad). Flash `../../../firmware/release/*.hex` built for 8 MHz (`make hex` with F_CPU=8000000).
+- Programming: ISP header J2 (pin 1 = MISO, square pad). Flash the matching image from `utility10/firmware/release/`: Seeti Counter `4MHz/seeti_prod.hex` (production firmware: timer-triggered 16 kS/s ADC, scan mode to find the real whistle frequency, battery check), Rain Alert `8MHz/rain_alert.hex`, Bijli Meter Reader `8MHz/bijli_meter.hex` (demo-grade firmware, to be hardened).
 
 ## Bring-up and test
 1. Plug a 5 V charger: VBUS (TP at J1/F1) = 5.0 V; +5V (TP1) = 4.9-5.0 V.

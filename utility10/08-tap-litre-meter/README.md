@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×50×24 mm, 2.4 mm wal
 
 End-of-line test: Run 10 L from a calibrated bucket: reading 10 L ±0.2 L (adjust pulses/L).
 
+## PCB (rev B, engineering release)
+See `../pcb/README.md`; files in `../pcb/release/tap/`.
+
 ## Prototype budget (Rs 1200, limit Rs 3,000)
 | Item | Rs |
 |---|---|

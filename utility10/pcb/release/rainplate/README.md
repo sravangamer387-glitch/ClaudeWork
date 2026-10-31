@@ -40,7 +40,7 @@ DRC breakdown: silk_over_copper:warning x1, silk_overlap:warning x1
 ## Assembly notes
 - Reflow (JLCPCB SMT): all SMD parts with an LCSC number. Hand-solder: JST connectors, pin headers, buzzer, switches, test points as listed in the BOM. Fiducials and mounting holes are in the Gerbers.
 - Polarity: LED cathode toward GND (silk marks), electrolytic none, diode D2 cathode to +V, Q2 orientation as footprint (SOT-23 pin 1 = gate).
-- Programming: ISP header J2 (pin 1 = MISO, square pad). Flash `../../../firmware/release/*.hex` built for 8 MHz (`make hex` with F_CPU=8000000).
+- Programming: ISP header J2 (pin 1 = MISO, square pad). Flash the matching image from `utility10/firmware/release/`: Seeti Counter `4MHz/seeti_prod.hex` (production firmware: timer-triggered 16 kS/s ADC, scan mode to find the real whistle frequency, battery check), Rain Alert `8MHz/rain_alert.hex`, Bijli Meter Reader `8MHz/bijli_meter.hex` (demo-grade firmware, to be hardened).
 
 ## Bring-up and test
 1. Dry plate: > 10 MOhm between DRV and SENSE; wet plate: < 150 kOhm.

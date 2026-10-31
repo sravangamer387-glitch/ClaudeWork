@@ -1,8 +1,8 @@
-# PCB designs for the Tier A electronic tools - rev B (engineering release)
+# PCB designs - rev B (engineering release)
 
-Boards: **Seeti Counter** (64 x 44 mm), **Bijli Meter Reader** (52 x 38 mm, USB-C), **Rain Alert Bell** indoor unit (60 x 42 mm) and its **rain plate** (38 x 60 mm). The two laser-cut Tier A tools (Masala Rack, Laptop Stand) have no PCB.
+Utility tools: **Seeti Counter**, **Bijli Meter Reader** (USB-C), **Rain Alert Bell** (+ rain plate), **Fridge Door Guard**, **Chulha Timers**, **Tap Litre Meter**, **Bijli Log** (USB-C + backup battery), **Gas Taraju** (HX711 load-cell scale). Other products: **Desi Arcade** (toy, 3 games) and **Kheti-Mitra** (12 V irrigation controller). The Jal-Netra ultrasonic meter board is in `../../jal-netra/hardware/`. The two laser-cut tools (Masala Rack, Laptop Stand) have no PCB. Not done: Prayog STEM kit board (12 plug-in modules), Beat Runner (16-LED strip), and the parked mains products (Jal-Rakshak) and stopped gas alarm.
 
-**Status: software-verified engineering release. Nothing here has been built, reviewed by a second engineer, or sent to a fab. Before ordering, an electronics engineer must complete `REVIEW_CHECKLIST.md`.** Order 5 prototypes first.
+**Status: software-verified engineering release. Nothing here has been built, reviewed by a second engineer, or sent to a fab. Before ordering, an electronics engineer must complete `REVIEW_CHECKLIST.md`.** Order 5 prototypes first. Boards added later (Tier B tools, Desi Arcade, Kheti-Mitra) reuse the verified blocks of the first four and had less iteration.
 
 ## What rev B adds over the first draft
 Reverse-battery protection (P-MOSFET), TVS surge protection on the USB-C VBUS line and on the rain-plate cable, PTC fuse, correct USB-C sink resistors (HRO Type-C receptacle, 5.1 k on CC1/CC2), test points, four M2.5 mounting holes and two fiducials per board, rounded corners, ground pours on both layers with stitching vias, power traces 0.4 mm, JLCPCB-format BOM/CPL with LCSC numbers (the ones I could verify are marked), a 3D STEP model, fabrication-notes PDF, assembly drawing PDF, a parametric enclosure shell generated from the finished board with a collision check, SPICE simulations of the analog stages, and a readable schematic with real wires where it was safe to draw them. Two **design errors were found by simulation and fixed**: the microphone amplifier's feedback return into a weakly bypassed bias node had destroyed the low-frequency gain (fixed with a 10 uF bypass), and its first gain/bandwidth claim (101x, 9 kHz) did not match the final component values (34x, 26 kHz, so an anti-alias filter was added).
@@ -14,6 +14,11 @@ Reverse-battery protection (P-MOSFET), TVS surge protection on the USB-C VBUS li
 | bijli_meter_reader | 23 / 17 | 0 | 0 (1 warnings) | 0 | yes | 0 |
 | rain_alert_main | 27 / 19 | 0 | 0 (0 warnings) | 0 | yes | 0 |
 | rain_plate | 1 / 2 | 0 | 0 (2 warnings) | 0 | yes | 0 |
+| fridge_door_guard | 24 / 17 | 0 | 0 (1 warnings) | 0 | yes | 0 |
+| chulha_timers | 22 / 18 | 0 | 0 (2 warnings) | 0 | yes | 0 |
+| tap_litre_meter | 28 / 19 | 0 | 0 (2 warnings) | 0 | yes | 0 |
+| bijli_log | 31 / 19 | 0 | 0 (4 warnings) | 0 | yes | 0 |
+| kheti_mitra | 37 / 22 | 0 | 0 (7 warnings) | 0 | yes | 0 |
 
 How it was checked: (1) own ERC on the netlist (unconnected pins, single-pin nets, output conflicts, unpowered supply nets, symbol-to-footprint pin match; KiCad 7's command line has no ERC); (2) KiCad 7 DRC through its Python API (clearance, hole spacing, courtyards, mask bridges, silkscreen); (3) schematic export compared pin-group by pin-group with the PCB netlist (this caught an accidental short that my own auto-wiring had drawn between CC2 and VBUS); (4) independent Gerber parse with a second library (gerbonara): layers read, outline size equals the design; (5) SPICE (ngspice) for the Seeti amplifier and rain-plate sense; arithmetic model for the Bijli sensor head. The rain plate's mask-bridge errors are waived on purpose (one mask opening spans both gold electrodes).
 

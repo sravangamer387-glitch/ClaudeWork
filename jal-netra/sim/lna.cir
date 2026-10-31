@@ -1,0 +1,35 @@
+* Jal-Netra receive chain (2 x OPA356-class, A0=100000, GBW 200 MHz)
+VMID vmid 0 DC 1.65
+Vin in 0 DC 0 AC 1
+Rs in a 270
+Cc1 a b 10n
+R12 b vmid 100k
+E1 x1 0 value = {100000.0*(V(b)-V(fb1))}
+Rp1 x1 o1 1000.0
+Cp1 o1 0 7.9577e-08
+Rg1 fb1 g1 240
+Cg1 g1 vmid 1u
+Rf1 o1 fb1 2.2k
+Cc2 o1 c 10n
+R16 c vmid 100k
+E2 x2 0 value = {100000.0*(V(c)-V(fb2))}
+Rp2 x2 o2 1000.0
+Cp2 o2 0 7.9577e-08
+Rg2 fb2 g2 100
+Cg2 g2 vmid 1u
+Rf2 o2 fb2 1k
+.nodeset v(o1)=1.65 v(o2)=1.65 v(fb1)=1.65 v(fb2)=1.65 v(x1)=1.65 v(x2)=1.65 v(g1)=1.65 v(g2)=1.65 v(b)=1.65 v(c)=1.65
+.ac dec 40 1k 100meg
+.control
+run
+meas ac g1_1m find vdb(o1) at=1meg
+meas ac g2_1m find vdb(o2) at=1meg
+meas ac g1_pk max vdb(o1)
+meas ac g2_pk max vdb(o2)
+let tmp = vdb(o2)
+meas ac f_hi2 when vdb(o2)=37 fall=1
+meas ac f_lo2 when vdb(o2)=37 rise=1
+meas ac f_hi1 when vdb(o1)=17 fall=1
+print g1_1m g2_1m f_lo2 f_hi2 f_hi1
+.endc
+.end

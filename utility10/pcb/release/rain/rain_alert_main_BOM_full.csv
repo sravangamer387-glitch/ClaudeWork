@@ -12,15 +12,15 @@ SW2,Mute,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
 D1,Red,LED_SMD:LED_0603_1608Metric,,,,hand/THT
 D3,TVS 5V bidir,Diode_SMD:D_SOD-323,,,,hand/THT
 D4,TVS 5V bidir,Diode_SMD:D_SOD-323,,,,hand/THT
-R1,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,memory,SMT (JLC)
-R2,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,memory,SMT (JLC)
-R3,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,memory,SMT (JLC)
-R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,memory,SMT (JLC)
-R6,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,memory,SMT (JLC)
-R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,memory,SMT (JLC)
-C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,memory,SMT (JLC)
-C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,memory,SMT (JLC)
-C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,memory,SMT (JLC)
+R1,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R2,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R3,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R6,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
 C4,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,memory,SMT (JLC)
 C5,2.2n,Capacitor_SMD:C_0603_1608Metric,,,,hand/THT
 TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT

@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (90×60×26 mm, 2.4 mm wal
 
 End-of-line test: Zero the plate, place a 20 kg reference weight: reading within ±0.1 kg; remove: returns to 0 ±0.05 kg; store counts/kg in EEPROM.
 
+## PCB (rev B, engineering release)
+See `../pcb/README.md`; files in `../pcb/release/gastaraju/`.
+
 ## Prototype budget (Rs 1730, limit Rs 3,000)
 | Item | Rs |
 |---|---|

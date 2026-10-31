@@ -46,5 +46,65 @@
   "failures": 0,
   "parts": 1,
   "nets": 2
+ },
+ {
+  "board": "fridge_door_guard",
+  "mod": "fridge",
+  "drc_errors": 0,
+  "drc_warnings": 1,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 24,
+  "nets": 17
+ },
+ {
+  "board": "chulha_timers",
+  "mod": "chulha",
+  "drc_errors": 0,
+  "drc_warnings": 2,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 22,
+  "nets": 18
+ },
+ {
+  "board": "tap_litre_meter",
+  "mod": "tap",
+  "drc_errors": 0,
+  "drc_warnings": 2,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 28,
+  "nets": 19
+ },
+ {
+  "board": "bijli_log",
+  "mod": "bijlilog",
+  "drc_errors": 0,
+  "drc_warnings": 4,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 31,
+  "nets": 19
+ },
+ {
+  "board": "kheti_mitra",
+  "mod": "kheti",
+  "drc_errors": 0,
+  "drc_warnings": 7,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 37,
+  "nets": 22
  }
 ]

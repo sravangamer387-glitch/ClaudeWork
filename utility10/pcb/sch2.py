@@ -55,6 +55,11 @@ def build(name, parts, S, title, rev, date, out_path):
         return min(max(ax0, ax1), max(bx0, bx1)) - max(min(ax0, ax1), min(bx0, bx1)) > -tol and min(max(ay0, ay1), max(by0, by1)) - max(min(ay0, ay1), min(by0, by1)) > -tol
     stub = {k: (v[0], (v[0][0] + v[1][0] * 3.81, v[0][1] + v[1][1] * 3.81)) for k, v in pinpos.items() if v[2]}
     accepted = []; S["_wires_auto"] = []
+    seen_ = set()
+    for (ref, num), (pt, d, net) in pinpos.items():                       # keep auto-wires away from the PWR_FLAG symbols that are placed later
+        if net in POWER_SYM and net not in seen_ and net not in S.get("no_flag", ()):
+            seen_.add(net); fx, fy = pt[0] + d[0] * 5.08, pt[1] + d[1] * 5.08 + (3.81 if d[1] == 0 else 0)
+            accepted += [((fx - 3.0, fy - 4.0), (fx + 3.0, fy - 4.0)), ((fx - 3.0, fy + 5.0), (fx + 3.0, fy + 5.0)), ((fx, fy - 4.0), (fx, fy + 5.0)), ((fx - 3.0, fy - 4.0), (fx - 3.0, fy + 5.0)), ((fx + 3.0, fy - 4.0), (fx + 3.0, fy + 5.0))]
     for net, pl in auto.items():
         if len(pl) != 2 or not S.get("auto_wire", True) or pl[0][0] == pl[1][0]: continue
         (a, da, _), (b, db, _) = pinpos[pl[0]], pinpos[pl[1]]

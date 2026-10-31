@@ -1,0 +1,8 @@
+Designed BOM Rs 2970
+  price Rs 4499: as designed: contribution Rs -619 (-16%)
+  price Rs 4499: BOM +30 %: contribution Rs -1,658 (-43%)
+  price Rs 5499: as designed: contribution Rs 47 (1%)
+  price Rs 5499: BOM +30 %: contribution Rs -992 (-21%)
+  price Rs 6999: as designed: contribution Rs 1,045 (18%)
+  price Rs 6999: BOM +30 %: contribution Rs 6 (0%)
+Not included: certification, fixed development (about Rs 8-15 lakh incl. rig, tooling, tests), warranty, returns from mis-installation.

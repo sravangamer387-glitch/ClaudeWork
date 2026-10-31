@@ -2,7 +2,7 @@
 import os, sys, shutil, subprocess, zipfile, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import outputs, docgen
-BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate"]
+BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti"]
 summary = []
 for mod in BOARDS:
     if mod != "rainplate": subprocess.run([sys.executable, os.path.join(HERE, "prune.py"), mod], capture_output=True, text=True)
@@ -26,4 +26,11 @@ for mod in BOARDS:
     for f in ("fp-lib-table", "sym-lib-table"): shutil.copy(os.path.join(out, f), rel)
     subprocess.run(["/tmp/venv/bin/python", "-c", f"import cairosvg; cairosvg.svg2png(url={os.path.join(out, name + '_top.svg')!r}, write_to={os.path.join(rel, name + '_top.png')!r}, output_width=1600); cairosvg.svg2png(url={os.path.join(out, name + '_bottom.svg')!r}, write_to={os.path.join(rel, name + '_bottom.png')!r}, output_width=1600)"])
     summary.append(dict(board=name, mod=mod, drc_errors=rep["drc_errors"], drc_warnings=rep["drc_warnings"], unconnected=rep["unconnected"], netlist=rep["netlist_match"], erc_errors=len(rep["erc_errors"]), failures=len(rep["route_failures"]), parts=rep["parts"], nets=rep["nets"]))
-json.dump(summary, open(os.path.join(HERE, "release", "summary.json"), "w"), indent=1); print(json.dumps(summary, indent=1))
+old = {}
+sp = os.path.join(HERE, "release", "summary.json")
+if os.path.exists(sp):
+    for x in json.load(open(sp)): old[x["mod"]] = x
+for x in summary: old[x["mod"]] = x
+order = ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra"]
+summary = [old[m] for m in order if m in old]
+json.dump(summary, open(sp, "w"), indent=1); print(json.dumps(summary, indent=1))
