@@ -1,6 +1,6 @@
 # Ten utility tools (2026-10-31)
 
-Smart, simple tools for Indian homes. Eight are low-voltage electronics (one C library of tested engines, `firmware/`), two are laser-cut (`sims/`, `out/`). Prototype ≤ Rs 3,000 each. **Nothing is built or field-tested; custom PCBs are not laid out.**
+Smart, simple tools for Indian homes. Eight are low-voltage electronics (one C library of tested engines, `firmware/`), two are laser-cut (`sims/`, `out/`). Prototype ≤ Rs 3,000 each. **Nothing is built or field-tested.** First-draft PCBs (KiCad schematic, layout, Gerbers, BOM) exist for the three electronic Tier A tools in `pcb/` — software-checked only, engineer review required.
 
 | # | Tool | Tier | Prototype Rs | BOM Rs | Price Rs | Contribution Rs | If BOM +30 % |
 |---|---|---|---|---|---|---|---|

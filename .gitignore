@@ -4,3 +4,6 @@ venv/
 prototypes/firmware/build/
 products/*/firmware/build/
 utility10/firmware/build/
+utility10/pcb/out/
+utility10/pcb/__pycache__/
+utility10/pcb/boards/__pycache__/

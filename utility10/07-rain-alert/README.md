@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×45×24 mm, 2.4 mm wal
 
 End-of-line test: Wet the plate with a drop of water for 4 s: alert; dry: clears after 2 min.
 
+## PCB (rev A, first draft)
+See `../pcb/README.md`; files in `../pcb/release/rain/`.
+
 ## Prototype budget (Rs 780, limit Rs 3,000)
 | Item | Rs |
 |---|---|

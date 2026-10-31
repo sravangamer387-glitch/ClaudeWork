@@ -18,6 +18,9 @@ Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×45×22 mm, 2.4 mm wal
 
 End-of-line test: Play a 2.8 kHz tone from a phone speaker at 10 cm for 1 s: counter must increment; play white noise: must not.
 
+## PCB (rev A, first draft)
+See `../pcb/README.md`; files in `../pcb/release/seeti/`.
+
 ## Prototype budget (Rs 1080, limit Rs 3,000)
 | Item | Rs |
 |---|---|

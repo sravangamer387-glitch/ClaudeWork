@@ -5,7 +5,7 @@
  * 4 Bijli Meter Reader: photodiode/LDR + comparator or divider on A0 pointing at the meter's pulse LED, LED D13; set IMP_PER_KWH from the meter label
  * 5 Bijli Log      : mains-present sense D2 (5 V USB adapter through a divider, HIGH = mains ok), prints each cut
  * 6 Chulha Timers  : buttons D2..D5 add 1 minute to channels 1..4 (hold 1 s = acknowledge/clear), buzzer D9, serial display
- * 7 Rain Alert     : rain plate on A0 (higher = wetter, 10k pull-down), mute button D2, buzzer D9
+ * 7 Rain Alert     : plate drive D5 (pulsed), plate sense A0 (higher = wetter, 100k pull-down), mute button D2, buzzer D9
  * 8 Tap Litre Meter: YF-S201-type hall flow sensor on D3 (interrupt), K = pulses per litre (set after a bucket test) */
 #include <Arduino.h>
 #include "utilcore.h"
@@ -44,7 +44,7 @@ static bm_t M;
 void setup() { Serial.begin(115200); pinMode(13, OUTPUT); bm_init(&M, 1600); /* TODO IMP_PER_KWH from the meter label */ }
 void loop() {
     static int lo = 1023, hi = 0; int a = analogRead(A0); if (a < lo) lo = a; if (a > hi) hi = a; static uint32_t decay = 0; if (millis() > decay) { decay = millis() + 20000; lo++; hi--; }
-    bool on = hi - lo > 40 && a > (lo + hi) / 2; digitalWrite(13, on); bm_sample(&M, millis(), on);
+    bool on = hi - lo > 40 && a < (lo + hi) / 2;                       /* board rev A: 10k pull-up + phototransistor to GND, so SIG goes LOW when the meter LED is lit */ digitalWrite(13, on); bm_sample(&M, millis(), on);
     static uint32_t nx = 0; if (millis() > nx) { nx = millis() + 10000; Serial.print(F("kWh ")); Serial.print(bm_kwh(&M), 3); Serial.print(F("  W ")); Serial.print(bm_watts(&M, millis()), 0); Serial.print(F("  bill~Rs ")); Serial.println(bm_bill(&M, bm_kwh(&M)), 1); }
     delay(2);
 }
@@ -64,7 +64,8 @@ void loop() {
 #elif TOOL == 7
 static rain_t R;
 void setup() { pinMode(2, INPUT_PULLUP); pinMode(9, OUTPUT); rain_init(&R); R.wet_thr = 400; R.dry_thr = 250; /* TODO tune on your plate */ }
-void loop() { rain_step(&R, millis(), analogRead(A0), digitalRead(2) == LOW); if (R.alert && (millis() / 400) % 2) tone(9, 1800); else noTone(9); delay(20); }
+void loop() { pinMode(5, OUTPUT); digitalWrite(5, HIGH); delay(2); uint16_t v = analogRead(A0); digitalWrite(5, LOW);          /* board rev A drives the plate only for ~2 ms per reading (limits corrosion) */
+    rain_step(&R, millis(), v, digitalRead(2) == LOW); if (R.alert && (millis() / 400) % 2) tone(9, 1800); else noTone(9); delay(20); }
 #else
 static tap_t T; static volatile uint32_t pulses;
 static void isr() { pulses++; }

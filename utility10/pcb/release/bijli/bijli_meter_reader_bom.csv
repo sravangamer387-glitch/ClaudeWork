@@ -1,0 +1,17 @@
+Ref,Value,Footprint,Suggested part (VERIFY availability/price)
+U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,Microchip ATmega328P-AU (TQFP-32)
+J1,Micro-USB 5V,Connector_USB:USB_Micro-B_Amphenol_10118194_Horizontal,Micro-USB B SMD receptacle (Amphenol 10118194-class)
+F1,500mA PTC,Fuse:Fuse_0805_2012Metric,0805 PTC 0.5 A 6 V
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ISP
+J3,Sensor head,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,Sensor head
+J4,TM1637 display,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,TM1637 display
+SW1,Reset bill,Button_Switch_SMD:SW_SPST_B3U-1000P,SMD tact switch (B3U-1000P-class)
+D1,Green,LED_SMD:LED_0603_1608Metric,Green
+R3,10k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R4,10k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+C1,10u,Capacitor_SMD:C_0805_2012Metric,0805 X5R 10 V
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C4,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C5,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V

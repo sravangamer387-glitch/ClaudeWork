@@ -4,7 +4,7 @@
 | Tool type | Files ready | Files NOT ready |
 |---|---|---|
 | Laser (Masala Rack, Laptop Stand) | `out/*.svg`, `out/*.dxf` (CUT + ENGRAVE layers, mm), results of fit/strength checks | assembly drawings, jigs, packaging dieline |
-| Electronics (8 tools) | tested C engines, Nano demo `.hex`, enclosure STL prototype shells, BOM with estimated costs, pin maps, end-of-line tests | **PCB schematic/layout/Gerbers**, production enclosure tooling, firmware for the final MCU, certification |
+| Electronics (8 tools) | tested C engines, Nano demo `.hex`, enclosure STL prototype shells, BOM with estimated costs, pin maps, end-of-line tests | **engineer-reviewed** PCBs (first-draft KiCad files and Gerbers exist for Seeti Counter, Bijli Meter Reader and Rain Alert in `pcb/release/`; the other five electronic tools have none), production enclosure tooling, firmware for the final MCU, certification |
 
 ## RFQ template (send to 3 vendors per process)
 - **Laser shop:** material (9 mm / 6 mm MDF, BWP ply, bamboo), sheet size 600×450 / 600×600, files DXF, kerf and tolerance ±0.2 mm, quantity breaks 100/500/1,000, deburr + sand, packing, lead time, sample price. Ask for a kerf test coupon first (slot width 8.95 mm for a 9 mm board; adjust).

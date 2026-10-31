@@ -1,0 +1,28 @@
+Ref,Value,Footprint,Suggested part (VERIFY availability/price)
+U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,Microchip ATmega328P-AU (TQFP-32)
+U2,MCP6001,Package_TO_SOT_SMD:SOT-23-5,Microchip MCP6001T-I/OT
+J1,2xAAA,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,2xAAA
+SW1,Power,Button_Switch_SMD:SW_SPDT_PCM12,slide switch SPDT (C&K PCM12-class)
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ISP
+J3,Electret mic,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Electret mic
+BZ1,Buzzer 3V,Buzzer_Beeper:Buzzer_12x9.5RM7.6,Buzzer 3V
+Q1,MMBT3904,Package_TO_SOT_SMD:SOT-23,any SOT-23 NPN (MMBT3904)
+D2,1N4148WS,Diode_SMD:D_SOD-323,1N4148WS (SOD-323)
+SW2,Target,Button_Switch_SMD:SW_SPST_B3U-1000P,SMD tact switch (B3U-1000P-class)
+D1,Green,LED_SMD:LED_0603_1608Metric,Green
+R1,2.2k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R2,100k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R3,100k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R4,100k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R6,1k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R8,100k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+R9,1k,Resistor_SMD:R_0603_1608Metric,0603 1 % resistor
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
+C4,10u,Capacitor_SMD:C_0805_2012Metric,0805 X5R 10 V
+C5,1u,Capacitor_SMD:C_0603_1608Metric,0603 X7R 10 V
+C6,10u,Capacitor_SMD:C_0805_2012Metric,0805 X5R 10 V
+C7,100n,Capacitor_SMD:C_0603_1608Metric,0603 X7R 16 V
