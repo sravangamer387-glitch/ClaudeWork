@@ -1,0 +1,11 @@
+id,name,kind,prototype_rs,designed_bom_rs,price_rs,contribution_rs,margin,contribution_bom_plus30,margin_bom_plus30
+01,Reflex Raja,electronic,1090,310,999,263,0.311,155,0.183
+02,Taal Memory,electronic,1070,310,899,189,0.248,80,0.106
+03,Aloo Bomb,electronic,940,227,699,137,0.23,57,0.096
+04,Beat Runner,electronic,1140,326,1299,365,0.331,251,0.228
+05,Rangoli Spiro Gears,laser,700,193,649,199,0.322,131,0.212
+06,Paper Rocket Air Launcher,physics,1100,310,799,188,0.247,80,0.105
+07,Tilt Maze Labyrinth,laser,950,260,799,246,0.324,155,0.204
+08,Rubber-band Racer,laser,600,119,449,118,0.275,76,0.177
+09,Marble Cricket,laser,1110,262,999,412,0.433,320,0.336
+10,Katha Cubes,print,400,109,399,87,0.23,49,0.129

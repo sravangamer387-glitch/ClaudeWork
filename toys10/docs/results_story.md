@@ -1,0 +1,1 @@
+36 distinct English words on 6 dice (Who, Where, Wants, Problem, Helper, Ending). Distinct stories: 46,656. Hindi and Telugu were written by me and are UNREVIEWED; the net SVG is a layout sheet (use a printer/illustrator for final 25 mm cubes with icons).
