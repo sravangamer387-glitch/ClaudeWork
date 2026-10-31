@@ -15,5 +15,6 @@ hex:
 	 avr-g++ $(CF) -fno-exceptions -DTOY=$$n -Ilib -c src/main_toys.cpp -o build/main$$n.o && \
 	 avr-gcc -mmcu=atmega328p -Wl,--gc-sections build/main$$n.o build/toycore.o build/core.a -lm -o build/$$name.elf && \
 	 avr-objcopy -O ihex -R .eeprom build/$$name.elf release/$$name.hex && echo "$$name: $$(avr-size -C --mcu=atmega328p build/$$name.elf | grep Program)"; done
+	@avr-g++ $(CF) -fno-exceptions -Ilib -c src/main_arcade.cpp -o build/arcade.o && avr-gcc -mmcu=atmega328p -Wl,--gc-sections build/arcade.o build/toycore.o build/core.a -lm -o build/desi_arcade.elf && avr-objcopy -O ihex -R .eeprom build/desi_arcade.elf release/desi_arcade.hex && echo "desi_arcade: $$(avr-size -C --mcu=atmega328p build/desi_arcade.elf | grep Program)"
 clean:
 	rm -rf build

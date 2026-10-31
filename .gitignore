@@ -3,3 +3,4 @@ __pycache__/
 venv/
 prototypes/firmware/build/
 products/*/firmware/build/
+utility10/firmware/build/

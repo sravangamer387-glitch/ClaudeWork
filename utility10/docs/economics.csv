@@ -1,0 +1,11 @@
+id,name,tier,prototype_rs,designed_bom_rs,price_rs,contribution_rs,margin,contribution_bom_plus30,margin_bom_plus30
+01,Seeti Counter,A,1080,305,999,269,0.318,163,0.192
+02,Gas Taraju (LPG cylinder scale),B,1730,757,2499,661,0.312,396,0.187
+03,Fridge Door Guard,B,610,162,599,138,0.271,81,0.16
+04,Bijli Meter Reader,A,900,325,1299,366,0.332,252,0.229
+05,Bijli Log (power-cut logger),B,1220,475,1499,324,0.255,158,0.124
+06,Chulha Timers (4 kitchen timers),B,970,362,1199,256,0.252,129,0.127
+07,Rain Alert Bell (terrace/clothesline),A,780,240,899,271,0.355,187,0.245
+08,Tap Litre Meter,B,1200,380,1199,235,0.231,102,0.1
+09,Masala Rack (3-step spice rack),A,850,380,1299,422,0.341,289,0.233
+10,Fold-flat Laptop Stand,A,700,270,799,235,0.308,140,0.184
