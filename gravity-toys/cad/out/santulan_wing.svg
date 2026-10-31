@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="175.0mm" height="22.0mm" viewBox="0 0 175.0 22.0">
+<rect x="0.00" y="0.00" width="175.00" height="22.00" rx="9" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+<circle cx="161.00" cy="11.00" r="6.00" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+<circle cx="10.00" cy="7.00" r="1.60" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+<circle cx="10.00" cy="15.00" r="1.60" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+<text x="30" y="12.5" font-size="3.5" fill="#0000ff">wing x2, 3 mm ply; weight pocket O12 at tip</text>
+</svg>

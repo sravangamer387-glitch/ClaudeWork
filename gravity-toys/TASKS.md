@@ -21,7 +21,7 @@ Mirrors GitHub issues #1–#7 in sravangamer387-glitch/ClaudeWork. Vendor names 
 
 ## #3 Toy 1: Timber Tower Marble Run – wood prototype
 - [ ] Laser MDF prototype tower (plates 100x100x10, posts 20x20)
-- [ ] CNC groove 28x12 mm; test slopes 8–12° with Ø25 mm ball
+- [ ] CNC groove 28x12 mm; test slopes 5–8° with Ø25 mm ball (simulation: 6° gives a ~4 s run)
 - [ ] Rubber-wood prototype x3; finish and humidity swell test
 - [ ] 20 challenge cards
 - [ ] Pilot 200 sets

@@ -27,9 +27,10 @@ partnerships; later add a Bluetooth/IR timing gate (electric ⇒ IS 15644 scope)
 | Timing | Two 3D-printed/laser gates with paper flag, kids use phone stopwatch; optional IR gate |
 | Mission cards | 12 (e.g. "Does mass matter?", "Find θ for 1 s run") |
 
-Physics check: sliding ideal a = g·sinθ. At 10° a ≈ 1.7 m/s² → t = √(2·1.2/1.7) ≈ 1.2 s for 1.2 m;
-at 20° ≈ 0.85 s. Rolling cars lose some – exactly what the friction experiments reveal. Keep 10° default
-for visible timing, 25° max for "launch" fun.
+Physics check (simulation with assumed friction: hard wood 0.02, rubber 0.04, felt 0.08): over 1.2 m the run
+takes 1.26 / 1.35 / 1.61 s at 10° and 0.78 / 0.80 / 0.84 s at 25°. **Felt wheels need ≥ 10°** (at 5° a felt car
+takes about 5.7 s). Weights should not change the time, which is the lesson. Keep 10° default for visible
+timing, 25° max for "launch" fun.
 
 Steepness safety: ramp stand has 4 rubber feet and a lock-pin; cars stopped by cork block, not by kids' fingers.
 

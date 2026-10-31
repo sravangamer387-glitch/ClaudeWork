@@ -1,7 +1,7 @@
 #include "fake_hal.h"
 
 /* ---------- core: buttons + protocol ---------- */
-static void sink_count(void *ctx, btn_evt_t e) { (void)e; (*(int *)ctx)++; }
+static void sink_count(void *ctx, btn_evt_t e) { if (e.kind == BTN_EVT_PRESS) (*(int *)ctx)++; }
 
 static void test_buttons(void) {
     puts("buttons");
@@ -19,6 +19,13 @@ static void test_buttons(void) {
     for (int i = 0; i < 120; i++) { f_now += 10; btn_update(&b); }
     CHECK(btn_pop(&b, &e) && e.idx == 0 && e.kind == BTN_EVT_PRESS);
     CHECK(btn_pop(&b, &e) && e.idx == 0 && e.kind == BTN_EVT_LONG);
+    CHECK(!btn_pop(&b, &e));
+    /* a tap also yields one RELEASE after the PRESS */
+    fake_reset(); btn_init(&b, &FAKE, 1);
+    f_btn[0] = true; for (int i = 0; i < 4; i++) { f_now += 10; btn_update(&b); }
+    f_btn[0] = false; for (int i = 0; i < 4; i++) { f_now += 10; btn_update(&b); }
+    CHECK(btn_pop(&b, &e) && e.kind == BTN_EVT_PRESS);
+    CHECK(btn_pop(&b, &e) && e.kind == BTN_EVT_RELEASE);
     CHECK(!btn_pop(&b, &e));
     /* millis wrap-around */
     fake_reset(); btn_init(&b, &FAKE, 1); f_now = 0xFFFFFFF0u;

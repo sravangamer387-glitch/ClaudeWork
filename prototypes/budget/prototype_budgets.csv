@@ -1,0 +1,91 @@
+Code,Prototype,Item,Rs
+G1,Timber Tower Marble Run (MDF laser-cut prototype),MDF 6 mm sheet 2x2 ft,250
+G1,Timber Tower Marble Run (MDF laser-cut prototype),Laser cutting job work (~40 min),240
+G1,Timber Tower Marble Run (MDF laser-cut prototype),"Pine strip 20x20, 6 posts",120
+G1,Timber Tower Marble Run (MDF laser-cut prototype),Glass marbles 25 mm x4 (or wood balls),100
+G1,Timber Tower Marble Run (MDF laser-cut prototype),"Sandpaper, wax, PVA glue",160
+G1,Timber Tower Marble Run (MDF laser-cut prototype),Brass tube for chime + string,80
+G1,Timber Tower Marble Run (MDF laser-cut prototype),Cork sheet,50
+G1,Timber Tower Marble Run (MDF laser-cut prototype),TOTAL,1000
+G2,Drop Quest v0 (foam-board + MDF puzzle),MDF 3 mm + foam board,220
+G2,Drop Quest v0 (foam-board + MDF puzzle),Laser cutting,200
+G2,Drop Quest v0 (foam-board + MDF puzzle),Glass marbles 14 mm x6,60
+G2,Drop Quest v0 (foam-board + MDF puzzle),Printed challenge cards (A4 colour x4),150
+G2,Drop Quest v0 (foam-board + MDF puzzle),"Glue, tape",60
+G2,Drop Quest v0 (foam-board + MDF puzzle),TOTAL,690
+G3,"Galton Board (acrylic front, MDF back)",Acrylic 5 mm A3 sheet,450
+G3,"Galton Board (acrylic front, MDF back)",MDF 6 mm,200
+G3,"Galton Board (acrylic front, MDF back)",Laser cutting (acrylic + MDF),300
+G3,"Galton Board (acrylic front, MDF back)",Stainless rod O4 mm cut to 55 pegs (or steel dowel pins),160
+G3,"Galton Board (acrylic front, MDF back)",Steel balls O12 mm x30,200
+G3,"Galton Board (acrylic front, MDF back)","Screws, glue, rubber feet",120
+G3,"Galton Board (acrylic front, MDF back)",TOTAL,1430
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Rubber-wood blanks,150
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Turning by local artisan (3 pieces),450
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Birch ply 3 mm + laser (wings x2),180
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Zinc/brass weights + steel slug (lead-free),200
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Water-based paint + brushes,200
+G4,"Santulan balance set (bird, roly-poly, tumbler)",Lacquer + screws,100
+G4,"Santulan balance set (bird, roly-poly, tumbler)",TOTAL,1280
+G5,Ramp Racers (ramp + 4 cars),Plywood 12 mm (ramp + stand),450
+G5,Ramp Racers (ramp + 4 cars),Cutting job work,200
+G5,Ramp Racers (ramp + 4 cars),Wood blocks for 4 car bodies,150
+G5,Ramp Racers (ramp + 4 cars),Wheels O30 x16 (4 types),320
+G5,Ramp Racers (ramp + 4 cars),Steel axle rod 3 mm + brass bushes,140
+G5,Ramp Racers (ramp + 4 cars),Steel weights 20/40/60 g,150
+G5,Ramp Racers (ramp + 4 cars),"Cork, hinge, lock pin",160
+G5,Ramp Racers (ramp + 4 cars),TOTAL,1570
+E1,Rhymes player (Nano + MP3 module),"Arduino Nano clone (CH340, ATmega328P)",400
+E1,Rhymes player (Nano + MP3 module),Prototype board / breadboard,150
+E1,Rhymes player (Nano + MP3 module),Jumper wires + resistor kit,170
+E1,Rhymes player (Nano + MP3 module),DFPlayer-Mini-style MP3 module,180
+E1,Rhymes player (Nano + MP3 module),microSD 8 GB (preloaded with rhymes),250
+E1,Rhymes player (Nano + MP3 module),Speaker 3 W 4 ohm 40 mm,80
+E1,Rhymes player (Nano + MP3 module),7 tactile buttons + 2 LEDs,80
+E1,Rhymes player (Nano + MP3 module),3xAA holder + 3 cells,250
+E1,Rhymes player (Nano + MP3 module),Enclosure: laser MDF box,350
+E1,Rhymes player (Nano + MP3 module),TOTAL,1910
+E2,Star projector lamp (Nano + MP3 + RGB),"Arduino Nano clone (CH340, ATmega328P)",400
+E2,Star projector lamp (Nano + MP3 + RGB),Prototype board / breadboard,150
+E2,Star projector lamp (Nano + MP3 + RGB),Jumper wires + resistor kit,170
+E2,Star projector lamp (Nano + MP3 + RGB),DFPlayer-style MP3 module,180
+E2,Star projector lamp (Nano + MP3 + RGB),microSD 2 GB with lullabies,150
+E2,Star projector lamp (Nano + MP3 + RGB),Speaker 2 W 36 mm,70
+E2,Star projector lamp (Nano + MP3 + RGB),3 x 1 W LEDs + heatsinks,100
+E2,Star projector lamp (Nano + MP3 + RGB),Logic-level MOSFETs IRLZ44N x4,120
+E2,Star projector lamp (Nano + MP3 + RGB),N20 gear motor (rotor),120
+E2,Star projector lamp (Nano + MP3 + RGB),Star-projection film + lens,100
+E2,Star projector lamp (Nano + MP3 + RGB),3 buttons,30
+E2,Star projector lamp (Nano + MP3 + RGB),3xAAA holder + cells,130
+E2,Star projector lamp (Nano + MP3 + RGB),3D-printed dome 59 g at Rs 5/g [S] + courier,400
+E2,Star projector lamp (Nano + MP3 + RGB),TOTAL,2120
+E3,Cricket game (Nano + TM1637 display),"Arduino Nano clone (CH340, ATmega328P)",400
+E3,Cricket game (Nano + TM1637 display),Prototype board / breadboard,150
+E3,Cricket game (Nano + TM1637 display),Jumper wires + resistor kit,170
+E3,Cricket game (Nano + TM1637 display),TM1637 4-digit display module,120
+E3,Cricket game (Nano + TM1637 display),7 LEDs + resistors,40
+E3,Cricket game (Nano + TM1637 display),Piezo buzzer,30
+E3,Cricket game (Nano + TM1637 display),2 buttons,30
+E3,Cricket game (Nano + TM1637 display),3xAAA holder + cells,130
+E3,Cricket game (Nano + TM1637 display),Enclosure: laser MDF box,300
+E3,Cricket game (Nano + TM1637 display),TOTAL,1370
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),"Arduino Nano clone (CH340, ATmega328P)",400
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),Prototype board / breadboard,150
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),Jumper wires + resistor kit,170
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),Analog microphone module (MAX9814-class),250
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),Logic-level MOSFETs IRLZ44N x3 + gate resistors,110
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),"12 V RGB strip 5050, 2 m",250
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),12 V 2 A adapter,250
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),"Terminal blocks, fuse, heat-shrink",120
+D1,Beat-synced light controller (Nano + mic + 12 V RGB strip),TOTAL,1700
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),"Arduino Nano clone (CH340, ATmega328P)",400
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Prototype board / breadboard,150
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Jumper wires + resistor kit,170
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Rotary pots 10k x6,150
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),"Slide pots 60 mm x2 (crossfader, pitch)",200
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Tactile/arcade buttons x8,160
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Rotary encoder KY-040,60
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Knobs x8,100
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),Laser-cut MDF enclosure,400
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),USB cable,80
+D2,DJ MIDI controller (Nano + pots + buttons + encoder),TOTAL,1870

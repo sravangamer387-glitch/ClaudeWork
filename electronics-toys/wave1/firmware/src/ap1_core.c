@@ -28,6 +28,8 @@ void btn_update(btn_scan_t *b) {
                 b->t_press[i] = now;
                 b->long_sent[i] = false;
                 push(b, i, BTN_EVT_PRESS);
+            } else {
+                push(b, i, BTN_EVT_RELEASE);
             }
         }
         if (b->stable[i] && !b->long_sent[i] && (uint32_t)(now - b->t_press[i]) >= BTN_LONG_MS) {

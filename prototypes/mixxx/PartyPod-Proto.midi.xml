@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mixxx mapping for the PartyPod prototype controller (Arduino Nano -> serial MIDI bridge).
+     NOT TESTED in Mixxx: the file follows the standard Mixxx controller-preset layout as I remember it.
+     If a control does not respond, open Mixxx > Preferences > Controllers and use "Learning Wizard" or adjust below. -->
+<MixxxControllerPreset mixxxVersion="2.3.0" schemaVersion="1">
+    <info>
+        <name>PartyPod Prototype</name>
+        <author>PartyPod project</author>
+        <description>8 pots (CC16-23), 8 buttons (notes 36-43), 1 encoder (CC40, 1 = +1 / 127 = -1)</description>
+    </info>
+    <controller id="PartyPodProto">
+        <scriptfiles/>
+        <controls>
+            <!-- pots -->
+            <control><group>[Channel1]</group><key>volume</key><status>0xB0</status><midino>0x10</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>volume</key><status>0xB0</status><midino>0x11</midino><options><normal/></options></control>
+            <control><group>[Master]</group><key>crossfader</key><status>0xB0</status><midino>0x12</midino><options><normal/></options></control>
+            <control><group>[EqualizerRack1_[Channel1]_Effect1]</group><key>parameter1</key><status>0xB0</status><midino>0x13</midino><options><normal/></options></control>
+            <control><group>[EqualizerRack1_[Channel2]_Effect1]</group><key>parameter1</key><status>0xB0</status><midino>0x14</midino><options><normal/></options></control>
+            <control><group>[QuickEffectRack1_[Channel1]]</group><key>super1</key><status>0xB0</status><midino>0x15</midino><options><normal/></options></control>
+            <control><group>[Channel1]</group><key>rate</key><status>0xB0</status><midino>0x16</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>rate</key><status>0xB0</status><midino>0x17</midino><options><normal/></options></control>
+            <!-- buttons (note on = press) -->
+            <control><group>[Channel1]</group><key>play</key><status>0x90</status><midino>0x24</midino><options><normal/></options></control>
+            <control><group>[Channel1]</group><key>cue_default</key><status>0x90</status><midino>0x25</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>play</key><status>0x90</status><midino>0x26</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>cue_default</key><status>0x90</status><midino>0x27</midino><options><normal/></options></control>
+            <control><group>[Channel1]</group><key>hotcue_1_activate</key><status>0x90</status><midino>0x28</midino><options><normal/></options></control>
+            <control><group>[Channel1]</group><key>hotcue_2_activate</key><status>0x90</status><midino>0x29</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>hotcue_1_activate</key><status>0x90</status><midino>0x2A</midino><options><normal/></options></control>
+            <control><group>[Channel2]</group><key>hotcue_2_activate</key><status>0x90</status><midino>0x2B</midino><options><normal/></options></control>
+            <!-- encoder: browse the library (relative) -->
+            <control><group>[Library]</group><key>MoveVertical</key><status>0xB0</status><midino>0x28</midino><options><selectknob/></options></control>
+        </controls>
+        <outputs/>
+    </controller>
+</MixxxControllerPreset>

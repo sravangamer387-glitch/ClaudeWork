@@ -8,6 +8,7 @@ Outputs:
   galton_back_mdf.svg        6 mm MDF back panel with peg holes
   marble_tower_plate.svg     100x100 plate with 4 post holes and a 28 mm U-groove guide line
   ramp_racer_ramp.svg        1200 x 140 ply ramp with lane guides
+  santulan_wing.svg          swept wing arm, 175 x 22 mm, cut x2
 Colour convention: red = cut, blue = score/engrave.
 """
 import math
@@ -84,6 +85,15 @@ def ramp(length=1200.0, width=140.0, lane=60.0, rail=6.0):
     return svg(length, width, "\n".join(body))
 
 
+def santulan_wing(length=175.0, width=22.0, pocket_d=12.0):
+    """One swept wing arm (cut 2, 3 mm birch ply). The tip pocket takes a 20 g weight screw; the root has two 3 mm holes."""
+    body = [rect(0, 0, length, width, r=9)]
+    body.append(circle(length - 14, width / 2, pocket_d))
+    body += [circle(10, width / 2 - 4, 3.2), circle(10, width / 2 + 4, 3.2)]
+    body.append(f'<text x="30" y="{width / 2 + 1.5:.1f}" font-size="3.5" fill="{SCORE}">wing x2, 3 mm ply; weight pocket O12 at tip</text>')
+    return svg(length, width, "\n".join(body))
+
+
 def main():
     out = Path(sys.argv[1] if len(sys.argv) > 1 else "out")
     out.mkdir(parents=True, exist_ok=True)
@@ -92,7 +102,8 @@ def main():
     (out / "galton_front_acrylic.svg").write_text(front)
     (out / "marble_tower_plate.svg").write_text(tower_plate())
     (out / "ramp_racer_ramp.svg").write_text(ramp())
-    print(f"wrote 4 files to {out}; galton pegs={n} (expected 55)")
+    (out / "santulan_wing.svg").write_text(santulan_wing())
+    print(f"wrote 5 files to {out}; galton pegs={n} (expected 55)")
     print("ramp rises (mm):", {d: round(1200 * math.sin(math.radians(d))) for d in (5, 10, 15, 20, 25)})
     print("galton bin probs:", [round(math.comb(10, k) / 1024, 3) for k in range(11)])
 

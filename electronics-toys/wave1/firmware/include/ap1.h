@@ -7,6 +7,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* ---------------- HAL ---------------- */
 typedef struct {
     uint32_t (*millis)(void);
@@ -23,7 +27,7 @@ typedef struct {
 #define BTN_LONG_MS 800u
 #define BTN_QUEUE 16
 
-typedef enum { BTN_EVT_PRESS = 1, BTN_EVT_LONG = 2 } btn_kind_t;
+typedef enum { BTN_EVT_PRESS = 1, BTN_EVT_LONG = 2, BTN_EVT_RELEASE = 3 } btn_kind_t;
 typedef struct { uint8_t idx; uint8_t kind; } btn_evt_t;
 
 typedef struct {
@@ -120,5 +124,9 @@ void cricket_init(cricket_t *c, const ap1_hal_t *hal, uint32_t seed);
 void cricket_event(cricket_t *c, btn_evt_t e);
 void cricket_tick(cricket_t *c);
 uint8_t seg_encode(uint8_t digit);   /* 0..9 -> segment mask, others -> blank */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -28,9 +28,9 @@ ramps, spirals, see-saws and bells. Expansion packs drive repeat sales (the Grav
 |---|---|
 | Ball | Ø25 mm turned wood (starter) · optional Ø25 steel-core "fast ball" age 6+ |
 | Channel | 28 mm wide × 12 mm deep U-groove, routed, 3 mm corner radius |
-| Straight ramp | 100 mm long, **8–12° fall** (Δh ≈ 14–21 mm) |
+| Straight ramp | 100 mm long, **6–8° fall** (Δh ≈ 10–14 mm). *Corrected by simulation: at 10° the whole starter route lasts only ~3.5 s; at 6° it lasts ~4.2 s including see-saw, funnel and bell.* |
 | Ideal solid-ball acceleration | a = (5/7)·g·sinθ → at 10° ≈ 1.2 m/s² (slow, watchable); at 15° ≈ 1.8 m/s² |
-| Spiral | 1 turn, Ø100 mm centreline, 20 mm drop per quarter turn (≈ 10° slope) |
+| Spiral | 1 turn, Ø100 mm centreline (314 mm of track), **33 mm drop per turn (≈ 6°)** |
 | Funnel | Ø90 mm → 28 mm exit, 35° wall |
 | See-saw flipper | Pivot Ø4 mm dowel; counterweight so empty tilts to rest; ball mass 12 g |
 | Bell/chime | Brass tube (lead-free) hanging in ball path |

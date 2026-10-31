@@ -33,6 +33,9 @@ IP-led puzzle (2) that earns the injection-mould investment only after validatio
 - `05-unit-economics.csv` – marketplace margin model (formulas)
 - **Note:** the unit economics show the original retail prices lose money on Amazon; use the prices in the business plan.
 
+## Verification (new)
+- `sim/verify_designs.py` (+ `sim/verification.md`) – physics checks for all toys; **found three design corrections**: marble-run ramps must be 6–8° not 8–12°; the balancing bird's weights must sit ~95 mm forward of the beak; felt wheels need ≥ 10° ramps. Run: `python3 -I sim/verify_designs.py`.
+
 ## Files
 - `cad/generate_laser_svgs.py` – parametric laser-cut files (`python3 -I cad/generate_laser_svgs.py cad/out`);
   outputs in `cad/out/` (Galton front/back, tower plate, racer ramp). Includes asserts that guard
