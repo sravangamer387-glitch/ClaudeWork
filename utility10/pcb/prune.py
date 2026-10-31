@@ -8,6 +8,7 @@ def run(mod):
     for _ in range(4):
         bd = pcbnew.LoadBoard(path)
         for z in bd.Zones():
+            z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
             if z.GetLayer() == pcbnew.F_Cu: z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)          # top pour: solid pad connection (no starved thermal spokes)
         pcbnew.ZONE_FILLER(bd).Fill(bd.Zones()); bd.Save(path); bd = pcbnew.LoadBoard(path); rpt = os.path.join(HERE, "out", mod, "_prune.rpt"); pcbnew.WriteDRCReport(bd, rpt, pcbnew.EDA_UNITS_MILLIMETRES, True)
         txt = open(rpt).read(); pts = [(float(m.group(1)), float(m.group(2))) for m in re.finditer(r"\[via_dangling\][^\n]*\n[^\n]*\n\s+@\(([-\d.]+) mm, ([-\d.]+) mm\): Via \[GND\]", txt)]

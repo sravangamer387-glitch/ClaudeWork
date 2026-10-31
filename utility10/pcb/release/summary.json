@@ -96,6 +96,18 @@
   "nets": 19
  },
  {
+  "board": "gas_taraju",
+  "mod": "gastaraju",
+  "drc_errors": 6,
+  "drc_warnings": 9,
+  "unconnected": 6,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 35,
+  "nets": 28
+ },
+ {
   "board": "kheti_mitra",
   "mod": "kheti",
   "drc_errors": 0,

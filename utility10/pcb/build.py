@@ -99,7 +99,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     # escape stubs: every used pad of a fine-pitch part (>= 24 pads) gets a short outward track first, so later nets cannot wall it in
     for ref_, fp_ in fps.items():
         pads_ = list(fp_.Pads())
-        if len(pads_) < 24 or ref_.startswith("J"): continue
+        if (len(pads_) < 24 and not (ref_.startswith("U") and len(pads_) >= 5)) or ref_.startswith("J"): continue
         cx_, cy_ = ToMM(fp_.GetPosition().x), ToMM(fp_.GetPosition().y)
         for pidx_, pad_ in enumerate(pads_):
             n_ = pad_.GetNetname()
@@ -113,7 +113,7 @@ def build(modname, boost=(), seed=None, outdir=None):
                 pts_.append((x_, y_))
             if len(pts_) < 8: continue                                                    # not even 0.35 mm: skip
             end_ = pts_[-1]; rt.commit_trace(nid_, 0, [pts_[0], end_], widths.get(n_, 0.2)); add_track(0, pts_[0], end_, n_, widths.get(n_, 0.2)); ex_, ey_ = rt.cell(*end_)
-            esc_cells.setdefault(n_, set()).add((0, ex_, ey_))
+            esc_cells[(ref_, pad_.GetNumber(), pidx_)] = (0, ex_, ey_)
     order = {}
     for kk, v in pad_info.items(): order.setdefault(v[0], []).append(kk)
     def cells_in(bbox, layer, padobj, ctr):
@@ -140,13 +140,13 @@ def build(modname, boost=(), seed=None, outdir=None):
     if seed is not None: pw.sort(key=lambda n: rnd_.random())
     skip_gnd_tht = True
     only = os.environ.get("ONLY_NETS")
-    for n_, cs_ in esc_cells.items(): done[n_] |= cs_
     for n in first_nets + ([gnd] if gnd in order else []) + pw + sig:
         if only and n not in only.split(","): continue
         nid = netid[n]; w = widths.get(n, 0.2); first = not done[n]
         for pk in order[n]:
             _, layers, bbox, ctr, tht, circ = pad_info[pk]
             starts = [c for l in layers for c in cells_in(bbox, l, circ, ctr) if rt._free(rt.cls(w), l, c[1], c[2], nid)]
+            if pk in esc_cells: starts = starts + [esc_cells[pk]]                          # the pad's own escape stub end is part of the pad
             if not starts: failures.append((n, pk, "no free start cell")); continue
             if n == gnd and (tht or B.get("gnd_pour_only")): continue                  # ground reaches SMD pads through the top pour / stitching vias
             if first and n != gnd and not done[n]: first = False; done[n] |= set(starts); continue
@@ -210,7 +210,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     if gnd in nets:
         for lay in (pcbnew.F_Cu, pcbnew.B_Cu):
             z = pcbnew.ZONE(bd); z.SetLayer(lay); z.SetNet(nets[gnd]); z.SetMinThickness(MM(0.2)); z.SetLocalClearance(MM(0.25)); z.SetThermalReliefGap(MM(0.25)); z.SetThermalReliefSpokeWidth(MM(0.3))
-            z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL if lay == pcbnew.F_Cu else pcbnew.ZONE_CONNECTION_THERMAL); ol = z.Outline(); ol.NewOutline()
+            z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS); z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL if lay == pcbnew.F_Cu else pcbnew.ZONE_CONNECTION_THERMAL); ol = z.Outline(); ol.NewOutline()
             m = 0.4
             for (x, y) in ((m, m), (W - m, m), (W - m, H - m), (m, H - m)): ol.Append(MM(x), MM(y))
             bd.Add(z)
