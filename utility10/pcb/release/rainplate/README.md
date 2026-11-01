@@ -20,7 +20,7 @@ Passive.
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 0 errors, 2 warnings; unconnected pads: 0 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | no |
@@ -28,12 +28,10 @@ Passive.
 
 Waived DRC items (by design): solder_mask_bridge (intentional mask opening over the comb) x23; track_dangling (open comb finger ends) x45
 
-DRC breakdown: silk_over_copper:warning x1, silk_overlap:warning x1
-
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
-| J1 | Cable | PinHeader_1x02_P2.54mm_Vertical |  |  |  |
+| J1 | Cable | PinHeader_1x02_P2.54mm_Vertical | ZHOURI 2.54-1*2 | C5116481 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
 
@@ -47,9 +45,34 @@ DRC breakdown: silk_over_copper:warning x1, silk_overlap:warning x1
 2. Check ENIG finish and mask opening on the delivered boards.
 
 ## Files
-`rain_plate.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `rain_plate_JLC_BOM.csv`, `rain_plate_JLC_CPL.csv`, `rain_plate_BOM_full.csv`, `rain_plate.step`, `rain_plate_schematic.pdf`, `rain_plate_assembly_top.pdf`, `rain_plate_copper.pdf`, `rain_plate_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

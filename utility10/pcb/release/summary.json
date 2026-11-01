@@ -9,19 +9,21 @@
   "erc_errors": 0,
   "failures": 0,
   "parts": 36,
-  "nets": 24
+  "nets": 24,
+  "order_ready": true
  },
  {
   "board": "bijli_meter_reader",
   "mod": "bijli",
   "drc_errors": 0,
-  "drc_warnings": 1,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 23,
-  "nets": 17
+  "nets": 17,
+  "order_ready": true
  },
  {
   "board": "rain_alert_main",
@@ -33,91 +35,99 @@
   "erc_errors": 0,
   "failures": 0,
   "parts": 27,
-  "nets": 19
+  "nets": 19,
+  "order_ready": true
  },
  {
   "board": "rain_plate",
   "mod": "rainplate",
   "drc_errors": 0,
-  "drc_warnings": 2,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 1,
-  "nets": 2
+  "nets": 2,
+  "order_ready": true
  },
  {
   "board": "fridge_door_guard",
   "mod": "fridge",
   "drc_errors": 0,
-  "drc_warnings": 1,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 24,
-  "nets": 17
+  "nets": 17,
+  "order_ready": true
  },
  {
   "board": "chulha_timers",
   "mod": "chulha",
   "drc_errors": 0,
-  "drc_warnings": 2,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 22,
-  "nets": 18
+  "nets": 18,
+  "order_ready": true
  },
  {
   "board": "tap_litre_meter",
   "mod": "tap",
   "drc_errors": 0,
-  "drc_warnings": 2,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 28,
-  "nets": 19
+  "nets": 19,
+  "order_ready": true
  },
  {
   "board": "bijli_log",
   "mod": "bijlilog",
   "drc_errors": 0,
-  "drc_warnings": 4,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 31,
-  "nets": 19
+  "nets": 19,
+  "order_ready": true
  },
  {
-  "board": "gas_taraju",
-  "mod": "gastaraju",
-  "drc_errors": 6,
-  "drc_warnings": 9,
-  "unconnected": 6,
+  "board": "desi_arcade",
+  "mod": "arcade",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
-  "parts": 35,
-  "nets": 28
+  "parts": 27,
+  "nets": 25,
+  "order_ready": true
  },
  {
   "board": "kheti_mitra",
   "mod": "kheti",
   "drc_errors": 0,
-  "drc_warnings": 7,
+  "drc_warnings": 0,
   "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 37,
-  "nets": 22
+  "nets": 22,
+  "order_ready": true
  },
  {
   "board": "jal_netra",
@@ -129,6 +139,7 @@
   "erc_errors": 0,
   "failures": 0,
   "parts": 78,
-  "nets": 51
+  "nets": 51,
+  "order_ready": true
  }
 ]

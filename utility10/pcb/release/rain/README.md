@@ -49,18 +49,18 @@ Enclosure (prototype shell for 3D printing): outer 65.2 x 47.2 x 20.6 mm, collis
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
-| J1 | BATT 3xAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| SW1 | Power | SW_SPDT_PCM12 |  |  |  |
+| J1 | BATT 3xAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | verified |
 | Q2 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| J3 | Rain plate | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| BZ1 | Buzzer 85dB | Buzzer_12x9.5RM7.6 |  |  |  |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | Rain plate | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| BZ1 | Buzzer 85dB | Buzzer_12x9.5RM7.6 | YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz) | C781869 | verified |
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
-| SW2 | Mute | SW_SPST_B3U-1000P |  |  |  |
-| D1 | Red | LED_0603_1608Metric |  |  |  |
-| D3 | TVS 5V bidir | D_SOD-323 |  |  |  |
-| D4 | TVS 5V bidir | D_SOD-323 |  |  |  |
+| SW2 | Mute | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| D1 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D3 | TVS 5V bidir | D_SOD-323 | Nexperia PESD5V0S1BA,115 | C19224 | verified |
+| D4 | TVS 5V bidir | D_SOD-323 | Nexperia PESD5V0S1BA,115 | C19224 | verified |
 | R1 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R2 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R3 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
@@ -70,8 +70,8 @@ Enclosure (prototype shell for 3D printing): outer 65.2 x 47.2 x 20.6 mm, collis
 | C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| C5 | 2.2n | C_0603_1608Metric |  |  |  |
+| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| C5 | 2.2n | C_0603_1608Metric | Samsung CL10B222KB8NNNC X7R | C16033 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -90,9 +90,34 @@ Enclosure (prototype shell for 3D printing): outer 65.2 x 47.2 x 20.6 mm, collis
 4. Flash over ISP with fuses lfuse 0xE2, hfuse 0xD9, efuse 0xFD (8 MHz internal, BOD 2.7 V: the unit resets cleanly when the batteries fall below 2.7 V, which is the 8 MHz limit).
 
 ## Files
-`rain_alert_main.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `rain_alert_main_JLC_BOM.csv`, `rain_alert_main_JLC_CPL.csv`, `rain_alert_main_BOM_full.csv`, `rain_alert_main.step`, `rain_alert_main_schematic.pdf`, `rain_alert_main_assembly_top.pdf`, `rain_alert_main_copper.pdf`, `rain_alert_main_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

@@ -1,0 +1,34 @@
+{
+ "board": "rain_plate",
+ "erc_errors": [],
+ "erc_warnings": [],
+ "pin_pad_mismatch": [],
+ "stitch_vias": 0,
+ "silk_unplaced": [],
+ "route_failures": [],
+ "tracks": 48,
+ "attempts": 1,
+ "drc": {},
+ "drc_errors": 0,
+ "drc_warnings": 0,
+ "drc_waived": {
+  "solder_mask_bridge (intentional mask opening over the comb)": 23,
+  "track_dangling (open comb finger ends)": 45
+ },
+ "unconnected": 0,
+ "step": false,
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
+ "nets": 2,
+ "parts": 1,
+ "gerber_independent_check": {
+  "layers": 9,
+  "outline_mm": [
+   38.1,
+   60.1
+  ],
+  "size_ok": true,
+  "errors": []
+ }
+}

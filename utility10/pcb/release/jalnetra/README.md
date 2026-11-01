@@ -42,22 +42,22 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
-| U1 | STM32G431CBT6 | LQFP-48_7x7mm_P0.5mm | STM32G431CBT6 |  |  |
-| U4 | TS5A3159 | SOT-363_SC-70-6 |  |  |  |
-| U5 | OPA356 | SOT-23-5 |  |  |  |
-| U6 | OPA356 | SOT-23-5 |  |  |  |
-| U7 | TS5A3159 | SOT-363_SC-70-6 |  |  |  |
-| U3 | AP2112K-3.3 | SOT-23-5 |  |  |  |
-| FB1 | BLM18 600R | L_0603_1608Metric |  |  |  |
-| Y1 | 8 MHz | Crystal_SMD_3225-4Pin_3.2x2.5mm |  |  |  |
-| D5 | BAV99 | SOT-23 |  |  |  |
-| D6 | BAV99 | SOT-23 |  |  |  |
-| J6 | Transducer A (BTL) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| J7 | Transducer B (BTL) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| R30 | 22 | R_0603_1608Metric |  |  |  |
-| R31 | 22 | R_0603_1608Metric |  |  |  |
-| R32 | 22 | R_0603_1608Metric |  |  |  |
-| R33 | 22 | R_0603_1608Metric |  |  |  |
+| U1 | STM32G431CBT6 | LQFP-48_7x7mm_P0.5mm | STM32G431CBT6 (LQFP-48) | C529355 | verified |
+| U4 | TS5A3159 | SOT-363_SC-70-6 | TI TS5A3159DCKR | C46388 | verified |
+| U5 | OPA356 | SOT-23-5 | TI OPA356AIDBVR | C183100 | verified |
+| U6 | OPA356 | SOT-23-5 | TI OPA356AIDBVR | C183100 | verified |
+| U7 | TS5A3159 | SOT-363_SC-70-6 | TI TS5A3159DCKR | C46388 | verified |
+| U3 | AP2112K-3.3 | SOT-23-5 | Diodes AP2112K-3.3TRG1 (from the LCSC datasheet link) | C51118 | verified |
+| FB1 | BLM18 600R | L_0603_1608Metric | Murata BLM18AG601SN1D | C19330 | verified |
+| Y1 | 8 MHz | Crystal_SMD_3225-4Pin_3.2x2.5mm | YXC X32258MOB4SI 8 MHz 12 pF 3225 (matches the 15 pF load caps) | C2682775 | verified |
+| D5 | BAV99 | SOT-23 | JSCJ BAV99 | C68983 | verified |
+| D6 | BAV99 | SOT-23 | JSCJ BAV99 | C68983 | verified |
+| J6 | Transducer A (BTL) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| J7 | Transducer B (BTL) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| R30 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
+| R31 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
+| R32 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
+| R33 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
 | C20 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
 | R35 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | C21 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
@@ -71,37 +71,37 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | C27 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | C28 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
 | R12 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
-| R13 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | memory |
-| R14 | 240 | R_0603_1608Metric |  |  |  |
+| R13 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
+| R14 | 240 | R_0603_1608Metric | UNI-ROYAL 0603WAF2400T5E (JLCPCB listing) | C23350 | verified |
 | C29 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
-| R15 | 0 | R_0603_1608Metric |  |  |  |
+| R15 | 0 | R_0603_1608Metric | UNI-ROYAL 0603WAF0000T5E | C21189 | verified |
 | C30 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
 | R16 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R17 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| R18 | 100 | R_0603_1608Metric |  |  |  |
+| R18 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
 | C31 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
-| R19 | 0 | R_0603_1608Metric |  |  |  |
-| R20 | 33 | R_0603_1608Metric |  |  |  |
-| C32 | 22p | C_0603_1608Metric |  |  |  |
+| R19 | 0 | R_0603_1608Metric | UNI-ROYAL 0603WAF0000T5E | C21189 | verified |
+| R20 | 33 | R_0603_1608Metric | UNI-ROYAL 0603WAF330JT5E | C23140 | verified |
+| C32 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | verified |
 | C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C33 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C34 | 4.7u | C_0603_1608Metric |  |  |  |
-| C35 | 15p | C_0603_1608Metric |  |  |  |
-| C36 | 15p | C_0603_1608Metric |  |  |  |
+| C34 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
+| C35 | 15p | C_0603_1608Metric | Samsung CL10C150JB8NNNC C0G | C1644 | verified |
+| C36 | 15p | C_0603_1608Metric | Samsung CL10C150JB8NNNC C0G | C1644 | verified |
 | R21 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R22 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C37 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C38 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | C39 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
-| J4 | OLED I2C | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical |  |  |  |
-| R23 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | memory |
-| R24 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | memory |
-| J5 | UART host / BLE | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical |  |  |  |
-| J3 | SWD | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| SW2 | Test / zero | SW_SPST_B3U-1000P |  |  |  |
+| J4 | OLED I2C | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
+| R23 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
+| R24 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
+| J5 | UART host / BLE | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
+| J3 | SWD | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| SW2 | Test / zero | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -109,16 +109,16 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | TP5 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP6 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | J1 | USB-C 5V | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | verified |
-| F1 | PTC 500mA | Fuse_1206_3216Metric |  |  |  |
-| D3 | SMAJ5.0A | D_SMA |  |  |  |
-| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
-| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
-| C5 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 |  |  |  |
+| F1 | PTC 500mA | Fuse_1206_3216Metric | Littelfuse 1206L050YR (6 V) | C163512 | verified |
+| D3 | SMAJ5.0A | D_SMA | Littelfuse SMAJ5.0A | C83329 | verified |
+| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
+| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
+| C5 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 | YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz) | C781869 | verified |
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | R7 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| D1 | Green | LED_0603_1608Metric |  |  |  |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
@@ -134,9 +134,34 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 3. Follow `jal-netra/docs/TEST_PLAN.md` gates 1-3.
 
 ## Files
-`jal_netra.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `jal_netra_JLC_BOM.csv`, `jal_netra_JLC_CPL.csv`, `jal_netra_BOM_full.csv`, `jal_netra.step`, `jal_netra_schematic.pdf`, `jal_netra_assembly_top.pdf`, `jal_netra_copper.pdf`, `jal_netra_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

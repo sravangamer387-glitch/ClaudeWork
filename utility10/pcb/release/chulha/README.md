@@ -21,13 +21,11 @@ Display on: about 10 mA + MCU 3 mA; sleep between button presses and blank the d
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 0 errors, 2 warnings; unconnected pads: 0 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [72.1, 48.1] mm, match |
-
-DRC breakdown: silk_overlap:warning x2
 
 Enclosure (prototype shell for 3D printing): outer 77.2 x 53.2 x 20.6 mm, collision/opening check: pass
 
@@ -39,20 +37,20 @@ Enclosure (prototype shell for 3D printing): outer 77.2 x 53.2 x 20.6 mm, collis
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| J1 | BATT 3xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| SW1 | Power | SW_SPDT_PCM12 |  |  |  |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J1 | BATT 3xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | verified |
 | Q2 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
-| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 |  |  |  |
+| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 | YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz) | C781869 | verified |
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | R6 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| SW2 | CH1 | SW_SPST_B3U-1000P |  |  |  |
-| SW3 | CH2 | SW_SPST_B3U-1000P |  |  |  |
-| SW4 | CH3 | SW_SPST_B3U-1000P |  |  |  |
-| SW5 | CH4 | SW_SPST_B3U-1000P |  |  |  |
-| J4 | TM1637 display | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical |  |  |  |
+| SW2 | CH1 | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| SW3 | CH2 | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| SW4 | CH3 | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| SW5 | CH4 | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| J4 | TM1637 display | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -69,9 +67,34 @@ Enclosure (prototype shell for 3D printing): outer 77.2 x 53.2 x 20.6 mm, collis
 2. Ring: each channel's buzzer pattern stops with its own button.
 
 ## Files
-`chulha_timers.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `chulha_timers_JLC_BOM.csv`, `chulha_timers_JLC_CPL.csv`, `chulha_timers_BOM_full.csv`, `chulha_timers.step`, `chulha_timers_schematic.pdf`, `chulha_timers_assembly_top.pdf`, `chulha_timers_copper.pdf`, `chulha_timers_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

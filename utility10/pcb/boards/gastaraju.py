@@ -5,7 +5,7 @@ parts = (mcu("+4V5", {"13": "BUZ", "12": "TARE", "32": "HX_DOUT", "1": "HX_SCK",
                nets={"1": "+4V5", "3": "AVDD", "4": "AVDD", "5": "GND", "6": "VBG", "7": "A_N", "8": "A_P", "11": "HX_SCK", "12": "HX_DOUT", "14": "GND", "15": "GND", "16": "+4V5"}),
           R("R14", "100", 53, 8, "+4V5", "AVDD", 90, lcsc=None), C("C10", "100n", 56, 8, "AVDD", "GND", 90), C("C11", "100n", 66, 8, "+4V5", "GND", 90), C("C12", "100n", 56, 26, "VBG", "GND", 90), C("C13", "10u", 70, 12, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
           R("R15", "100", 66, 25, "AVDD", "EXC", 90, lcsc=None), C("C14", "100n", 69, 25, "EXC", "GND", 90), C("C15", "100n", 66, 29, "A_P", "A_N", 90),
-          jst("J3", 4, 48, 46, ["EXC", "GND", "A_P", "A_N"], "Load cell bridge E+ E- A+ A-"), jst("J4", 4, 70, 36, ["GND", "+4V5", "DIO", "DCLK"], "TM1637 4-digit", 90),
+          jst("J3", 4, 48, 46, ["EXC", "GND", "A_P", "A_N"], "Load cell bridge E+ E- A+ A-"), jst("J4", 4, 62, 42, ["GND", "+4V5", "DIO", "DCLK"], "TM1637 4-digit", 0),
           button("SW2", "TARE", 40, 6, "Tare / zero"),
           TP("TP1", "+4V5", 4, 22), TP("TP2", "GND", 4, 26), TP("TP3", "A_P", 40, 48)] + led("+4V5", "LED_G", 46, 33, "Green", "D1", "R5") + led("+4V5", "LED_A", 46, 36.5, "Amber", "D5", "R8") + led("+4V5", "LED_R", 46, 40, "Red", "D6", "R9"))
 for p in parts:

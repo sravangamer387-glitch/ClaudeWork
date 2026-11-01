@@ -21,13 +21,11 @@ Sleep about 2 uA (BOD off, WDT off); an alarm minute at 30 mA = 0.5 mAh; 20 door
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 0 errors, 1 warnings; unconnected pads: 0 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [64.1, 44.1] mm, match |
-
-DRC breakdown: silk_over_copper:warning x1
 
 Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collision/opening check: pass
 
@@ -39,22 +37,22 @@ Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collis
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| J1 | BATT 2xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
-| SW1 | Power | SW_SPDT_PCM12 |  |  |  |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J1 | BATT 2xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
+| SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | verified |
 | Q2 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
-| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 |  |  |  |
+| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| BZ1 | Buzzer | Buzzer_12x9.5RM7.6 | YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz) | C781869 | verified |
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | R6 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| D1 | Green | LED_0603_1608Metric |  |  |  |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| SW2 | Silence | SW_SPST_B3U-1000P |  |  |  |
-| J3 | Reed switch | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical |  |  |  |
+| SW2 | Silence | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| J3 | Reed switch | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | R8 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | C9 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
-| D4 | TVS 5V bidir | D_SOD-323 |  |  |  |
+| D4 | TVS 5V bidir | D_SOD-323 | Nexperia PESD5V0S1BA,115 | C19224 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -71,9 +69,34 @@ Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collis
 2. After 60 s open: chirp every 10 s; after 180 s: continuous; closing silences.
 
 ## Files
-`fridge_door_guard.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `fridge_door_guard_JLC_BOM.csv`, `fridge_door_guard_JLC_CPL.csv`, `fridge_door_guard_BOM_full.csv`, `fridge_door_guard.step`, `fridge_door_guard_schematic.pdf`, `fridge_door_guard_assembly_top.pdf`, `fridge_door_guard_copper.pdf`, `fridge_door_guard_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

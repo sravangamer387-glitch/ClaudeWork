@@ -25,7 +25,8 @@ for mod in BOARDS:
         if os.path.isfile(p) and f.split(".")[-1] in ("kicad_pcb", "kicad_sch", "kicad_pro", "pdf", "csv", "step", "stl", "md", "net", "txt", "rpt", "json") and f not in ("route_report.json", "components.json", "view.svg"): shutil.copy(p, rel)
     for f in ("fp-lib-table", "sym-lib-table"): shutil.copy(os.path.join(out, f), rel)
     subprocess.run(["/tmp/venv/bin/python", "-c", f"import cairosvg; cairosvg.svg2png(url={os.path.join(out, name + '_top.svg')!r}, write_to={os.path.join(rel, name + '_top.png')!r}, output_width=1600); cairosvg.svg2png(url={os.path.join(out, name + '_bottom.svg')!r}, write_to={os.path.join(rel, name + '_bottom.png')!r}, output_width=1600)"])
-    summary.append(dict(board=name, mod=mod, drc_errors=rep["drc_errors"], drc_warnings=rep["drc_warnings"], unconnected=rep["unconnected"], netlist=rep["netlist_match"], erc_errors=len(rep["erc_errors"]), failures=len(rep["route_failures"]), parts=rep["parts"], nets=rep["nets"]))
+    import release_tidy; rd = release_tidy.tidy(rel, name)
+    summary.append(dict(board=name, mod=mod, drc_errors=rep["drc_errors"], drc_warnings=rep["drc_warnings"], unconnected=rep["unconnected"], netlist=rep["netlist_match"], erc_errors=len(rep["erc_errors"]), failures=len(rep["route_failures"]), parts=rep["parts"], nets=rep["nets"], order_ready=rd["order_ready"]))
 old = {}
 sp = os.path.join(HERE, "release", "summary.json")
 if os.path.exists(sp):

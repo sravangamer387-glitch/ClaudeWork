@@ -37,13 +37,11 @@ MCU 5 V 8 MHz about 6 mA + display 10-30 mA + LED: under 50 mA, far below the 50
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 0 errors, 1 warnings; unconnected pads: 0 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [52.1, 38.1] mm, match |
-
-DRC breakdown: silk_over_copper:warning x1
 
 Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collision/opening check: pass
 
@@ -52,20 +50,20 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 |---|---|---|---|---|---|
 | U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
 | J1 | USB-C 5V | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | verified |
-| F1 | PTC 500mA | Fuse_1206_3216Metric |  |  |  |
-| D3 | SMAJ5.0A | D_SMA |  |  |  |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| J3 | Sensor head | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical |  |  |  |
-| J4 | TM1637 display | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical |  |  |  |
-| SW1 | Reset bill | SW_SPST_B3U-1000P |  |  |  |
-| D1 | Green | LED_0603_1608Metric |  |  |  |
-| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
-| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | memory |
+| F1 | PTC 500mA | Fuse_1206_3216Metric | Littelfuse 1206L050YR (6 V) | C163512 | verified |
+| D3 | SMAJ5.0A | D_SMA | Littelfuse SMAJ5.0A | C83329 | verified |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | Sensor head | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J4 | TM1637 display | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
+| SW1 | Reset bill | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
+| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
 | R3 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R4 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| R6 | 100 | R_0603_1608Metric |  |  |  |
-| C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
+| R6 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
+| C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
@@ -88,9 +86,34 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 4. Hold the head over a 1 Hz test LED: display counts one pulse per second.
 
 ## Files
-`bijli_meter_reader.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `bijli_meter_reader_JLC_BOM.csv`, `bijli_meter_reader_JLC_CPL.csv`, `bijli_meter_reader_BOM_full.csv`, `bijli_meter_reader.step`, `bijli_meter_reader_schematic.pdf`, `bijli_meter_reader_assembly_top.pdf`, `bijli_meter_reader_copper.pdf`, `bijli_meter_reader_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

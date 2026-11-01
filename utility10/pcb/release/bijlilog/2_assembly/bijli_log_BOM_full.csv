@@ -1,0 +1,32 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,C14877,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J1,USB-C 5V,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
+F1,PTC 500mA,Fuse:Fuse_1206_3216Metric,Littelfuse 1206L050YR (6 V),C163512,verified,SMT (JLC)
+D3,SMAJ5.0A,Diode_SMD:D_SMA,Littelfuse SMAJ5.0A,C83329,verified,SMT (JLC)
+R1,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+R2,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+C5,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+D1,Green,LED_SMD:LED_0603_1608Metric,Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check),C72043,verified,SMT (JLC)
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+U3,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,Diodes AP2112K-3.3TRG1 (from the LCSC datasheet link),C51118,verified,SMT (JLC)
+C6,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+C7,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+D5,BAT54WS,Diode_SMD:D_SOD-323,BORN BAT54WS (300 mA listing),C5148476,verified,SMT (JLC)
+D6,BAT54WS,Diode_SMD:D_SOD-323,BORN BAT54WS (300 mA listing),C5148476,verified,SMT (JLC)
+J6,BATT 2xAAA backup,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+C8,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+R12,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R13,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+J4,OLED 0.91in I2C,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
+J5,RTC DS3231 module,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
+R10,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+R11,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+SW2,Scroll / clear,Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT

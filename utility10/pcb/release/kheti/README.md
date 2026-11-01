@@ -21,13 +21,11 @@ Idle about 15 mA at 5 V from 12 V (0.2 W); valve 12 V x 0.3 A during watering.
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 0 errors, 7 warnings; unconnected pads: 0 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [86.1, 60.1] mm, match |
-
-DRC breakdown: silk_over_copper:warning x7
 
 Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collision/opening check: pass
 
@@ -39,26 +37,26 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical |  |  |  |
-| D1 | Green | LED_0603_1608Metric |  |  |  |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| J1 | 12 V DC in | BarrelJack_CUI_PJ-063AH_Horizontal |  |  |  |
-| F1 | PTC 1A 16V | Fuse_1812_4532Metric |  |  |  |
-| D3 | SMBJ15A | D_SMB |  |  |  |
+| J1 | 12 V DC in | BarrelJack_CUI_PJ-063AH_Horizontal | CUI/Same Sky PJ-063AH | C22434582 | verified |
+| F1 | PTC 1A 16V | Fuse_1812_4532Metric | Littelfuse 1812L110/16DR (1.1 A hold, 16 V) | C142746 | verified |
+| D3 | SMBJ15A | D_SMB | Littelfuse SMBJ15A | C83846 | verified |
 | Q3 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
 | R17 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
-| U3 | AMS1117-5.0 | SOT-223-3_TabPin2 |  |  |  |
-| C6 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
-| C7 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | memory |
+| U3 | AMS1117-5.0 | SOT-223-3_TabPin2 | AMS AMS1117-5.0 SOT-223 | C6187 | verified |
+| C6 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| C7 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| Q4 | AO3400A | SOT-23 |  |  |  |
-| R16 | 100 | R_0603_1608Metric |  |  |  |
+| Q4 | AO3400A | SOT-23 | AOS AO3400A | C20917 | verified |
+| R16 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
 | R18 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
-| D7 | SS14 | D_SMA |  |  |  |
-| J5 | Valve 12V | TerminalBlock_bornier-2_P5.08mm |  |  |  |
-| J6 | Soil sensor 1 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical |  |  |  |
-| J7 | Soil sensor 2 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical |  |  |  |
-| J8 | Rain sensor | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical |  |  |  |
+| D7 | SS14 | D_SMA | Starsea SS14 SMA | C84343 | verified |
+| J5 | Valve 12V | TerminalBlock_bornier-2_P5.08mm | Cixi Kefa KF128-5.08-2P-AA | C474952 | verified |
+| J6 | Soil sensor 1 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J7 | Soil sensor 2 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J8 | Rain sensor | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | R20 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | C9 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
 | R21 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
@@ -66,7 +64,7 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | R22 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R23 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C11 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| SW2 | Hold | SW_SPST_B3U-1000P |  |  |  |
+| SW2 | Hold | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |
@@ -85,9 +83,34 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 3. Soil sensors: dry about 520 counts / wet about 260 counts (to be calibrated).
 
 ## Files
-`kheti_mitra.kicad_pcb/.kicad_sch/.kicad_pro` (KiCad 7), `gerbers/` (Gerber X2 + drill, zip), `kheti_mitra_JLC_BOM.csv`, `kheti_mitra_JLC_CPL.csv`, `kheti_mitra_BOM_full.csv`, `kheti_mitra.step`, `kheti_mitra_schematic.pdf`, `kheti_mitra_assembly_top.pdf`, `kheti_mitra_copper.pdf`, `kheti_mitra_enclosure_base.stl/_lid.stl`.
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
 - Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
 - Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
 - Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

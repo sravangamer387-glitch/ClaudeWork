@@ -44,6 +44,7 @@ def post(modname):
     mism = {str(sorted(g)[:3]) + "...": ("only in schematic" if g in got_groups else "only in PCB") for g in spec_groups ^ got_groups}
     names_missing = [n for n in spec if not any(spec[n] == v for v in got.values())]
     rep["netlist_match"] = not mism; rep["net_names_not_in_schematic"] = names_missing; rep["netlist_mismatch"] = dict(list(mism.items())[:8]); rep["nets"] = len(spec); rep["parts"] = len(B["parts"])
+    import lcsc_fill; lcsc_fill.fill(B["parts"])
     # ---------- JLCPCB BOM / CPL ----------
     smd = {fp.GetReference(): bool(fp.GetAttributes() & pcbnew.FP_SMD) for fp in bd.GetFootprints()}
     groups = collections.OrderedDict()

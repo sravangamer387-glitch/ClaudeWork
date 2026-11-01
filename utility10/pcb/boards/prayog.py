@@ -6,11 +6,11 @@ for p in usb:                                                    # this board ne
     if p["ref"] == "J1":
         p["nc"] = ["A8", "B8"]; p["nets"].update({"A6": "USB_DP", "B6": "USB_DP", "A7": "USB_DM", "B7": "USB_DM"}); p["value"] = "USB-C data + 5V"
 parts = (mcu("+5V", {"30": "RXD", "31": "TXD", "7": "XTAL1", "8": "XTAL2", "23": "AN0", "24": "AN1", "25": "AN2", "26": "AN3", "27": "AN4", "28": "AN5", "19": "AN6", "22": "AN7", "32": "GATE", "2": "TRIG", "9": "ECHO", "11": "LED", "12": "BTN"}, 46, 34) + isp("+5V", 70, 42) + usb +
-         [dict(ref="U2", sym="Interface_USB:CH340C", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="CH340C", x=14, y=34, rot=0, lcsc="C84681", lcsc_status="unverified", mpn="CH340C",
+         [dict(ref="U2", sym="Interface_USB:CH340C", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="CH340C", x=14, y=34, rot=0, lcsc="C84681", lcsc_status="verified", mpn="CH340C",
                nets={"1": "GND", "2": "RXD", "3": "TXD", "4": "V3", "5": "USB_DP", "6": "USB_DM", "13": "DTR", "16": "+5V"}, nc=["7", "8", "9", "10", "11", "12", "14", "15"]),
           C("C6", "100n", 22, 26, "+5V", "GND", 90), C("C7", "100n", 22, 41, "V3", "GND", 90), C("C8", "100n", 26, 26, "DTR", "RESET", 90),
-          dict(ref="Y1", sym="Device:Crystal_GND24", fp="Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm", value="16 MHz", x=34, y=48, rot=0, nets={"1": "XTAL1", "2": "GND", "3": "XTAL2", "4": "GND"}),
-          C("C9", "22p", 29, 46, "XTAL1", "GND", 90), C("C10", "22p", 39, 46, "XTAL2", "GND", 90)] +
+          dict(ref="Y1", sym="Device:Crystal_GND24", fp="Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm", value="16 MHz", x=33, y=39, rot=0, nets={"1": "XTAL1", "2": "GND", "3": "XTAL2", "4": "GND"}),
+          C("C9", "22p", 29, 42.5, "XTAL1", "GND", 90), C("C10", "22p", 33, 44.5, "XTAL2", "GND", 90)] +
          [sock(n, 46 + (n % 4) * 10, 6 + (n // 4) * 9) for n in range(8)] +
          [jst("J11", 3, 62, 58, ["+5V", "GATE", "GND"], "Photogate", 0), jst("J12", 4, 74, 56, ["+5V", "TRIG", "ECHO", "GND"], "Ultrasonic HC-SR04", 0),
           button("SW2", "BTN", 22, 58, "Reaction pad"), TP("TP1", "+5V", 5, 22), TP("TP2", "GND", 5, 28)] + led("+5V", "LED", 8, 58, "Green"))

@@ -1,0 +1,31 @@
+{
+ "board": "kheti_mitra",
+ "erc_errors": [],
+ "erc_warnings": [],
+ "pin_pad_mismatch": [],
+ "stitch_vias": 132,
+ "silk_unplaced": [],
+ "route_failures": [],
+ "tracks": 448,
+ "attempts": 2,
+ "drc": {},
+ "drc_errors": 0,
+ "drc_warnings": 0,
+ "drc_waived": {},
+ "unconnected": 0,
+ "step": true,
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
+ "nets": 22,
+ "parts": 37,
+ "gerber_independent_check": {
+  "layers": 9,
+  "outline_mm": [
+   86.1,
+   60.1
+  ],
+  "size_ok": true,
+  "errors": []
+ }
+}
