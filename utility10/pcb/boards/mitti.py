@@ -37,8 +37,8 @@ parts = [
  jst("J5", 3, 30, 77, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
  V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=46, y=77, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
  R("R13", "4.7k", 52, 76, "+3V3", "ONEWIRE", 90), R("R15", "1k", 38, 75, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 38, 71, "SOIL_ADC", "GND", 90),
- LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
- jst("J8", 3, 84, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
+ LED("D5", "Green", 74, 50, "GND", "LED_A"), R("R14", "1k", 74, 44, "LED", "LED_A", 90),
+ jst("J8", 3, 84, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 46, 38), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
