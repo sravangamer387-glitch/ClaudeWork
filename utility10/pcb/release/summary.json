@@ -232,5 +232,18 @@
   "parts": 67,
   "nets": 39,
   "order_ready": true
+ },
+ {
+  "board": "biowatt",
+  "mod": "biowatt",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 29,
+  "nets": 20,
+  "order_ready": true
  }
 ]

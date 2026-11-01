@@ -1,0 +1,13 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/biowatt/biowatt.kicad_pcb **
+** Created on 2026-11-01 19:31:36 **
+
+** Found 1 DRC violations **
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(23.6875 mm, 18.0000 mm): Track [OKP_N] on F.Cu, length 1.2000 mm
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

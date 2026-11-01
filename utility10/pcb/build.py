@@ -157,6 +157,7 @@ def build(modname, boost=(), seed=None, outdir=None):
             starts = [c for l in layers for c in cells_in(bbox, l, circ, ctr) if rt._free(rt.cls(w), l, c[1], c[2], nid)]
             if pk in esc_cells: starts = starts + [esc_cells[pk]]                          # the pad's own escape stub end is part of the pad
             if n == gnd and (tht or B.get("gnd_pour_only")): continue                  # ground reaches SMD pads through the top pour / stitching vias (verified by the DRC connectivity check)
+            if not starts and n == gnd and B.get("pre_vias") and any(v[0] == gnd and bbox[0] <= v[1] <= bbox[2] and bbox[1] <= v[2] <= bbox[3] for v in B["pre_vias"]): continue   # pad already carries a pre-placed GND via
             if not starts: failures.append((n, pk, "no free start cell")); continue
             if first and n != gnd and not done[n]: first = False; done[n] |= set(starts); continue
             if n == gnd and any(c in done[n] for c in starts): continue
@@ -211,6 +212,7 @@ def build(modname, boost=(), seed=None, outdir=None):
             x = 3.0
             while x < W - 2.5:
                 ix, iy = rt.cell(x, y); sp_ = spot(ix, iy)
+                if sp_ and any(a - 1.0 <= sp_[0] <= c + 1.0 and b - 1.0 <= sp_[1] <= d + 1.0 for (a, b, c, d) in B.get("pour_keepout", [])): sp_ = None   # no stitching vias inside a pour keepout
                 if sp_: rt.commit_via(gid, *sp_); add_via(sp_[0], sp_[1], gnd); stitched += 1
                 x += pitch
             y += pitch
@@ -223,6 +225,11 @@ def build(modname, boost=(), seed=None, outdir=None):
             m = 0.4
             for (x, y) in ((m, m), (W - m, m), (W - m, H - m), (m, H - m)): ol.Append(MM(x), MM(y))
             bd.Add(z)
+    for (kx0, ky0, kx1, ky1) in B.get("pour_keepout", []):                                                      # copper-pour keepout (e.g. around high-impedance resistor dividers: no ground pour nearby, as the datasheet requires)
+        zk = pcbnew.ZONE(bd); zk.SetIsRuleArea(True); zk.SetDoNotAllowCopperPour(True); zk.SetDoNotAllowTracks(False); zk.SetDoNotAllowVias(False); zk.SetDoNotAllowPads(False); zk.SetDoNotAllowFootprints(False)
+        ls_ = pcbnew.LSET(); ls_.AddLayer(pcbnew.F_Cu); ls_.AddLayer(pcbnew.B_Cu); zk.SetLayerSet(ls_); olk = zk.Outline(); olk.NewOutline()
+        for (xx, yy) in ((kx0, ky0), (kx1, ky0), (kx1, ky1), (kx0, ky1)): olk.Append(MM(xx), MM(yy))
+        bd.Add(zk)
     # ---------- silkscreen: reference placement with collision avoidance ----------
     occ = list(occupied); sil = []
     for ref_, fp_ in fps.items():

@@ -58,6 +58,13 @@ L += ["### Bought-in", "", "12 V 3 A adapter (barrel 5.5/2.1, centre positive), 
 write("biotray/MANUFACTURING_MANUAL.md", L)
 
 # ---------------- BioWatt ----------------
-L = ["# BioWatt MFC harvester: status page (no manufacturing manual yet)", "", "> **Status: concept and energy-budget model only. No PCB is released.** See `biowatt/docs/PCB_BLOCKERS.md` for the exact missing input (harvester IC setpoint resistors from the vendor datasheet).", "",
- "## What you can do now", "", "- Run `python3 biowatt/sim/budget.py` and replace the assumptions with your own measured MFC data (polarisation sweep).", "- Decide the load: a BLE/LoRa sensor tag, not WiFi (see `biowatt/docs/budget.md`).", "- Provide the datasheet text so the board can be completed through the normal pipeline.", ""]
-write("biowatt/MANUFACTURING_STATUS.md", L)
+ok, b, s = state("utility10/pcb/release/biowatt", "biowatt")
+L = ["# BioWatt MFC energy-harvester board: manufacturing manual", "", f"> **Status: design only; nothing built or tested with a real fuel cell.** PCB: {s}. Setting resistors derived from the TI BQ25570 datasheet equations (SLUSBH2G).", "",
+ "## 1. What is made", "", "A 44 x 40 mm board: BQ25570 harvester (boost charger with MPPT at 50 % of Voc, nano-power buck) from a microbial fuel cell input (J1) into a protected single Li-ion/LiPo cell (J2), with a regulated 3.35 V output and a VBAT_OK flag on J3. Thirteen 1 % megohm resistors set VBAT_OV 3.95 V, VBAT_OK 3.35 V falling / 3.63 V rising and VOUT 3.35 V; the region around them has no ground pour.", "",
+ "## 2. Deliverables", "", "| Item | Where | State |", "|---|---|---|", f"| PCB | `utility10/pcb/release/biowatt/` and `biowatt/hardware/biowatt/` | {s} |", "| Energy budget model | `biowatt/sim/budget.py`, `biowatt/docs/budget.md` | assumption-based |", ""]
+if ok: L += ["## 3. Bill of materials", "", bom_table(b["bom"]), ""]
+L += ["### Bought-in", "", "Protected single Li-ion/LiPo cell (3.7 V) with JST-PH 2 lead; MFC with JST-PH 2 lead; load tag on J3 (BLE/LoRa class: average current well under 1 mA).", "",
+ "## 4. Make the board", "", COMMON_MAKE.format(rel="utility10/pcb/release/biowatt", name="biowatt", copper="1 oz is fine"), "The megohm resistors are 0603 1 % parts (5.6 M, 4.3 M, 1 M): check the CPL preview and clean flux residue thoroughly afterwards, then keep the board dry.", "",
+ "## 5. Commissioning", "", "1. Bench supply 0.8 V, current-limited 5 mA, on J1: with no cell fitted VSTOR (TP2) rises. 2. Fit a protected cell: VBAT_OK goes high above about 3.63 V and drops below 3.35 V. 3. VOUT (TP3) reads 3.35 V. 4. Then connect the MFC.", "",
+ "## 6. Limits", "", "Cold start needs VIN of at least 600 mV: a single MFC (0.5-0.7 V) is marginal, use two in series or a start-up source. C6 is a stocked X7R 10 nF where the datasheet asks for a low-leakage part. MFC power (about 20 uW) supports only a BLE/LoRa tag. Not tested on hardware.", ""]
+write("biowatt/MANUFACTURING_MANUAL.md", L)

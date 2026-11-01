@@ -2,7 +2,7 @@
 import os, sys, shutil, subprocess, zipfile, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import outputs, docgen
-BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra", "prayog", "beatrunner", "astradand", "kinetic_ctl", "kinetic_vib", "biotray", "mitti"]
+BOARDS = sys.argv[1:] or ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra", "prayog", "beatrunner", "astradand", "kinetic_ctl", "kinetic_vib", "biotray", "mitti", "biowatt"]
 summary = []
 for mod in BOARDS:
     if mod != "rainplate": subprocess.run([sys.executable, os.path.join(HERE, "prune.py"), mod], capture_output=True, text=True)
@@ -32,6 +32,6 @@ sp = os.path.join(HERE, "release", "summary.json")
 if os.path.exists(sp):
     for x in json.load(open(sp)): old[x["mod"]] = x
 for x in summary: old[x["mod"]] = x
-order = ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra", "prayog", "beatrunner", "astradand", "kinetic_ctl", "kinetic_vib", "biotray", "mitti"]
+order = ["seeti", "bijli", "rain", "rainplate", "fridge", "chulha", "tap", "bijlilog", "gastaraju", "arcade", "kheti", "jalnetra", "prayog", "beatrunner", "astradand", "kinetic_ctl", "kinetic_vib", "biotray", "mitti", "biowatt"]
 summary = [old[m] for m in order if m in old]
 json.dump(summary, open(sp, "w"), indent=1); print(json.dumps(summary, indent=1))
