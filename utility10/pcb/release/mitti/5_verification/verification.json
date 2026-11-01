@@ -3,7 +3,7 @@
  "erc_errors": [],
  "erc_warnings": [],
  "pin_pad_mismatch": [],
- "stitch_vias": 206,
+ "stitch_vias": 211,
  "silk_unplaced": [],
  "silk": {
   "placed": 61,
@@ -12,20 +12,16 @@
   ]
  },
  "route_failures": [],
- "tracks": 899,
+ "tracks": 903,
  "drc": {
-  "silk_overlap:warning": 2,
-  "silk_over_copper:warning": 12,
-  "solder_mask_bridge:error": 3,
-  "silk_edge_clearance:warning": 4,
-  "courtyards_overlap:error": 6,
-  "clearance:error": 3,
-  "track_dangling:warning": 7
+  "courtyards_overlap:error": 1,
+  "track_dangling:warning": 8,
+  "unconnected_items:error": 1
  },
- "drc_errors": 12,
- "drc_warnings": 25,
+ "drc_errors": 2,
+ "drc_warnings": 8,
  "drc_waived": {},
- "unconnected": 0,
+ "unconnected": 1,
  "step": true,
  "netlist_match": true,
  "net_names_not_in_schematic": [],

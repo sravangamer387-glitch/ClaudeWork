@@ -5,7 +5,7 @@ parts = [
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=76, y=26, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
    nets={"1": "GND", "40": "GND", "41": "GND", "2": "+3V3", "3": "EN", "27": "BOOT", "8": "ONEWIRE", "9": "MODEM_TX", "10": "MODEM_RX", "11": "MODEM_PWRKEY", "12": "MODEM_STATUS", "6": "MODEM_EN", "4": "HX_DT", "5": "HX_SCK", "17": "ACC_INT", "18": "SDA", "19": "SCL", "39": "SOIL_ADC", "38": "VBAT_ADC", "25": "LED", "37": "UART_TX", "36": "UART_RX"}),
  C("C37", "100n", 62, 36, "+3V3", "GND", 90), C("C38", "10u", 58, 36, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- R("R42", "10k", 60, 22, "+3V3", "EN", 90), C("C39", "1u", 60, 27, "EN", "GND", 90), button("SW2", "EN", 56, 41, "Reset (EN)"), button("SW3", "BOOT", 65, 41, "Boot (IO0)"),
+ R("R42", "10k", 60, 22, "+3V3", "EN", 90), C("C39", "1u", 60, 27, "EN", "GND", 90), button("SW2", "EN", 54, 41, "Reset (EN)"), button("SW3", "BOOT", 62, 41, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C (charge + program)", x=34, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
  R("R43", "5.1k", 32, 20, "CC1", "GND", 90), R("R44", "5.1k", 36, 20, "CC2", "GND", 90),
