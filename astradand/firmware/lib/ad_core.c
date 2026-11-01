@@ -115,7 +115,7 @@ void ad_led_frame(const ad_game_t *s, uint32_t now, uint32_t started, int spell,
             out[i].r = (uint8_t)(c.r * v / 255 * fade / 255); out[i].g = (uint8_t)(c.g * v / 255 * fade / 255); out[i].b = (uint8_t)(c.b * v / 255 * fade / 255);
         }
     } else {                                                                                                          /* idle: mana bar with a slow breath */
-        int lit = (s->mana * AD_LEDS + 99) / 100; uint8_t br = (uint8_t)(40 + tri(now, 3000) * 60 / 255);
+        int lit = (s->mana * AD_LEDS + 99) / 100; uint8_t br = (uint8_t)(14 + tri(now, 3000) * 14 / 255);
         for (int i = 0; i < AD_LEDS; i++) if (i < lit) { out[i].r = br / 4; out[i].g = br / 2; out[i].b = br; }
         if (low && ((now / 500) % 2 == 0)) { out[0].r = 120; out[0].g = 0; out[0].b = 0; }
     }
