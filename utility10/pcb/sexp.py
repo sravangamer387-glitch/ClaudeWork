@@ -23,7 +23,8 @@ SYMDIR = "/usr/share/kicad/symbols"; FPDIR = "/usr/share/kicad/footprints"
 _libs = {}
 def lib(name):
     if name not in _libs:
-        _libs[name] = parse(open(os.path.join(SYMDIR, name + ".kicad_sym")).read())
+        _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "symbols", name + ".kicad_sym")
+        _libs[name] = parse(open(_p if os.path.exists(_p) else os.path.join(SYMDIR, name + ".kicad_sym")).read())
     return _libs[name]
 def symbol(libname, name):
     for e in lib(libname):

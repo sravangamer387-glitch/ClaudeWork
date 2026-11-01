@@ -65,7 +65,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     report["pin_pad_mismatch"] = mism
     if mism: print(*mism, sep="\n")
     # ---------- routing ----------
-    widths = B.get("widths", {}); WS = (0.2, 0.4); clr = B.get("clr", 0.2)
+    widths = B.get("widths", {}); WS = tuple(B.get("ws", (0.2, 0.4))); clr = B.get("clr", 0.2)
     rt = R.Router(W, H, widths=WS, clr=clr); rt.block_outside(0.45); rt.block_corner(CR, W, H)
     netid = {n: i for i, n in enumerate(sorted({n for p in parts for n in p["nets"].values() if n}))}
     pad_info = {}; occupied = []

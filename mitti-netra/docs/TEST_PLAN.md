@@ -1,0 +1,5 @@
+# MITTI-NETRA test plan (bench steps not yet run)
+**A (done on a PC):** `cd firmware && make test` (23 checks); `python3 camera/crop_index.py --selftest`.
+**B (board):** 1. USB only, no cell: confirm the TP4056 is not damaged and note that the ESP32 needs a cell (LDO input is the cell). 2. Fit a protected cell: TP2 = 3.3 V. 3. Solar or USB: charge LED lit, cell current about 0.58 A at the start of charge. 4. Deep-sleep current: target under 100 uA total with the modem switched off (measure; the AP2112K alone is about 55 uA). 5. Modem socket: with no breakout, MODEM_EN toggles VBAT_M.
+**C (sensors):** ADXL345 device ID 0xE5; tilt a rigid plate 10 degrees: roll reads 10 +-0.5. HX711 with a known resistor bridge: reading steps with a shunt resistor (quarter-bridge calibration). Soil probe in dry air and water: set the two calibration counts. DS18B20 reads room temperature.
+**D (field):** 7-day outdoor run on solar with hourly reports; log battery voltage, reports delivered, any missed alarms; moisture sensor drift against a gravimetric sample.

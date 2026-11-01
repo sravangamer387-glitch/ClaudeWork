@@ -1,0 +1,2 @@
+# MITTI-NETRA economics (estimates, India, 2026; verify quotes)
+Board with assembled parts: about Rs 2,200; modem breakout (SIM7080G) Rs 2,000-3,000; probe + DS18B20 + ADXL are on the board or cheap (Rs 300); solar panel 6 V 2 W Rs 350; protected 18650 Rs 250; IP65 enclosure Rs 300. **Node about Rs 5,500-6,500**, above the Rs 3,000 prototype ceiling mainly because of the modem. Data plan: NB-IoT/LTE-M SIM plans vary; assume Rs 100-250 per month. Without the modem (WiFi/LoRa variant) the node is about Rs 3,000.
