@@ -40,11 +40,13 @@ parts += [dict(ref="BZ1", sym="Device:Buzzer", fp="Buzzer_Beeper:Buzzer_12x9.5RM
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 
-S = sch_layout([("USB-C 5 V INPUT + 3.3 V LDO + filtered analog supply", ["J1", "F1", "D3", "R1", "R2", "C5", "U3", "C38", "C39", "FB1", "C25", "TP1", "TP2"]), ("MCU: STM32G431CBT6 (170 MHz, 12-bit ADC 4 MSPS, 8 MHz crystal)", ["U1", "Y1", "C35", "C36", "C1", "C2", "C3", "C4", "C33", "C34", "R21", "R22", "C37"]),
+S = sch_layout([("USB-C 5 V INPUT + 3.3 V LDO + filtered analog supply", ["J1", "F1", "D3", "R2", "C5", "R1", "U3", "C38", "C39", "FB1", "C25", "TP1", "TP2"]), ("MCU: STM32G431CBT6 (170 MHz, 12-bit ADC 4 MSPS, 8 MHz crystal)", ["U1", "Y1", "C35", "C36", "C1", "C2", "C3", "C4", "C33", "C34", "R21", "R22", "C37"]),
                ("TRANSDUCER DRIVE: 22 ohm series, BTL from two timer pins, clamp + AC-coupled receive tap", ["J6", "J7", "R30", "R31", "R32", "R33", "C20", "R35", "C21", "R36", "D5", "D6"]),
                ("RECEIVE CHAIN: input mux, 2 x OPA356 (x10 each), gain-select mux, ADC anti-alias", ["U4", "U5", "U6", "U7", "C22", "C23", "C24", "R10", "R11", "C27", "C28", "R12", "R13", "R14", "C29", "R15", "C30", "R16", "R17", "R18", "C31", "R19", "R20", "C32", "TP3", "TP4", "TP5", "TP6"]),
                ("ALARM, LED, BUTTON", ["BZ1", "Q1", "D2", "R7", "D1", "R5", "SW2"]), ("OLED, UART, SWD", ["J4", "R23", "R24", "J5", "J3"])], big=("U1",), maxw=410)
 S["notes"] = [("Measurement: STM32 TIM3 makes a 6-cycle 1 MHz burst on two pins (second inverted = bridge drive, 6.6 Vpp) into transducer A; transducer B receives through U4/LNA/U7 into ADC1 at 4 MS/s (64 samples DMA). Then roles swap. 1000 up/down pairs per measurement.", 20, 280), ("While receiving, one leg of the transducer is held low by its timer pin and the other is high-impedance and feeds the clamp + mux. LNA1 x10.2 (20 dB), LNA2 x10 (+20 dB), U7 selects 20 or 40 dB.", 20, 287), ("2-layer prototype. Production should use 4 layers (solid analog ground, guarded receive trace) - see docs.", 20, 294)]
+S["no_auto"] = {"CC1", "CC2"}
+S["no_flag"] = ("VBUS",)
 BOARD = dict(clr=0.15, name="jal_netra", title="Jal-Netra ultrasonic flow main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S, single_ok=("BAT_P", "TXA1", "TXA2", "TXB1", "TXB2", "VBUS", "RXA_C", "RXB_C", "LNA1_G", "LNA2_G"),
  supply={"+5V": "USB via PTC", "VBUS": "USB", "+3V3": "LDO U3", "AVDD": "ferrite from 3V3", "GND": "USB", "VMID": "divider"}, holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, 2.5), (36, 63.5)],
  gnd_pour_only=True, widths={"VBUS": 0.4}, first=["CC1", "CC2", "VBUS", "+5V", "+3V3", "AVDD", "TXA1", "TXA2", "TXB1", "TXB2", "ADC_IN", "ADC_PRE", "LNA_IN", "LNA1_OUT", "LNA2_OUT", "RXA", "RXB"], edge_ok=("J1",),

@@ -1,6 +1,6 @@
 from .blocks import *
 W, H = 76, 52
-parts = (mcu("+4V5", {"13": "BUZ", "12": "TARE", "32": "HX_DOUT", "1": "HX_SCK", "27": "DIO", "28": "DCLK", "9": "LED_G", "10": "LED_A", "11": "LED_R"}, 34, 26) + isp("+4V5", 62, 40) + batt_input("+4V5", 11, 45.5, "BATT 3xAA") + buzzer("+4V5", "BUZ", 9, 15) +
+parts = (mcu("+4V5", {"13": "BUZ", "12": "TARE", "32": "HX_DOUT", "1": "HX_SCK", "27": "DIO", "28": "DCLK", "9": "LED_G", "10": "LED_A", "11": "LED_R"}, 34, 26) + isp("+4V5", 47, 8) + batt_input("+4V5", 11, 45.5, "BATT 3xAA") + buzzer("+4V5", "BUZ", 9, 15) +
          [dict(ref="U4", sym="Analog_ADC:HX711", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="HX711", x=60, y=17, rot=0, nc=["2", "9", "10", "13"],
                nets={"1": "+4V5", "3": "AVDD", "4": "AVDD", "5": "GND", "6": "VBG", "7": "A_N", "8": "A_P", "11": "HX_SCK", "12": "HX_DOUT", "14": "GND", "15": "GND", "16": "+4V5"}),
           R("R14", "100", 53, 8, "+4V5", "AVDD", 90, lcsc=None), C("C10", "100n", 56, 8, "AVDD", "GND", 90), C("C11", "100n", 66, 8, "+4V5", "GND", 90), C("C12", "100n", 56, 26, "VBG", "GND", 90), C("C13", "10u", 70, 12, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),

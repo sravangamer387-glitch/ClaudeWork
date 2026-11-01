@@ -245,7 +245,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     for (txt, x, y, size) in B.get("silk", []):
         t = pcbnew.PCB_TEXT(bd); t.SetText(txt); t.SetPosition(V(MM(x), MM(y))); t.SetLayer(pcbnew.F_SilkS); t.SetTextSize(V(MM(max(size, 0.8)), MM(max(size, 0.8)))); t.SetTextThickness(MM(0.16)); bd.Add(t)
     pcb_path = os.path.join(out, name + ".kicad_pcb"); bd.Save(pcb_path)
-    open(os.path.join(out, name + ".kicad_pro"), "w").write(json.dumps({"meta": {"filename": name + ".kicad_pro", "version": 1}, "board": {"design_settings": {"rules": {"min_clearance": clr, "min_track_width": 0.2, "min_via_diameter": 0.6, "min_through_hole_diameter": 0.3}}}}, indent=1))
+    open(os.path.join(out, name + ".kicad_pro"), "w").write(json.dumps({"meta": {"filename": name + ".kicad_pro", "version": 1}, "net_settings": {"classes": [{"name": "Default", "clearance": clr, "track_width": 0.2, "via_diameter": 0.6, "via_drill": 0.3}], "meta": {"version": 3}}, "board": {"design_settings": {"rules": {"min_clearance": clr, "min_track_width": 0.2, "min_via_diameter": 0.6, "min_through_hole_diameter": 0.3}}}}, indent=1))
     bd = pcbnew.LoadBoard(pcb_path); filler = pcbnew.ZONE_FILLER(bd); filler.Fill(bd.Zones()); bd.Save(pcb_path)
     import silkfix; report["silk"] = silkfix.fix(pcb_path)
     report["route_failures"] = [list(map(str, f_)) for f_ in failures]; report["tracks"] = len(list(bd.GetTracks()))

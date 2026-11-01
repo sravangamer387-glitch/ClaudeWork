@@ -61,7 +61,7 @@ def build(name, parts, S, title, rev, date, out_path):
             seen_.add(net); fx, fy = pt[0] + d[0] * 5.08, pt[1] + d[1] * 5.08 + (3.81 if d[1] == 0 else 0)
             accepted += [((fx - 3.0, fy - 4.0), (fx + 3.0, fy - 4.0)), ((fx - 3.0, fy + 5.0), (fx + 3.0, fy + 5.0)), ((fx, fy - 4.0), (fx, fy + 5.0)), ((fx - 3.0, fy - 4.0), (fx - 3.0, fy + 5.0)), ((fx + 3.0, fy - 4.0), (fx + 3.0, fy + 5.0))]
     for net, pl in auto.items():
-        if len(pl) != 2 or not S.get("auto_wire", True) or pl[0][0] == pl[1][0]: continue
+        if len(pl) != 2 or not S.get("auto_wire", True) or pl[0][0] == pl[1][0] or net in S.get("no_auto", ()): continue
         (a, da, _), (b, db, _) = pinpos[pl[0]], pinpos[pl[1]]
         if abs(a[0] - b[0]) + abs(a[1] - b[1]) > S.get("auto_wire_max", 70): continue
         a2 = (a[0] + da[0] * 2.54, a[1] + da[1] * 2.54); b2 = (b[0] + db[0] * 2.54, b[1] + db[1] * 2.54)

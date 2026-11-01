@@ -9,7 +9,9 @@ def run(mod):
     for z in bd.Zones():
         z.SetLocalClearance(MM(max(clr + 0.03, 0.18))); z.SetMinThickness(MM(0.15)); z.SetThermalReliefGap(MM(0.2)); z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
     pcbnew.ZONE_FILLER(bd).Fill(bd.Zones()); bd.Save(p)
-    r = {"island_vias": islandfix.fix(p), "stubs_removed": dangle.fix(p)}; r["silk"] = silkfix.fix(p)
+    import subprocess; r = {}
+    for step in ("islandfix", "dangle", "silkfix"):                 # separate processes: pcbnew's track iterator breaks after a zone fill in the same process
+        r[step] = subprocess.run([sys.executable, os.path.join(HERE, step + ".py"), d], capture_output=True, text=True).stdout.strip().splitlines()[-1:]
     bd = pcbnew.LoadBoard(p); rpt = os.path.join(d, "drc_final.rpt"); pcbnew.WriteDRCReport(bd, rpt, pcbnew.EDA_UNITS_MILLIMETRES, True)
     import re, collections; c = collections.Counter(re.findall(r"^\[(\w+)\]", open(rpt).read(), re.M)); r["drc"] = dict(c); return r
 if __name__ == "__main__":

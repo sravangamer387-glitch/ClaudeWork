@@ -31,13 +31,11 @@ MCU 170 MHz about 35 mA while measuring (0.5 s per measurement), LNAs 2 x 8 mA: 
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 50 errors, 17 warnings; unconnected pads: 11 |
-| Schematic netlist equals PCB netlist | NO: {"[('C1', '2'), ('C2', '2'), ('C22', '2')]...": 'only in schematic', "[('J1', 'B5'), ('R2', '1')]...": 'only in PCB'} |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
+| Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [86.1, 66.1] mm, match |
-
-DRC breakdown: clearance:error x39, track_dangling:warning x17, unconnected_items:error x11
 
 Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collision/opening check: pass
 

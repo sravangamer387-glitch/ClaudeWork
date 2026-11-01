@@ -3,8 +3,8 @@ W, H = 92, 58
 def arc(n, x, y):
     return jst(f"J{4+n}", 3, x, y, [f"B{n}", f"LA{n}", "GND"], f"Arcade button {n}")
 parts = (mcu("+4V5", {"13": "BUZ", "30": "B1", "31": "B2", "32": "B3", "28": "B4", "24": "L1", "25": "L2", "26": "L3", "27": "L4", "23": "NOISE"}, 34, 27) + isp("+4V5", 62, 48) + batt_input("+4V5", 12, 50, "BATT 3xAAA") + buzzer("+4V5", "BUZ", 14, 14) +
-         [arc(1, 82, 12), arc(2, 82, 21), arc(3, 82, 30), arc(4, 82, 39), R("R10", "330", 70, 12, "L1", "LA1", 90, lcsc=None), R("R11", "330", 70, 21, "L2", "LA2", 90, lcsc=None), R("R12", "330", 70, 30, "L3", "LA3", 90, lcsc=None), R("R13", "330", 70, 39, "L4", "LA4", 90, lcsc=None),
-          R("R14", "100k", 52, 40, "+4V5", "NOISE", 90), R("R15", "100k", 56, 40, "NOISE", "GND", 90), TP("TP1", "+4V5", 5, 28), TP("TP2", "GND", 5, 33), TP("TP3", "NOISE", 60, 40)])
+         [arc(1, 82, 12), arc(2, 82, 21), arc(3, 82, 30), arc(4, 82, 39), R("R10", "330", 75, 12, "L1", "LA1", 90, lcsc=None), R("R11", "330", 75, 21, "L2", "LA2", 90, lcsc=None), R("R12", "330", 75, 30, "L3", "LA3", 90, lcsc=None), R("R13", "330", 75, 39, "L4", "LA4", 90, lcsc=None),
+          R("R14", "100k", 28, 42, "+4V5", "NOISE", 90), R("R15", "100k", 32, 42, "NOISE", "GND", 90), TP("TP1", "+4V5", 5, 28), TP("TP2", "GND", 5, 33), TP("TP3", "NOISE", 38, 44)])
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("POWER INPUT: 3xAAA, switch, reverse-polarity PMOS", ["J1", "SW1", "Q2", "C4", "TP1", "TP2"]), ("MCU: ATmega328P-AU. Hold button 2 / 3 at power-on to pick Taal Memory / Aloo Bomb", ["U1", "C1", "C2", "C3", "R7"]),
