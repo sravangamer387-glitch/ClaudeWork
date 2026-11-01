@@ -17,11 +17,13 @@ def fix(path, gndname="GND", rounds=4):
         bd = pcbnew.LoadBoard(path); pcbnew.ZONE_FILLER(bd).Fill(bd.Zones())
         zs = {z.GetLayer(): z for z in bd.Zones() if z.GetNetname() == gndname}
         if pcbnew.F_Cu not in zs or pcbnew.B_Cu not in zs: return added
-        top = zs[pcbnew.F_Cu].GetFilledPolysList(pcbnew.F_Cu); bot = zs[pcbnew.B_Cu].GetFilledPolysList(pcbnew.B_Cu)
+        polys = {pcbnew.F_Cu: zs[pcbnew.F_Cu].GetFilledPolysList(pcbnew.F_Cu), pcbnew.B_Cu: zs[pcbnew.B_Cu].GetFilledPolysList(pcbnew.B_Cu)}
         # connectivity: island is OK if a GND via already lands inside it
         vias = [t for t in bd.GetTracks() if t.GetClass() == "PCB_VIA" and t.GetNetname() == gndname]
         n = 0; net = zs[pcbnew.F_Cu].GetNet()
-        for i in range(top.OutlineCount()):
+        for lay, other in ((pcbnew.F_Cu, pcbnew.B_Cu), (pcbnew.B_Cu, pcbnew.F_Cu)):
+          top = polys[lay]; bot = polys[other]
+          for i in range(top.OutlineCount()):
             o = top.Outline(i); bb = o.BBox(); area = abs(o.Area()) / 1e12
             if area < (0.3 if relax else 1.0): continue
             single = pcbnew.SHAPE_POLY_SET(); single.AddOutline(o)

@@ -79,6 +79,11 @@ def build(modname, boost=(), seed=None, outdir=None):
                 rt.add_pad(layers, x0, y0, x1, y1, netid[n]); pad_info[(ref, pad.GetNumber(), pidx)] = (n, layers, (x0, y0, x1, y1), (ToMM(pad.GetPosition().x), ToMM(pad.GetPosition().y)), attr == pcbnew.PAD_ATTRIB_PTH, pad)
             else: rt.block_rect(x0, y0, x1, y1, layers)
     for (a, b, c_, d) in B.get("keepout", []): rt.block_rect(a, b, c_, d)
+    for fp_ in fps.values():                                                                                 # footprint keepout rule areas (e.g. under the MPU-6050 body)
+        for z_ in fp_.Zones():
+            if z_.GetDoNotAllowTracks() or z_.GetDoNotAllowVias():
+                bb_ = z_.GetBoundingBox(); rt.block_rect(ToMM(bb_.GetLeft()), ToMM(bb_.GetTop()), ToMM(bb_.GetRight()), ToMM(bb_.GetBottom()))
+
     tracks = []; failures = []
     def add_track(layer, a, b, nname, w):
         t = pcbnew.PCB_TRACK(bd); t.SetStart(V(MM(a[0]), MM(a[1]))); t.SetEnd(V(MM(b[0]), MM(b[1]))); t.SetWidth(MM(w)); t.SetLayer(pcbnew.F_Cu if layer == 0 else pcbnew.B_Cu); t.SetNet(nets[nname]); bd.Add(t)
