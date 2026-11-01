@@ -20,13 +20,13 @@ parts = [
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=38, y=32, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "VBAT", "2": "GND", "3": "VBAT", "5": "+3V3"}, nc=["4"]),
  C("C3", "1u", 32, 33, "VBAT", "GND", 90), C("C4", "10u", 44, 33, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  R("R4", "330k", 20, 46, "VBAT", "VBAT_ADC", 90), R("R5", "330k", 20, 51, "VBAT_ADC", "GND", 90), C("C5", "100n", 25, 51, "VBAT_ADC", "GND", 90),
- V(ref="Q1", sym="Device:Q_PMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3401A", x=8, y=56, rot=0, lcsc="C15127", mpn="AO3401A", nets={"1": "MGATE", "2": "VBAT", "3": "VBAT_M"}),
- R("R6", "100k", 14, 55, "VBAT", "MGATE", 90),
- V(ref="Q2", sym="Device:Q_NMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3400A", x=14, y=62, rot=0, lcsc="C20917", mpn="AO3400A", nets={"1": "MEN_GR", "2": "GND", "3": "MGATE"}),
- R("R7", "100", 8, 62, "MODEM_EN", "MEN_GR"), R("R8", "100k", 8, 66, "MEN_GR", "GND"),
- V(ref="C6", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=24, y=66, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VBAT_M", "2": "GND"}),
- V(ref="C7", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=31, y=64, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "VBAT_M", "2": "GND"}),
- dict(ref="J6", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Cellular modem (SIM7080G breakout)", x=40, y=66, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "VBAT_M", "2": "GND", "3": "MODEM_TX", "4": "MODEM_RX", "5": "MODEM_PWRKEY", "6": "MODEM_STATUS"}),
+ V(ref="Q1", sym="Device:Q_PMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3401A", x=44, y=42, rot=0, lcsc="C15127", mpn="AO3401A", nets={"1": "MGATE", "2": "VBAT", "3": "VBAT_M"}),
+ R("R6", "100k", 49, 41, "VBAT", "MGATE", 90),
+ V(ref="Q2", sym="Device:Q_NMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3400A", x=44, y=48, rot=0, lcsc="C20917", mpn="AO3400A", nets={"1": "MEN_GR", "2": "GND", "3": "MGATE"}),
+ R("R7", "100", 50, 48, "MODEM_EN", "MEN_GR"), R("R8", "100k", 50, 52, "MEN_GR", "GND"),
+ V(ref="C6", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=42, y=58, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VBAT_M", "2": "GND"}),
+ V(ref="C7", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=51, y=58, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "VBAT_M", "2": "GND"}),
+ dict(ref="J6", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Cellular modem (SIM7080G breakout)", x=52, y=24, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "VBAT_M", "2": "GND", "3": "MODEM_TX", "4": "MODEM_RX", "5": "MODEM_PWRKEY", "6": "MODEM_STATUS"}),
  V(ref="U5", sym="Sensor_Motion:ADXL343", fp="Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y", value="ADXL345", x=62, y=50, rot=0, lcsc="C9667", mpn="ADXL345BCCZ-RL7", nets={"1": "+3V3", "2": "GND", "4": "GND", "5": "GND", "6": "+3V3", "7": "+3V3", "12": "GND", "13": "SDA", "14": "SCL", "8": "ACC_INT"}, nc=["3", "9", "10", "11"]),
  C("C8", "100n", 56, 48, "+3V3", "GND", 90), C("C9", "100n", 68, 46, "+3V3", "GND", 90), R("R9", "4.7k", 66, 54, "+3V3", "SDA", 90), R("R10", "4.7k", 70, 54, "+3V3", "SCL", 90),
  V(ref="U2", sym="Analog_ADC:HX711", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="HX711", x=80, y=64, rot=0, lcsc="C43656", mpn="HX711", nc=["2", "9", "10", "13"],
@@ -38,7 +38,7 @@ parts = [
  V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=46, y=77, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
  R("R13", "4.7k", 52, 76, "+3V3", "ONEWIRE", 90), R("R15", "1k", 22, 76, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 22, 72, "SOIL_ADC", "GND", 90),
  LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
- jst("J8", 3, 50, 10, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
+ jst("J8", 3, 84, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
