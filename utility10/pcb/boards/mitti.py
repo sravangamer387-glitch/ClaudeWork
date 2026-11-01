@@ -8,7 +8,7 @@ parts = [
  R("R42", "10k", 60, 22, "+3V3", "EN", 90), C("C39", "1u", 60, 27, "EN", "GND", 90), button("SW2", "EN", 58, 46, "Reset (EN)"), button("SW3", "BOOT", 66, 46, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C (charge + program)", x=34, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
- R("R43", "5.1k", 40, 14, "CC1", "GND", 90), R("R44", "5.1k", 44, 14, "CC2", "GND", 90),
+ R("R43", "5.1k", 32, 20, "CC1", "GND", 90), R("R44", "5.1k", 36, 20, "CC2", "GND", 90),
  jst("J2", 2, 6, 6, ["SOLAR", "GND"], "Solar panel 5-6 V"),
  V(ref="D1", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=16, y=6, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "SOLAR", "2": "VCC_CHG"}),
  V(ref="D2", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=16, y=12, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "VCC_CHG"}),
@@ -38,7 +38,7 @@ parts = [
  V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=50, y=78, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
  R("R13", "4.7k", 56, 78, "+3V3", "ONEWIRE", 90), R("R15", "1k", 10, 76, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 14, 76, "SOIL_ADC", "GND", 90),
  LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
- jst("J8", 3, 30, 16, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
+ jst("J8", 3, 50, 10, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
