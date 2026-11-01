@@ -12,7 +12,7 @@ A clip-on photodiode head sits on the meter's pulse LED. The unit counts pulses 
 Host tests: 1000 W for one simulated hour produces 1600 pulses and 1.000 kWh; watts from the pulse gap within 4%; idle shows 0 W; slab bill arithmetic; bounce rejected. Slab rates in the code are placeholders, **not a real DISCOM tariff**. Not verified: sensing under sunlight, different LED colours/meter types.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`bm_*`), demo build `firmware/release/bijli_meter.hex`. Nano pins: photodiode A0, LED D13 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`bm_*`), demo build `firmware/release/bijli_meter.hex`. Nano pins: photodiode A0, LED D13 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (80×50×22 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

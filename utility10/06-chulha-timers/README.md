@@ -12,7 +12,7 @@ Four buttons = four channels. Tap adds one minute, hold 1 s clears. Each channel
 Host tests: independent channels, acknowledge only one, add/subtract with floor at zero, 99-minute cap, wrap-safe. Not verified: display ergonomics and buzzer loudness.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`ct_*`), demo build `firmware/release/chulha_timers.hex`. Nano pins: buttons D2-D5, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`ct_*`), demo build `firmware/release/chulha_timers.hex`. Nano pins: buttons D2-D5, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (100×55×22 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

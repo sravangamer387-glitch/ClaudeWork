@@ -12,7 +12,7 @@ Plugs into a wall 5 V USB adapter (supplied). When mains disappears it keeps run
 Host tests: a 1-hour cut is logged with the right duration, 1 s flickers are ignored (2 s debounce), 40 cuts keep the last 32 and total outage adds up. Not verified: real clock drift (needs an RTC), backup cell life.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`pc_*`), demo build `firmware/release/bijli_log.hex`. Nano pins: mains sense D2 (divider from 5 V), I2C display/RTC A4/A5 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`pc_*`), demo build `firmware/release/bijli_log.hex`. Nano pins: mains sense D2 (divider from 5 V), I2C display/RTC A4/A5 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×50×24 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

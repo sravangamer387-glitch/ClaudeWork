@@ -12,7 +12,7 @@ A reed switch and magnet stick on the door gap. Quiet for 60 s, then a chirp eve
 Host tests: quiet in the first minute, chirps then continuous alarm at the thresholds, closing silences and logs time, 11 short opens never warn, millis() wrap-safe. Not verified: magnet alignment tolerance and battery life.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`fd_*`), demo build `firmware/release/fridge_guard.hex`. Nano pins: reed D2 (to GND), buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`fd_*`), demo build `firmware/release/fridge_guard.hex`. Nano pins: reed D2 (to GND), buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (60×30×18 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

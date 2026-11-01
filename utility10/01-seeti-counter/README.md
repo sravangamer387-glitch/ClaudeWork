@@ -12,7 +12,7 @@ A heat-shielded clip puts a small microphone about 10 cm from the whistle. A Goe
 Synthetic kitchen audio (noise + 100 Hz hum): 3/3 whistles counted, 0 counts for 100 ms clinks, 0 for loud noise alone, 0 for a different-frequency tone, 3/3 with whistle 1.5k vs noise 1.5k amplitude. **Limit found:** a whistle at amplitude 300 against noise 1200 counted 0 of 3, so mic placement and gain matter. The whistle frequency (2.8 kHz here) is an assumption: **record 5 real cookers and set it**.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`seeti_*`), demo build `firmware/release/seeti_counter.hex`. Nano pins: mic A0, buzzer D9, button D2, LED D13 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`seeti_*`), demo build `firmware/release/seeti_counter.hex`. Nano pins: mic A0, buzzer D9, button D2, LED D13 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×45×22 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

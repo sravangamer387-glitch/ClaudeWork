@@ -12,7 +12,7 @@ A comb-trace rain plate on the terrace wall, a cable to an indoor bell unit. A 3
 Host tests: no alert for a 2 s wet blip or a flickering sensor, alert after 3 s, mute, re-ring after mute, clears after dry. Not verified: plate corrosion (use gold-plated or carbon traces), cable length effect.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`rain_*`), demo build `firmware/release/rain_alert.hex`. Nano pins: rain A0, mute D2, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`rain_*`), demo build `firmware/release/rain_alert.hex`. Nano pins: rain A0, mute D2, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×45×24 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

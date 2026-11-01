@@ -12,7 +12,7 @@ The cylinder stands on a 330 mm plate over four load cells. After the cylinder i
 Host tests (110 checks incl. other tools): calibration, rejects readings while the cylinder is being placed or bumped, full cylinder reads 14.2 kg / 100%, learned consumption within 0.05 kg/day, empty reads 0%. A real bug was found: the sample history froze after 255 samples (index stuck), fixed. Not verified: real load cell drift/temperature, hysteresis under 30 kg, creep.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`gs_*`), demo build `firmware/release/gas_taraju.hex`. Nano pins: HX711 DT D4, SCK D5, LEDs D6-D8, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`gs_*`), demo build `firmware/release/gas_taraju.hex`. Nano pins: HX711 DT D4, SCK D5, LEDs D6-D8, buzzer D9 (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (90×60×26 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 

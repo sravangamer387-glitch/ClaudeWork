@@ -12,7 +12,7 @@ An inline flow sensor on a tap or hose; the display shows litres this session an
 Host tests: litres from pulses, a session ends after 5 s without flow, target alarm at 10 L, new session starts cleanly, day total adds. Pulses per litre (450) is a typical datasheet value, **the pack includes a 10 L bucket calibration**.
 
 ## Firmware and electronics
-Engine `firmware/lib/utilcore.c` (`tap_*`), demo build `firmware/release/tap_litre.hex`. Nano pins: flow D3 (interrupt), display I2C (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. A custom PCB is **not laid out**; the Nano demo and the pin map above are the starting point for the EMS.
+Engine `firmware/lib/utilcore.c` (`tap_*`), demo build `firmware/release/tap_litre.hex`. Nano pins: flow D3 (interrupt), display I2C (wiring notes in the header of `firmware/src/main_util.cpp`). Low voltage only. The rev B PCB is laid out (see below). The hex above is the **Nano bench demo**; firmware for the custom board is `firmware/src/main_board.cpp` (Seeti: `seeti_prod.cpp`), built by `make boards`, hex in `firmware/release/<clock>/boards/` - compiled but not yet run on hardware.
 
 Enclosure: `enclosure_body.stl` / `enclosure_lid.stl` (70×50×24 mm, 2.4 mm walls, watertight): a simple prototype shell; production tooling needs a proper design.
 
