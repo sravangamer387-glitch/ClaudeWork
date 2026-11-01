@@ -180,5 +180,18 @@
   "parts": 53,
   "nets": 46,
   "order_ready": true
+ },
+ {
+  "board": "astradand_main",
+  "mod": "astradand",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 49,
+  "nets": 33,
+  "order_ready": true
  }
 ]
