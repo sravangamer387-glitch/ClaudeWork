@@ -50,6 +50,6 @@ PREV = [("GND", 73.40, 27.36), ("GND", 73.40, 29.56), ("GND", 75.60, 27.36), ("G
 BOARD = dict(pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soil and structure telemetry node (ESP32-S3 + LTE-M modem socket)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VBAT": "Li-ion cell", "VBAT_M": "VBAT through Q1", "VCC_CHG": "solar/USB through D1/D2", "+3V3": "LDO U3", "GND": "battery", "VBUS": "USB host", "AVDD": "HX711 analog supply via R11", "SOLAR": "solar panel"}, single_ok=("CC1", "CC2", "STDBY_K"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
- holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG"], edge_ok=("J1",), gnd_pour_only=True,
+ holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("MITTI-NETRA rev A", 30, 77, 1.1)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 6, 6, 4)], lid=[])
