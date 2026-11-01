@@ -11,7 +11,7 @@ BY_VALUE = {
  "PTC 1A 16V": ("C142746", "Littelfuse 1812L110/16DR (1.1 A hold, 16 V)"), "8 MHz": ("C2682775", "YXC X32258MOB4SI 8 MHz 12 pF 3225 (matches the 15 pF load caps)"),
 }
 BY_VALUE_FP = {
- ("Green", "LED_0603"): ("C72043", "Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check)"), ("Red", "LED_0603"): ("C72044", "Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check)"),
+ ("Green", "LED_0603"): ("C72043", "Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check)"), ("Amber", "LED_0603"): ("C72038", "Everlight 19-213/Y2C-CQ2R2L/3T yellow 591 nm (marked obsolete by some distributors: check)"), ("Red", "LED_0603"): ("C72044", "Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check)"),
 }
 BY_FP = {   # footprint name fragment -> (lcsc, mpn); through-hole parts are hand-assembled but get numbers so the whole BOM can be bought
  "JST_PH_B2B-PH-K": ("C131337", "JST B2B-PH-K-S(LF)(SN)"), "JST_PH_B3B-PH-K": ("C131339", "JST B3B-PH-K-S(LF)(SN)"), "JST_PH_B4B-PH-K": ("C131334", "JST B4B-PH-K-S(LF)(SN)"),

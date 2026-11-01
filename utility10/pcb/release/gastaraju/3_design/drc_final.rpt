@@ -1,0 +1,18 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/gastaraju/gas_taraju.kicad_pcb **
+** Created on 2026-11-01 04:49:53 **
+
+** Found 2 DRC violations **
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(24.0000 mm, 50.3000 mm): PCB Text 'GAS TARAJU rev B' on F.Silkscreen
+    @(20.8000 mm, 49.7300 mm): Line on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(24.0000 mm, 50.3000 mm): PCB Text 'GAS TARAJU rev B' on F.Silkscreen
+    @(21.9000 mm, 49.5200 mm): Line on F.Silkscreen
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

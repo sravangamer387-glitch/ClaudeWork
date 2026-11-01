@@ -18,6 +18,6 @@ S = sch_layout([("POWER INPUT: 3xAAA, switch, reverse-polarity PMOS", ["J1", "SW
                ("LEDS", [f"D{10+n}" for n in range(16)] + [f"R{20+n}" for n in range(16)]), ("BUTTON, BUZZER, PROGRAMMING", ["J3", "BZ1", "Q1", "D2", "R6", "J2"])], big=("U1",))
 S["notes"] = [("Beat Runner: 16 LEDs in a row on two cascaded 74HC595 (data on D11, shift clock D12, latch D13 as in firmware; shared with the ISP header). Notes scroll toward LED 0; press the big arcade button on time.", 20, 300)]
 BOARD = dict(name="beat_runner", title="Beat Runner - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+4V5": "battery via Q2", "GND": "battery"}, single_ok=("BAT_P",),
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(44, 2.5), (W - 14, H - 2.5)], gnd_pour_only=True, widths={}, first=["+4V5", "BAT_P", "BAT_SW", "MOSI", "SCK", "MISO"], clr=0.15,
+ holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(44, 2.5), (W - 14, H - 2.5)], widths={}, first=["+4V5", "BAT_P", "BAT_SW", "MOSI", "SCK", "MISO"], clr=0.15,
  silk=[("BEAT RUNNER rev A", 60, H - 1.7, 0.9)], stitch=6.0)
 BOARD["enc"] = dict(standoff=4.0, side=[("J1", "left", 9, 7, 3), ("J3", "right", 9, 7, 3)], lid=[("grille", "BZ1", 5, 1.2, 7)])

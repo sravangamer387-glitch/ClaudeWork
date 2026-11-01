@@ -1,0 +1,37 @@
+{
+ "board": "gas_taraju",
+ "erc_errors": [],
+ "erc_warnings": [],
+ "pin_pad_mismatch": [],
+ "stitch_vias": 423,
+ "silk_unplaced": [],
+ "silk": {
+  "placed": 34,
+  "unplaced": [
+   "TP2",
+   "GAS TARAJU rev B"
+  ]
+ },
+ "route_failures": [],
+ "tracks": 899,
+ "drc": {},
+ "drc_errors": 0,
+ "drc_warnings": 0,
+ "drc_waived": {},
+ "unconnected": 0,
+ "step": true,
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
+ "nets": 28,
+ "parts": 35,
+ "gerber_independent_check": {
+  "layers": 9,
+  "outline_mm": [
+   76.1,
+   52.1
+  ],
+  "size_ok": true,
+  "errors": []
+ }
+}

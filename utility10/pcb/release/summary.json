@@ -104,6 +104,19 @@
   "order_ready": true
  },
  {
+  "board": "gas_taraju",
+  "mod": "gastaraju",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 35,
+  "nets": 28,
+  "order_ready": true
+ },
+ {
   "board": "desi_arcade",
   "mod": "arcade",
   "drc_errors": 0,
