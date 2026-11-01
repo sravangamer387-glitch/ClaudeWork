@@ -37,3 +37,18 @@ Two 1 MHz piezo discs face each other across a 60 mm measuring bore (12 mm diame
 
 ## 5. Where things are
 `sim/` physics, digital twin, receive-chain budget, SPICE, plots · `firmware/` tested core + target skeleton · `hardware/` KiCad project, Gerbers, BOM, STEP, fab notes · `cad/` spool and fluid-volume STLs, piezo reference · `docs/` results, economics, test plan.
+
+## Main board status (rev A, software-routed)
+
+![top](out/pcb_top.png)
+
+| Check | Result |
+|---|---|
+| Board | 86.1 x 66.1 mm, 2 layers, 78 parts, 51 nets, JLCPCB parts (see `hardware/jal_netra_JLC_BOM.csv`) |
+| KiCad DRC (0.15 mm clearance, 0.2 mm tracks, 0.6/0.3 mm vias) | 0 errors, 0 warnings, 0 unconnected |
+| Netlist (schematic vs PCB pin groups) | identical, 51 nets |
+| Own ERC on the spec | 0 errors |
+| Independent Gerber parse (gerbonara) | 9 layers, outline 86.1 x 66.1 mm, no errors |
+| Silkscreen | references placed by geometry (no pads/vias/holes/edge hits); audited on screenshots |
+
+Limits, stated plainly: the placement and routing were produced by my own scripted router and have **not** been reviewed by a PCB engineer; the RX front end is laid out by connectivity, not hand-tuned for noise; guard rings / star-ground around the LNA and the TX bridge return paths need a human layout review before a fab run. Nothing has been built or measured. See `docs/TEST_PLAN.md` for the gates that decide whether the physics holds on real water.

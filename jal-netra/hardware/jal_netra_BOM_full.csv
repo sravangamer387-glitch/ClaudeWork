@@ -1,0 +1,79 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+U1,STM32G431CBT6,Package_QFP:LQFP-48_7x7mm_P0.5mm,STM32G431CBT6,,,hand/THT
+U4,TS5A3159,Package_TO_SOT_SMD:SOT-363_SC-70-6,,,,hand/THT
+U5,OPA356,Package_TO_SOT_SMD:SOT-23-5,,,,hand/THT
+U6,OPA356,Package_TO_SOT_SMD:SOT-23-5,,,,hand/THT
+U7,TS5A3159,Package_TO_SOT_SMD:SOT-363_SC-70-6,,,,hand/THT
+U3,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,,,,hand/THT
+FB1,BLM18 600R,Inductor_SMD:L_0603_1608Metric,,,,hand/THT
+Y1,8 MHz,Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm,,,,hand/THT
+D5,BAV99,Package_TO_SOT_SMD:SOT-23,,,,hand/THT
+D6,BAV99,Package_TO_SOT_SMD:SOT-23,,,,hand/THT
+J6,Transducer A (BTL),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,,,,hand/THT
+J7,Transducer B (BTL),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,,,,hand/THT
+R30,22,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+R31,22,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+R32,22,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+R33,22,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+C20,10n,Capacitor_SMD:C_0603_1608Metric,0603 10nF X7R,C57112,verified,SMT (JLC)
+R35,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C21,10n,Capacitor_SMD:C_0603_1608Metric,0603 10nF X7R,C57112,verified,SMT (JLC)
+R36,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C22,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C23,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C24,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C25,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+R10,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+R11,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C27,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+C28,10n,Capacitor_SMD:C_0603_1608Metric,0603 10nF X7R,C57112,verified,SMT (JLC)
+R12,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R13,2.2k,Resistor_SMD:R_0603_1608Metric,0603 2.2k 1%,C4190,memory,SMT (JLC)
+R14,240,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+C29,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+R15,0,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+C30,10n,Capacitor_SMD:C_0603_1608Metric,0603 10nF X7R,C57112,verified,SMT (JLC)
+R16,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R17,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R18,100,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+C31,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+R19,0,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+R20,33,Resistor_SMD:R_0603_1608Metric,,,,hand/THT
+C32,22p,Capacitor_SMD:C_0603_1608Metric,,,,hand/THT
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C4,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C33,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C34,4.7u,Capacitor_SMD:C_0603_1608Metric,,,,hand/THT
+C35,15p,Capacitor_SMD:C_0603_1608Metric,,,,hand/THT
+C36,15p,Capacitor_SMD:C_0603_1608Metric,,,,hand/THT
+R21,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+R22,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C37,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C38,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+C39,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+J4,OLED I2C,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,,,,hand/THT
+R23,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,memory,SMT (JLC)
+R24,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,memory,SMT (JLC)
+J5,UART host / BLE,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,,,,hand/THT
+J3,SWD,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,,,,hand/THT
+SW2,Test / zero,Button_Switch_SMD:SW_SPST_B3U-1000P,,,,hand/THT
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP4,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP5,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP6,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+J1,USB-C 5V,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
+F1,PTC 500mA,Fuse:Fuse_1206_3216Metric,,,,hand/THT
+D3,SMAJ5.0A,Diode_SMD:D_SMA,,,,hand/THT
+R1,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,memory,SMT (JLC)
+R2,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,memory,SMT (JLC)
+C5,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,memory,SMT (JLC)
+BZ1,Buzzer,Buzzer_Beeper:Buzzer_12x9.5RM7.6,,,,hand/THT
+Q1,MMBT3904,Package_TO_SOT_SMD:SOT-23,MMBT3904,C20526,verified,SMT (JLC)
+D2,1N4148WS,Diode_SMD:D_SOD-323,1N4148WS,C2128,verified,SMT (JLC)
+R7,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+D1,Green,LED_SMD:LED_0603_1608Metric,,,,hand/THT
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
