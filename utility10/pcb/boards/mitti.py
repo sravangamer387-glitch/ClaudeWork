@@ -46,8 +46,12 @@ S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", 
                ("CELLULAR MODEM SOCKET: high-side switch, burst capacitors, UART", ["Q1", "R6", "Q2", "R7", "R8", "C6", "C7", "J6"]),
                ("SENSORS: tilt/vibration (ADXL345), strain bridge (HX711), soil probe, temperature", ["U5", "C8", "C9", "R9", "R10", "R15", "C16", "U2", "R11", "C10", "C11", "C12", "C13", "R12", "C14", "C15", "J4", "J5", "J7", "R13"])], big=("U1",))
 S["notes"] = [("MITTI-NETRA: solar/USB charge a protected 1S Li-ion cell through a TP4056 (charge current about 0.58 A with R1 = 2.2 k). The ESP32-S3 deep-sleeps and reports through a plug-in SIM7080G breakout (LTE-M / NB-IoT) that is powered through the high-side switch Q1 only while transmitting; the socket brings out VBAT, GND, UART and PWRKEY/STATUS: match your breakout's pinout. ADXL345 on I2C gives tilt and vibration; HX711 reads a strain-gauge bridge; capacitive soil probe on an ADC pin; DS18B20 temperature on 1-Wire. LDO cutoff: the node stops regulating below about 3.55 V on the cell.", 0, 0)]
-PREV = [("GND", 73.40, 27.36), ("GND", 73.40, 29.56), ("GND", 75.60, 27.36), ("GND", 75.60, 29.56)]
-BOARD = dict(pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soil and structure telemetry node (ESP32-S3 + LTE-M modem socket)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
+PRE = [dict(net="+3V3", layer=0, pts=[(66.0, 54.83), (66.0, 56.3)], w=0.25),
+       dict(net="+3V3", layer=1, pts=[(66.0, 56.3), (46.0, 76.3), (46.0, 77.0)], w=0.25),
+       dict(net="+3V3", layer=1, pts=[(52.0, 70.3), (30.0, 70.3), (30.0, 77.0)], w=0.25),
+       dict(net="SCL", layer=0, pts=[(62.0, 48.0), (62.0, 44.4), (71.0, 44.4), (71.0, 52.0), (70.0, 53.17)], w=0.2)]
+PREV = [("+3V3", 66.0, 56.3), ("GND", 73.40, 27.36), ("GND", 73.40, 29.56), ("GND", 75.60, 27.36), ("GND", 75.60, 29.56)]
+BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soil and structure telemetry node (ESP32-S3 + LTE-M modem socket)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VBAT": "Li-ion cell", "VBAT_M": "VBAT through Q1", "VCC_CHG": "solar/USB through D1/D2", "+3V3": "LDO U3", "GND": "battery", "VBUS": "USB host", "AVDD": "HX711 analog supply via R11", "SOLAR": "solar panel"}, single_ok=("CC1", "CC2", "STDBY_K"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
  holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (60, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
