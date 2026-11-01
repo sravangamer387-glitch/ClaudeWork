@@ -15,7 +15,7 @@ parts = [
  C("C1", "10u", 24, 6, "VCC_CHG", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  V(ref="U4", sym="KN:TP4056", fp="Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm", value="TP4056", x=16, y=24, rot=0, lcsc="C382139", mpn="TPOWER TP4056", nets={"1": "GND", "2": "PROG", "3": "GND", "4": "VCC_CHG", "5": "VBAT", "6": "STDBY_K", "7": "CHRG_K", "8": "VCC_CHG"}),
  R("R1", "2.2k", 6, 28, "PROG", "GND", 90), C("C2", "10u", 26, 28, "VBAT", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- LED("D3", "Red (charging)", 8, 34, "CHRG_K", "CHRG_A"), R("R2", "1k", 8, 39, "VCC_CHG", "CHRG_A", 90), LED("D4", "Green (done)", 14, 34, "STDBY_K", "STDBY_A"), R("R3", "1k", 14, 39, "VCC_CHG", "STDBY_A", 90),
+ LED("D3", "Red", 8, 34, "CHRG_K", "CHRG_A"), R("R2", "1k", 8, 39, "VCC_CHG", "CHRG_A", 90), LED("D4", "Green", 14, 34, "STDBY_K", "STDBY_A"), R("R3", "1k", 14, 39, "VCC_CHG", "STDBY_A", 90),
  jst("J3", 2, 28, 44, ["VBAT", "GND"], "Li-ion cell (protected!)"),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=38, y=32, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "VBAT", "2": "GND", "3": "VBAT", "5": "+3V3"}, nc=["4"]),
  C("C3", "1u", 32, 33, "VBAT", "GND", 90), C("C4", "10u", 44, 33, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),

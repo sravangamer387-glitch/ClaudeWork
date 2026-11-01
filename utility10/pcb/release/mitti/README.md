@@ -6,7 +6,7 @@ MITTI-NETRA soil and structure telemetry node (90 x 72 mm): ESP32-S3, TP4056 sol
 
 ## Specification
 - Board 90 x 80 mm, 2 layers, 1.6 mm FR-4, 1 oz copper, rounded corners R2.5 mm, 3 x M2.5 mounting holes, 2 fiducials.
-- Rules used: min track 0.2 mm (power 0.4 mm), min clearance 0.15 mm, via 0.6/0.3 mm, GND pour on both layers, 211 stitching vias.
+- Rules used: min track 0.2 mm (power 0.4 mm), min clearance 0.15 mm, via 0.6/0.3 mm, GND pour on both layers, 212 stitching vias.
 - Finish: ENIG recommended (HASL lead-free acceptable); green mask, white silk; IPC class 2.
 - 62 parts, 41 nets.
 
@@ -22,13 +22,11 @@ Target under 100 uA in deep sleep with the modem off (not measured); modem burst
 | Check | Result |
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
-| KiCad DRC | 2 errors, 8 warnings; unconnected pads: 1 |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
 | Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [90.1, 80.1] mm, match |
-
-DRC breakdown: courtyards_overlap:error x1, track_dangling:warning x8, unconnected_items:error x1
 
 Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collision/opening check: pass
 
@@ -128,8 +126,8 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | Check | Result |
 |---|---|
 | gerber layers and drill present | PASS |
-| drc errors 0 | FAIL |
-| unconnected 0 | FAIL |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
 | netlist matches schematic | PASS |
 | erc errors 0 | PASS |
 | independent gerber check clean | PASS |
@@ -137,7 +135,7 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | every lcsc number verified | PASS |
 | cpl rows equal jlc bom parts | PASS |
 | step model | PASS |
-| KiCad DRC warnings | 8 |
+| KiCad DRC warnings | 0 |
 | **Order ready** | **NO - see lists below** |
 
 Parts with no LCSC number: D3, D4

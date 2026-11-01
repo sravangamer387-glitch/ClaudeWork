@@ -3,7 +3,7 @@
  "erc_errors": [],
  "erc_warnings": [],
  "pin_pad_mismatch": [],
- "stitch_vias": 211,
+ "stitch_vias": 212,
  "silk_unplaced": [],
  "silk": {
   "placed": 61,
@@ -12,16 +12,12 @@
   ]
  },
  "route_failures": [],
- "tracks": 903,
- "drc": {
-  "courtyards_overlap:error": 1,
-  "track_dangling:warning": 8,
-  "unconnected_items:error": 1
- },
- "drc_errors": 2,
- "drc_warnings": 8,
+ "tracks": 939,
+ "drc": {},
+ "drc_errors": 0,
+ "drc_warnings": 0,
  "drc_waived": {},
- "unconnected": 1,
+ "unconnected": 0,
  "step": true,
  "netlist_match": true,
  "net_names_not_in_schematic": [],

@@ -1,41 +1,9 @@
 ** Drc report for /home/user/ClaudeWork/utility10/pcb/out/mitti/mitti_netra.kicad_pcb **
-** Created on 2026-11-01 21:48:50 **
+** Created on 2026-11-01 21:59:33 **
 
-** Found 9 DRC violations **
-[courtyards_overlap]: Courtyards overlap
-    Rule: board setup constraints courtyard; Severity: error
-    @(65.0000 mm, 41.0000 mm): Footprint SW3
-    @(76.0000 mm, 26.0000 mm): Footprint U1
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(67.2500 mm, 22.0100 mm): Track [+3V3] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(61.0000 mm, 52.0000 mm): Track [+3V3] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(82.4750 mm, 59.5550 mm): Track [+3V3] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(62.0000 mm, 52.0000 mm): Track [+3V3] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(82.4750 mm, 64.6350 mm): Track [HX_DT] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(82.4750 mm, 65.9050 mm): Track [HX_SCK] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(62.0000 mm, 48.0000 mm): Track [SCL] on F.Cu, length 1.2000 mm
-[track_dangling]: Track has unconnected end
-    Local override; Severity: warning
-    @(18.6500 mm, 22.0950 mm): Track [VCC_CHG] on F.Cu, length 1.2000 mm
+** Found 0 DRC violations **
 
-** Found 1 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
-    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+** Found 0 unconnected pads **
 
 ** Found 0 Footprint errors **
 

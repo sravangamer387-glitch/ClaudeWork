@@ -236,9 +236,9 @@
  {
   "board": "mitti_netra",
   "mod": "mitti",
-  "drc_errors": 2,
-  "drc_warnings": 8,
-  "unconnected": 1,
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
