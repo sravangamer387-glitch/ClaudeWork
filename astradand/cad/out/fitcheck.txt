@@ -1,0 +1,13 @@
+Interference volumes (mm3) of the PCB/components/cells/LEDs against upper shell, lower shell, crystal:
+('board', 0.0, 0.0, 0.0)
+('3xAAA cells', 0.0, 0.0, 0.0)
+('LED tops', 0.0, 0.0, 0.0)
+('BZ1 piezo 12x12x3', 0.0, 0.0, 0.0)
+('MCU + 4 corner parts 16x16x1.4', 0.0, 0.0, 0.0)
+('J1 battery JST 6x5x6', 0.0, 0.0, 0.0)
+('SW1 slide switch 10x6x3.5', 0.0, 0.0, 0.0)
+('J2 ISP header 5.1x7.6x2.5', 0.0, 0.0, 0.0)
+('SW2 trigger 3x2.5x2', 0.0, 0.0, 0.0)
+('D20 SMA 5x2.7x2.2', 0.0, 0.0, 0.0)
+('U2 IMU 4x4x1', 0.0, 0.0, 0.0)
+PASS: no interference above 1 mm3

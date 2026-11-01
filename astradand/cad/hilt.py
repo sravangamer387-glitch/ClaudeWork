@@ -8,6 +8,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out"); os.makedi
 L = 232.0; R_OUT = 17.0; WALL = 2.4; R_IN = R_OUT - WALL            # outer diameter 34 mm
 BX0 = 24.0; BZ = 2.0; BOARD_L, BOARD_W, BOARD_T = 146.0, 26.0, 1.6
 HEAD_X0, HEAD_X1 = BX0 + 8, BX0 + 60                                   # LEDs sit at board x 10..55
+BOSS_Y = BOARD_W / 2 + 2.9                                              # screw bosses sit outside the board edge (inside the wall thickness): no collision with the PCB
 LED_Y = -(BOARD_W / 2 - 5.0)                                            # board y=5 from the LED edge -> offset slit
 def cyl_x(r, x0, x1, sections=96):
     m = creation.cylinder(radius=r, height=x1 - x0, sections=sections); m.apply_transform(T.rotation_matrix(math.pi / 2, [0, 1, 0])); m.apply_translation([(x0 + x1) / 2, 0, 0]); return m
@@ -39,12 +40,12 @@ def build():
     keep = cyl_x(R_OUT - 0.4, 0, L); inner_u = [trimesh.boolean.intersection([m, keep], engine="manifold") for m in inner if m is not None]
     bosses = []
     for x in (22, 62, 102, 142, 182, 214):
-        for sy in (-1, 1): bosses.append(cyl_z(3.2, x, sy * (R_IN - 1.0), -6.0, 6.0))
+        for sy in (-1, 1): bosses.append(cyl_z(2.7, x, sy * BOSS_Y, -6.0, 6.0))
     bosses = [trimesh.boolean.intersection([b, keep], engine="manifold") for b in bosses]
     shell = union([shell] + inner_u + bosses)
     holes = []
     for x in (22, 62, 102, 142, 182, 214):
-        for sy in (-1, 1): holes.append(cyl_z(1.15, x, sy * (R_IN - 1.0), -8.0, 8.0))                  # 2.3 mm pilot for M2.5 self-tapping screws (upper) / clearance below
+        for sy in (-1, 1): holes.append(cyl_z(1.15, x, sy * BOSS_Y, -8.0, 8.0))                  # 2.3 mm pilot for M2.5 self-tapping screws (upper) / clearance below
     shell = diff(shell, holes)
     window = box(HEAD_X0, HEAD_X1, LED_Y - 3.7, LED_Y + 3.7, 4.0, R_OUT + 2.0)                         # light slit over the six LEDs (diffuser crystal sits in it)
     trig = cyl_z(3.1, BX0 + 58, 6.0 - 4.0, 2.0, R_OUT + 2.0)                                              # trigger button hole over SW2 (board x 58, y 20.5 -> y = +7.5)
@@ -55,7 +56,7 @@ def build():
     upper = trimesh.boolean.intersection([shell, box(-1, L + 1, -R_OUT - 3, R_OUT + 3, 0.0, R_OUT + 3)], engine="manifold"); upper = diff(upper, [window, trig] + grille)
     lower = trimesh.boolean.intersection([shell, box(-1, L + 1, -R_OUT - 3, R_OUT + 3, -R_OUT - 3, 0.0)], engine="manifold")
     # lower screw heads: counterbore 5 mm on the underside
-    cb = [cyl_z(2.6, x, sy * (R_IN - 1.0), -9.0, -5.2) for x in (22, 62, 102, 142, 182, 214) for sy in (-1, 1)]
+    cb = [cyl_z(2.6, x, sy * BOSS_Y, -9.0, -5.2) for x in (22, 62, 102, 142, 182, 214) for sy in (-1, 1)]
     lower = diff(lower, cb)
     # crystal diffuser (translucent natural PETG / clear resin): slides into the slit from below the upper shell rim
     crystal = box(HEAD_X0 + 0.3, HEAD_X1 - 0.3, LED_Y - 3.4, LED_Y + 3.4, 5.4, R_OUT + 0.8)
