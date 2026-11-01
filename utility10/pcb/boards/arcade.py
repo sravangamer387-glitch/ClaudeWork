@@ -10,7 +10,7 @@ for p in parts:
 S = sch_layout([("POWER INPUT: 3xAAA, switch, reverse-polarity PMOS", ["J1", "SW1", "Q2", "C4", "TP1", "TP2"]), ("MCU: ATmega328P-AU. Hold button 2 / 3 at power-on to pick Taal Memory / Aloo Bomb", ["U1", "C1", "C2", "C3", "R7"]),
                ("ARCADE BUTTONS + LAMPS (30 mm buttons with LED)", ["J5", "J6", "J7", "J8", "R10", "R11", "R12", "R13"]), ("ALARM: buzzer", ["BZ1", "Q1", "D2", "R6"]), ("RANDOM SEED / BATTERY DIVIDER + PROGRAMMING", ["R14", "R15", "TP3", "J2"])], big=("U1",))
 S["notes"] = [("Desi Arcade: three games (Reflex Raja, Taal Memory, Aloo Bomb) on one board. NOISE node = VCC/2 divider: its ADC noise seeds the random generator and measures the battery.", 20, 280)]
-BOARD = dict(name="desi_arcade", title="Desi Arcade - main board", rev="B", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+4V5": "battery via Q2", "GND": "battery"}, single_ok=("BAT_P",),
+BOARD = dict(clr=0.15, name="desi_arcade", title="Desi Arcade - main board", rev="B", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+4V5": "battery via Q2", "GND": "battery"}, single_ok=("BAT_P",),
  holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, 2.5), (W - 14, H - 2.5)], gnd_pour_only=True, widths={}, first=["+4V5", "BAT_P", "BAT_SW", "B1", "B2", "B3", "B4"],
  silk=[("DESI ARCADE rev B", 28, H - 1.7, 0.9)], stitch=6.0)
 BOARD["enc"] = dict(standoff=4.0, side=[("J1", "bottom", 9, 7, 3), ("SW1", "bottom", 8, 5, 2.5), ("J5", "right", 9, 7, 3), ("J6", "right", 9, 7, 3), ("J7", "right", 9, 7, 3), ("J8", "right", 9, 7, 3)], lid=[("grille", "BZ1", 5, 1.2, 7)])
