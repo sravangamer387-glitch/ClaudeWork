@@ -96,12 +96,12 @@
   "drc_errors": 0,
   "drc_warnings": 0,
   "unconnected": 0,
-  "netlist": false,
+  "netlist": true,
   "erc_errors": 0,
   "failures": 0,
   "parts": 31,
   "nets": 19,
-  "order_ready": false
+  "order_ready": true
  },
  {
   "board": "gas_taraju",

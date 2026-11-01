@@ -50,6 +50,7 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | Project | Manual | Board | Main caveat |
 |---|---|---|---|
 | Jal-Netra (engineering marvel) | [jal-netra/MANUFACTURING_MANUAL.md](../jal-netra/MANUFACTURING_MANUAL.md) | **order-ready** | **Gate 1 acoustic test first; not sellable** |
+| ASTRADAND gesture wand (sci-fi project) | [astradand/MANUFACTURING_MANUAL.md](../astradand/MANUFACTURING_MANUAL.md) | **order-ready** | software-verified; never built; Hindi names unreviewed |
 | Gravity toys (5) | [gravity-toys/MANUFACTURING_MANUAL.md](../gravity-toys/MANUFACTURING_MANUAL.md) | no PCB | drawings partial |
 | Wave 1 electronics toys | [electronics-toys/wave1/MANUFACTURING_MANUAL.md](../electronics-toys/wave1/MANUFACTURING_MANUAL.md) | no PCB | no PCB: not manufacturable yet |
 | Prototype packs (10) | [prototypes/MANUFACTURING_MANUAL.md](../prototypes/MANUFACTURING_MANUAL.md) | no PCB | bench prototypes |

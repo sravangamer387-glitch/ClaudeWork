@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/user/ClaudeWork/utility10/pcb/out/prayog/prayog_hub.kicad_sch</source>
-    <date>Sun Nov  1 08:48:40 2026</date>
+    <date>Sun Nov  1 08:59:00 2026</date>
     <tool>Eeschema 7.0.11+dfsg-1build4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,7 +33,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4be75bfe-8686-4b75-ad43-7f15c43e6ca0</tstamps>
+      <tstamps>3db93481-12af-438a-b620-7eb223eae047</tstamps>
     </comp>
     <comp ref="C2">
       <value>100n</value>
@@ -44,7 +44,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>73fe1df5-8237-4cce-aada-804591d601ee</tstamps>
+      <tstamps>63b36ada-0b0b-4c52-a1a9-8e6f15e7823f</tstamps>
     </comp>
     <comp ref="C3">
       <value>100n</value>
@@ -55,7 +55,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bdf281a9-08f0-4249-8219-a2f04866b85b</tstamps>
+      <tstamps>f4c24aee-807b-4ea9-a784-6c9481a4139d</tstamps>
     </comp>
     <comp ref="C5">
       <value>10u</value>
@@ -66,7 +66,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>76d6231a-9f6c-4ddb-a45a-b53a340cc767</tstamps>
+      <tstamps>bcbd801f-66d1-4831-961e-b9ed71761c22</tstamps>
     </comp>
     <comp ref="C6">
       <value>100n</value>
@@ -77,7 +77,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>13cb213b-b598-4202-9804-e6748af9287b</tstamps>
+      <tstamps>6e97e03c-cae2-4922-a8cd-5cfd7f2efeb2</tstamps>
     </comp>
     <comp ref="C7">
       <value>100n</value>
@@ -88,7 +88,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e9ce2991-d73c-4dbd-9f31-10425c83f026</tstamps>
+      <tstamps>0e14628f-c455-4553-85d8-dc375a5df57a</tstamps>
     </comp>
     <comp ref="C8">
       <value>100n</value>
@@ -99,7 +99,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>673f4611-30b7-47cd-9efa-1766837de36a</tstamps>
+      <tstamps>8f417bd7-ec18-4bd4-80ad-a833d9ec05a0</tstamps>
     </comp>
     <comp ref="C9">
       <value>22p</value>
@@ -110,7 +110,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>178e5675-9535-47cb-b3d2-8b99d3a9cd92</tstamps>
+      <tstamps>c8fe4b1d-1caf-4168-a50e-8598416fcf65</tstamps>
     </comp>
     <comp ref="C10">
       <value>22p</value>
@@ -121,7 +121,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6450898c-5072-43b0-b349-05ac410efea8</tstamps>
+      <tstamps>959a0ea8-072a-4d29-9f8f-41c09d4718bc</tstamps>
     </comp>
     <comp ref="D1">
       <value>Green</value>
@@ -132,7 +132,7 @@
       <property name="ki_description" value="Light emitting diode"/>
       <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c497f5a2-a8d2-4d35-8105-01bc564be64f</tstamps>
+      <tstamps>554fc790-d96f-4e73-b4d5-8dc1d986402e</tstamps>
     </comp>
     <comp ref="D3">
       <value>SMAJ5.0A</value>
@@ -143,7 +143,7 @@
       <property name="ki_description" value="Bidirectional transient-voltage-suppression diode"/>
       <property name="ki_keywords" value="diode TVS thyrector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cc9d2654-7933-45b6-9cce-e026f48d5524</tstamps>
+      <tstamps>88c104ea-c983-4a68-be1f-6639ff009fd7</tstamps>
     </comp>
     <comp ref="F1">
       <value>PTC 500mA</value>
@@ -154,7 +154,7 @@
       <property name="ki_description" value="Resettable fuse, polymeric positive temperature coefficient"/>
       <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d6b142b1-34a4-46e6-919d-018cb796f271</tstamps>
+      <tstamps>c32298cd-8d86-4c91-bf07-c2d9dc98d642</tstamps>
     </comp>
     <comp ref="J1">
       <value>USB-C data + 5V</value>
@@ -165,7 +165,7 @@
       <property name="ki_description" value="USB 2.0-only 16P Type-C Receptacle connector"/>
       <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d64b4755-d1e4-4846-b636-16e308f2ddf0</tstamps>
+      <tstamps>8c7e0df6-edda-4c5b-982a-8abc683dc79f</tstamps>
     </comp>
     <comp ref="J2">
       <value>ISP</value>
@@ -176,7 +176,7 @@
       <property name="ki_description" value="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b9373bca-0b38-4321-88b6-33111c13238a</tstamps>
+      <tstamps>645f534a-74c7-44d0-b936-a7cc52382d8a</tstamps>
     </comp>
     <comp ref="J3">
       <value>Analog socket A0</value>
@@ -187,7 +187,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>356cfce7-7313-43d4-8155-57beca306e45</tstamps>
+      <tstamps>e3d68b18-f9d0-4e8f-8872-000891bab70c</tstamps>
     </comp>
     <comp ref="J4">
       <value>Analog socket A1</value>
@@ -198,7 +198,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9508e02f-0714-446e-936b-8da7c7a1d631</tstamps>
+      <tstamps>78102b83-03e4-4269-b9af-f4bc18bf3228</tstamps>
     </comp>
     <comp ref="J5">
       <value>Analog socket A2</value>
@@ -209,7 +209,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>25044ab2-4b6c-4c8f-a219-e421853e37e1</tstamps>
+      <tstamps>406cf104-4d1e-4c48-9149-cfd0a9167927</tstamps>
     </comp>
     <comp ref="J6">
       <value>Analog socket A3</value>
@@ -220,7 +220,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>34aefc81-d969-461d-a1da-4ebc3510a389</tstamps>
+      <tstamps>ae9a7893-b741-4c91-9e41-f774fb2450a0</tstamps>
     </comp>
     <comp ref="J7">
       <value>Analog socket A4</value>
@@ -231,7 +231,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bbc49d79-5d65-4658-967f-f81690b2da60</tstamps>
+      <tstamps>7cc16ab0-300c-4fce-ad92-cdbcfc52e669</tstamps>
     </comp>
     <comp ref="J8">
       <value>Analog socket A5</value>
@@ -242,7 +242,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>14cee1b2-b5f6-4dcc-b1e2-16ebd13ccaf8</tstamps>
+      <tstamps>3571cedb-fc8c-401b-8212-987799ee2250</tstamps>
     </comp>
     <comp ref="J9">
       <value>Analog socket A6</value>
@@ -253,7 +253,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d0ceaae4-b395-40f0-9f83-f0cace6f440c</tstamps>
+      <tstamps>a90fca43-1558-49a8-8b05-257cb4d21775</tstamps>
     </comp>
     <comp ref="J10">
       <value>Analog socket A7</value>
@@ -264,7 +264,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e107386d-7256-4f9a-bffa-a59c21f9ac7d</tstamps>
+      <tstamps>d98c1af1-d17c-4bb3-a597-08b00f7cff1e</tstamps>
     </comp>
     <comp ref="J11">
       <value>Photogate</value>
@@ -275,7 +275,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>54bfa0fe-7968-4d37-8694-00c4ebcdad70</tstamps>
+      <tstamps>4beab0fb-bb54-423f-b1ca-8c2ee464f00e</tstamps>
     </comp>
     <comp ref="J12">
       <value>Ultrasonic HC-SR04</value>
@@ -286,7 +286,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>91bf57f0-cc4c-4373-a385-0b945ef36b66</tstamps>
+      <tstamps>b2623080-83ef-43d3-8aed-14a888142e5d</tstamps>
     </comp>
     <comp ref="R1">
       <value>5.1k</value>
@@ -297,7 +297,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b54255f2-c551-40ee-ae0c-1a7dd15f1598</tstamps>
+      <tstamps>b13ed0c7-4919-475c-bdba-71a12394440b</tstamps>
     </comp>
     <comp ref="R2">
       <value>5.1k</value>
@@ -308,7 +308,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>18f053bd-e824-40a2-b543-91caf90c1b3a</tstamps>
+      <tstamps>0ea51cc3-2d8a-42dd-ba00-d5d4b5d7014f</tstamps>
     </comp>
     <comp ref="R5">
       <value>1k</value>
@@ -319,7 +319,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1933a78d-e411-480d-a7b2-a5ef369e3ee2</tstamps>
+      <tstamps>6803490c-7388-41ed-a408-edab754b3647</tstamps>
     </comp>
     <comp ref="R7">
       <value>10k</value>
@@ -330,7 +330,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b0dab00d-5454-4678-82b4-2c7b245accbf</tstamps>
+      <tstamps>b35268c0-ed44-4aaf-8ec7-137bd2524fab</tstamps>
     </comp>
     <comp ref="SW2">
       <value>Reaction pad</value>
@@ -341,7 +341,7 @@
       <property name="ki_description" value="Push button switch, generic, two pins"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>08477917-58a6-4b67-b9cb-1f1edb5a33a3</tstamps>
+      <tstamps>d4f9474e-2499-4583-bac0-e6bff1e2e0ba</tstamps>
     </comp>
     <comp ref="TP1">
       <value>TP</value>
@@ -352,7 +352,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e16a82d4-3cf0-46f7-b143-a1d895dc0dda</tstamps>
+      <tstamps>4f96e226-6d17-481c-a45b-be82280b729f</tstamps>
     </comp>
     <comp ref="TP2">
       <value>TP</value>
@@ -363,7 +363,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b2b8d15e-b779-44d2-bc83-d670f7f9926b</tstamps>
+      <tstamps>a2908713-e914-4f9a-b0d8-85628f2fd4c4</tstamps>
     </comp>
     <comp ref="U1">
       <value>ATmega328P-AU</value>
@@ -374,7 +374,7 @@
       <property name="ki_description" value="20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32"/>
       <property name="ki_keywords" value="AVR 8bit Microcontroller MegaAVR PicoPower"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>24223a5d-d1c7-41c6-90b5-cd910fb649d3</tstamps>
+      <tstamps>9d71ad03-0b5e-4916-b2d2-6d2190ca776f</tstamps>
     </comp>
     <comp ref="U2">
       <value>CH340C</value>
@@ -385,7 +385,7 @@
       <property name="ki_description" value="USB serial converter, UART, SOIC-16"/>
       <property name="ki_keywords" value="USB UART Serial Converter Interface"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5720386a-d06f-4d59-9772-46f148ecc347</tstamps>
+      <tstamps>cf00784b-02cd-4597-aebe-7e5648f22556</tstamps>
     </comp>
     <comp ref="Y1">
       <value>16 MHz</value>
@@ -396,7 +396,7 @@
       <property name="ki_description" value="Four pin crystal, GND on pins 2 and 4"/>
       <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>58f5f1b0-8471-414e-949f-82f30c613884</tstamps>
+      <tstamps>0d3d9a6b-6526-4d69-abef-85d2e3ed26ac</tstamps>
     </comp>
   </components>
   <libparts>
@@ -911,46 +911,46 @@
       <node ref="J1" pin="B4" pinfunction="VBUS" pintype="passive"/>
       <node ref="J1" pin="B9" pinfunction="VBUS" pintype="passive"/>
     </net>
-    <net code="33" name="unconnected-(J1-SBU1-PadA8)">
+    <net code="36" name="unconnected-(J1-SBU1-PadA8)">
       <node ref="J1" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(J1-SBU2-PadB8)">
+    <net code="37" name="unconnected-(J1-SBU2-PadB8)">
       <node ref="J1" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U1-PB1-Pad13)">
+    <net code="38" name="unconnected-(U1-PB1-Pad13)">
       <node ref="U1" pin="13" pinfunction="PB1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(U1-PB2-Pad14)">
+    <net code="39" name="unconnected-(U1-PB2-Pad14)">
       <node ref="U1" pin="14" pinfunction="PB2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(U1-PD3-Pad1)">
+    <net code="40" name="unconnected-(U1-PD3-Pad1)">
       <node ref="U1" pin="1" pinfunction="PD3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(U1-PD6-Pad10)">
+    <net code="41" name="unconnected-(U1-PD6-Pad10)">
       <node ref="U1" pin="10" pinfunction="PD6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="39" name="unconnected-(U2-NC-Pad7)">
+    <net code="42" name="unconnected-(U2-NC-Pad7)">
       <node ref="U2" pin="7" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="40" name="unconnected-(U2-R232-Pad15)">
+    <net code="43" name="unconnected-(U2-R232-Pad15)">
       <node ref="U2" pin="15" pinfunction="R232" pintype="input+no_connect"/>
     </net>
-    <net code="41" name="unconnected-(U2-~{CTS}-Pad9)">
+    <net code="44" name="unconnected-(U2-~{CTS}-Pad9)">
       <node ref="U2" pin="9" pinfunction="~{CTS}" pintype="input+no_connect"/>
     </net>
-    <net code="42" name="unconnected-(U2-~{DCD}-Pad12)">
+    <net code="45" name="unconnected-(U2-~{DCD}-Pad12)">
       <node ref="U2" pin="12" pinfunction="~{DCD}" pintype="input+no_connect"/>
     </net>
-    <net code="43" name="unconnected-(U2-~{DSR}-Pad10)">
+    <net code="46" name="unconnected-(U2-~{DSR}-Pad10)">
       <node ref="U2" pin="10" pinfunction="~{DSR}" pintype="input+no_connect"/>
     </net>
-    <net code="44" name="unconnected-(U2-~{OUT}{slash}~{DTR}-Pad8)">
+    <net code="47" name="unconnected-(U2-~{OUT}{slash}~{DTR}-Pad8)">
       <node ref="U2" pin="8" pinfunction="~{OUT}/~{DTR}" pintype="output+no_connect"/>
     </net>
-    <net code="45" name="unconnected-(U2-~{RI}-Pad11)">
+    <net code="48" name="unconnected-(U2-~{RI}-Pad11)">
       <node ref="U2" pin="11" pinfunction="~{RI}" pintype="input+no_connect"/>
     </net>
-    <net code="46" name="unconnected-(U2-~{RTS}-Pad14)">
+    <net code="49" name="unconnected-(U2-~{RTS}-Pad14)">
       <node ref="U2" pin="14" pinfunction="~{RTS}" pintype="output+no_connect"/>
     </net>
   </nets>

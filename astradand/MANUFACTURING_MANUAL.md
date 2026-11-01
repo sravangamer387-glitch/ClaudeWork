@@ -1,6 +1,6 @@
 # ASTRADAND gesture wand: manufacturing manual
 
-> **Status: design only; nothing built or tested on hardware.** PCB: **not yet released: do not send to a fab**. Printed shell: generated, never printed. Firmware: engine host-tested, board code compiled only. Expect to correct this manual after the first 5-unit prototype run.
+> **Status: design only; nothing built or tested on hardware.** PCB: **order-ready: every automatic check passes**. Printed shell: generated, never printed. Firmware: engine host-tested, board code compiled only. Expect to correct this manual after the first 5-unit prototype run.
 
 ## 1. What is made
 
@@ -10,7 +10,7 @@ A 232 mm hilt: two FDM-printed shell halves holding a 146 x 26 mm PCB (ATmega328
 
 | Item | Where | State |
 |---|---|---|
-| PCB (Gerbers, BOM, CPL, KiCad, STEP) | `utility10/pcb/release/astradand/` | **not yet released: do not send to a fab** |
+| PCB (Gerbers, BOM, CPL, KiCad, STEP) | `utility10/pcb/release/astradand/` | **order-ready: every automatic check passes** |
 | Firmware | `astradand/firmware/release/astradand_8MHz.hex`; source `astradand/firmware/lib/ad_core.c`, `src/main_astradand.cpp` | engine 83 host checks; board code compiled (19.7 KB flash, 1.1 KB RAM) |
 | Shell STL | `astradand/cad/out/hilt_upper.stl`, `hilt_lower.stl`, `crystal.stl`, `trigger_cap.stl`, `tip_cap.stl`, `pommel.stl` | watertight; unprototyped |
 | Stand (laser) | `astradand/cad/out/stand_laser.svg/.dxf` | 6 mm MDF; unprototyped |
@@ -18,6 +18,58 @@ A 232 mm hilt: two FDM-printed shell halves holding a 146 x 26 mm PCB (ATmega328
 | Spell cards | `astradand/spellbook/out/spell_cards_A4.pdf` (+ one SVG per card) | Hindi names unreviewed |
 | Assembly section | `astradand/cad/out/assembly_section.png` | drawing |
 | Test plan / economics | `astradand/docs/TEST_PLAN.md`, `economics.md` | |
+
+## 3. Circuit board bill of materials
+
+| Ref | Value | Package | Part (manufacturer) | LCSC | Assembly |
+|---|---|---|---|---|---|
+| U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | SMT (JLC) |
+| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | SMT (JLC) |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | hand/THT |
+| J1 | BATT 3xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | hand/THT |
+| SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | SMT (JLC) |
+| Q2 | AO3401A | SOT-23 | AO3401A | C15127 | SMT (JLC) |
+| C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
+| D11 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C20 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| D12 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C21 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| D13 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C22 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| D14 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C23 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| D15 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C24 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| D16 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | SMT (JLC) |
+| C25 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| U2 | MPU-6050 | InvenSense_QFN-24_4x4mm_P0.5mm | MPU-6050 | C24112 | SMT (JLC) |
+| C10 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C11 | 2.2n | C_0603_1608Metric | Samsung CL10B222KB8NNNC X7R | C16033 | SMT (JLC) |
+| C12 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C13 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| R20 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | SMT (JLC) |
+| R21 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | SMT (JLC) |
+| U3 | AP2112K-3.3 | SOT-23-5 | Diodes AP2112K-3.3TRG1 (from the LCSC datasheet link) | C51118 | SMT (JLC) |
+| C5 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | SMT (JLC) |
+| C6 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | SMT (JLC) |
+| D20 | SS14 | D_SMA | Starsea SS14 SMA | C84343 | SMT (JLC) |
+| Q3 | AO3401A | SOT-23 | AO3401A | C15127 | SMT (JLC) |
+| Q4 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | SMT (JLC) |
+| R33 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | SMT (JLC) |
+| R34 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
+| C7 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
+| R30 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | SMT (JLC) |
+| R31 | 330k | R_0603_1608Metric | UNI-ROYAL 0603WAF3303T5E | C23137 | SMT (JLC) |
+| R32 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | SMT (JLC) |
+| BZ1 | PKLCS1212E4001 | Buzzer_Murata_PKLCS1212E | PKLCS1212E4001-R1 | C113159 | SMT (JLC) |
+| SW2 | Cast trigger | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | SMT (JLC) |
+| Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | SMT (JLC) |
+| D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | SMT (JLC) |
+| R6 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
+| J4 | Haptic motor | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | hand/THT |
 
 ### Bought-in and mechanical (estimates for 2,000 units)
 

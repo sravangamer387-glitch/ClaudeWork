@@ -14,15 +14,9 @@
  "drc_waived": {},
  "unconnected": 0,
  "step": true,
- "netlist_match": false,
- "net_names_not_in_schematic": [
-  "GND",
-  "CC2"
- ],
- "netlist_mismatch": {
-  "[('J1', 'B5'), ('R2', '1')]...": "only in PCB",
-  "[('C1', '2'), ('C2', '2'), ('C3', '2')]...": "only in schematic"
- },
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
  "nets": 19,
  "parts": 31,
  "gerber_independent_check": {

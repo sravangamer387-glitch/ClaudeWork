@@ -22,7 +22,7 @@ Run about 3 mA incl. OLED off most of the time; on battery only during cuts.
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
 | KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
-| Schematic netlist equals PCB netlist | NO: {"[('J1', 'B5'), ('R2', '1')]...": 'only in PCB', "[('C1', '2'), ('C2', '2'), ('C3', '2')]...": 'only in schematic'} |
+| Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [68.1, 52.1] mm, match |
@@ -94,7 +94,7 @@ Enclosure (prototype shell for 3D printing): outer 73.2 x 57.2 x 19.6 mm, collis
 | gerber layers and drill present | PASS |
 | drc errors 0 | PASS |
 | unconnected 0 | PASS |
-| netlist matches schematic | FAIL |
+| netlist matches schematic | PASS |
 | erc errors 0 | PASS |
 | independent gerber check clean | PASS |
 | every part has lcsc number | PASS |
@@ -102,7 +102,7 @@ Enclosure (prototype shell for 3D printing): outer 73.2 x 57.2 x 19.6 mm, collis
 | cpl rows equal jlc bom parts | PASS |
 | step model | PASS |
 | KiCad DRC warnings | 0 |
-| **Order ready** | **NO - see lists below** |
+| **Order ready** | **YES** |
 
 Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
 
