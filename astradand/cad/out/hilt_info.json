@@ -1,0 +1,58 @@
+{
+ "hilt_upper": {
+  "watertight": true,
+  "volume_cm3": 29.84,
+  "size_mm": [
+   232.0,
+   35.6,
+   17.8
+  ]
+ },
+ "hilt_lower": {
+  "watertight": true,
+  "volume_cm3": 40.27,
+  "size_mm": [
+   232.0,
+   35.6,
+   17.8
+  ]
+ },
+ "crystal": {
+  "watertight": true,
+  "volume_cm3": 4.29,
+  "size_mm": [
+   51.4,
+   6.8,
+   12.4
+  ]
+ },
+ "trigger_cap": {
+  "watertight": true,
+  "volume_cm3": 0.24,
+  "size_mm": [
+   8.4,
+   8.4,
+   7.7
+  ]
+ },
+ "tip_cap": {
+  "watertight": true,
+  "volume_cm3": 6.65,
+  "size_mm": [
+   22.0,
+   34.0,
+   34.0
+  ]
+ },
+ "pommel": {
+  "watertight": true,
+  "volume_cm3": 11.19,
+  "size_mm": [
+   19.8,
+   33.0,
+   33.0
+  ]
+ },
+ "wand_overall_mm": 232.0,
+ "board_in_hilt_x0_mm": 24.0
+}
