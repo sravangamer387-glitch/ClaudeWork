@@ -1,0 +1,14 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/kinetic_ctl/kinetic_ctl.kicad_pcb **
+** Created on 2026-11-01 19:13:31 **
+
+** Found 0 DRC violations **
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+
+** Found 0 Footprint errors **
+
+** End of Report **

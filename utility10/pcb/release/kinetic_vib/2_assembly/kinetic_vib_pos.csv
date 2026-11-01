@@ -1,0 +1,8 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","100n","C_0603_1608Metric",6.000000,-7.500000,90.000000,top
+"C2","100n","C_0603_1608Metric",12.000000,-5.500000,90.000000,top
+"C3","10u","C_0805_2012Metric",8.500000,-19.500000,90.000000,top
+"FID1","Fiducial","Fiducial_1mm_Mask2mm",3.500000,-2.500000,0.000000,top
+"FID2","Fiducial","Fiducial_1mm_Mask2mm",21.500000,-2.500000,0.000000,top
+"J3","SPI to controller","PinHeader_2x03_P2.54mm_Vertical",19.500000,-8.000000,0.000000,top
+"U1","ADXL345","LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y",8.500000,-12.500000,0.000000,top

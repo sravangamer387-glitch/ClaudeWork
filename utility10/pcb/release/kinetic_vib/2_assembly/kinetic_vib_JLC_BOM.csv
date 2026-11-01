@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,LCSC Part #
+ADXL345,U1,LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y,C9667
+100n,"C1,C2",C_0603_1608Metric,C14663
+10u,C3,C_0805_2012Metric,C15850

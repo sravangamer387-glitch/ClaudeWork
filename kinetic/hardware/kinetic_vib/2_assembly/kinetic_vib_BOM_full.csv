@@ -1,0 +1,6 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+U1,ADXL345,Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y,ADXL345BCCZ-RL7,C9667,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C3,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+J3,SPI to controller,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT

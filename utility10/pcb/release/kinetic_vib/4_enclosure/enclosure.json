@@ -1,0 +1,12 @@
+{
+ "inner_height": 11,
+ "outer": [
+  30.2,
+  31.2,
+  18.6
+ ],
+ "tallest": 8.5,
+ "base_watertight": true,
+ "lid_watertight": true,
+ "issues": []
+}

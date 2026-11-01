@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/user/ClaudeWork/utility10/pcb/out/kinetic_vib/kinetic_vib.kicad_sch</source>
+    <date>Sun Nov  1 19:14:40 2026</date>
+    <tool>Eeschema 7.0.11+dfsg-1build4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>KINETIC vibration puck (ADXL345, SPI)</title>
+        <company>ClaudeWork</company>
+        <rev>A</rev>
+        <date>2026-11-01</date>
+        <source>kinetic_vib.kicad_sch</source>
+        <comment number="1" value="First engineering release; see pcb/README.md for status and limits"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="kinetic_vib.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49a1cd0e-cf14-4a92-8d63-48373b300268</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="kinetic_vib.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a8da7a95-c2e8-4a4b-89a5-cb669580896a</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="kinetic_vib.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac8cac7b-5159-482c-9375-1d56c8d945a2</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>SPI to controller</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="kinetic_vib.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39f55f62-c0ca-4c54-88fe-997f2c7469ff</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ADXL345</value>
+      <footprint>Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y</footprint>
+      <libsource lib="Sensor_Motion" part="ADXL343" description="3-Axis MEMS Accelerometer, 2/4/8/16g range, I2C/SPI, LGA-14"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="kinetic_vib.kicad_sch"/>
+      <property name="ki_description" value="3-Axis MEMS Accelerometer, 2/4/8/16g range, I2C/SPI, LGA-14"/>
+      <property name="ki_keywords" value="3-axis accelerometer i2c spi mems"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62af486e-1c1e-4c1e-8ca1-80549fc537ad</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
+      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Motion" part="ADXL343">
+      <description>3-Axis MEMS Accelerometer, 2/4/8/16g range, I2C/SPI, LGA-14</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf</docs>
+      <footprints>
+        <fp>*LGA*3x5mm*P0.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADXL343</field>
+        <field name="Footprint">Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vdd_I/O" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="RES" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="Vs" type="power_in"/>
+        <pin num="7" name="~{CS}" type="input"/>
+        <pin num="8" name="INT1" type="output"/>
+        <pin num="9" name="INT2" type="output"/>
+        <pin num="10" name="NC" type="no_connect"/>
+        <pin num="11" name="RES" type="passive"/>
+        <pin num="12" name="SDO/ADDR" type="bidirectional"/>
+        <pin num="13" name="SDA/SDI/SDIO" type="bidirectional"/>
+        <pin num="14" name="SCL/SCLK" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols/Device.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Motion">
+      <uri>/usr/share/kicad/symbols/Sensor_Motion.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="Vdd_I/O" pintype="power_in"/>
+      <node ref="U1" pin="6" pinfunction="Vs" pintype="power_in"/>
+    </net>
+    <net code="2" name="/S_CS">
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="3" name="/S_MISO">
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="SDO/ADDR" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/S_MOSI">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="SDA/SDI/SDIO" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/S_SCLK">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="SCL/SCLK" pintype="input"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="9" name="unconnected-(U1-INT1-Pad8)">
+      <node ref="U1" pin="8" pinfunction="INT1" pintype="output+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(U1-INT2-Pad9)">
+      <node ref="U1" pin="9" pinfunction="INT2" pintype="output+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(U1-NC-Pad10)">
+      <node ref="U1" pin="10" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="12" name="unconnected-(U1-RES-Pad3)">
+      <node ref="U1" pin="3" pinfunction="RES" pintype="passive+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(U1-RES-Pad11)">
+      <node ref="U1" pin="11" pinfunction="RES" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

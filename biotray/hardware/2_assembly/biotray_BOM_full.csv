@@ -1,0 +1,68 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+J2,12 V DC in,Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal,CUI/Same Sky PJ-063AH,C22434582,verified,hand/THT
+F1,PTC 1A 16V,Fuse:Fuse_1812_4532Metric,Littelfuse 1812L110/16DR,C142746,verified,SMT (JLC)
+D3,SMBJ15A,Diode_SMD:D_SMB,Littelfuse SMBJ15A,C83846,verified,SMT (JLC)
+Q5,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
+D4,BZT52C12,Diode_SMD:D_SOD-123,DIODES BZT52C12-7-F,C124196,verified,SMT (JLC)
+R40,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C30,100u/35V,Capacitor_SMD:CP_Elec_6.3x7.7,Lelon VEJ101M1VTT-0607L,C7442639,verified,SMT (JLC)
+C31,10u/50V,Capacitor_SMD:C_1210_3225Metric,Samsung CL32A106KBJNNNE,C380537,verified,SMT (JLC)
+U2,AP63205WU-7,Package_TO_SOT_SMD:TSOT-23-6,AP63205WU-7,C2071056,verified,SMT (JLC)
+R41,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+C32,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+L1,4.7u,Inductor_SMD:L_Changjiang_FNR5040S,Changjiang FNR5040S4R7MT,C167963,verified,SMT (JLC)
+C33,22u/10V,Capacitor_SMD:C_0805_2012Metric,Samsung CL21A226MPQNNNE,C29277,verified,SMT (JLC)
+C34,22u/10V,Capacitor_SMD:C_0805_2012Metric,Samsung CL21A226MPQNNNE,C29277,verified,SMT (JLC)
+D5,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)
+U3,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,AP2112K-3.3TRG1,C51118,verified,SMT (JLC)
+C35,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+C36,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+U1,ESP32-S3-WROOM-1-N8,RF_Module:ESP32-S3-WROOM-1,ESP32-S3-WROOM-1-N8,C2913198,verified,SMT (JLC)
+C37,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C38,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+R42,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C39,1u,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R,C15849,verified,SMT (JLC)
+SW2,Reset (EN),Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
+SW3,Boot (IO0),Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
+J1,USB-C,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
+R43,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+R44,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+D6,Green,LED_SMD:LED_0603_1608Metric,Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check),C72043,verified,SMT (JLC)
+R45,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+J7,Water temp DS18B20,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+R46,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+J8,I2C (BH1750 / SHT31),Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
+R47,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+R48,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+J9,Water-level float switch,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+R49,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+J10,pH module (0-3 V analog),Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+R50,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C40,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+J11,EC module (0-3 V analog),Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+R51,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C41,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+J12,UART flash/debug (USB-serial adapter),Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP4,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+Q1,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R10,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R14,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+J3,Pump 1,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+D10,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)
+Q2,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R11,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R15,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+J4,Pump 2,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+D11,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)
+Q3,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R12,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R16,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+J5,Grow light (PWM),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+Q4,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R13,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R17,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+J6,Fan,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+D13,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)

@@ -195,6 +195,32 @@
   "order_ready": true
  },
  {
+  "board": "kinetic_ctl",
+  "mod": "kinetic_ctl",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 59,
+  "nets": 53,
+  "order_ready": true
+ },
+ {
+  "board": "kinetic_vib",
+  "mod": "kinetic_vib",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 5,
+  "nets": 6,
+  "order_ready": true
+ },
+ {
   "board": "biotray",
   "mod": "biotray",
   "drc_errors": 0,
