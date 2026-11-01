@@ -27,7 +27,7 @@ parts = [
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=60, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
  R("R43", "5.1k", 62, 14, "CC1", "GND", 90), R("R44", "5.1k", 65, 14, "CC2", "GND", 90),
- LED("D6", "Green", 36, 38, "GND", "LED_A"), R("R45", "1k", 36, 43, "LED", "LED_A", 90),
+ LED("D6", "Green", 20, 38, "GND", "LED_A"), R("R45", "1k", 20, 43, "LED", "LED_A", 90),
  R("R46", "100k", 28, 28, "VM", "VM_SENSE", 90), R("R47", "10k", 28, 33, "VM_SENSE", "GND", 90), C("C40", "100n", 33, 33, "VM_SENSE", "GND", 90),
  jst("J7", 3, 74, 70, ["GND", "UART_TX", "UART_RX"], "Host UART (Pi/PC)"),
  dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Vibration sensor SPI", x=74, y=58, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "+3V3", "2": "GND", "3": "S_SCLK", "4": "S_MOSI", "5": "S_MISO", "6": "S_CS"}),
