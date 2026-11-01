@@ -154,5 +154,18 @@
   "parts": 78,
   "nets": 51,
   "order_ready": true
+ },
+ {
+  "board": "beat_runner",
+  "mod": "beatrunner",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 53,
+  "nets": 46,
+  "order_ready": true
  }
 ]
