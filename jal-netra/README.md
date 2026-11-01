@@ -44,7 +44,7 @@ Two 1 MHz piezo discs face each other across a 60 mm measuring bore (12 mm diame
 
 | Check | Result |
 |---|---|
-| Board | 86.1 x 66.1 mm, 2 layers, 78 parts, 51 nets, JLCPCB parts (see `hardware/jal_netra_JLC_BOM.csv`) |
+| Board | 86.1 x 66.1 mm, 2 layers, 78 parts, 51 nets, JLCPCB parts (see `hardware/2_assembly/jal_netra_JLC_BOM.csv`) |
 | KiCad DRC (0.15 mm clearance, 0.2 mm tracks, 0.6/0.3 mm vias) | 0 errors, 0 warnings, 0 unconnected |
 | Netlist (schematic vs PCB pin groups) | identical, 51 nets |
 | Own ERC on the spec | 0 errors |
