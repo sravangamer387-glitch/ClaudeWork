@@ -156,8 +156,8 @@ def build(modname, boost=(), seed=None, outdir=None):
             _, layers, bbox, ctr, tht, circ = pad_info[pk]
             starts = [c for l in layers for c in cells_in(bbox, l, circ, ctr) if rt._free(rt.cls(w), l, c[1], c[2], nid)]
             if pk in esc_cells: starts = starts + [esc_cells[pk]]                          # the pad's own escape stub end is part of the pad
+            if n == gnd and (tht or B.get("gnd_pour_only")): continue                  # ground reaches SMD pads through the top pour / stitching vias (verified by the DRC connectivity check)
             if not starts: failures.append((n, pk, "no free start cell")); continue
-            if n == gnd and (tht or B.get("gnd_pour_only")): continue                  # ground reaches SMD pads through the top pour / stitching vias
             if first and n != gnd and not done[n]: first = False; done[n] |= set(starts); continue
             if n == gnd and any(c in done[n] for c in starts): continue
             # window around the pad and the nearest goals

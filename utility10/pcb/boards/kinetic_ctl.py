@@ -24,7 +24,7 @@ parts = [
  C("C37", "100n", 74, 34, "+3V3", "GND", 90), C("C38", "10u", 70, 34, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  R("R42", "10k", 76, 22, "+3V3", "EN", 90), C("C39", "1u", 76, 27, "EN", "GND", 90),
  button("SW2", "EN", 74, 40, "Reset (EN)"), button("SW3", "BOOT", 74, 46, "Boot (IO0)"),
- dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=52, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
+ dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=58, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
  R("R43", "5.1k", 56, 20, "CC1", "GND", 90), R("R44", "5.1k", 60, 20, "CC2", "GND", 90),
  LED("D6", "Green", 20, 38, "GND", "LED_A"), R("R45", "1k", 20, 43, "LED", "LED_A", 90),

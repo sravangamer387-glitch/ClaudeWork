@@ -193,5 +193,18 @@
   "parts": 49,
   "nets": 33,
   "order_ready": true
+ },
+ {
+  "board": "biotray",
+  "mod": "biotray",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 67,
+  "nets": 39,
+  "order_ready": true
  }
 ]
