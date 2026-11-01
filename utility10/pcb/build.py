@@ -53,12 +53,12 @@ def build(modname, boost=(), seed=None, outdir=None):
     mism = []
     for p in parts + auto:
         fp = load_fp(p["fp"])
-        for pad_ in list(fp.Pads()):                                                   # drop the footprint's 0.2 mm thermal-via pads (below the fab's 0.3 mm drill limit); board specs add their own 0.6/0.3 ground vias
-            if pad_.GetNumber() == "41" and pad_.GetAttribute() == pcbnew.PAD_ATTRIB_PTH and p["fp"].startswith("RF_Module:ESP32"): fp.Remove(pad_)
+        drop_ = [pad_ for pad_ in fp.Pads() if pad_.GetNumber() == "41" and pad_.GetAttribute() == pcbnew.PAD_ATTRIB_PTH and p["fp"].startswith("RF_Module:ESP32")]   # drop the footprint's 0.2 mm thermal-via pads (below the fab's 0.3 mm drill limit); board specs add their own 0.6/0.3 ground vias
+        for pad_ in drop_: fp.Remove(pad_)
         fp.SetReference(p["ref"]); fp.SetValue(p["value"]); fp.SetPosition(V(MM(p["x"]), MM(p["y"])))
         if p.get("side", "F") == "B": fp.Flip(fp.GetPosition(), False)
         fp.SetOrientationDegrees(p.get("rot", 0)); bd.Add(fp); fps[p["ref"]] = fp
-        padnums = {pad.GetNumber() for pad in fp.Pads()}
+        padnums = {pad.GetNumber() for pad in list(fp.Pads())}
         for num, nn in p["nets"].items():
             if nn and num not in padnums: mism.append(f"{p['ref']}: symbol pin {num} has no pad in footprint {p['fp']}")
         for pad in fp.Pads():
