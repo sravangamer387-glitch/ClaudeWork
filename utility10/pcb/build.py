@@ -251,7 +251,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     report["route_failures"] = [list(map(str, f_)) for f_ in failures]; report["tracks"] = len(list(bd.GetTracks()))
     json.dump(report, open(os.path.join(out, "route_report.json"), "w"), indent=1); return report
 if __name__ == "__main__" and len(sys.argv) >= 4 and sys.argv[2] == "seed":            # python3 build.py <board> seed <n> : one randomised-order attempt into out/<board>_s<n>
-    r = build(sys.argv[1], (), int(sys.argv[3]), os.path.join(HERE, "out", f"{sys.argv[1]}_s{sys.argv[3]}")); print("RESULT", len(r.get("route_failures", [])))
+    r = build(sys.argv[1], tuple(x for x in os.environ.get("BOOST", "").split(",") if x), int(sys.argv[3]), os.path.join(HERE, "out", f"{sys.argv[1]}_s{sys.argv[3]}")); print("RESULT", len(r.get("route_failures", [])))
     sys.exit(0)
 if __name__ == "__main__":
     boost = []
