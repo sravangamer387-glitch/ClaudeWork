@@ -97,7 +97,8 @@ def build(modname, boost=(), seed=None, outdir=None):
         rt.commit_trace(nid, pr["layer"], pr["pts"], w)
         for a, b in zip(pr["pts"], pr["pts"][1:]): add_track(pr["layer"], a, b, pr["net"], w)
         for (x, y) in pr["pts"]:
-            c = rt.cell(x, y); done[pr["net"]].add((pr["layer"], c[0], c[1]))
+            c = rt.cell(x, y)
+            if pr.get("goal", True): done[pr["net"]].add((pr["layer"], c[0], c[1]))      # goal=False: copper is committed but not a routing goal (a separate island the router must still link)
     for (n, x, y) in B.get("pre_vias", []):
         rt.commit_via(netid[n], x, y); add_via(x, y, n); c = rt.cell(x, y); done[n] |= {(0, c[0], c[1]), (1, c[0], c[1])}
     esc_cells = {}
