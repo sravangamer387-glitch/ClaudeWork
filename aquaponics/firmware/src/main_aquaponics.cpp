@@ -16,7 +16,7 @@ static aq_trend_t t_ph, t_do, t_temp; static aq_stuck_t k_ph, k_do, k_temp; stat
 static const aq_dose_cfg_t DOSE = {7.0f, 0.15f, 20, 1800, 400};                      // pH setpoint 7.0, +-0.15 dead-band, 20 s pulses, 30 min apart, 400 s/day cap
 static const float PH_LO = 6.4f, PH_HI = 7.8f, DO_LO_MGL = 5.0f, T_HI = 30.0f;     // PLACEHOLDER limits: use the values for YOUR fish and plants
 static uint32_t pulse_end_ms = 0;
-static float ph_from_volts(float v) { return 7.0f + (2.5f - v) * (3.0f / 0.5f) / 6.0f * 6.0f * 0.5f; }   // PLACEHOLDER: replace with a two-point calibration (bt_cal_apply from biotray)
+static float ph_from_volts(float v) { return 7.0f + (2.5f - v) * 6.0f; }   // PLACEHOLDER slope/offset: replace with a two-point calibration (see bt_cal_apply in biotray/firmware/lib)
 void setup() { Serial.begin(115200); pinMode(PIN_PUMP1, OUTPUT); pinMode(PIN_PUMP2, OUTPUT); pinMode(PIN_FAN, OUTPUT); digitalWrite(PIN_PUMP1, HIGH); Wire.begin(PIN_SDA, PIN_SCL); ads.begin(); ds.begin();
     aq_trend_init(&t_ph, 0.3f, 0.1f); aq_trend_init(&t_do, 0.3f, 0.1f); aq_trend_init(&t_temp, 0.3f, 0.1f); aq_dose_init(&dose); }
 void loop() {

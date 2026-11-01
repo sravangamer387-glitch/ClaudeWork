@@ -1,0 +1,15 @@
+{
+ "height_mm": 70.0,
+ "base_width_mm": 24.0,
+ "tip_width_mm": 4.0,
+ "depth_mm": 20.0,
+ "ribs": 7,
+ "triangles": 576,
+ "bbox_mm": [
+  25.6,
+  70.5,
+  20.0
+ ],
+ "contact_note": "grip force per finger must be limited by the actuator: pressure = F / (contact length x depth); keep below about 20 kPa for soft fruit (assumption)",
+ "material": "TPU 95A, 100% wall, 3 perimeters, print upright"
+}
