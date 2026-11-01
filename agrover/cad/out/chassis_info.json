@@ -1,0 +1,16 @@
+{
+ "base_plate_mm": [
+  400,
+  300
+ ],
+ "top_deck_mm": [
+  360,
+  260
+ ],
+ "sensor_bracket_mm": [
+  120,
+  50
+ ],
+ "material": "6 mm plywood or acrylic",
+ "note": "check the motor bracket and wheel dimensions of your chosen gear motors before cutting"
+}

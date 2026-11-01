@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360mm" height="260mm" viewBox="0 0 360 260">
+<!-- top deck 360x260 with 10 standoff holes M5 (solar panel on top, tilt by shims) -->
+<rect x="0.1" y="0.1" width="359.8" height="259.8" rx="8" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="30" cy="30" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="90" cy="30" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="150" cy="30" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="210" cy="30" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="270" cy="30" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="30" cy="230" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="90" cy="230" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="150" cy="230" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="210" cy="230" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="270" cy="230" r="2.6" fill="none" stroke="red" stroke-width="0.2"/>
+</svg>
