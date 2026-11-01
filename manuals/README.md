@@ -45,6 +45,19 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | 09 Marble Cricket | [toys10/09-marble-cricket/MANUFACTURING_MANUAL.md](../toys10/09-marble-cricket/MANUFACTURING_MANUAL.md) | no PCB | provisional cut file; calibration drop |
 | 10 Katha Cubes | [toys10/10-katha-cubes/MANUFACTURING_MANUAL.md](../toys10/10-katha-cubes/MANUFACTURING_MANUAL.md) | no PCB | illustrations and proofreading missing |
 
+## Bio / agri / civil / robotics programmes
+
+| Project | Manual | Board | Main caveat |
+|---|---|---|---|
+| KINETIC motion controller + vibration puck | [kinetic/MANUFACTURING_MANUAL.md](../kinetic/MANUFACTURING_MANUAL.md) | **order-ready** | never run on a motor; AI on synthetic data |
+| MITTI-NETRA soil + structure node | [mitti-netra/MANUFACTURING_MANUAL.md](../mitti-netra/MANUFACTURING_MANUAL.md) | no released board | modem is a plug-in breakout |
+| BioTray vertical-farm controller | [biotray/MANUFACTURING_MANUAL.md](../biotray/MANUFACTURING_MANUAL.md) | **order-ready** | calibration values are placeholders |
+| BioWatt MFC harvester | [biowatt/MANUFACTURING_MANUAL.md](../biowatt/MANUFACTURING_MANUAL.md) | **order-ready** | cold start needs 600 mV; marginal on one MFC |
+| GEONODE foundation monitoring | [geotech/MANUFACTURING_MANUAL.md](../geotech/MANUFACTURING_MANUAL.md) | no PCB | synthetic data; reuses MITTI-NETRA board |
+| AQUAPONICS controller | [aquaponics/MANUFACTURING_MANUAL.md](../aquaponics/MANUFACTURING_MANUAL.md) | no PCB | runs on BioTray; biological limits are placeholders |
+| SORTER bio-robotic platform | [sorter/MANUFACTURING_MANUAL.md](../sorter/MANUFACTURING_MANUAL.md) | no PCB | vision baseline only; uses KINETIC |
+| AGROVER solar rover | [agrover/MANUFACTURING_MANUAL.md](../agrover/MANUFACTURING_MANUAL.md) | no PCB | dead-reckoning only; safety review needed |
+
 ## Other projects
 
 | Project | Manual | Board | Main caveat |
