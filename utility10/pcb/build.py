@@ -247,6 +247,7 @@ def build(modname, boost=(), seed=None, outdir=None):
     pcb_path = os.path.join(out, name + ".kicad_pcb"); bd.Save(pcb_path)
     open(os.path.join(out, name + ".kicad_pro"), "w").write(json.dumps({"meta": {"filename": name + ".kicad_pro", "version": 1}, "board": {"design_settings": {"rules": {"min_clearance": 0.2, "min_track_width": 0.2, "min_via_diameter": 0.6, "min_through_hole_diameter": 0.3}}}}, indent=1))
     bd = pcbnew.LoadBoard(pcb_path); filler = pcbnew.ZONE_FILLER(bd); filler.Fill(bd.Zones()); bd.Save(pcb_path)
+    import silkfix; report["silk"] = silkfix.fix(pcb_path)
     report["route_failures"] = [list(map(str, f_)) for f_ in failures]; report["tracks"] = len(list(bd.GetTracks()))
     json.dump(report, open(os.path.join(out, "route_report.json"), "w"), indent=1); return report
 if __name__ == "__main__" and len(sys.argv) >= 4 and sys.argv[2] == "seed":            # python3 build.py <board> seed <n> : one randomised-order attempt into out/<board>_s<n>
