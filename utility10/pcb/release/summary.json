@@ -156,6 +156,19 @@
   "order_ready": true
  },
  {
+  "board": "prayog_hub",
+  "mod": "prayog",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 34,
+  "nets": 32,
+  "order_ready": true
+ },
+ {
   "board": "beat_runner",
   "mod": "beatrunner",
   "drc_errors": 0,

@@ -1,0 +1,17 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/prayog/prayog_hub.kicad_pcb **
+** Created on 2026-11-01 05:59:30 **
+
+** Found 1 DRC violations **
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(18.4750 mm, 33.5550 mm): Track [+5V] on F.Cu, length 1.2000 mm
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(18.4750 mm, 33.5550 mm): Track [+5V] on F.Cu, length 1.2000 mm
+    @(19.4000 mm, 30.6500 mm): Track [+5V] on F.Cu, length 1.0607 mm
+
+** Found 0 Footprint errors **
+
+** End of Report **

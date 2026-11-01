@@ -1,6 +1,6 @@
 # Prayog STEM lab kit: manufacturing manual
 
-> **Status: firmware and analysis tools tested on the host; the hub board is **not yet released** (routing/verification unfinished: do not send to a fab); no hardware built; sensors uncalibrated; syllabus mapping and school procurement route unverified.**
+> **Status: firmware and analysis tools tested on the host; the hub board is **order-ready (all automatic checks pass)**; no hardware built; sensors uncalibrated; syllabus mapping and school procurement route unverified.**
 
 ## 1. What is made
 
@@ -13,6 +13,43 @@ A hub board (ATmega328P at 16 MHz, CH340C USB-serial with auto-reset, USB-C, eig
 | Analysis tools | `products/03-prayog/tools/prayog_tools.py` (11 of 11 pass on simulated data) |
 | Experiments | `products/03-prayog/docs/experiments.md` (20) |
 | Cost model | `products/03-prayog/docs/kit_cost.txt` (BOM Rs 2,580 at about 1,000 kits) |
+
+## 2. Hub board bill of materials
+
+| Ref | Value | Package | Part (manufacturer) | LCSC | Assembly |
+|---|---|---|---|---|---|
+| U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | SMT (JLC) |
+| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | SMT (JLC) |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | hand/THT |
+| J1 | USB-C data + 5V | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | SMT (JLC) |
+| F1 | PTC 500mA | Fuse_1206_3216Metric | Littelfuse 1206L050YR (6 V) | C163512 | SMT (JLC) |
+| D3 | SMAJ5.0A | D_SMA | Littelfuse SMAJ5.0A | C83329 | SMT (JLC) |
+| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | SMT (JLC) |
+| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | SMT (JLC) |
+| C5 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
+| U2 | CH340C | SOIC-16_3.9x9.9mm_P1.27mm | CH340C | C84681 | SMT (JLC) |
+| C6 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C7 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| Y1 | 16 MHz | Crystal_SMD_3225-4Pin_3.2x2.5mm | YXC X322516MOB4SI 16 MHz 12 pF 3225 (LCSC listing seen in search results; matches the 22 pF load caps) | C12668 | SMT (JLC) |
+| C9 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | SMT (JLC) |
+| C10 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | SMT (JLC) |
+| J3 | Analog socket A0 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J4 | Analog socket A1 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J5 | Analog socket A2 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J6 | Analog socket A3 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J7 | Analog socket A4 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J8 | Analog socket A5 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J9 | Analog socket A6 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J10 | Analog socket A7 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J11 | Photogate | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
+| J12 | Ultrasonic HC-SR04 | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | hand/THT |
+| SW2 | Reaction pad | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | SMT (JLC) |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | SMT (JLC) |
+| R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
 
 ## 3. The 12 modules (bought-in or built in-house)
 

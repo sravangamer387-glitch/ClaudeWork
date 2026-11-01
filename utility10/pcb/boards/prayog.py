@@ -16,9 +16,10 @@ parts = (mcu("+5V", {"30": "RXD", "31": "TXD", "7": "XTAL1", "8": "XTAL2", "23":
           button("SW2", "BTN", 24, 64, "Reaction pad"), TP("TP1", "+5V", 5, 22), TP("TP2", "GND", 5, 28)] + led("+5V", "LED", 8, 64, "Green"))
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
-S = sch_layout([("USB-C INPUT: data pair to CH340C, CC pull-downs, PTC, TVS", ["J1", "F1", "D3", "R1", "R2", "C5", "TP1", "TP2"]), ("USB-SERIAL: CH340C, auto-reset capacitor", ["U2", "C6", "C7", "C8"]),
+S = sch_layout([("USB-C INPUT: data pair to CH340C, CC pull-downs, PTC, TVS", ["J1", "F1", "D3", "R2", "C5", "R1", "TP1", "TP2"]), ("USB-SERIAL: CH340C, auto-reset capacitor", ["U2", "C6", "C7", "C8"]),
                ("MCU: ATmega328P-AU, 16 MHz crystal", ["U1", "Y1", "C9", "C10", "C1", "C2", "C3", "R7"]), ("8 ANALOG SENSOR SOCKETS A0-A7", ["J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10"]),
                ("PHOTOGATE, ULTRASONIC, REACTION PAD, PROGRAMMING", ["J11", "J12", "SW2", "D1", "R5", "J2"])], big=("U1",))
+S["no_auto"] = {"CC1", "CC2"}
 S["notes"] = [("Prayog hub: Arduino-Nano-class board. CH340C gives USB serial and auto-reset (DTR through 100 nF). Sockets are +5V / signal / GND JST-PH; photogate on D2 (interrupt), ultrasonic trigger D4 and echo D5, reaction pad button D8 and LED D7. Flash firmware/release/prayog.hex over USB with the Arduino bootloader or over ISP.", 20, 330)]
 PRE = [dict(net="+5V", layer=0, pts=[(18.475, 33.555), (20.5, 33.555), (20.5, 31.775)], w=0.2)]    # CH340C VCC (U2.16) straight to its bypass cap C6.1: the autorouter could not reach this corner pad
 BOARD = dict(pre=PRE, name="prayog_hub", title="Prayog STEM lab kit - hub board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+5V": "USB via PTC", "GND": "USB", "VBUS": "USB", "V3": "CH340C internal 3.3 V"}, single_ok=("V3", "USB_DP", "USB_DM"),

@@ -11,14 +11,19 @@ Reverse-battery protection (P-MOSFET), TVS surge protection on the USB-C VBUS li
 | Board | Parts / nets | Own ERC errors | KiCad DRC errors | Unconnected | Schematic netlist = PCB netlist | Router failures |
 |---|---|---|---|---|---|---|
 | seeti_counter | 36 / 24 | 0 | 0 (0 warnings) | 0 | yes | 0 |
-| bijli_meter_reader | 23 / 17 | 0 | 0 (1 warnings) | 0 | yes | 0 |
+| bijli_meter_reader | 23 / 17 | 0 | 0 (0 warnings) | 0 | yes | 0 |
 | rain_alert_main | 27 / 19 | 0 | 0 (0 warnings) | 0 | yes | 0 |
-| rain_plate | 1 / 2 | 0 | 0 (2 warnings) | 0 | yes | 0 |
-| fridge_door_guard | 24 / 17 | 0 | 0 (1 warnings) | 0 | yes | 0 |
-| chulha_timers | 22 / 18 | 0 | 0 (2 warnings) | 0 | yes | 0 |
-| tap_litre_meter | 28 / 19 | 0 | 0 (2 warnings) | 0 | yes | 0 |
-| bijli_log | 31 / 19 | 0 | 0 (4 warnings) | 0 | yes | 0 |
-| kheti_mitra | 37 / 22 | 0 | 0 (7 warnings) | 0 | yes | 0 |
+| rain_plate | 1 / 2 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| fridge_door_guard | 24 / 17 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| chulha_timers | 22 / 18 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| tap_litre_meter | 28 / 19 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| bijli_log | 31 / 19 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| gas_taraju | 35 / 28 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| desi_arcade | 27 / 25 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| kheti_mitra | 37 / 22 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| jal_netra | 78 / 51 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| prayog_hub | 34 / 32 | 0 | 0 (0 warnings) | 0 | yes | 0 |
+| beat_runner | 53 / 46 | 0 | 0 (0 warnings) | 0 | yes | 0 |
 
 How it was checked: (1) own ERC on the netlist (unconnected pins, single-pin nets, output conflicts, unpowered supply nets, symbol-to-footprint pin match; KiCad 7's command line has no ERC); (2) KiCad 7 DRC through its Python API (clearance, hole spacing, courtyards, mask bridges, silkscreen); (3) schematic export compared pin-group by pin-group with the PCB netlist (this caught an accidental short that my own auto-wiring had drawn between CC2 and VBUS); (4) independent Gerber parse with a second library (gerbonara): layers read, outline size equals the design; (5) SPICE (ngspice) for the Seeti amplifier and rain-plate sense; arithmetic model for the Bijli sensor head. The rain plate's mask-bridge errors are waived on purpose (one mask opening spans both gold electrodes).
 

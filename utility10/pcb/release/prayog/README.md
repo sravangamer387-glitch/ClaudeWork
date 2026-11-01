@@ -1,0 +1,114 @@
+# Prayog STEM lab kit - hub board (rev A)
+
+Prayog hub board for the school STEM lab kit: ATmega328P at 16 MHz, CH340C USB-serial with auto-reset, eight 3-pin analog sensor sockets, photogate and ultrasonic ports, reaction pad.
+
+**Status: engineering release, software-verified only (ERC on the netlist, KiCad DRC, netlist cross-check, SPICE where noted). Not yet built, not reviewed by a second engineer, not certified.**
+
+## Specification
+- Board 100 x 72 mm, 2 layers, 1.6 mm FR-4, 1 oz copper, rounded corners R2.5 mm, 4 x M2.5 mounting holes, 2 fiducials.
+- Rules used: min track 0.2 mm (power 0.4 mm), min clearance 0.15 mm, via 0.6/0.3 mm, GND pour on both layers, 179 stitching vias.
+- Finish: ENIG recommended (HASL lead-free acceptable); green mask, white silk; IPC class 2.
+- 34 parts, 32 nets.
+
+## Circuit description
+- **USB:** USB-C with 5.1 k CC resistors, PTC and TVS; D+/D- go to the CH340C (needs no crystal). 5 V from USB feeds the MCU, sockets and the ultrasonic module directly (no regulator).
+- **MCU:** ATmega328P-AU, 16 MHz crystal with 22 pF caps; DTR through 100 nF resets it for the Arduino bootloader; ISP header for the first flash of the bootloader.
+- **Sensors:** eight JST-PH sockets (+5 V, signal, GND) on A0-A7 (ADC6/7 for A6/A7); photogate on D2 (interrupt), ultrasonic trigger D4 / echo D5, reaction pad button D8 and LED D7.
+
+## Power
+USB powered: about 40 mA for the board plus the sensor modules (ultrasonic 15 mA); the 500 mA PTC limits a shorted socket.
+
+## Verification
+| Check | Result |
+|---|---|
+| Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
+| KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
+| Schematic netlist equals PCB netlist | yes |
+| Router failures | 0 |
+| 3D STEP export | yes |
+| Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [100.1, 72.1] mm, match |
+
+Enclosure (prototype shell for 3D printing): outer 105.2 x 77.2 x 19.6 mm, collision/opening check: pass
+
+## Bill of materials
+| Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
+|---|---|---|---|---|---|
+| U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
+| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J1 | USB-C data + 5V | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | verified |
+| F1 | PTC 500mA | Fuse_1206_3216Metric | Littelfuse 1206L050YR (6 V) | C163512 | verified |
+| D3 | SMAJ5.0A | D_SMA | Littelfuse SMAJ5.0A | C83329 | verified |
+| R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
+| R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
+| C5 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
+| U2 | CH340C | SOIC-16_3.9x9.9mm_P1.27mm | CH340C | C84681 | verified |
+| C6 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C7 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| Y1 | 16 MHz | Crystal_SMD_3225-4Pin_3.2x2.5mm | YXC X322516MOB4SI 16 MHz 12 pF 3225 (LCSC listing seen in search results; matches the 22 pF load caps) | C12668 | verified |
+| C9 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | verified |
+| C10 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | verified |
+| J3 | Analog socket A0 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J4 | Analog socket A1 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J5 | Analog socket A2 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J6 | Analog socket A3 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J7 | Analog socket A4 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J8 | Analog socket A5 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J9 | Analog socket A6 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J10 | Analog socket A7 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J11 | Photogate | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
+| J12 | Ultrasonic HC-SR04 | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
+| SW2 | Reaction pad | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
+| TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
+| TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
+| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
+
+`verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
+
+## Assembly notes
+- Reflow (JLCPCB SMT): all SMD parts with an LCSC number. Hand-solder: JST connectors, pin headers, buzzer, switches, test points as listed in the BOM. Fiducials and mounting holes are in the Gerbers.
+- Polarity: LED cathode toward GND (silk marks), electrolytic none, diode D2 cathode to +V, Q2 orientation as footprint (SOT-23 pin 1 = gate).
+- Programming: ISP header J2 (pin 1 = MISO, square pad). Flash the matching image from `utility10/firmware/release/`: Seeti Counter `4MHz/seeti_prod.hex` (production firmware: timer-triggered 16 kS/s ADC, scan mode to find the real whistle frequency, battery check), Rain Alert `8MHz/rain_alert.hex`, Bijli Meter Reader `8MHz/bijli_meter.hex` (demo-grade firmware, to be hardened).
+
+## Bring-up and test
+1. Plug USB: +5V = 5.0 V; the CH340C enumerates as a serial port.
+2. Burn the bootloader over ISP, then upload `products/03-prayog/release/prayog.hex` (or the Arduino build) over USB.
+3. Open the serial port at 115200: CSV lines appear 10 times a second; connect a pot-type sensor to a socket and confirm the column changes.
+
+## Files
+`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
+`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
+`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
+`4_enclosure/` printable base and lid STL
+`5_verification/` DRC, ERC, verification and readiness reports
+
+## Known limits and review checklist
+- Layout was produced by a custom router and software placement; a human layout review (analog routing, ground returns, creepage, connector mechanics, silkscreen) is still required.
+- Not verified: EMC, ESD (apart from TVS parts where fitted), thermal, real component tolerances, supplier stock/price, assembly house design-for-manufacture check (run JLCPCB's DFM check on the Gerbers).
+- Firmware thresholds are placeholders to be calibrated on prototypes.
+
+## Manufacturing readiness (automatic check)
+
+| Check | Result |
+|---|---|
+| gerber layers and drill present | PASS |
+| drc errors 0 | PASS |
+| unconnected 0 | PASS |
+| netlist matches schematic | PASS |
+| erc errors 0 | PASS |
+| independent gerber check clean | PASS |
+| every part has lcsc number | PASS |
+| every lcsc number verified | PASS |
+| cpl rows equal jlc bom parts | PASS |
+| step model | PASS |
+| KiCad DRC warnings | 0 |
+| **Order ready** | **YES** |
+
+Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
+
+Limits: the layout is software-generated and has not been reviewed by a PCB engineer; no prototype has been built; the first batch should be treated as a prototype run (order 5 boards).

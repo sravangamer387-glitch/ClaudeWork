@@ -25,7 +25,7 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 |---|---|---|---|
 | 1 Desi Games Studio (print) | [products/01-desi-games/MANUFACTURING_MANUAL.md](../products/01-desi-games/MANUFACTURING_MANUAL.md) | no PCB | language + fact review before print |
 | 2 Kalakriti Automata (laser) | [products/02-automata/MANUFACTURING_MANUAL.md](../products/02-automata/MANUFACTURING_MANUAL.md) | no PCB | frame layouts provisional |
-| 3 Prayog STEM lab kit | [products/03-prayog/MANUFACTURING_MANUAL.md](../products/03-prayog/MANUFACTURING_MANUAL.md) | no released board | sensors uncalibrated |
+| 3 Prayog STEM lab kit | [products/03-prayog/MANUFACTURING_MANUAL.md](../products/03-prayog/MANUFACTURING_MANUAL.md) | **order-ready** | sensors uncalibrated |
 | 4 Jal-Rakshak tank controller | [products/04-jal-rakshak/MANUFACTURING_MANUAL.md](../products/04-jal-rakshak/MANUFACTURING_MANUAL.md) | no PCB | **mains version cannot be made**: low-voltage prototype only |
 | 5 Kheti-Mitra irrigation | [products/05-kheti-mitra/MANUFACTURING_MANUAL.md](../products/05-kheti-mitra/MANUFACTURING_MANUAL.md) | **order-ready** | field trial required |
 | 6 Gas-Suraksha leak alarm | [products/06-gas-suraksha/MANUFACTURING_MANUAL.md](../products/06-gas-suraksha/MANUFACTURING_MANUAL.md) | no PCB | **not certified, not for sale** |
@@ -37,7 +37,7 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | 01 Reflex Raja | [toys10/01-reflex-raja/MANUFACTURING_MANUAL.md](../toys10/01-reflex-raja/MANUFACTURING_MANUAL.md) | **order-ready** | shares the Desi Arcade board |
 | 02 Taal Memory | [toys10/02-taal-memory/MANUFACTURING_MANUAL.md](../toys10/02-taal-memory/MANUFACTURING_MANUAL.md) | **order-ready** | shares the Desi Arcade board |
 | 03 Aloo Bomb | [toys10/03-aloo-bomb/MANUFACTURING_MANUAL.md](../toys10/03-aloo-bomb/MANUFACTURING_MANUAL.md) | **order-ready** | shares the Desi Arcade board |
-| 04 Beat Runner | [toys10/04-beat-runner/MANUFACTURING_MANUAL.md](../toys10/04-beat-runner/MANUFACTURING_MANUAL.md) | no released board |  |
+| 04 Beat Runner | [toys10/04-beat-runner/MANUFACTURING_MANUAL.md](../toys10/04-beat-runner/MANUFACTURING_MANUAL.md) | **order-ready** |  |
 | 05 Rangoli Spiro Gears | [toys10/05-rangoli-spiro/MANUFACTURING_MANUAL.md](../toys10/05-rangoli-spiro/MANUFACTURING_MANUAL.md) | no PCB | kerf test first |
 | 06 Paper Rocket Launcher | [toys10/06-paper-rocket/MANUFACTURING_MANUAL.md](../toys10/06-paper-rocket/MANUFACTURING_MANUAL.md) | no PCB | projectile toy: lab review before sale; no drawings |
 | 07 Tilt Maze | [toys10/07-tilt-maze/MANUFACTURING_MANUAL.md](../toys10/07-tilt-maze/MANUFACTURING_MANUAL.md) | no PCB | gimbal frame drawing missing |

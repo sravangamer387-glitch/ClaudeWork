@@ -8,7 +8,7 @@ BY_VALUE = {
  "AMS1117-5.0": ("C6187", "AMS AMS1117-5.0 SOT-223"), "HX711": ("C43656", "Avia HX711 SOP-16"), "BAV99": ("C68983", "JSCJ BAV99"), "BAT54WS": ("C5148476", "BORN BAT54WS (300 mA listing)"),
  "AO3400A": ("C20917", "AOS AO3400A"), "SMAJ5.0A": ("C83329", "Littelfuse SMAJ5.0A"), "SMBJ15A": ("C83846", "Littelfuse SMBJ15A"), "SS14": ("C84343", "Starsea SS14 SMA"),
  "TVS 5V bidir": ("C19224", "Nexperia PESD5V0S1BA,115"), "BLM18 600R": ("C19330", "Murata BLM18AG601SN1D"), "PTC 500mA": ("C163512", "Littelfuse 1206L050YR (6 V)"),
- "PTC 1A 16V": ("C142746", "Littelfuse 1812L110/16DR (1.1 A hold, 16 V)"), "8 MHz": ("C2682775", "YXC X32258MOB4SI 8 MHz 12 pF 3225 (matches the 15 pF load caps)"),
+ "PTC 1A 16V": ("C142746", "Littelfuse 1812L110/16DR (1.1 A hold, 16 V)"), "16 MHz": ("C12668", "YXC X322516MOB4SI 16 MHz 12 pF 3225 (LCSC listing seen in search results; matches the 22 pF load caps)"), "8 MHz": ("C2682775", "YXC X32258MOB4SI 8 MHz 12 pF 3225 (matches the 15 pF load caps)"),
 }
 BY_VALUE_FP = {
  ("Green", "LED_0603"): ("C72043", "Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check)"), ("Amber", "LED_0603"): ("C72038", "Everlight 19-213/Y2C-CQ2R2L/3T yellow 591 nm (marked obsolete by some distributors: check)"), ("Red", "LED_0603"): ("C72044", "Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check)"),
