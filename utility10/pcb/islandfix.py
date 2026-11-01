@@ -20,6 +20,9 @@ def fix(path, gndname="GND", rounds=4):
         polys = {pcbnew.F_Cu: zs[pcbnew.F_Cu].GetFilledPolysList(pcbnew.F_Cu), pcbnew.B_Cu: zs[pcbnew.B_Cu].GetFilledPolysList(pcbnew.B_Cu)}
         # connectivity: island is OK if a GND via already lands inside it
         vias = [t for t in bd.GetTracks() if t.GetClass() == "PCB_VIA" and t.GetNetname() == gndname]
+        allv = [(ToMM(t.GetPosition().x), ToMM(t.GetPosition().y)) for t in bd.GetTracks() if t.GetClass() == "PCB_VIA"]
+        pads = [(ToMM(p.GetPosition().x), ToMM(p.GetPosition().y), ToMM(max(p.GetSizeX(), p.GetSizeY())) / 2) for f in bd.GetFootprints() for p in f.Pads() if p.GetDrillSize().x > 0]
+        def near_hole(x, y): return any(math.hypot(x - px, y - py) < pr + 0.9 for px, py, pr in pads) or any(math.hypot(x - vx, y - vy) < 1.0 for vx, vy in allv)
         n = 0; net = zs[pcbnew.F_Cu].GetNet()
         for lay, other in ((pcbnew.F_Cu, pcbnew.B_Cu), (pcbnew.B_Cu, pcbnew.F_Cu)):
           top = polys[lay]; bot = polys[other]
@@ -38,6 +41,7 @@ def fix(path, gndname="GND", rounds=4):
                 x += 0.3
             cx, cy = (x0 + x1) / 2, (y0 + y1) / 2; cands.sort(key=lambda p: (p[0] - cx) ** 2 + (p[1] - cy) ** 2)
             for (x, y) in cands:
+                if near_hole(x, y): continue
                 if inside(single, x, y, vr) and inside(bot, x, y, vr):
                     v = pcbnew.PCB_VIA(bd); v.SetPosition(V(MM(x), MM(y))); v.SetWidth(MM(vd)); v.SetDrill(MM(vd / 2)); v.SetNet(net); v.SetViaType(pcbnew.VIATYPE_THROUGH); bd.Add(v); n += 1; break
         if n == 0 and relax: break
