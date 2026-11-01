@@ -48,6 +48,15 @@ NOTES["jalnetra"] = dict(desc="Jal-Netra main board: STM32G431 transit-time meas
   sims=["../../jal-netra/sim/lna_results.txt"], power="MCU 170 MHz about 35 mA while measuring (0.5 s per measurement), LNAs 2 x 8 mA: USB powered only (about 0.1 W average with a 10 s idle period).",
   bringup=["USB-C 5 V: +3V3 = 3.3 V, AVDD = 3.28 V, VMID = 1.64 V.", "Flash over SWD; with the spool dry nothing should be received (amplitude near zero); fill with water: a burst of amplitude A appears at ADC_IN 40.5 us after the transmit edge (TP5).", "Follow `jal-netra/docs/TEST_PLAN.md` gates 1-3."])
 
+NOTES["prayog"] = dict(desc="Prayog hub board for the school STEM lab kit: ATmega328P at 16 MHz, CH340C USB-serial with auto-reset, eight 3-pin analog sensor sockets, photogate and ultrasonic ports, reaction pad.",
+  circuit=["**USB:** USB-C with 5.1 k CC resistors, PTC and TVS; D+/D- go to the CH340C (needs no crystal). 5 V from USB feeds the MCU, sockets and the ultrasonic module directly (no regulator).", "**MCU:** ATmega328P-AU, 16 MHz crystal with 22 pF caps; DTR through 100 nF resets it for the Arduino bootloader; ISP header for the first flash of the bootloader.", "**Sensors:** eight JST-PH sockets (+5 V, signal, GND) on A0-A7 (ADC6/7 for A6/A7); photogate on D2 (interrupt), ultrasonic trigger D4 / echo D5, reaction pad button D8 and LED D7."],
+  sims=[], power="USB powered: about 40 mA for the board plus the sensor modules (ultrasonic 15 mA); the 500 mA PTC limits a shorted socket.",
+  bringup=["Plug USB: +5V = 5.0 V; the CH340C enumerates as a serial port.", "Burn the bootloader over ISP, then upload `products/03-prayog/release/prayog.hex` (or the Arduino build) over USB.", "Open the serial port at 115200: CSV lines appear 10 times a second; connect a pot-type sensor to a socket and confirm the column changes."])
+NOTES["beatrunner"] = dict(desc="Beat Runner main board: ATmega328P, two cascaded 74HC595 drive 16 LEDs, buzzer, arcade button input, 3xAAA power.",
+  circuit=["**LEDs:** 16 red LEDs with 330 ohm resistors on the two 74HC595 outputs (about 7 mA each at 4.5 V; the 74HC595 allows 35 mA per pin and 70 mA total, so the game must keep at most about 8 LEDs lit at once - the note pattern lights 1-3); data D11, shift clock D12, latch D13 shared with the ISP header.", "**Input/sound:** arcade button on D2 (pull-up in firmware), buzzer on D10 through an NPN with flyback diode.", "**Power:** 3xAAA through a slide switch and reverse-polarity PMOS."],
+  sims=[], power="About 8 mA average (one or two LEDs lit) plus buzzer bursts: a set of 3xAAA lasts well over 100 hours of play.",
+  bringup=["Battery in, switch on: +4V5 = 4.5 V at TP1.", "Flash `toys10/electronic/release` Beat Runner build over ISP.", "Self test: LEDs sweep 0-15; button press beeps."])
+
 def gen(mod):
     B = importlib.import_module("boards." + mod).BOARD; N = NOTES[mod]; name = B["name"]; out = os.path.join(HERE, "out", mod); V = json.load(open(os.path.join(out, "verification.json")))
     W, H = B["size"]
