@@ -1,5 +1,5 @@
 from .blocks import *
-W, H = 90, 72
+W, H = 90, 80
 V = lambda **k: dict(k, lcsc_status="verified")
 parts = [
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=76, y=26, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
@@ -24,19 +24,19 @@ parts = [
  R("R6", "100k", 14, 55, "VBAT", "MGATE", 90),
  V(ref="Q2", sym="Device:Q_NMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3400A", x=14, y=62, rot=0, lcsc="C20917", mpn="AO3400A", nets={"1": "MEN_GR", "2": "GND", "3": "MGATE"}),
  R("R7", "100", 8, 62, "MODEM_EN", "MEN_GR"), R("R8", "100k", 8, 66, "MEN_GR", "GND"),
- V(ref="C6", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=24, y=62, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VBAT_M", "2": "GND"}),
- V(ref="C7", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=31, y=60, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "VBAT_M", "2": "GND"}),
- dict(ref="J6", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Cellular modem (SIM7080G breakout)", x=40, y=62, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "VBAT_M", "2": "GND", "3": "MODEM_TX", "4": "MODEM_RX", "5": "MODEM_PWRKEY", "6": "MODEM_STATUS"}),
+ V(ref="C6", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=24, y=66, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VBAT_M", "2": "GND"}),
+ V(ref="C7", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=31, y=64, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "VBAT_M", "2": "GND"}),
+ dict(ref="J6", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Cellular modem (SIM7080G breakout)", x=40, y=66, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "VBAT_M", "2": "GND", "3": "MODEM_TX", "4": "MODEM_RX", "5": "MODEM_PWRKEY", "6": "MODEM_STATUS"}),
  V(ref="U5", sym="Sensor_Motion:ADXL343", fp="Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y", value="ADXL345", x=50, y=56, rot=0, lcsc="C9667", mpn="ADXL345BCCZ-RL7", nets={"1": "+3V3", "2": "GND", "4": "GND", "5": "GND", "6": "+3V3", "7": "+3V3", "12": "GND", "13": "SDA", "14": "SCL", "8": "ACC_INT"}, nc=["3", "9", "10", "11"]),
  C("C8", "100n", 44, 54, "+3V3", "GND", 90), C("C9", "100n", 56, 62, "+3V3", "GND", 90), R("R9", "4.7k", 62, 56, "+3V3", "SDA", 90), R("R10", "4.7k", 66, 56, "+3V3", "SCL", 90),
- V(ref="U2", sym="Analog_ADC:HX711", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="HX711", x=80, y=56, rot=0, lcsc="C43656", mpn="HX711", nc=["2", "9", "10", "13"],
+ V(ref="U2", sym="Analog_ADC:HX711", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="HX711", x=80, y=64, rot=0, lcsc="C43656", mpn="HX711", nc=["2", "9", "10", "13"],
    nets={"1": "+3V3", "3": "AVDD", "4": "AVDD", "5": "GND", "6": "VBG", "7": "A_N", "8": "A_P", "11": "HX_SCK", "12": "HX_DT", "14": "GND", "15": "GND", "16": "+3V3"}),
- R("R11", "100", 74, 52, "+3V3", "AVDD", 90), C("C10", "100n", 78, 52, "AVDD", "GND", 90), C("C11", "100n", 84, 52, "+3V3", "GND", 90), C("C12", "100n", 74, 66, "VBG", "GND", 90), C("C13", "10u", 70, 54, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
- R("R12", "100", 66, 66, "AVDD", "EXC", 90), C("C14", "100n", 62, 66, "EXC", "GND", 90), C("C15", "100n", 70, 66, "A_P", "A_N", 90),
- jst("J4", 4, 80, 68, ["EXC", "GND", "A_P", "A_N"], "Strain-gauge bridge E+ E- A+ A-"),
- jst("J5", 3, 4, 70, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
- V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=50, y=70, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
- R("R13", "4.7k", 56, 70, "+3V3", "ONEWIRE", 90), R("R15", "1k", 10, 68, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 14, 68, "SOIL_ADC", "GND", 90),
+ R("R11", "100", 74, 60, "+3V3", "AVDD", 90), C("C10", "100n", 78, 60, "AVDD", "GND", 90), C("C11", "100n", 84, 60, "+3V3", "GND", 90), C("C12", "100n", 74, 74, "VBG", "GND", 90), C("C13", "10u", 70, 62, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
+ R("R12", "100", 66, 74, "AVDD", "EXC", 90), C("C14", "100n", 62, 74, "EXC", "GND", 90), C("C15", "100n", 70, 74, "A_P", "A_N", 90),
+ jst("J4", 4, 80, 76, ["EXC", "GND", "A_P", "A_N"], "Strain-gauge bridge E+ E- A+ A-"),
+ jst("J5", 3, 4, 78, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
+ V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=50, y=78, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
+ R("R13", "4.7k", 56, 78, "+3V3", "ONEWIRE", 90), R("R15", "1k", 10, 76, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 14, 76, "SOIL_ADC", "GND", 90),
  LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
  jst("J8", 3, 30, 16, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
 for p in parts:
@@ -51,5 +51,5 @@ BOARD = dict(pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soi
  supply={"VBAT": "Li-ion cell", "VBAT_M": "VBAT through Q1", "VCC_CHG": "solar/USB through D1/D2", "+3V3": "LDO U3", "GND": "battery", "VBUS": "USB host", "AVDD": "HX711 analog supply via R11", "SOLAR": "solar panel"}, single_ok=("CC1", "CC2", "STDBY_K"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
  holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG"], edge_ok=("J1",), gnd_pour_only=True,
- silk=[("MITTI-NETRA rev A", 40, 69, 1.1)], stitch=5.0)
+ silk=[("MITTI-NETRA rev A", 30, 77, 1.1)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 6, 6, 4)], lid=[])

@@ -22,7 +22,7 @@ parts = [
    nets={"1": "GND", "40": "GND", "41": "GND", "2": "+3V3", "3": "EN", "27": "BOOT", "4": "PUMP1_G", "5": "PUMP2_G", "6": "LIGHT_G", "7": "FAN_G", "12": "SDA", "17": "SCL", "18": "LEVEL", "8": "ONEWIRE", "39": "PH_ADC", "38": "EC_ADC", "25": "LED", "37": "UART_TX", "36": "UART_RX"}),
  C("C37", "100n", 66, 50, "+3V3", "GND", 90), C("C38", "10u", 70, 50, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  R("R42", "10k", 58, 24, "+3V3", "EN", 90), C("C39", "1u", 58, 29, "EN", "GND", 90),
- button("SW2", "EN", 70, 56, "Reset (EN)"), button("SW3", "BOOT", 78, 56, "Boot (IO0)"),
+ button("SW2", "EN", 78, 46, "Reset (EN)"), button("SW3", "BOOT", 86, 46, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=52, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
  R("R43", "5.1k", 56, 20, "CC1", "GND", 90), R("R44", "5.1k", 60, 20, "CC2", "GND", 90),
@@ -30,7 +30,7 @@ parts = [
  jst("J7", 3, 62, 56, ["+3V3", "ONEWIRE", "GND"], "Water temp DS18B20"), R("R46", "4.7k", 55, 56, "+3V3", "ONEWIRE", 90),
  jst("J8", 4, 88, 58, ["+3V3", "SDA", "SCL", "GND"], "I2C (BH1750 / SHT31)"), R("R47", "4.7k", 80, 62, "+3V3", "SDA", 90), R("R48", "4.7k", 84, 62, "+3V3", "SCL", 90),
  jst("J9", 2, 88, 70, ["LEVEL", "GND"], "Water-level float switch"), R("R49", "10k", 80, 70, "+3V3", "LEVEL", 90),
- jst("J10", 3, 70, 66, ["+5V", "PH_J", "GND"], "pH module (0-3 V analog)"), R("R50", "1k", 64, 66, "PH_J", "PH_ADC", 90), C("C40", "100n", 60, 66, "PH_ADC", "GND", 90),
+ jst("J10", 3, 70, 66, ["+5V", "PH_J", "GND"], "pH module (0-3 V analog)"), R("R50", "1k", 64, 66, "PH_J", "PH_ADC", 90), C("C40", "100n", 62, 62, "PH_ADC", "GND", 90),
  jst("J11", 3, 70, 74, ["+5V", "EC_J", "GND"], "EC module (0-3 V analog)"), R("R51", "1k", 64, 74, "EC_J", "EC_ADC", 90), C("C41", "100n", 60, 74, "EC_ADC", "GND", 90),
  jst("J12", 3, 24, 36, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VM", 6, 34), TP("TP2", "+5V", 6, 40), TP("TP3", "+3V3", 6, 46), TP("TP4", "GND", 6, 52)]
 for k, (nm, gnet, lbl) in enumerate([("PUMP1", "PUMP1_G", "Pump 1"), ("PUMP2", "PUMP2_G", "Pump 2"), ("LIGHT", "LIGHT_G", "Grow light (PWM)"), ("FAN", "FAN_G", "Fan")]):
@@ -46,11 +46,11 @@ S = sch_layout([("POWER IN: 12 V, PTC, TVS, reverse-polarity PMOS with 12 V gate
                ("LOW-SIDE LOAD DRIVERS: 2 pumps, grow-light PWM, fan (12 V)", [f"Q{1 + k}" for k in range(4)] + [f"R{10 + k}" for k in range(4)] + [f"R{14 + k}" for k in range(4)] + [f"J{3 + k}" for k in range(4)] + ["D10", "D11", "D13"]),
                ("SENSORS: water temp, I2C, level switch, pH and EC analog inputs", ["J7", "R46", "J8", "R47", "R48", "J9", "R49", "J10", "R50", "C40", "J11", "R51", "C41"])], big=("U1",))
 S["notes"] = [("BioTray: ESP32-S3 grows-tray controller. Two 12 V pumps and a fan are switched low-side with flyback diodes; the grow light is PWM dimmed (no flyback diode: LED strip). Pump, fan and light total must stay under the PTC rating (1.1 A hold): fit a larger PTC or fuse for bigger loads. pH and EC are off-the-shelf analog modules with 0-3 V outputs; calibrate in firmware. Water-level float switch closes to GND when water is present.", 0, 0)]
-PRE = [dict(net="BST", layer=0, pts=[(47.14, 13.05), (49.83, 13.05)], w=0.2), dict(net="SW", layer=0, pts=[(47.14, 14.0), (51.37, 14.0), (51.37, 13.05)], w=0.4)]
+PRE = [dict(net="BST", layer=0, pts=[(47.14, 13.05), (48.34, 13.05), (49.83, 13.05)], w=0.2), dict(net="SW", layer=0, pts=[(47.14, 14.0), (48.34, 14.0), (51.37, 14.0), (51.37, 13.05)], w=0.4)]
 PREV = [("GND", 81.40, 25.36), ("GND", 81.40, 27.56), ("GND", 83.60, 25.36), ("GND", 83.60, 27.56)]
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="biotray", title="BioTray vertical-farm tray controller (ESP32-S3, MQTT)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host", "VIN_F": "12 V after PTC"}, single_ok=("CC1", "CC2"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
- holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(6, 26), (95, 52)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V"], edge_ok=("J1",), gnd_pour_only=True,
+ holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, 48), (95, 52)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("BioTray rev A", 40, 77, 1.2), ("12V IN", 10, 3.5, 0.9)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 8, 10, 9)], lid=[])

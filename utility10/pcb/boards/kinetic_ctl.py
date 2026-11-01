@@ -15,7 +15,7 @@ parts = [
  V(ref="L1", sym="Device:L", fp="Inductor_SMD:L_Changjiang_FNR5040S", value="4.7u", x=44, y=26, rot=90, lcsc="C167963", mpn="Changjiang FNR5040S4R7MT", nets={"1": "SW", "2": "+5V"}),
  V(ref="C33", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=50, y=28, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
  V(ref="C34", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=50, y=33, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
- V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=56, y=18, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
+ V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=66, y=28, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=48, y=40, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "+5V", "2": "GND", "3": "+5V", "5": "+3V3"}, nc=["4"]),
  C("C35", "1u", 42, 41, "+5V", "GND", 90), C("C36", "10u", 54, 41, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=92, y=26, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
@@ -26,7 +26,7 @@ parts = [
  button("SW2", "EN", 74, 40, "Reset (EN)"), button("SW3", "BOOT", 74, 46, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=52, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
- R("R43", "5.1k", 54, 17, "CC1", "GND", 90), R("R44", "5.1k", 57, 17, "CC2", "GND", 90),
+ R("R43", "5.1k", 56, 20, "CC1", "GND", 90), R("R44", "5.1k", 60, 20, "CC2", "GND", 90),
  LED("D6", "Green", 20, 38, "GND", "LED_A"), R("R45", "1k", 20, 43, "LED", "LED_A", 90),
  R("R46", "100k", 28, 28, "VM", "VM_SENSE", 90), R("R47", "10k", 28, 33, "VM_SENSE", "GND", 90), C("C40", "100n", 33, 33, "VM_SENSE", "GND", 90),
  jst("J7", 3, 74, 70, ["GND", "UART_TX", "UART_RX"], "Host UART (Pi/PC)"),
@@ -49,7 +49,7 @@ S = sch_layout([("POWER IN: 24 V, TVS, reverse-polarity PMOS with 12 V gate clam
                ("DRIVER SOCKETS (A4988 / DRV8825 / TMC2209 StepStick) + MOTOR OUTPUTS", [f"J{11 + 2 * k}" for k in range(3)] + [f"J{12 + 2 * k}" for k in range(3)] + [f"J{20 + k}" for k in range(3)] + [f"R{51 + k}" for k in range(3)]),
                ("ENDSTOPS, HOST UART, VIBRATION SENSOR", ["J7", "J3", "J8", "J9", "J10", "R48", "R49", "R50", "C41", "C42", "C43"])], big=("U1",))
 S["notes"] = [("KINETIC: 24 V in (12-28 V), 5 V buck, 3.3 V LDO, ESP32-S3 runs the jerk-limited motion planner (kn_motion) and the vibration classifier (kn_vib). Three StepStick sockets; microstep pins MS1-3 are tied to 3.3 V (1/16 on A4988, 1/32 on DRV8825) and RESET/SLEEP are pulled up. Current limit is set on each driver module. Endstops are normally-closed to GND recommended.", 0, 0)]
-PRE = [dict(net="BST", layer=0, pts=[(45.14, 11.05), (47.83, 11.05)], w=0.2), dict(net="SW", layer=0, pts=[(45.14, 12.0), (49.37, 12.0), (49.37, 11.05)], w=0.4)]
+PRE = [dict(net="BST", layer=0, pts=[(45.14, 11.05), (46.34, 11.05), (47.83, 11.05)], w=0.2), dict(net="SW", layer=0, pts=[(45.14, 12.0), (46.34, 12.0), (49.37, 12.0), (49.37, 11.05)], w=0.4)]
 PREV = [("GND", 89.40, 27.36), ("GND", 89.40, 29.56), ("GND", 91.60, 27.36), ("GND", 91.60, 29.56)]
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="kinetic_ctl", title="KINETIC stepper / servo motion controller - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN24": "external 24 V supply", "VM": "24 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host"}, single_ok=("CC1", "CC2"),
