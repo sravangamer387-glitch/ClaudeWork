@@ -9,7 +9,7 @@ parts = [
  V(ref="D4", sym="Device:D_Zener", fp="Diode_SMD:D_SOD-123", value="BZT52C12", x=26, y=22, rot=0, lcsc="C124196", mpn="DIODES BZT52C12-7-F", nets={"1": "VM", "2": "GATE"}),
  R("R40", "10k", 32, 22, "GATE", "GND", 90),
  V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=34, y=6, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VM", "2": "GND"}),
- V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=40, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
+ V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=42, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
  V(ref="U2", sym="Regulator_Switching:AP63205WU", fp="Package_TO_SOT_SMD:TSOT-23-6", value="AP63205WU-7", x=46, y=14, rot=0, lcsc="C2071056", mpn="AP63205WU-7", nets={"1": "+5V", "2": "EN_B", "3": "VM", "4": "GND", "5": "SW", "6": "BST"}),
  R("R41", "100k", 41, 19, "VM", "EN_B", 90), C("C32", "100n", 46, 20, "BST", "SW", 90),
  V(ref="L1", sym="Device:L", fp="Inductor_SMD:L_Changjiang_FNR5040S", value="4.7u", x=46, y=28, rot=90, lcsc="C167963", mpn="Changjiang FNR5040S4R7MT", nets={"1": "SW", "2": "+5V"}),
@@ -46,9 +46,10 @@ S = sch_layout([("POWER IN: 12 V, PTC, TVS, reverse-polarity PMOS with 12 V gate
                ("LOW-SIDE LOAD DRIVERS: 2 pumps, grow-light PWM, fan (12 V)", [f"Q{1 + k}" for k in range(4)] + [f"R{10 + k}" for k in range(4)] + [f"R{14 + k}" for k in range(4)] + [f"J{3 + k}" for k in range(4)] + ["D10", "D11", "D13"]),
                ("SENSORS: water temp, I2C, level switch, pH and EC analog inputs", ["J7", "R46", "J8", "R47", "R48", "J9", "R49", "J10", "R50", "C40", "J11", "R51", "C41"])], big=("U1",))
 S["notes"] = [("BioTray: ESP32-S3 grows-tray controller. Two 12 V pumps and a fan are switched low-side with flyback diodes; the grow light is PWM dimmed (no flyback diode: LED strip). Pump, fan and light total must stay under the PTC rating (1.1 A hold): fit a larger PTC or fuse for bigger loads. pH and EC are off-the-shelf analog modules with 0-3 V outputs; calibrate in firmware. Water-level float switch closes to GND when water is present.", 0, 0)]
-BOARD = dict(clr=0.15, name="biotray", title="BioTray vertical-farm tray controller (ESP32-S3, MQTT)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
+PREV = [("GND", 78.44, 21.40), ("GND", 78.44, 23.60), ("GND", 80.64, 21.40), ("GND", 80.64, 23.60)]
+BOARD = dict(pre_vias=PREV, clr=0.15, name="biotray", title="BioTray vertical-farm tray controller (ESP32-S3, MQTT)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host", "VIN_F": "12 V after PTC"}, single_ok=("CC1", "CC2"),
- ws=(0.2, 0.4), widths={"VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, 3.5)], first=["VIN12", "VIN_F", "VM", "SW", "+5V", "USB_DP", "USB_DN"], gnd_pour_only=True,
+ ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
+ holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V", "USB_DP", "USB_DN"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("BioTray rev A", 40, 77, 1.2), ("12V IN", 10, 3.5, 0.9)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 8, 10, 9)], lid=[])

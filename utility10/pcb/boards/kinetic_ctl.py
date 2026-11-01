@@ -8,7 +8,7 @@ parts = [
  V(ref="D4", sym="Device:D_Zener", fp="Diode_SMD:D_SOD-123", value="BZT52C12", x=22, y=20, rot=0, lcsc="C124196", mpn="DIODES BZT52C12-7-F", nets={"1": "VM", "2": "GATE"}),
  R("R40", "10k", 28, 20, "GATE", "GND", 90),
  V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=30, y=6, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VM", "2": "GND"}),
- V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=36, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
+ V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=40, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
  V(ref="U2", sym="Regulator_Switching:AP63205WU", fp="Package_TO_SOT_SMD:TSOT-23-6", value="AP63205WU-7", x=44, y=12, rot=0, lcsc="C2071056", mpn="AP63205WU-7", nets={"1": "+5V", "2": "EN_B", "3": "VM", "4": "GND", "5": "SW", "6": "BST"}),
  R("R41", "100k", 40, 18, "VM", "EN_B", 90),
  C("C32", "100n", 44, 18, "BST", "SW", 90),
@@ -27,7 +27,7 @@ parts = [
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=60, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A8", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND", "A6": "USB_DP", "B6": "USB_DP", "A7": "USB_DN", "B7": "USB_DN"}),
  R("R43", "5.1k", 62, 14, "CC1", "GND", 90), R("R44", "5.1k", 65, 14, "CC2", "GND", 90),
- LED("D6", "Green", 74, 44, "GND", "LED_A"), R("R45", "1k", 74, 49, "LED", "LED_A", 90),
+ LED("D6", "Green", 36, 38, "GND", "LED_A"), R("R45", "1k", 36, 43, "LED", "LED_A", 90),
  R("R46", "100k", 28, 28, "VM", "VM_SENSE", 90), R("R47", "10k", 28, 33, "VM_SENSE", "GND", 90), C("C40", "100n", 33, 33, "VM_SENSE", "GND", 90),
  jst("J7", 3, 74, 70, ["GND", "UART_TX", "UART_RX"], "Host UART (Pi/PC)"),
  dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Vibration sensor SPI", x=74, y=58, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "+3V3", "2": "GND", "3": "S_SCLK", "4": "S_MOSI", "5": "S_MISO", "6": "S_CS"}),
@@ -49,8 +49,9 @@ S = sch_layout([("POWER IN: 24 V, TVS, reverse-polarity PMOS with 12 V gate clam
                ("DRIVER SOCKETS (A4988 / DRV8825 / TMC2209 StepStick) + MOTOR OUTPUTS", [f"J{11 + 2 * k}" for k in range(3)] + [f"J{12 + 2 * k}" for k in range(3)] + [f"J{20 + k}" for k in range(3)] + [f"R{51 + k}" for k in range(3)]),
                ("ENDSTOPS, HOST UART, VIBRATION SENSOR", ["J7", "J3", "J8", "J9", "J10", "R48", "R49", "R50", "C41", "C42", "C43"])], big=("U1",))
 S["notes"] = [("KINETIC: 24 V in (12-28 V), 5 V buck, 3.3 V LDO, ESP32-S3 runs the jerk-limited motion planner (kn_motion) and the vibration classifier (kn_vib). Three StepStick sockets; microstep pins MS1-3 are tied to 3.3 V (1/16 on A4988, 1/32 on DRV8825) and RESET/SLEEP are pulled up. Current limit is set on each driver module. Endstops are normally-closed to GND recommended.", 0, 0)]
-BOARD = dict(clr=0.15, name="kinetic_ctl", title="KINETIC stepper / servo motion controller - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
+PREV = [("GND", 78.44, 23.40), ("GND", 78.44, 25.60), ("GND", 80.64, 23.40), ("GND", 80.64, 25.60)]
+BOARD = dict(pre_vias=PREV, clr=0.15, name="kinetic_ctl", title="KINETIC stepper / servo motion controller - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN24": "external 24 V supply", "VM": "24 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host"}, single_ok=("CC1", "CC2"),
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, 3.5)], ws=(0.2, 0.4), widths={"VM": 0.4, "+5V": 0.4, "SW": 0.4, "MX_1A": 0.4, "MX_1B": 0.4, "MX_2A": 0.4, "MX_2B": 0.4, "MY_1A": 0.4, "MY_1B": 0.4, "MY_2A": 0.4, "MY_2B": 0.4, "MZ_1A": 0.4, "MZ_1B": 0.4, "MZ_2A": 0.4, "MZ_2B": 0.4, "VIN24": 0.4},
- first=["VIN24", "VM", "SW", "+5V", "USB_DP", "USB_DN"], gnd_pour_only=True, silk=[("KINETIC rev A", 30, 76, 1.2), ("24V IN", 8, 4, 0.9), ("X", 14, 41, 0.9), ("Y", 36, 41, 0.9), ("Z", 58, 41, 0.9)], stitch=5.0)
+ holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "MX_1A": 0.4, "MX_1B": 0.4, "MX_2A": 0.4, "MX_2B": 0.4, "MY_1A": 0.4, "MY_1B": 0.4, "MY_2A": 0.4, "MY_2B": 0.4, "MZ_1A": 0.4, "MZ_1B": 0.4, "MZ_2A": 0.4, "MZ_2B": 0.4, "VIN24": 0.4},
+ first=["CC1", "CC2", "VBUS", "VIN24", "VM", "SW", "+5V", "USB_DP", "USB_DN"], edge_ok=("J1",), gnd_pour_only=True, silk=[("KINETIC rev A", 30, 76, 1.2), ("24V IN", 8, 4, 0.9), ("X", 14, 41, 0.9), ("Y", 36, 41, 0.9), ("Z", 58, 41, 0.9)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J5", "left", 6, 8, 6), ("J1", "top", 10, 8, 4)], lid=[])
