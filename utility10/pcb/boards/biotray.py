@@ -15,7 +15,7 @@ parts = [
  V(ref="L1", sym="Device:L", fp="Inductor_SMD:L_Changjiang_FNR5040S", value="4.7u", x=46, y=28, rot=90, lcsc="C167963", mpn="Changjiang FNR5040S4R7MT", nets={"1": "SW", "2": "+5V"}),
  V(ref="C33", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=53, y=30, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
  V(ref="C34", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=53, y=35, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
- V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=62, y=12, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
+ V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=68, y=12, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=62, y=42, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "+5V", "2": "GND", "3": "+5V", "5": "+3V3"}, nc=["4"]),
  C("C35", "1u", 56, 43, "+5V", "GND", 90), C("C36", "10u", 68, 43, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=82, y=24, rot=270, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
@@ -25,9 +25,9 @@ parts = [
  button("SW2", "EN", 70, 56, "Reset (EN)"), button("SW3", "BOOT", 78, 56, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C", x=52, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
- R("R43", "5.1k", 58, 14, "CC1", "GND", 90), R("R44", "5.1k", 62, 18, "CC2", "GND", 90),
- LED("D6", "Green", 90, 60, "GND", "LED_A"), R("R45", "1k", 90, 65, "LED", "LED_A", 90),
- jst("J7", 3, 88, 48, ["+3V3", "ONEWIRE", "GND"], "Water temp DS18B20"), R("R46", "4.7k", 82, 48, "+3V3", "ONEWIRE", 90),
+ R("R43", "5.1k", 56, 20, "CC1", "GND", 90), R("R44", "5.1k", 60, 20, "CC2", "GND", 90),
+ LED("D6", "Green", 50, 44, "GND", "LED_A"), R("R45", "1k", 50, 49, "LED", "LED_A", 90),
+ jst("J7", 3, 62, 56, ["+3V3", "ONEWIRE", "GND"], "Water temp DS18B20"), R("R46", "4.7k", 55, 56, "+3V3", "ONEWIRE", 90),
  jst("J8", 4, 88, 58, ["+3V3", "SDA", "SCL", "GND"], "I2C (BH1750 / SHT31)"), R("R47", "4.7k", 80, 62, "+3V3", "SDA", 90), R("R48", "4.7k", 84, 62, "+3V3", "SCL", 90),
  jst("J9", 2, 88, 70, ["LEVEL", "GND"], "Water-level float switch"), R("R49", "10k", 80, 70, "+3V3", "LEVEL", 90),
  jst("J10", 3, 70, 66, ["+5V", "PH_J", "GND"], "pH module (0-3 V analog)"), R("R50", "1k", 64, 66, "PH_J", "PH_ADC", 90), C("C40", "100n", 60, 66, "PH_ADC", "GND", 90),
@@ -38,7 +38,7 @@ for k, (nm, gnet, lbl) in enumerate([("PUMP1", "PUMP1_G", "Pump 1"), ("PUMP2", "
     parts += [V(ref=f"Q{1 + k}", sym="Device:Q_NMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3400A", x=x0, y=58, rot=0, lcsc="C20917", mpn="AO3400A", nets={"1": f"{nm}_GR", "2": "GND", "3": d}),
               R(f"R{10 + k}", "100", x0 - 5, 56, gnet, f"{nm}_GR"), R(f"R{14 + k}", "100k", x0 - 5, 61, f"{nm}_GR", "GND"),
               jst(f"J{3 + k}", 2, x0 + 3, 72, ["VM", d], lbl)]
-    if nm != "LIGHT": parts.append(V(ref=f"D{10 + k}", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=x0 + 6, y=63, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VM", "2": d}))
+    if nm != "LIGHT": parts.append(V(ref=f"D{10 + k}", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=x0 + 7, y=67, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VM", "2": d}))
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("POWER IN: 12 V, PTC, TVS, reverse-polarity PMOS with 12 V gate clamp, bulk", ["J2", "F1", "D3", "Q5", "D4", "R40", "C30", "C31", "TP1", "TP4"]), ("5 V BUCK AP63205 + 3.3 V LDO", ["U2", "R41", "C32", "L1", "C33", "C34", "D5", "U3", "C35", "C36", "TP2", "TP3"]),
@@ -51,6 +51,6 @@ PREV = [("GND", 78.44, 21.40), ("GND", 78.44, 23.60), ("GND", 80.64, 21.40), ("G
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="biotray", title="BioTray vertical-farm tray controller (ESP32-S3, MQTT)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host", "VIN_F": "12 V after PTC"}, single_ok=("CC1", "CC2"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
- holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V"], edge_ok=("J1",), gnd_pour_only=True,
+ holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(6, 26), (95, 52)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("BioTray rev A", 40, 77, 1.2), ("12V IN", 10, 3.5, 0.9)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 8, 10, 9)], lid=[])

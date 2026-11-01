@@ -1,7 +1,7 @@
 """Seeded routing with failed nets promoted to the front each round: python3 boostloop.py <board> <seed> [rounds]  -> out/<board> when 0 failures (or best found)."""
 import sys, os, json, subprocess, shutil
 HERE = os.path.dirname(os.path.abspath(__file__)); mod, seed = sys.argv[1], sys.argv[2]; rounds = int(sys.argv[3]) if len(sys.argv) > 3 else 6
-boost = []; best = None
+boost = [x for x in os.environ.get("BOOST0", "").split(",") if x]; best = None
 for r in range(rounds):
     env = dict(os.environ, BOOST=",".join(boost)); subprocess.run([sys.executable, os.path.join(HERE, "build.py"), mod, "seed", seed], env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     d = os.path.join(HERE, "out", f"{mod}_s{seed}"); rr = os.path.join(d, "route_report.json")
