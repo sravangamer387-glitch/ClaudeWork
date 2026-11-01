@@ -15,10 +15,10 @@ parts = [
  V(ref="L1", sym="Device:L", fp="Inductor_SMD:L_Changjiang_FNR5040S", value="4.7u", x=46, y=28, rot=90, lcsc="C167963", mpn="Changjiang FNR5040S4R7MT", nets={"1": "SW", "2": "+5V"}),
  V(ref="C33", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=53, y=30, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
  V(ref="C34", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=53, y=35, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
- V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=68, y=12, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
+ V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=66, y=28, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=62, y=42, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "+5V", "2": "GND", "3": "+5V", "5": "+3V3"}, nc=["4"]),
  C("C35", "1u", 56, 43, "+5V", "GND", 90), C("C36", "10u", 68, 43, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=82, y=24, rot=270, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
+ V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=84, y=24, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
    nets={"1": "GND", "40": "GND", "41": "GND", "2": "+3V3", "3": "EN", "27": "BOOT", "4": "PUMP1_G", "5": "PUMP2_G", "6": "LIGHT_G", "7": "FAN_G", "12": "SDA", "17": "SCL", "18": "LEVEL", "8": "ONEWIRE", "39": "PH_ADC", "38": "EC_ADC", "25": "LED", "37": "UART_TX", "36": "UART_RX"}),
  C("C37", "100n", 66, 50, "+3V3", "GND", 90), C("C38", "10u", 70, 50, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  R("R42", "10k", 58, 24, "+3V3", "EN", 90), C("C39", "1u", 58, 29, "EN", "GND", 90),
@@ -47,7 +47,7 @@ S = sch_layout([("POWER IN: 12 V, PTC, TVS, reverse-polarity PMOS with 12 V gate
                ("SENSORS: water temp, I2C, level switch, pH and EC analog inputs", ["J7", "R46", "J8", "R47", "R48", "J9", "R49", "J10", "R50", "C40", "J11", "R51", "C41"])], big=("U1",))
 S["notes"] = [("BioTray: ESP32-S3 grows-tray controller. Two 12 V pumps and a fan are switched low-side with flyback diodes; the grow light is PWM dimmed (no flyback diode: LED strip). Pump, fan and light total must stay under the PTC rating (1.1 A hold): fit a larger PTC or fuse for bigger loads. pH and EC are off-the-shelf analog modules with 0-3 V outputs; calibrate in firmware. Water-level float switch closes to GND when water is present.", 0, 0)]
 PRE = [dict(net="BST", layer=0, pts=[(47.14, 13.05), (49.83, 13.05)], w=0.2), dict(net="SW", layer=0, pts=[(47.14, 14.0), (51.37, 14.0), (51.37, 13.05)], w=0.4)]
-PREV = [("GND", 78.44, 21.40), ("GND", 78.44, 23.60), ("GND", 80.64, 21.40), ("GND", 80.64, 23.60)]
+PREV = [("GND", 81.40, 25.36), ("GND", 81.40, 27.56), ("GND", 83.60, 25.36), ("GND", 83.60, 27.56)]
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="biotray", title="BioTray vertical-farm tray controller (ESP32-S3, MQTT)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+5V": "buck U2 or USB VBUS via D5", "+3V3": "LDO U3", "GND": "supply", "VBUS": "USB host", "VIN_F": "12 V after PTC"}, single_ok=("CC1", "CC2"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
