@@ -34,9 +34,9 @@ parts = [
  R("R11", "100", 74, 60, "+3V3", "AVDD", 90), C("C10", "100n", 78, 60, "AVDD", "GND", 90), C("C11", "100n", 84, 60, "+3V3", "GND", 90), C("C12", "100n", 66, 68, "VBG", "GND", 90), C("C13", "10u", 70, 62, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
  R("R12", "100", 66, 72, "AVDD", "EXC", 90), C("C14", "100n", 62, 70, "EXC", "GND", 90), C("C15", "100n", 82, 70, "A_P", "A_N", 90),
  jst("J4", 4, 80, 76, ["EXC", "GND", "A_P", "A_N"], "Strain-gauge bridge E+ E- A+ A-"),
- jst("J5", 3, 4, 78, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
- V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=50, y=78, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
- R("R13", "4.7k", 56, 78, "+3V3", "ONEWIRE", 90), R("R15", "1k", 10, 76, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 14, 76, "SOIL_ADC", "GND", 90),
+ jst("J5", 3, 30, 77, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
+ V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=46, y=77, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
+ R("R13", "4.7k", 52, 76, "+3V3", "ONEWIRE", 90), R("R15", "1k", 22, 76, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 22, 72, "SOIL_ADC", "GND", 90),
  LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
  jst("J8", 3, 50, 10, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
 for p in parts:
@@ -51,5 +51,5 @@ BOARD = dict(pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soi
  supply={"VBAT": "Li-ion cell", "VBAT_M": "VBAT through Q1", "VCC_CHG": "solar/USB through D1/D2", "+3V3": "LDO U3", "GND": "battery", "VBUS": "USB host", "AVDD": "HX711 analog supply via R11", "SOLAR": "solar panel"}, single_ok=("CC1", "CC2", "STDBY_K"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
  holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (W - 14, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
- silk=[("MITTI-NETRA rev A", 30, 77, 1.1)], stitch=5.0)
+ silk=[("MITTI-NETRA rev A", 10, 77, 1.1)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 6, 6, 4)], lid=[])
