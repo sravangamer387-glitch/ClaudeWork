@@ -234,6 +234,19 @@
   "order_ready": true
  },
  {
+  "board": "mitti_netra",
+  "mod": "mitti",
+  "drc_errors": 12,
+  "drc_warnings": 25,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 62,
+  "nets": 41,
+  "order_ready": false
+ },
+ {
   "board": "biowatt",
   "mod": "biowatt",
   "drc_errors": 0,

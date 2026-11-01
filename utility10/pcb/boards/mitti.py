@@ -5,7 +5,7 @@ parts = [
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=76, y=26, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",
    nets={"1": "GND", "40": "GND", "41": "GND", "2": "+3V3", "3": "EN", "27": "BOOT", "8": "ONEWIRE", "9": "MODEM_TX", "10": "MODEM_RX", "11": "MODEM_PWRKEY", "12": "MODEM_STATUS", "6": "MODEM_EN", "4": "HX_DT", "5": "HX_SCK", "17": "ACC_INT", "18": "SDA", "19": "SCL", "39": "SOIL_ADC", "38": "VBAT_ADC", "25": "LED", "37": "UART_TX", "36": "UART_RX"}),
  C("C37", "100n", 62, 36, "+3V3", "GND", 90), C("C38", "10u", 58, 36, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- R("R42", "10k", 60, 22, "+3V3", "EN", 90), C("C39", "1u", 60, 27, "EN", "GND", 90), button("SW2", "EN", 58, 46, "Reset (EN)"), button("SW3", "BOOT", 66, 46, "Boot (IO0)"),
+ R("R42", "10k", 60, 22, "+3V3", "EN", 90), C("C39", "1u", 60, 27, "EN", "GND", 90), button("SW2", "EN", 56, 41, "Reset (EN)"), button("SW3", "BOOT", 65, 41, "Boot (IO0)"),
  dict(ref="J1", sym="Connector:USB_C_Receptacle_USB2.0_16P", fp="Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12", value="USB-C (charge + program)", x=34, y=6, rot=180, lcsc="C165948", lcsc_status="verified", mpn="TYPE-C-31-M-12", nc=["A6", "A7", "A8", "B6", "B7", "B8"],
       nets={"A1": "GND", "B12": "GND", "A12": "GND", "B1": "GND", "A4": "VBUS", "B9": "VBUS", "A9": "VBUS", "B4": "VBUS", "A5": "CC1", "B5": "CC2", "S1": "GND"}),
  R("R43", "5.1k", 32, 20, "CC1", "GND", 90), R("R44", "5.1k", 36, 20, "CC2", "GND", 90),
@@ -36,9 +36,9 @@ parts = [
  jst("J4", 4, 70, 76, ["EXC", "GND", "A_P", "A_N"], "Strain-gauge bridge E+ E- A+ A-"),
  jst("J5", 3, 30, 77, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
  V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=46, y=77, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
- R("R13", "4.7k", 52, 76, "+3V3", "ONEWIRE", 90), R("R15", "1k", 38, 75, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 38, 71, "SOIL_ADC", "GND", 90),
+ R("R13", "4.7k", 55, 76, "+3V3", "ONEWIRE", 90), R("R15", "1k", 38, 75, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 38, 71, "SOIL_ADC", "GND", 90),
  LED("D5", "Green", 74, 50, "GND", "LED_A"), R("R14", "1k", 74, 44, "LED", "LED_A", 90),
- jst("J8", 3, 84, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 46, 38), TP("TP3", "GND", 4, 14)]
+ jst("J8", 3, 81, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 46, 38), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
@@ -54,6 +54,6 @@ PREV = [("+3V3", 66.0, 56.3), ("GND", 73.40, 27.36), ("GND", 73.40, 29.56), ("GN
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-NETRA soil and structure telemetry node (ESP32-S3 + LTE-M modem socket)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VBAT": "Li-ion cell", "VBAT_M": "VBAT through Q1", "VCC_CHG": "solar/USB through D1/D2", "+3V3": "LDO U3", "GND": "battery", "VBUS": "USB host", "AVDD": "HX711 analog supply via R11", "SOLAR": "solar panel"}, single_ok=("CC1", "CC2", "STDBY_K"),
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
- holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (60, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
+ holes=[(3.5, 20), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (60, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("MITTI-NETRA rev A", 10, 77, 1.1)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 6, 6, 4)], lid=[])
