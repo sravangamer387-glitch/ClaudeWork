@@ -1,5 +1,5 @@
 # MITTI-NETRA design
-## Hardware (`utility10/pcb/boards/mitti.py`, 90 x 72 mm, 2 layers)
+## Hardware (`utility10/pcb/boards/mitti.py`, 90 x 80 mm, 2 layers)
 | Block | Parts | Notes |
 |---|---|---|
 | Charger | TP4056 (C382139) with PROG = 2.2 k (about 0.58 A); solar and USB OR-ed by two SS14 diodes | solar input 5-6 V nominal; the TP4056 is a linear charger, so a 6 V panel wastes the difference as heat; no MPPT |

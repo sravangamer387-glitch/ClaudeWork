@@ -1,6 +1,6 @@
 # MITTI-NETRA: low-power cellular soil and structure telemetry node
 
-Programme 1 (AgTech and civil automation). **Status: designed, firmware core host-tested, PCB checked in software; nothing has been built, powered, or connected to a mobile network. The cellular modem is a plug-in breakout that you must source and match to the socket.**
+Programme 1 (AgTech and civil automation). **Status: designed, firmware core host-tested, PCB order-ready (DRC 0, unconnected 0, netlist match, ERC 0, all parts LCSC-verified); nothing has been built, powered, or connected to a mobile network. The cellular modem is a plug-in breakout that you must source and match to the socket.**
 
 ## What it is
 A solar-charged, deep-sleeping ESP32-S3 node that measures **soil moisture and temperature**, **tilt and vibration** (ADXL345) and **strain** (HX711 + a strain-gauge bridge), decides locally whether a structure is drifting (watch/alarm levels with debounce and hysteresis), and reports a 26-byte CRC-protected frame through a SIMCom SIM7080G (LTE-M / NB-IoT) breakout. An optional Raspberry Pi / Banana Pi companion runs an **edge camera analysis** (canopy cover, greenness) on field photos.

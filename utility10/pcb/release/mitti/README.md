@@ -1,6 +1,6 @@
 # MITTI-NETRA soil and structure telemetry node (ESP32-S3 + LTE-M modem socket) (rev A)
 
-MITTI-NETRA soil and structure telemetry node (90 x 72 mm): ESP32-S3, TP4056 solar/USB charger for one Li-ion cell, 3.3 V LDO, switched socket for a SIM7080G breakout, ADXL345, HX711 strain input, soil-probe and DS18B20 inputs.
+MITTI-NETRA soil and structure telemetry node (90 x 80 mm): ESP32-S3, TP4056 solar/USB charger for one Li-ion cell, 3.3 V LDO, switched socket for a SIM7080G breakout, ADXL345, HX711 strain input, soil-probe and DS18B20 inputs.
 
 **Status: engineering release, software-verified only (ERC on the netlist, KiCad DRC, netlist cross-check, SPICE where noted). Not yet built, not reviewed by a second engineer, not certified.**
 
@@ -50,9 +50,9 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | U4 | TP4056 | HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm | TPOWER TP4056 | C382139 | verified |
 | R1 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
 | C2 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| D3 | Red (charging) | LED_0603_1608Metric |  |  |  |
+| D3 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
 | R2 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| D4 | Green (done) | LED_0603_1608Metric |  |  |  |
+| D4 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
 | R3 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | J3 | Li-ion cell (protected!) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | U3 | AP2112K-3.3 | SOT-23-5 | AP2112K-3.3TRG1 | C51118 | verified |
@@ -131,14 +131,12 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | netlist matches schematic | PASS |
 | erc errors 0 | PASS |
 | independent gerber check clean | PASS |
-| every part has lcsc number | FAIL |
+| every part has lcsc number | PASS |
 | every lcsc number verified | PASS |
 | cpl rows equal jlc bom parts | PASS |
 | step model | PASS |
 | KiCad DRC warnings | 0 |
-| **Order ready** | **NO - see lists below** |
-
-Parts with no LCSC number: D3, D4
+| **Order ready** | **YES** |
 
 Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
 

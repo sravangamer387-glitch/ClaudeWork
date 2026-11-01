@@ -20,8 +20,8 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "C39","1u","C_0603_1608Metric",60.000000,-27.000000,90.000000,top
 "D1","SS14","D_SMA",16.000000,-6.000000,0.000000,top
 "D2","SS14","D_SMA",16.000000,-12.000000,0.000000,top
-"D3","Red (charging)","LED_0603_1608Metric",8.000000,-34.000000,0.000000,top
-"D4","Green (done)","LED_0603_1608Metric",14.000000,-34.000000,0.000000,top
+"D3","Red","LED_0603_1608Metric",8.000000,-34.000000,0.000000,top
+"D4","Green","LED_0603_1608Metric",14.000000,-34.000000,0.000000,top
 "D5","Green","LED_0603_1608Metric",74.000000,-50.000000,0.000000,top
 "FID1","Fiducial","Fiducial_1mm_Mask2mm",14.000000,-76.500000,0.000000,top
 "FID2","Fiducial","Fiducial_1mm_Mask2mm",60.000000,-76.500000,0.000000,top

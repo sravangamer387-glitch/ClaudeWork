@@ -244,7 +244,7 @@
   "failures": 0,
   "parts": 62,
   "nets": 41,
-  "order_ready": false
+  "order_ready": true
  },
  {
   "board": "biowatt",

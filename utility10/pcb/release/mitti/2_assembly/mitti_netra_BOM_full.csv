@@ -16,9 +16,9 @@ C1,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
 U4,TP4056,Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm,TPOWER TP4056,C382139,verified,SMT (JLC)
 R1,2.2k,Resistor_SMD:R_0603_1608Metric,0603 2.2k 1%,C4190,verified,SMT (JLC)
 C2,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
-D3,Red (charging),LED_SMD:LED_0603_1608Metric,,,,hand/THT
+D3,Red,LED_SMD:LED_0603_1608Metric,Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check),C72044,verified,SMT (JLC)
 R2,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
-D4,Green (done),LED_SMD:LED_0603_1608Metric,,,,hand/THT
+D4,Green,LED_SMD:LED_0603_1608Metric,Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check),C72043,verified,SMT (JLC)
 R3,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
 J3,Li-ion cell (protected!),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
 U3,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,AP2112K-3.3TRG1,C51118,verified,SMT (JLC)

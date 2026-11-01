@@ -5,15 +5,12 @@
  "netlist_matches_schematic": true,
  "erc_errors_0": true,
  "independent_gerber_check_clean": true,
- "every_part_has_lcsc_number": false,
+ "every_part_has_lcsc_number": true,
  "every_lcsc_number_verified": true,
  "cpl_rows_equal_jlc_bom_parts": true,
  "step_model": true,
  "drc_warnings": 0,
- "parts_without_lcsc": [
-  "D3",
-  "D4"
- ],
+ "parts_without_lcsc": [],
  "parts_with_unverified_lcsc": [],
- "order_ready": false
+ "order_ready": true
 }
