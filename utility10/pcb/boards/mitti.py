@@ -31,13 +31,13 @@ parts = [
  C("C8", "100n", 44, 54, "+3V3", "GND", 90), C("C9", "100n", 56, 62, "+3V3", "GND", 90), R("R9", "4.7k", 62, 56, "+3V3", "SDA", 90), R("R10", "4.7k", 66, 56, "+3V3", "SCL", 90),
  V(ref="U2", sym="Analog_ADC:HX711", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="HX711", x=80, y=56, rot=0, lcsc="C43656", mpn="HX711", nc=["2", "9", "10", "13"],
    nets={"1": "+3V3", "3": "AVDD", "4": "AVDD", "5": "GND", "6": "VBG", "7": "A_N", "8": "A_P", "11": "HX_SCK", "12": "HX_DT", "14": "GND", "15": "GND", "16": "+3V3"}),
- R("R11", "100", 74, 46, "+3V3", "AVDD", 90), C("C10", "100n", 78, 46, "AVDD", "GND", 90), C("C11", "100n", 84, 46, "+3V3", "GND", 90), C("C12", "100n", 74, 66, "VBG", "GND", 90), C("C13", "10u", 70, 50, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
+ R("R11", "100", 74, 52, "+3V3", "AVDD", 90), C("C10", "100n", 78, 52, "AVDD", "GND", 90), C("C11", "100n", 84, 52, "+3V3", "GND", 90), C("C12", "100n", 74, 66, "VBG", "GND", 90), C("C13", "10u", 70, 54, "AVDD", "GND", 0, "Capacitor_SMD:C_0805_2012Metric"),
  R("R12", "100", 66, 66, "AVDD", "EXC", 90), C("C14", "100n", 62, 66, "EXC", "GND", 90), C("C15", "100n", 70, 66, "A_P", "A_N", 90),
  jst("J4", 4, 80, 68, ["EXC", "GND", "A_P", "A_N"], "Strain-gauge bridge E+ E- A+ A-"),
  jst("J5", 3, 4, 70, ["+3V3", "SOIL_J", "GND"], "Soil probe (capacitive, 3.3 V)"),
  V(ref="J7", sym="Connector_Generic:Conn_01x03", fp="Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical", value="DS18B20 temp", x=50, y=70, rot=0, lcsc="C131339", mpn="JST B3B-PH-K-S", nets={"1": "+3V3", "2": "ONEWIRE", "3": "GND"}),
  R("R13", "4.7k", 56, 70, "+3V3", "ONEWIRE", 90), R("R15", "1k", 10, 68, "SOIL_J", "SOIL_ADC", 90), C("C16", "100n", 14, 68, "SOIL_ADC", "GND", 90),
- LED("D5", "Green", 76, 40, "GND", "LED_A"), R("R14", "1k", 76, 35, "LED", "LED_A", 90),
+ LED("D5", "Green", 34, 50, "GND", "LED_A"), R("R14", "1k", 34, 45, "LED", "LED_A", 90),
  TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 4, 44), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
