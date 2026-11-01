@@ -25,7 +25,7 @@ parts = (mcu("+3V3", {"1": "TRIG", "2": "HAPT", "10": "LED_DIN", "13": "BZ_A", "
           dict(ref="Q1", sym="Device:Q_NPN_BEC", fp="Package_TO_SOT_SMD:SOT-23", value="MMBT3904", x=80, y=19.5, rot=0, lcsc="C20526", lcsc_status="verified", mpn="MMBT3904", nets={"1": "HAPT_B", "2": "GND", "3": "HAPT_N"}),
           dict(ref="D2", sym="Device:D", fp="Diode_SMD:D_SOD-323", value="1N4148WS", x=80, y=23.5, rot=0, lcsc="C2128", lcsc_status="verified", mpn="1N4148WS", nets={"1": "+4V5", "2": "HAPT_N"}),
           R("R6", "1k", 85, 21.5, "HAPT", "HAPT_B", 90), jst("J4", 2, 68, 21.5, ["+4V5", "HAPT_N"], "Haptic motor", 0),
-          TP("TP1", "+4V5", 6.5, 13), TP("TP2", "GND", 6.5, 17)])
+          TP("TP1", "+4V5", 111, 23.2), TP("TP2", "GND", 115, 23.2)])
 parts = [dict(p, nets={k: ("LED_DIN" if v == "LED_DIN_R" else v) for k, v in p["nets"].items()}) if p["ref"] == "R30" else p for p in parts]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
