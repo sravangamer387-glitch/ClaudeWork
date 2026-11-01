@@ -32,17 +32,30 @@ def usb_c_power(x, y):
 def jst(ref, n, x, y, nets, value, rot=0):
     sym = {2: "Conn_01x02", 3: "Conn_01x03", 4: "Conn_01x04", 5: "Conn_01x05", 6: "Conn_01x06"}[n]
     return dict(ref=ref, sym=f"Connector_Generic:{sym}", fp=f"Connector_JST:JST_PH_B{n}B-PH-K_1x0{n}_P2.00mm_Vertical", value=value, x=x, y=y, rot=rot, nets={str(i + 1): v for i, v in enumerate(nets)})
-def sch_layout(groups, big=("U1",), paper="A3", cell=(36, 33), maxw=400):
-    """auto schematic layout: groups = [(title, [refs])]; returns S dict (place + blocks)"""
-    place = {}; blocks = []; x = 20; y = 22; rowh = 0
+def sch_layout(groups, big=("U1",), paper="A3", cell=(36, 33), maxw=400, bighalf=None):
+    for pp, (PW_, PH_) in ((("A3", (420, 297)), ("A2", (594, 420)), ("A1", (841, 594)))):
+        S_ = _sch_layout(groups, big, pp, cell, PW_ - 24, bighalf)
+        if all(b_["x"] + b_["w"] <= PW_ - 12 and b_["y"] + b_["h"] <= PH_ - 12 and not (b_["x"] + b_["w"] > PW_ - 120 and b_["y"] + b_["h"] > PH_ - 48) for b_ in S_["blocks"]): return S_
+    return S_
+def _sch_layout(groups, big, paper, cell, maxw, bighalf):
+    """auto schematic layout: groups = [(title, [refs])]; returns S dict (place + blocks). A group holding a big IC puts its small parts in rows
+    ABOVE the IC (so their text never lands on the IC pins); bighalf = {ref: half height of the IC symbol in mm}."""
+    place = {}; blocks = []; x = 20; y = 22; rowh = 0; bighalf = bighalf or {}
     for title, refs in groups:
         isbig = any(r in big for r in refs)
+        small = [r for r in refs if r not in big]
         cols = 1 if isbig and len(refs) == 1 else 4
-        n = len(refs); rows = math.ceil(n / cols); w = cols * cell[0] + 8 if not isbig else 130; h = rows * cell[1] + 16 if not isbig else 170
+        if isbig:
+            bigref = [r for r in refs if r in big][0]; hh = bighalf.get(bigref, 26); rows_o = math.ceil(len(small) / 4) if small else 0
+            by = 34 + rows_o * cell[1] + (10 if small else 0) + hh; w = 130; h = by + hh + 14
+        else:
+            n = len(refs); rows = math.ceil(n / cols); w = cols * cell[0] + 16; h = rows * cell[1] + 26
         if x + w > maxw: x = 20; y += rowh + 6; rowh = 0
         blocks.append(dict(title=title, x=x, y=y, w=w, h=h))
-        for i, r in enumerate(refs):
-            if isbig and r in big: place[r] = (x + 70, y + 95, 0)
-            else: place[r] = (x + 22 + (i % cols) * cell[0], y + 24 + (i // cols) * cell[1], 0)
+        if isbig:
+            place[bigref] = (x + 70, y + by, 0)
+            for i, r in enumerate(small): place[r] = (x + 30 + (i % 4) * cell[0], y + 34 + (i // 4) * cell[1], 0)
+        else:
+            for i, r in enumerate(refs): place[r] = (x + 30 + (i % cols) * cell[0], y + 34 + (i // cols) * cell[1], 0)
         x += w + 6; rowh = max(rowh, h)
     return dict(paper=paper, place=place, blocks=blocks, notes=[])
