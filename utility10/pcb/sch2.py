@@ -68,7 +68,28 @@ def build(name, parts, S, title, rev, date, out_path):
         (ax0, ay0), (ax1, ay1) = s1; (bx0, by0), (bx1, by1) = s2
         return min(max(ax0, ax1), max(bx0, bx1)) - max(min(ax0, ax1), min(bx0, bx1)) > -tol and min(max(ay0, ay1), max(by0, by1)) - max(min(ay0, ay1), min(by0, by1)) > -tol
     stub = {k: (v[0], (v[0][0] + v[1][0] * 3.81, v[0][1] + v[1][1] * 3.81)) for k, v in pinpos.items() if v[2]}
+    clus = {}                                                              # adjacent pins on the same power net in one row share one power symbol
+    groups_ = {}
+    for (ref, num), (pt, d, net) in pinpos.items():
+        if net in POWER_SYM and True:
+            groups_.setdefault((net, d, round(pt[1], 2) if d[0] == 0 else round(pt[0], 2)), []).append(((ref, num), pt))
+    for (net, d, _), lst in groups_.items():
+        lst.sort(key=lambda t: t[1][0] if d[0] == 0 else t[1][1]); run = [lst[0]]
+        for it in lst[1:] + [None]:
+            def blocked_(a_, b_):                                          # any pin of another net between two pins of the run would be shorted by the shared bus wire
+                lo_, hi_ = sorted((a_[0], b_[0]) if d[0] == 0 else (a_[1], b_[1]))
+                for (rf_, pn_), (pt2_, d2_, net2_) in pinpos.items():
+                    c_ = pt2_[0] if d[0] == 0 else pt2_[1]; l_ = pt2_[1] if d[0] == 0 else pt2_[0]; l0_ = a_[1] if d[0] == 0 else a_[0]
+                    if net2_ != net and abs(l_ - l0_) < 2.7 and lo_ - 0.01 < c_ < hi_ + 0.01: return True
+                return False
+            if it is not None and abs((it[1][0] - run[-1][1][0]) if d[0] == 0 else (it[1][1] - run[-1][1][1])) <= 5.1 and not blocked_(it[1], run[-1][1]): run.append(it); continue
+            lead = run[len(run) // 2]
+            for k_, _pt in run: clus[k_] = (lead[0], run)
+            if it is not None: run = [it]
     accepted = []; S["_wires_auto"] = []
+    for (_n, _d, _l), lst_ in groups_.items():
+        for (k1_, p1_), (k2_, p2_) in zip(lst_, lst_[1:]):
+            if k1_ in clus and k2_ in clus and clus[k1_][0] == clus[k2_][0]: accepted.append(((p1_[0] + _d[0] * 2.54, p1_[1] + _d[1] * 2.54), (p2_[0] + _d[0] * 2.54, p2_[1] + _d[1] * 2.54)))
     seen_ = set()
     for (ref, num), (pt, d, net) in pinpos.items():                       # keep auto-wires away from the PWR_FLAG symbols that are placed later
         if net in POWER_SYM and net not in seen_ and net not in S.get("no_flag", ()):
@@ -98,18 +119,6 @@ def build(name, parts, S, title, rev, date, out_path):
         segs_ = [(a2, mid), (mid, b2)]; segs_ = [sg for sg in segs_ if sg[0] != sg[1]] or [(a, a2)]; sg = max(segs_, key=lambda q: abs(q[0][0] - q[1][0]) + abs(q[0][1] - q[1][1]))
         anc = ((sg[0][0] + sg[1][0]) / 2, (sg[0][1] + sg[1][1]) / 2)
         label(na, anc, (1, 0) if sg[0][1] == sg[1][1] else (0, -1)); wired.add((r1, p1)); wired.add((r2, p2))
-    clus = {}                                                              # adjacent pins on the same power net in one row share one power symbol
-    groups_ = {}
-    for (ref, num), (pt, d, net) in pinpos.items():
-        if net in POWER_SYM and (ref, num) not in wired:
-            groups_.setdefault((net, d, round(pt[1], 2) if d[0] == 0 else round(pt[0], 2)), []).append(((ref, num), pt))
-    for (net, d, _), lst in groups_.items():
-        lst.sort(key=lambda t: t[1][0] if d[0] == 0 else t[1][1]); run = [lst[0]]
-        for it in lst[1:] + [None]:
-            if it is not None and abs((it[1][0] - run[-1][1][0]) if d[0] == 0 else (it[1][1] - run[-1][1][1])) <= 5.1: run.append(it); continue
-            lead = run[len(run) // 2]
-            for k_, _pt in run: clus[k_] = (lead[0], run)
-            if it is not None: run = [it]
     for (ref, num), (pt, d, net) in pinpos.items():
         if net is None or (ref, num) in wired: continue
         if net in POWER_SYM:
@@ -136,32 +145,29 @@ def build(name, parts, S, title, rev, date, out_path):
             body.append(symbol_inst(key, f"#PWR0{pwr_count}", net, "", ox, oy, rot, 1, ["1"], hide_ref=True, props_at=("PW", end, d)))
             continue
         L = 3.81; end = (pt[0] + d[0] * L, pt[1] + d[1] * L); wire(pt, end); label(net, end, d)
-    # PWR_FLAG on supply nets (once each, near the first pin of the net)
+    # PWR_FLAG on supply nets (once each): the flag pin is wired to the middle of an existing power-pin stub, so it needs no net label of its own
     need("power:PWR_FLAG"); flagged = set(); fl = 0
     for (ref, num), (pt, d, net) in pinpos.items():
-        if net in POWER_SYM and net not in flagged and net not in S.get("no_flag", ()):
+        if net in POWER_SYM and net not in flagged and net not in S.get("no_flag", ()) and (ref, num) not in wired:
             flagged.add(net); fl += 1
+            mp = (pt[0] + d[0] * 1.27, pt[1] + d[1] * 1.27)
             def flag_cost(fx, fy):
-                bx = (fx - 1.8, fy - 0.3, fx + 1.8, fy + 3.2); lb = tbox(net, (fx, fy + 3.81), (0, 1)); wb = (fx - 0.1, fy, fx + 0.1, fy + 3.81); c = 0
-                for q in (bx, lb, wb):
+                bx = (fx - 1.8, fy - 3.6, fx + 1.8, fy + 0.4); wb = (min(fx, mp[0]) - 0.1, min(fy, mp[1]) - 0.1, max(fx, mp[0]) + 0.1, max(fy, mp[1]) + 0.1); c = 0
+                for q in (bx, wb):
                     for a_, b_ in W:
-                        if inter0(q, (min(a_[0], b_[0]) - 0.1, min(a_[1], b_[1]) - 0.1, max(a_[0], b_[0]) + 0.1, max(a_[1], b_[1]) + 0.1)): c += 3
+                        if (a_ == pt or b_ == pt) and q is wb: continue
+                        if inter0(q, (min(a_[0], b_[0]) - 0.1, min(a_[1], b_[1]) - 0.1, max(a_[0], b_[0]) + 0.1, max(a_[1], b_[1]) + 0.1), -0.2 if q is bx else 0.12): c += 3
                     for ow, bb_ in BOD:
-                        if inter0(q, bb_): c += 5
+                        if inter0(q, bb_, -0.3): c += 5
                     for fb in FIX:
-                        if inter0(q, fb): c += 4
+                        if inter0(q, fb, -0.5): c += 4
                 return c
-            cand = []
-            for dist in (5.08, 7.62, 10.16, 12.7):
-                for off in (0, 5.08, -5.08, 7.62, -7.62):
-                    cand.append((pt[0] + d[0] * dist + (off if d[0] == 0 else 0), pt[1] + d[1] * dist + (off if d[0] != 0 else 0) + (3.81 if d[1] == 0 and off == 0 else 0)))
+            if d[0] == 0: cand = [(mp[0] + sx * dist, mp[1]) for dist in (5.08, 7.62, 10.16) for sx in (1, -1)]
+            else: cand = [(mp[0], mp[1] + sy * dist) for dist in (5.08, 7.62) for sy in (-1, 1)]
             fx, fy = min(cand, key=lambda c_: flag_cost(*c_))
-            if (fx, fy) != (pt[0] + d[0] * 5.08, pt[1] + d[1] * 5.08 + (3.81 if d[1] == 0 else 0)): wire(pt, (pt[0] + d[0] * 2.54, pt[1] + d[1] * 2.54)) if False else None
-            fp0 = list(pins(resolve("power", "PWR_FLAG")).values())[0]
-            pw = (fx, fy)
-            BOD.append((("#FLG", fl), (fx - 1.8, fy - 0.3, fx + 1.8, fy + 3.2)))
+            BOD.append((("#FLG", fl), (fx - 1.8, fy - 3.6, fx + 1.8, fy + 0.4)))
             body.append(symbol_inst("power:PWR_FLAG", f"#FLG0{fl}", "PWR_FLAG", "", fx, fy, 0, 1, ["1"], hide_ref=True, props_at=(fx + 1, fy - 3)))
-            wire(pw, (fx, fy + 3.81)); label(net, (fx, fy + 3.81), (0, 1))
+            wire((fx, fy), mp); body.append(f'(junction (at {f(mp[0])} {f(mp[1])}) (diameter 0) (color 0 0 0 0) (uuid {uid()}))')
     for b in S.get("blocks", []):
         x, y, w, h = b["x"], b["y"], b["w"], b["h"]
         body.append(f'(rectangle (start {f(x)} {f(y)}) (end {f(x + w)} {f(y + h)}) (stroke (width 0.2) (type dash)) (fill (type none)) (uuid {uid()}))')
@@ -184,11 +190,11 @@ def build(name, parts, S, title, rev, date, out_path):
         for wb in wbox:
             if inter(box, wb): c += 3
         for ow, bb in BOD:
-            if ow != own and inter(box, bb, 0.05): c += 5
+            if ow != own and inter(box, bb, -0.3): c += 5
         for fb in FIX:
-            if inter(box, fb): c += 4
+            if inter(box, fb, -0.6): c += 4
         for pb in placed:
-            if inter(box, pb): c += 4
+            if inter(box, pb, -0.6): c += 4
         return c
     def fld_box(txt, x, y, just):
         w = len(txt) * CW + 0.3
@@ -217,7 +223,6 @@ def build(name, parts, S, title, rev, date, out_path):
         if not bb:
             px, py = fl["fixed"] or (fl["pos"][0] + 3, fl["pos"][1] - 4); tokens[f"@@R{fl['n']}@@"] = fmt(px, py, "left"); tokens[f"@@V{fl['n']}@@"] = fmt(px, py + 2.54, "left"); continue
         bb = bb[0]; txt1, txt2 = fl["ref"], fl["value"]; w = max(len(txt1), len(txt2)) * CW + 0.3; cy = (bb[1] + bb[3]) / 2; cx = (bb[0] + bb[2]) / 2; cands = []
-        if fl["fixed"] and not (isinstance(fl["fixed"], tuple) and fl["fixed"][0] == "PW"): cands.append((fl["fixed"][0], fl["fixed"][1], "left"))
         for extra in (0.8, 3.5, 6.5):
             cands += [(bb[2] + extra, cy - 1.27, "left"), (bb[0] - extra, cy - 1.27, "right"), (bb[2] + extra, cy - 3.0, "left"), (bb[0] - extra, cy - 3.0, "right"), (bb[2] + extra, cy + 2.2, "left"), (bb[0] - extra, cy + 2.2, "right")]
         for up in (1.8, 4.0):

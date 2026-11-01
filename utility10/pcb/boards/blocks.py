@@ -37,25 +37,48 @@ def sch_layout(groups, big=("U1",), paper="A3", cell=(36, 33), maxw=400, bighalf
         S_ = _sch_layout(groups, big, pp, cell, PW_ - 24, bighalf)
         if all(b_["x"] + b_["w"] <= PW_ - 12 and b_["y"] + b_["h"] <= PH_ - 12 and not (b_["x"] + b_["w"] > PW_ - 120 and b_["y"] + b_["h"] > PH_ - 48) for b_ in S_["blocks"]): return S_
     return S_
+def _extent(sym, unit):
+    """screen-space extent (xmin, xmax, ymin, ymax) of a symbol's pins relative to its origin, plus pin-stub allowance"""
+    from sexp import pins, resolve
+    l, n = sym.split(":"); pn = pins(resolve(l, n)); xs = []; ys = []
+    for num, (pu, qx, qy, qa, ln, pname, ptype) in pn.items():
+        if pu not in (0, unit): continue
+        xs.append(qx); ys.append(-qy)
+    if not xs: return (-3, 3, -3, 3)
+    return (min(xs), max(xs), min(ys), max(ys))
 def _sch_layout(groups, big, paper, cell, maxw, bighalf):
-    """auto schematic layout: groups = [(title, [refs])]; returns S dict (place + blocks). A group holding a big IC puts its small parts in rows
-    ABOVE the IC (so their text never lands on the IC pins); bighalf = {ref: half height of the IC symbol in mm}."""
-    place = {}; blocks = []; x = 20; y = 22; rowh = 0; bighalf = bighalf or {}
+    import inspect
+    parts = {p["ref"]: p for p in inspect.stack()[2].frame.f_globals.get("parts", [])}
+    def ext(r):
+        base, u = (r.split("#")[0], int(r.split("#")[1])) if "#" in r else (r, 1)
+        p = parts.get(base); e = _extent(p["sym"], u) if p else (-3, 3, -3, 3)
+        return e
+    MX, MY = 15.0, 13.0                                                     # room for pin stubs, rotated net labels, power symbols and the reference/value text
+    place = {}; blocks = []; x = 20; y = 22; rowh = 0
     for title, refs in groups:
-        isbig = any(r in big for r in refs)
-        small = [r for r in refs if r not in big]
-        cols = 1 if isbig and len(refs) == 1 else 4
-        if isbig:
-            bigref = [r for r in refs if r in big][0]; hh = bighalf.get(bigref, 26); rows_o = math.ceil(len(small) / 4) if small else 0
-            by = 34 + rows_o * cell[1] + (10 if small else 0) + hh; w = 130; h = by + hh + 14
-        else:
-            n = len(refs); rows = math.ceil(n / cols); w = cols * cell[0] + 16; h = rows * cell[1] + 26
-        if x + w > maxw: x = 20; y += rowh + 6; rowh = 0
-        blocks.append(dict(title=title, x=x, y=y, w=w, h=h))
-        if isbig:
-            place[bigref] = (x + 70, y + by, 0)
-            for i, r in enumerate(small): place[r] = (x + 30 + (i % 4) * cell[0], y + 34 + (i // 4) * cell[1], 0)
-        else:
-            for i, r in enumerate(refs): place[r] = (x + 30 + (i % cols) * cell[0], y + 34 + (i // cols) * cell[1], 0)
-        x += w + 6; rowh = max(rowh, h)
+        bigs = [r for r in refs if r in big]; small = [r for r in refs if r not in big]
+        inner = 0; rows = []; cur = []; curw = 0; BW = 4 * cell[0] + 16
+        for r in small:
+            e = ext(r); w = (e[1] - e[0]) + 2 * MX; h = (e[3] - e[2]) + 2 * MY
+            w = max(w, 24.0)
+            if cur and curw + w > BW - 10: rows.append(cur); cur = []; curw = 0
+            cur.append((r, e, w, h)); curw += w
+        if cur: rows.append(cur)
+        ytop = 28.0; maxrowx = 0; rel = {}
+        for row in rows:
+            rh = max(c[3] for c in row); cx = 8.0
+            for (r, e, w, h) in row:
+                rel[r] = (cx + MX - e[0], ytop + MY - e[2]); cx += w
+            maxrowx = max(maxrowx, cx); ytop += rh
+        w_blk = max(BW if not bigs else 130, maxrowx + 8, len(title) * 2.3 + 10)
+        if bigs:
+            r = bigs[0]; e = ext(r); hw = (e[1] - e[0]) / 2; hh = (e[3] - e[2]) / 2
+            by = ytop + (6 if rows else 0) + 14 + hh - (e[2] + e[3]) / 2 * 0
+            rel[r] = (max(70, hw + 24 + MX) - (e[0] + e[1]) / 2, by - (e[2] + e[3]) / 2)
+            w_blk = max(w_blk, 2 * (hw + 24 + MX)); h = by + hh + 22
+        else: h = ytop + 12
+        if x + w_blk > maxw: x = 20; y += rowh + 6; rowh = 0
+        for r_, (rx_, ry_) in rel.items(): place[r_] = (x + rx_, y + ry_, 0)
+        blocks.append(dict(title=title, x=x, y=y, w=w_blk, h=h))
+        x += w_blk + 6; rowh = max(rowh, h)
     return dict(paper=paper, place=place, blocks=blocks, notes=[])
