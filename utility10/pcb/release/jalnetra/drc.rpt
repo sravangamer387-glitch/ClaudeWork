@@ -1,0 +1,261 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/jalnetra/jal_netra.kicad_pcb **
+** Created on 2026-11-01 03:40:20 **
+
+** Found 56 DRC violations **
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(74.7500 mm, 24.8500 mm): Track [+3V3] on F.Cu, length 1.1000 mm
+    @(74.0000 mm, 25.2250 mm): Pad 2 [GND] of C38 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(16.1500 mm, 20.4000 mm): Track [+3V3] on F.Cu, length 19.1500 mm
+    @(16.8250 mm, 27.0000 mm): Pad 2 [LNA1_FB] of R13 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(16.1500 mm, 20.4000 mm): Track [+3V3] on F.Cu, length 19.1500 mm
+    @(16.8250 mm, 30.0000 mm): Pad 2 [LNA1_G] of R14 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1970 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(75.8000 mm, 23.8000 mm): Track [+3V3] on F.Cu, length 1.4849 mm
+    @(74.0000 mm, 25.2250 mm): Pad 2 [GND] of C38 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(41.3000 mm, 30.9500 mm): Track [XOUT] on F.Cu, length 2.4000 mm
+    @(42.0000 mm, 30.2250 mm): Pad 2 [GND] of C25 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(44.7500 mm, 26.4500 mm): Track [ADC_IN] on F.Cu, length 2.0500 mm
+    @(44.0000 mm, 27.2250 mm): Pad 2 [GND] of C34 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1775 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(44.7500 mm, 26.4500 mm): Track [ADC_IN] on F.Cu, length 2.0500 mm
+    @(44.0000 mm, 28.7750 mm): Pad 1 [+3V3] of C34 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1775 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(44.7500 mm, 28.5000 mm): Track [ADC_IN] on F.Cu, length 1.8385 mm
+    @(44.0000 mm, 28.7750 mm): Pad 1 [+3V3] of C34 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1875 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(42.2500 mm, 39.1500 mm): Track [LED] on F.Cu, length 0.8000 mm
+    @(43.8375 mm, 38.7500 mm): Track [TXA2] on F.Cu, length 1.2000 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1875 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(45.2500 mm, 40.1625 mm): Track [BUZ] on F.Cu, length 1.2000 mm
+    @(44.8500 mm, 41.7500 mm): Track [TXA1] on F.Cu, length 0.8000 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1881 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(33.6500 mm, 13.1500 mm): Track [AVDD] on F.Cu, length 0.3000 mm
+    @(33.0500 mm, 13.3500 mm): Pad 1 [LNA1_OUT] of U7 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(22.3500 mm, 34.8500 mm): Track [AVDD] on F.Cu, length 1.0000 mm
+    @(22.9500 mm, 35.3500 mm): Pad 6 [MUX_SEL] of U4 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1881 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(34.3500 mm, 13.8500 mm): Track [AVDD] on F.Cu, length 0.9899 mm
+    @(33.0500 mm, 13.3500 mm): Pad 1 [LNA1_OUT] of U7 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1829 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(49.4000 mm, 33.3500 mm): Track [SWDIO] on F.Cu, length 0.7071 mm
+    @(49.7500 mm, 31.8375 mm): Pad 39 [SCL] of U1 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1875 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(50.7500 mm, 31.8375 mm): Track [SWDIO] on F.Cu, length 1.2000 mm
+    @(51.1500 mm, 30.2500 mm): Track [SWCLK] on F.Cu, length 0.8000 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(49.9000 mm, 32.8500 mm): Track [SWDIO] on F.Cu, length 0.8000 mm
+    @(50.2500 mm, 31.8375 mm): Pad 38 [SWCLK] of U1 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1829 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(49.9000 mm, 32.8500 mm): Track [SWDIO] on F.Cu, length 0.8000 mm
+    @(49.7500 mm, 31.8375 mm): Pad 39 [SCL] of U1 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(56.1500 mm, 43.4500 mm): Track [BOOT0] on F.Cu, length 1.4000 mm
+    @(55.5000 mm, 42.7250 mm): Pad 2 [GND] of C2 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(56.2500 mm, 45.0000 mm): Track [BOOT0] on F.Cu, length 1.4500 mm
+    @(55.5000 mm, 44.2750 mm): Pad 1 [+3V3] of C2 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(29.5500 mm, 17.7500 mm): Track [LNA1_OUT] on F.Cu, length 3.9598 mm
+    @(26.0000 mm, 20.7750 mm): Pad 1 [AVDD] of C23 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(31.5500 mm, 13.9500 mm): Track [LNA1_OUT] on F.Cu, length 1.1314 mm
+    @(30.0000 mm, 14.7750 mm): Pad 1 [AVDD] of C24 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(26.7500 mm, 20.5500 mm): Track [LNA1_OUT] on F.Cu, length 1.0000 mm
+    @(26.0000 mm, 20.7750 mm): Pad 1 [AVDD] of C23 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(30.7500 mm, 14.7500 mm): Track [LNA1_OUT] on F.Cu, length 0.8000 mm
+    @(30.0000 mm, 14.7750 mm): Pad 1 [AVDD] of C24 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(28.4500 mm, 27.8500 mm): Track [LNA1_P] on F.Cu, length 1.2500 mm
+    @(28.0000 mm, 27.1750 mm): Pad 2 [VMID] of R12 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(28.7500 mm, 29.5500 mm): Track [LNA1_P] on F.Cu, length 1.4000 mm
+    @(28.0000 mm, 28.8250 mm): Pad 1 [LNA1_C] of R12 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(29.8500 mm, 56.7500 mm): Track [TA1] on F.Cu, length 1.4000 mm
+    @(29.1750 mm, 56.0000 mm): Pad 1 [TXA1] of R30 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(29.8500 mm, 59.7500 mm): Track [TA2] on F.Cu, length 1.4000 mm
+    @(29.1750 mm, 59.0000 mm): Pad 1 [TXA2] of R31 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(31.5500 mm, 59.7500 mm): Track [TB1] on F.Cu, length 0.9000 mm
+    @(30.8250 mm, 59.0000 mm): Pad 2 [TA2] of R31 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(37.8500 mm, 56.7500 mm): Track [TB1] on F.Cu, length 4.0500 mm
+    @(37.1750 mm, 56.0000 mm): Pad 1 [TXB1] of R32 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(30.6500 mm, 59.7500 mm): Track [TB1] on F.Cu, length 0.5657 mm
+    @(30.8250 mm, 59.0000 mm): Pad 2 [TA2] of R31 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(37.8500 mm, 59.7500 mm): Track [TB2] on F.Cu, length 5.5000 mm
+    @(37.1750 mm, 59.0000 mm): Pad 1 [TXB2] of R33 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(3.8500 mm, 52.9000 mm): Track [TB2] on B.Cu, length 1.8000 mm
+    @(5.0000 mm, 52.0000 mm): PTH pad 1 [TB1] of J7
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(7.2500 mm, 24.8500 mm): Track [VMID] on F.Cu, length 3.7000 mm
+    @(8.0000 mm, 24.1750 mm): Pad 2 [GND] of R11 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(7.2500 mm, 24.8500 mm): Track [VMID] on F.Cu, length 3.7000 mm
+    @(8.0000 mm, 21.8250 mm): Pad 1 [AVDD] of R10 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(30.7500 mm, 19.8500 mm): Track [LNA2_C] on F.Cu, length 1.5000 mm
+    @(30.0000 mm, 19.1750 mm): Pad 2 [VMID] of R16 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1850 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(69.7500 mm, 10.4000 mm): Track [VBUS] on F.Cu, length 1.2500 mm
+    @(68.4500 mm, 11.5100 mm): Pad 2 [GND] of C5 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1850 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(68.5000 mm, 10.4000 mm): Track [VBUS] on F.Cu, length 2.1213 mm
+    @(68.4500 mm, 11.5100 mm): Pad 2 [GND] of C5 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(74.0500 mm, 53.5500 mm): Track [BUZ_B] on F.Cu, length 1.3000 mm
+    @(75.0625 mm, 52.9500 mm): Pad 2 [GND] of Q1 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1750 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(42.4500 mm, 61.2500 mm): Track [D1_A] on F.Cu, length 1.5000 mm
+    @(43.2125 mm, 62.0000 mm): Pad 1 [GND] of D1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(71.1375 mm, 21.0500 mm): Track [+3V3] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(43.8375 mm, 35.7500 mm): Track [XOUT] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(43.8375 mm, 36.7500 mm): Track [ADC_IN] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(43.8375 mm, 37.7500 mm): Track [GAIN_SEL] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(43.8375 mm, 38.7500 mm): Track [TXA2] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(47.7500 mm, 40.1625 mm): Track [BTN] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(34.9500 mm, 14.0000 mm): Track [AVDD] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(49.2500 mm, 40.1625 mm): Track [AVDD] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(50.7500 mm, 31.8375 mm): Track [SWDIO] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(46.7500 mm, 31.8375 mm): Track [BOOT0] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(21.0500 mm, 36.6500 mm): Track [RXB] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(20.8625 mm, 23.0500 mm): Track [LNA1_OUT] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(23.1375 mm, 24.9500 mm): Track [LNA1_FB] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(20.8625 mm, 14.9500 mm): Track [LNA2_P] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(23.1375 mm, 14.9500 mm): Track [LNA2_FB] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(68.8625 mm, 21.0500 mm): Track [+5V] on F.Cu, length 1.2000 mm
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(68.8625 mm, 22.9500 mm): Track [+5V] on F.Cu, length 1.2000 mm
+
+** Found 11 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+
+** Found 0 Footprint errors **
+
+** End of Report **

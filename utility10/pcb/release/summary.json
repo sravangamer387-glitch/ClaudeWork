@@ -118,5 +118,17 @@
   "failures": 0,
   "parts": 37,
   "nets": 22
+ },
+ {
+  "board": "jal_netra",
+  "mod": "jalnetra",
+  "drc_errors": 50,
+  "drc_warnings": 17,
+  "unconnected": 11,
+  "netlist": false,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 78,
+  "nets": 51
  }
 ]
