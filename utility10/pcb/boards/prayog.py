@@ -8,7 +8,7 @@ for p in usb:                                                    # this board ne
 parts = (mcu("+5V", {"30": "RXD", "31": "TXD", "7": "XTAL1", "8": "XTAL2", "23": "AN0", "24": "AN1", "25": "AN2", "26": "AN3", "27": "AN4", "28": "AN5", "19": "AN6", "22": "AN7", "32": "GATE", "2": "TRIG", "9": "ECHO", "11": "LED", "12": "BTN"}, 54, 38) + isp("+5V", 86, 42) + usb +
          [dict(ref="U2", sym="Interface_USB:CH340C", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="CH340C", x=16, y=38, rot=0, lcsc="C84681", lcsc_status="verified", mpn="CH340C",
                nets={"1": "GND", "2": "RXD", "3": "TXD", "4": "V3", "5": "USB_DP", "6": "USB_DM", "13": "DTR", "16": "+5V"}, nc=["7", "8", "9", "10", "11", "12", "14", "15"]),
-          C("C6", "100n", 24, 30, "+5V", "GND", 90), C("C7", "100n", 24, 45, "V3", "GND", 90), C("C8", "100n", 29, 30, "DTR", "RESET", 90),
+          C("C6", "100n", 20.5, 31, "+5V", "GND", 90), C("C7", "100n", 24, 45, "V3", "GND", 90), C("C8", "100n", 29, 30, "DTR", "RESET", 90),
           dict(ref="Y1", sym="Device:Crystal_GND24", fp="Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm", value="16 MHz", x=39.5, y=41.5, rot=0, nets={"1": "XTAL1", "2": "GND", "3": "XTAL2", "4": "GND"}),
           C("C9", "22p", 35.5, 44, "XTAL1", "GND", 90), C("C10", "22p", 35.5, 39, "XTAL2", "GND", 90)] +
          [sock(n, 52 + (n % 4) * 11, 6 + (n // 4) * 10) for n in range(8)] +
