@@ -21,7 +21,7 @@ parts = (mcu("+4V5", {"30": "RXD", "31": "TXD", "32": "MP3_BUSY", "1": "PWM_R", 
     # bought-in 4-digit LED display module with two on-board 74HC595 (header VCC SCLK RCLK DIO GND), wired by a 5-way JST PH to Dupont lead and mounted behind the lid window
     V(ref="J11", sym="Connector_Generic:Conn_01x05", fp="Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal", value="Display module (VCC SCLK RCLK DIO GND)", x=86, y=12, rot=180, lcsc="C157923", mpn="JST S5B-PH-K-S(LF)(SN)", nets={"1": "+4V5", "2": "SCK", "3": "MISO", "4": "DISP_DIO", "5": "GND"}),
     # 74HC595 for the seven ball-lane LEDs (cricket game); its QH' feeds the display module DIO: shift the two display bytes first, the lane byte last
-    dict(ref="U5", sym="74xx:74HC595", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="74HC595", x=100, y=32, rot=0,
+    dict(ref="U5", sym="74xx:74HC595", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="74HC595", x=100, y=32, rot=0, lcsc="C5947", lcsc_status="verified", mpn="74HC595D",
          nets=dict({QPIN[s_]: f"LANE{i}" for i, s_ in enumerate(SEG[:7])}, **{"8": "GND", "16": "+4V5", "10": "+4V5", "13": "GND", "14": "MOSI", "11": "SCK", "12": "MISO", "9": "DISP_DIO"}), nc=["7"]),
     C("C25", "100n", 106, 32, "+4V5", "GND", 90)] +
     [R(f"R{60 + i}", "1k", 68 + 5 * i, 70.5, f"LANE{i}", f"LANE{i}_A", 90) for i in range(7)] +

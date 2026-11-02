@@ -284,5 +284,18 @@
   "parts": 40,
   "nets": 26,
   "order_ready": true
+ },
+ {
+  "board": "ap1_audio",
+  "mod": "ap1",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 79,
+  "nets": 60,
+  "order_ready": true
  }
 ]

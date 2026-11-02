@@ -1,0 +1,35 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/ap1/ap1_audio.kicad_pcb **
+** Created on 2026-11-02 19:31:56 **
+
+** Found 5 DRC violations **
+[via_diameter]: Via diameter (netclass 'Default' min diameter 0.6000 mm; actual 0.5000 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(42.9270 mm, 30.0805 mm): Via [GND] on F.Cu - B.Cu
+[drill_out_of_range]: Drill out of range (netclass 'Default' min width 0.3000 mm; actual 0.2500 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(42.9270 mm, 30.0805 mm): Via [GND] on F.Cu - B.Cu
+[hole_near_hole]: Drilled holes too close together (board setup constraints min 0.2495 mm; actual 0.0250 mm)
+    Rule: board setup constraints; Severity: error
+    @(28.0000 mm, 65.4500 mm): Via [+4V5] on F.Cu - B.Cu
+    @(28.0000 mm, 66.0000 mm): PTH pad 1 [+4V5] of J14
+[hole_near_hole]: Drilled holes too close together (board setup constraints min 0.2495 mm; actual 0.0250 mm)
+    Rule: board setup constraints; Severity: error
+    @(28.0000 mm, 66.0000 mm): PTH pad 1 [+4V5] of J14
+    @(28.0000 mm, 65.4500 mm): Via [+4V5] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(118.4750 mm, 35.1750 mm): Track [+4V5] on F.Cu, length 0.6500 mm
+
+** Found 2 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+    @(0.4000 mm, 0.4000 mm): Zone [GND] on F.Cu
+
+** Found 0 Footprint errors **
+
+** End of Report **
