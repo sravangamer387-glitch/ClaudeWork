@@ -55,7 +55,7 @@ PRE = [dict(net="+4V5", layer=0, pts=[(28.06, 81.45), (28.06, 84.0)], w=0.4),
 PREV = [("+4V5", 28.06, 84.0)]
 BOARD = dict(pre=PRE, pre_vias=PREV, name="ap1_audio", title="AP1 shared audio platform (rhymes player, star lamp, cricket game)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"+4V5": "3xAA via Q2", "GND": "battery", "BAT_P": "battery", "BAT_SW": "battery switch"}, single_ok=(),
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (120, 24)], widths={"+4V5": 0.4, "SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
+ holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (120, 24)], widths={"SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
  first=["SPK1", "SPK2", "+4V5", "MOT_N", "BTN_ADC"], gnd_pour_only=True, silk=[("AP1 AUDIO PLATFORM rev A", 90, H - 1.7, 0.9), ("MP3", 18, 4.5, 0.7), ("DISPLAY MODULE", 104, 17.0, 0.7)], stitch=6.0)
 BOARD["enc"] = dict(standoff=4.0, inner_height=22, side=[("SW1", "bottom", 8, 5, 2.5)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_rect", 86.35, 15.6, 52, 20), ("abs_rect", 99, 84, 36, 5)] + [("round", f"SW{2 + k}", 5.0) for k in range(7)] + [("round", "D1", 2.2), ("round", "D4", 2.2)],
                     note="shared platform box: display window for the bought 4-digit module (fix the module to the lid behind tinted acrylic with M3 screws/standoffs; lead to J11), seven button plungers, speaker grille to add for the chosen speaker; 3 x AA bay with a screwed door")
