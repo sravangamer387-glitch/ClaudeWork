@@ -56,7 +56,7 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 | J3 | Sensor head | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J4 | TM1637 display | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
 | SW1 | Reset bill | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
-| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D1 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R1 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
 | R2 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
 | R3 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
@@ -64,10 +64,10 @@ Enclosure (prototype shell for 3D printing): outer 57.2 x 43.2 x 19.6 mm, collis
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R6 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
 | C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C5 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C4 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C5 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |

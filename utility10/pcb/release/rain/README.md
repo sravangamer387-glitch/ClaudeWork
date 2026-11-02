@@ -58,7 +58,7 @@ Enclosure (prototype shell for 3D printing): outer 65.2 x 47.2 x 20.6 mm, collis
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | SW2 | Mute | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
-| D1 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D1 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | D3 | TVS 5V bidir | D_SOD-323 | Nexperia PESD5V0S1BA,115 | C19224 | verified |
 | D4 | TVS 5V bidir | D_SOD-323 | Nexperia PESD5V0S1BA,115 | C19224 | verified |
 | R1 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
@@ -67,9 +67,9 @@ Enclosure (prototype shell for 3D printing): outer 65.2 x 47.2 x 20.6 mm, collis
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R6 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | C5 | 2.2n | C_0603_1608Metric | Samsung CL10B222KB8NNNC X7R | C16033 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |

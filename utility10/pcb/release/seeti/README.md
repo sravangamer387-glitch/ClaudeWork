@@ -63,7 +63,7 @@ Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collis
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | SW2 | Target | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
-| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D1 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R1 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
 | R2 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R3 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
@@ -73,14 +73,14 @@ Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collis
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R8 | 33k | R_0603_1608Metric | UNI-ROYAL 0603WAF3302T5E | C4216 | verified |
 | R9 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | C5 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | C6 | 220n | C_0603_1608Metric | Samsung CL10B224KB8NNNC X7R 50V | C64705 | verified |
 | C7 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C8 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R10 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | C9 | 22n | C_0603_1608Metric | Samsung CL10B223KB8NNNC X7R | C21122 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |

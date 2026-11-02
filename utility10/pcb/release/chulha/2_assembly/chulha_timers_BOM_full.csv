@@ -1,8 +1,8 @@
 Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
 U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,C14877,verified,SMT (JLC)
-C1,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
-C2,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
-C3,100n,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R,C14663,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
 R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
 J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
 J1,BATT 3xAAA,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
