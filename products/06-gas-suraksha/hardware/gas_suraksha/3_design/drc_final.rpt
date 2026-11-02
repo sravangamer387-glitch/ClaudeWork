@@ -1,0 +1,13 @@
+** Drc report for /home/user/ClaudeWork/utility10/pcb/out/gassuraksha/gas_suraksha.kicad_pcb **
+** Created on 2026-11-02 02:51:07 **
+
+** Found 1 DRC violations **
+[track_dangling]: Track has unconnected end
+    Local override; Severity: warning
+    @(49.6000 mm, 35.2500 mm): Track [BUZ] on F.Cu, length 1.2000 mm
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

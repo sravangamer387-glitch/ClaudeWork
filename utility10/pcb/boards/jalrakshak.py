@@ -16,13 +16,13 @@ parts = (mcu("+5V", {"11": "PROBE_DRV", "12": "SUMP", "13": "TANK_LOW", "14": "T
           R("R16", "100", 36, 50, "PUMP_G", "PUMP_GR"), R("R18", "100k", 36, 54, "PUMP_GR", "GND"),
           dict(ref="D7", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=22, y=46, rot=0, nets={"1": "+12V", "2": "PUMP_D"}),
           dict(ref="J5", sym="Connector:Screw_Terminal_01x02", fp="TerminalBlock:TerminalBlock_bornier-2_P5.08mm", value="Pump 12V DC, max 1 A (LOW VOLTAGE ONLY)", x=12, y=54, rot=0, nets={"1": "+12V", "2": "PUMP_D"}),
-          R("R30", "68", 8, 20, "+5V", "BZ_P", 90),
+          R("R30", "68", 44, 20, "+5V", "BZ_P", 90),
           jst("J6", 4, 76, 14, ["PROBE_COM", "SUMP_J", "LOW_J", "FULL_J"], "Probes: COM, SUMP, TANK LOW, TANK FULL", 90),
           R("R20", "1k", 63, 6, "PROBE_DRV", "PROBE_COM", 90),
           R("R21", "10k", 63, 11, "SUMP_J", "SUMP", 90), R("R22", "100k", 67, 11, "SUMP", "GND", 90),
           R("R23", "10k", 63, 16, "LOW_J", "TANK_LOW", 90), R("R24", "100k", 67, 16, "TANK_LOW", "GND", 90),
           R("R25", "10k", 63, 21, "FULL_J", "TANK_FULL", 90), R("R26", "100k", 67, 21, "TANK_FULL", "GND", 90),
-          button("SW2", "BTN", 58, 54, "Reset fault"), TP("TP1", "+12V", 4, 30), TP("TP2", "+5V", 4, 34), TP("TP3", "GND", 4, 38), TP("TP4", "PUMP_G", 44, 54)])
+          button("SW2", "BTN", 58, 54, "Reset fault"), TP("TP1", "+12V", 40, 16), TP("TP2", "+5V", 4, 34), TP("TP3", "GND", 4, 38), TP("TP4", "PUMP_G", 44, 54)])
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("12 V INPUT: jack, PTC, TVS, reverse-polarity PMOS", ["J1", "F1", "D3", "Q3", "R17", "C6", "TP1", "TP3"]), ("5 V REGULATOR", ["U3", "C7", "C8", "TP2"]), ("MCU: ATmega328P-AU, 8 MHz internal", ["U1", "C1", "C2", "C3", "R7"]),

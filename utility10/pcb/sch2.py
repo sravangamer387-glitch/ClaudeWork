@@ -3,7 +3,7 @@ net labels elsewhere, dashed block frames with titles, notes, title block. Outpu
 import sys, os, math, re; sys.path.insert(0, os.path.dirname(__file__))
 from sexp import *
 def f(v): return ("%.3f" % v).rstrip("0").rstrip(".")
-POWER_SYM = {"GND": ("power:GND", "down"), "+3V3": ("power:+3V3", "up"), "+3V0": ("power:+3V3", "up"), "+5V": ("power:+5V", "up"), "+4V5": ("power:+5V", "up"), "VBUS": ("power:VBUS", "up"), "BAT_P": ("power:+BATT", "up"), "+BATT": ("power:+BATT", "up")}
+POWER_SYM = {"GND": ("power:GND", "down"), "+3V3": ("power:+3V3", "up"), "+3V0": ("power:+3V3", "up"), "+5V": ("power:+5V", "up"), "+4V5": ("power:VDD", "up"), "VBUS": ("power:VBUS", "up"), "BAT_P": ("power:+BATT", "up"), "+BATT": ("power:+BATT", "up")}
 def rot_pin(px, py, a, rot):
     r = math.radians(rot); rx = px * math.cos(r) - py * math.sin(r); ry = px * math.sin(r) + py * math.cos(r)
     return rx, ry

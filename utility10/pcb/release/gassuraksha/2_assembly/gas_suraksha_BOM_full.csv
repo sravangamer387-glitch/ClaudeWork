@@ -1,0 +1,46 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+J1,USB-C 5V,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
+F1,PTC 500mA,Fuse:Fuse_1206_3216Metric,Littelfuse 1206L050YR (6 V),C163512,verified,SMT (JLC)
+D3,SMAJ5.0A,Diode_SMD:D_SMA,Littelfuse SMAJ5.0A,C83329,verified,SMT (JLC)
+R1,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+R2,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,C23186,verified,SMT (JLC)
+C5,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+J5,BATT 3xAA,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+SW1,Power,Button_Switch_SMD:SW_SPDT_PCM12,C&K PCM12SMTR,C221841,verified,SMT (JLC)
+Q2,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
+C4,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+BZ1,Buzzer active 3V,Buzzer_Beeper:Buzzer_12x9.5RM7.6,S&S SUN-1275Y-0327-50P7.6,C3015483,verified,hand/THT
+Q1,MMBT3904,Package_TO_SOT_SMD:SOT-23,MMBT3904,C20526,verified,SMT (JLC)
+D2,1N4148WS,Diode_SMD:D_SOD-323,1N4148WS,C2128,verified,SMT (JLC)
+R6,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,C14877,verified,SMT (JLC)
+C1,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+C2,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+C3,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),C2894964,verified,hand/THT
+R20,47,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF470JT5E,C23182,verified,SMT (JLC)
+D6,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)
+D7,SS14,Diode_SMD:D_SMA,SS14,C84343,verified,SMT (JLC)
+C20,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+Y1,16 MHz,Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm,YXC X322516MOB4SI 16 MHz 12 pF 3225 (LCSC listing seen in search results; matches the 22 pF load caps),C12668,verified,SMT (JLC)
+C9,22p,Capacitor_SMD:C_0603_1608Metric,Samsung CL10C220JB8NNNC C0G,C1653,verified,SMT (JLC)
+C10,22p,Capacitor_SMD:C_0603_1608Metric,Samsung CL10C220JB8NNNC C0G,C1653,verified,SMT (JLC)
+J3,MQ-6 module: VCC GND DO AO,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,ZHOURI 2.54-1*4,C5116483,verified,hand/THT
+R10,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C11,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+R11,220k,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF2203T5E,C22961,verified,SMT (JLC)
+R12,220k,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF2203T5E,C22961,verified,SMT (JLC)
+C12,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+J4,"UART log (adapter RX, TX)",Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+SW2,Silence,Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
+SW3,Test,Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+D1,Green,LED_SMD:LED_0603_1608Metric,"Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock)",C2289,verified,SMT (JLC)
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+D4,Amber,LED_SMD:LED_0603_1608Metric,Hubei KENTO KT-0603Y yellow (Everlight 19-213 was out of stock),C2287,verified,SMT (JLC)
+R8,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+D5,Red,LED_SMD:LED_0603_1608Metric,Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock),C2286,verified,SMT (JLC)
+R9,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)

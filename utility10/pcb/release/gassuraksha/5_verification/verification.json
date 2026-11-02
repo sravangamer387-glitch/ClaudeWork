@@ -1,0 +1,34 @@
+{
+ "board": "gas_suraksha",
+ "erc_errors": [],
+ "erc_warnings": [],
+ "pin_pad_mismatch": [],
+ "stitch_vias": 164,
+ "silk_unplaced": [],
+ "silk": {
+  "placed": 45,
+  "unplaced": []
+ },
+ "route_failures": [],
+ "tracks": 621,
+ "drc": {},
+ "drc_errors": 0,
+ "drc_warnings": 0,
+ "drc_waived": {},
+ "unconnected": 0,
+ "step": true,
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
+ "nets": 33,
+ "parts": 45,
+ "gerber_independent_check": {
+  "layers": 9,
+  "outline_mm": [
+   84.1,
+   60.1
+  ],
+  "size_ok": true,
+  "errors": []
+ }
+}
