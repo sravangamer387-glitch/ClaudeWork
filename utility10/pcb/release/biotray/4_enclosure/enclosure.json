@@ -1,12 +1,18 @@
 {
- "inner_height": 8,
- "outer": [
-  105.2,
-  85.2,
-  17.6
+ "version": 2,
+ "mode": "mounting plate for a bought IP65 box",
+ "plate": [
+  116.0,
+  96.0,
+  3.0
  ],
- "tallest": 6.0,
- "base_watertight": true,
- "lid_watertight": true,
- "issues": []
+ "min_box_inside": [
+  120.0,
+  100.0,
+  31.0
+ ],
+ "tallest": 11.0,
+ "plate_watertight": true,
+ "issues": [],
+ "note": "wet environment: mount on this plate inside an IP65 ABS junction box with cable glands; keep the box above the water line; use a GFCI-protected 12 V adapter"
 }

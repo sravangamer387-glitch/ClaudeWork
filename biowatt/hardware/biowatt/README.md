@@ -28,7 +28,7 @@ Harvester quiescent about 0.5 uA (datasheet); output limited by what the fuel ce
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [44.1, 40.1] mm, match |
 
-Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collision/opening check: pass
+Enclosure (prototype shell for 3D printing, screwed lid): outer 59.2 x 55.2 x 17.0 mm, collision/opening check: pass
 
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
@@ -40,11 +40,11 @@ Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collis
 | L1 | 22u | L_Coilcraft_LPS4018 | Coilcraft LPS4018-223MRC | C5278935 | verified |
 | L2 | 10u | L_Changjiang_FNR3015S | ZE ZENR3015T100M | C42427989 | verified |
 | C1 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
 | C4 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
 | C5 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
-| C6 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C6 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R3 | 5.6M | R_0603_1608Metric | FOJAN FRC0603F5604TS | C2933237 | verified |
 | R2 | 1M | R_0603_1608Metric | UNI-ROYAL 0603WAF1004T5E | C22935 | verified |
 | R1 | 5.6M | R_0603_1608Metric | FOJAN FRC0603F5604TS | C2933237 | verified |
@@ -81,7 +81,7 @@ Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collis
 `1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
 `2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
 `3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
-`4_enclosure/` printable base and lid STL
+`4_enclosure/` printable enclosure (base, screwed lid, battery door, plungers / light pipes / switch extensions) or a mounting plate for a bought IP65 box; dimensions and notes in enclosure.json
 `5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist

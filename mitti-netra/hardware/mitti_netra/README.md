@@ -6,9 +6,9 @@ MITTI-NETRA soil and structure telemetry node (90 x 80 mm): ESP32-S3, TP4056 sol
 
 ## Specification
 - Board 90 x 80 mm, 2 layers, 1.6 mm FR-4, 1 oz copper, rounded corners R2.5 mm, 3 x M2.5 mounting holes, 2 fiducials.
-- Rules used: min track 0.2 mm (power 0.4 mm), min clearance 0.15 mm, via 0.6/0.3 mm, GND pour on both layers, 212 stitching vias.
+- Rules used: min track 0.2 mm (power 0.4 mm), min clearance 0.15 mm, via 0.6/0.3 mm, GND pour on both layers, 206 stitching vias.
 - Finish: ENIG recommended (HASL lead-free acceptable); green mask, white silk; IPC class 2.
-- 62 parts, 41 nets.
+- 64 parts, 42 nets.
 
 ## Circuit description
 - **Charging:** solar (JST-PH 2) and USB VBUS OR-ed by SS14 diodes into a TP4056 with PROG = 2.2 k (about 0.58 A); a protected 1S Li-ion cell on JST-PH 2 (no protection IC on the board).
@@ -28,7 +28,7 @@ Target under 100 uA in deep sleep with the modem off (not measured); modem burst
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [90.1, 80.1] mm, match |
 
-Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collision/opening check: pass
+Enclosure: printed mounting plate 106 x 96 mm for an IP65 box of at least 110 x 100 x 38 mm inside. field node: mount on this plate inside an IP65 ABS junction box with cable glands and a vent membrane; place the 18650 holder and the modem breakout in the same box; keep the NTC TH1 side of the board next to the cell; shade the box from direct sun
 
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
@@ -49,6 +49,8 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | U4 | TP4056 | HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm | TPOWER TP4056 | C382139 | verified |
 | R1 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
+| R16 | 6.2k | R_0603_1608Metric | UNI-ROYAL 0603WAF6201T5E | C4260 | verified |
+| TH1 | NTC 10k B3950 | R_0805_2012Metric | FH CMFB103F3950FANT | C51597 | verified |
 | C2 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | D3 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R2 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
@@ -113,7 +115,7 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 `1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
 `2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
 `3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
-`4_enclosure/` printable base and lid STL
+`4_enclosure/` printable enclosure (base, screwed lid, battery door, plungers / light pipes / switch extensions) or a mounting plate for a bought IP65 box; dimensions and notes in enclosure.json
 `5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist

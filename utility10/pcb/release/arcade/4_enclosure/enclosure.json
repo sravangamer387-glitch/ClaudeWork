@@ -1,12 +1,33 @@
 {
- "inner_height": 12,
+ "battery": "3xAAA",
+ "holder": "Keystone 2480 (3 x AAA, wire leads)",
+ "bay": [
+  54.7,
+  39.5,
+  13.8
+ ],
+ "door_screws": "2 x M2.5 x 6 mm self-tapping (tool needed to open)",
+ "caps": [
+  {
+   "kind": "slider",
+   "ref": "SW1",
+   "shaft": 4.2,
+   "flange": 0.0,
+   "below_flange": 9.5,
+   "above_flange": 7.2
+  }
+ ],
+ "version": 2,
+ "inner_height": 36,
  "outer": [
-  97.2,
-  63.2,
-  20.6
+  157.2,
+  125.2,
+  59.8
  ],
  "tallest": 9.5,
+ "lid_fastening": "4 x M2.5 x 10 mm self-tapping, corner columns",
  "base_watertight": true,
  "lid_watertight": true,
- "issues": []
+ "issues": [],
+ "note": "arcade console: four 30 mm arcade buttons in the lid (28.5 mm holes: check your button and open up if needed), 3 x AAA bay under the floor with a screwed door; print in PETG or ABS"
 }

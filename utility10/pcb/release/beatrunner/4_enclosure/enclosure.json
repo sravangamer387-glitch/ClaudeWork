@@ -1,12 +1,33 @@
 {
- "inner_height": 12,
+ "battery": "3xAAA",
+ "holder": "Keystone 2480 (3 x AAA, wire leads)",
+ "bay": [
+  54.7,
+  39.5,
+  13.8
+ ],
+ "door_screws": "2 x M2.5 x 6 mm self-tapping (tool needed to open)",
+ "caps": [
+  {
+   "kind": "stalk",
+   "ref": "SW1",
+   "shaft": 2.2,
+   "flange": 0.0,
+   "below_flange": 38.6,
+   "above_flange": 4.5
+  }
+ ],
+ "version": 2,
+ "inner_height": 36,
  "outer": [
-  155.2,
-  51.2,
-  20.6
+  165.2,
+  108.5,
+  59.8
  ],
  "tallest": 9.5,
+ "lid_fastening": "4 x M2.5 x 10 mm self-tapping, corner columns",
  "base_watertight": true,
  "lid_watertight": true,
- "issues": []
+ "issues": [],
+ "note": "power switch: printed stalk through a lid slot; one 30 mm arcade button and a window over the 16 LEDs (glue a 1 mm translucent acrylic strip inside); 3 x AAA bay with a screwed door"
 }

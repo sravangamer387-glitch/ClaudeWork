@@ -1,12 +1,49 @@
 {
+ "battery": "3xAA",
+ "holder": "Keystone 2465 (3 x AA, wire leads)",
+ "bay": [
+  60.0,
+  50.3,
+  17.8
+ ],
+ "door_screws": "2 x M2.5 x 6 mm self-tapping (tool needed to open)",
+ "caps": [
+  {
+   "kind": "plunger",
+   "ref": "SW2",
+   "shaft": 4.5,
+   "flange": 8.0,
+   "below_flange": 8.9,
+   "above_flange": 3.9
+  },
+  {
+   "kind": "light pipe",
+   "ref": "D1",
+   "shaft": 2.7,
+   "flange": 5.5,
+   "below_flange": 9.6,
+   "above_flange": 2.7
+  },
+  {
+   "kind": "slider",
+   "ref": "SW1",
+   "shaft": 4.2,
+   "flange": 0.0,
+   "below_flange": 15.5,
+   "above_flange": 7.2
+  }
+ ],
+ "version": 2,
  "inner_height": 12,
  "outer": [
-  65.2,
-  47.2,
-  20.6
+  84.0,
+  74.3,
+  39.8
  ],
  "tallest": 9.5,
+ "lid_fastening": "4 x M2.5 x 10 mm self-tapping, corner columns",
  "base_watertight": true,
  "lid_watertight": true,
- "issues": []
+ "issues": [],
+ "note": "indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill"
 }

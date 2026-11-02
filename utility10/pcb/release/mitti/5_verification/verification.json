@@ -3,16 +3,16 @@
  "erc_errors": [],
  "erc_warnings": [],
  "pin_pad_mismatch": [],
- "stitch_vias": 212,
+ "stitch_vias": 206,
  "silk_unplaced": [],
  "silk": {
-  "placed": 61,
+  "placed": 63,
   "unplaced": [
    "U1"
   ]
  },
  "route_failures": [],
- "tracks": 939,
+ "tracks": 932,
  "drc": {},
  "drc_errors": 0,
  "drc_warnings": 0,
@@ -22,8 +22,8 @@
  "netlist_match": true,
  "net_names_not_in_schematic": [],
  "netlist_mismatch": {},
- "nets": 41,
- "parts": 62,
+ "nets": 42,
+ "parts": 64,
  "gerber_independent_check": {
   "layers": 9,
   "outline_mm": [

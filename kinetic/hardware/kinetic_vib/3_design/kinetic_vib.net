@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/user/ClaudeWork/utility10/pcb/out/kinetic_vib/kinetic_vib.kicad_sch</source>
-    <date>Sun Nov  1 19:14:40 2026</date>
+    <date>Mon Nov  2 16:25:01 2026</date>
     <tool>Eeschema 7.0.11+dfsg-1build4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,7 +33,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>49a1cd0e-cf14-4a92-8d63-48373b300268</tstamps>
+      <tstamps>e002b379-b7bb-4290-92b4-f1baba580c02</tstamps>
     </comp>
     <comp ref="C2">
       <value>100n</value>
@@ -44,7 +44,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a8da7a95-c2e8-4a4b-89a5-cb669580896a</tstamps>
+      <tstamps>aa616500-f75a-4391-a918-c445fed21630</tstamps>
     </comp>
     <comp ref="C3">
       <value>10u</value>
@@ -55,7 +55,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ac8cac7b-5159-482c-9375-1d56c8d945a2</tstamps>
+      <tstamps>a06fbb0c-f607-44e1-8851-a34797aee980</tstamps>
     </comp>
     <comp ref="J3">
       <value>SPI to controller</value>
@@ -66,7 +66,7 @@
       <property name="ki_description" value="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>39f55f62-c0ca-4c54-88fe-997f2c7469ff</tstamps>
+      <tstamps>f24c04cd-d9b8-4c40-abd6-1f62f6f86274</tstamps>
     </comp>
     <comp ref="U1">
       <value>ADXL345</value>
@@ -77,7 +77,7 @@
       <property name="ki_description" value="3-Axis MEMS Accelerometer, 2/4/8/16g range, I2C/SPI, LGA-14"/>
       <property name="ki_keywords" value="3-axis accelerometer i2c spi mems"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>62af486e-1c1e-4c1e-8ca1-80549fc537ad</tstamps>
+      <tstamps>4d73ad2b-c122-40c7-8204-8fcfcbc1989f</tstamps>
     </comp>
   </components>
   <libparts>

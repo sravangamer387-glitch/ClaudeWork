@@ -1,12 +1,15 @@
 {
- "inner_height": 11,
+ "version": 2,
+ "inner_height": 28,
  "outer": [
-  117.2,
-  85.2,
-  20.6
+  127.2,
+  95.2,
+  39.0
  ],
- "tallest": 8.5,
+ "tallest": 26.0,
+ "lid_fastening": "4 x M2.5 x 10 mm self-tapping, corner columns",
  "base_watertight": true,
  "lid_watertight": true,
- "issues": []
+ "issues": [],
+ "note": "driver modules with heatsinks are about 26 mm tall above the board; vents on both long walls; add a 40 mm fan on the lid if a driver runs above 1 A"
 }

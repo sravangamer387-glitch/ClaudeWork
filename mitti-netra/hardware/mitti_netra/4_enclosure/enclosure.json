@@ -1,12 +1,18 @@
 {
- "inner_height": 11,
- "outer": [
-  95.2,
-  85.2,
-  20.6
+ "version": 2,
+ "mode": "mounting plate for a bought IP65 box",
+ "plate": [
+  106.0,
+  96.0,
+  3.0
  ],
- "tallest": 8.5,
- "base_watertight": true,
- "lid_watertight": true,
- "issues": []
+ "min_box_inside": [
+  110.0,
+  100.0,
+  38.0
+ ],
+ "tallest": 18.0,
+ "plate_watertight": true,
+ "issues": [],
+ "note": "field node: mount on this plate inside an IP65 ABS junction box with cable glands and a vent membrane; place the 18650 holder and the modem breakout in the same box; keep the NTC TH1 side of the board next to the cell; shade the box from direct sun"
 }

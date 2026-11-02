@@ -242,8 +242,8 @@
   "netlist": true,
   "erc_errors": 0,
   "failures": 0,
-  "parts": 62,
-  "nets": 41,
+  "parts": 64,
+  "nets": 42,
   "order_ready": true
  },
  {

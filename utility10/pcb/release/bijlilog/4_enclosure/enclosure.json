@@ -1,12 +1,41 @@
 {
+ "battery": "2xAAA",
+ "holder": "Keystone 2469 (2 x AAA, wire leads)",
+ "bay": [
+  55.0,
+  26.6,
+  13.8
+ ],
+ "door_screws": "2 x M2.5 x 6 mm self-tapping (tool needed to open)",
+ "caps": [
+  {
+   "kind": "plunger",
+   "ref": "SW2",
+   "shaft": 4.5,
+   "flange": 8.0,
+   "below_flange": 7.9,
+   "above_flange": 3.9
+  },
+  {
+   "kind": "light pipe",
+   "ref": "D1",
+   "shaft": 2.7,
+   "flange": 5.5,
+   "below_flange": 8.6,
+   "above_flange": 2.7
+  }
+ ],
+ "version": 2,
  "inner_height": 11,
  "outer": [
-  73.2,
-  57.2,
-  19.6
+  83.2,
+  67.2,
+  34.8
  ],
  "tallest": 8.5,
+ "lid_fastening": "4 x M2.5 x 10 mm self-tapping, corner columns",
  "base_watertight": true,
  "lid_watertight": true,
- "issues": []
+ "issues": [],
+ "note": "indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill"
 }

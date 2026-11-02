@@ -27,16 +27,16 @@ About 0.1 mA at 3.2 kHz output data rate (datasheet figure; not measured).
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [25.1, 26.1] mm, match |
 
-Enclosure (prototype shell for 3D printing): outer 30.2 x 31.2 x 18.6 mm, collision/opening check: pass
+Enclosure (prototype shell for 3D printing): outer 40.2 x 41.2 x 20.0 mm, collision/opening check: pass
 
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ADXL345 | LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y | ADXL345BCCZ-RL7 | C9667 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
 
@@ -54,7 +54,7 @@ Enclosure (prototype shell for 3D printing): outer 30.2 x 31.2 x 18.6 mm, collis
 `1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
 `2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
 `3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
-`4_enclosure/` printable base and lid STL
+`4_enclosure/` printable enclosure (base, screwed lid, battery door, plungers / light pipes / switch extensions) or a mounting plate for a bought IP65 box; dimensions and notes in enclosure.json
 `5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist

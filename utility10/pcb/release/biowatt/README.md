@@ -28,7 +28,7 @@ Harvester quiescent about 0.5 uA (datasheet); output limited by what the fuel ce
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [44.1, 40.1] mm, match |
 
-Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collision/opening check: pass
+Enclosure (prototype shell for 3D printing, screwed lid): outer 59.2 x 55.2 x 17.0 mm, collision/opening check: pass
 
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
@@ -81,7 +81,7 @@ Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collis
 `1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot
 `2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing
 `3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders
-`4_enclosure/` printable base and lid STL
+`4_enclosure/` printable enclosure (base, screwed lid, battery door, plungers / light pipes / switch extensions) or a mounting plate for a bought IP65 box; dimensions and notes in enclosure.json
 `5_verification/` DRC, ERC, verification and readiness reports
 
 ## Known limits and review checklist
