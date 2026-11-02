@@ -8,6 +8,7 @@ Generated 2026-11-02 by `utility10/pcb/costing.py` from each board's `2_assembly
 
 | Board | Lines | Parts | 1 board USD | 1 board INR | 10 boards (each) USD | 100 boards (each) USD | 100 boards (each) INR | PCB fab planning (per order of 5) | Stock flags |
 |---|---|---|---|---|---|---|---|---|---|
+| ap1 | 42 | 79 | 6.61 | 581 | 6.08 | 5.03 | 443 | US$2 | none |
 | arcade | 19 | 27 | 4.24 | 373 | 3.72 | 3.15 | 278 | US$8 | none |
 | astradand | 25 | 49 | 27.69 | 2437 | 24.66 | 21.36 | 1880 | US$2 | none |
 | beatrunner | 17 | 53 | 4.48 | 395 | 3.96 | 3.32 | 292 | US$8 | none |

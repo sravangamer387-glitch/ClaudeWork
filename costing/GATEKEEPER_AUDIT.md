@@ -43,8 +43,12 @@ Diode, TVS, Zener, LED, polarised-capacitor and transistor orientation on all bo
 | 5 | Toys without a battery bay | **Closed**: floor battery bay sized for Keystone 2480 / 2465 / 2469 holders with a 2-screw door (tool needed); arcade consoles with four 30 mm button holes |
 | 6 | KINETIC / MITTI enclosures ignoring modules and cell | **Closed**: KINETIC box sized for 26 mm driver modules with vents; MITTI-NETRA and BioTray get a printed plate for a bought IP65 box (cell, modem, glands inside) |
 | 7 | BioTray / Aquaponics not water-resistant | **Closed**: IP65 box with mounting plate |
-| 8 | Gas-Suraksha, Jal-Rakshak, AP1 without boards | **Gas-Suraksha and Jal-Rakshak closed** (order-ready, DRC 0, ERC 0, all parts LCSC); **AP1**: see SIGNOFF.md |
+| 8 | Gas-Suraksha, Jal-Rakshak, AP1 without boards | **Closed**: Gas-Suraksha and Jal-Rakshak order-ready (DRC 0, ERC 0, all parts LCSC). AP1 redesigned with a bought 4-digit 74HC595 display module on a JST lead (18 parts removed), routed, DRC 0, 0 unconnected, netlist match, ERC 0, Gerber check clean, all parts LCSC-verified; firmware updated for the 24-bit display frame (`make avr`, 76 host checks) |
 
 Further fixes in this round: automata kerf compensation corrected; tilt-maze gimbal drawn; racer and cricket cut files kerf-compensated; Drop Quest v1 rules with 60 solver-verified levels and parts; gravity-toy drawings completed; paper rocket changed to a stomp launcher (no stored pressure); Katha Cubes word fixes; AP1 ball-lane hardware added and all three AP1 apps built for the board; active-buzzer flyback placed across the buzzer on Jal-Rakshak; +4V5 power symbol separated from +5V in schematics.
+
+## Revision 3: AP1 closed
+
+No project is on HOLD any more: 27 approved for prototyping, 13 approved with conditions (`costing/SIGNOFF.md`). AP1 condition: check the MP3 command codes and the display-module polarity on the first board; toy-safety (IS 9873) testing before sale.
 
 Remaining conditions are production gates (native language review, lab tests, real calibration, ESP32 compile on target), listed per project in `costing/SIGNOFF.md`.

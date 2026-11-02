@@ -1927,5 +1927,124 @@
    "B Constant Tolerance": "\u00b11%"
   },
   "brand": "FH"
+ },
+ "C157923": {
+  "model": "S5B-PH-K-S(LF)(SN)",
+  "intro": "Connector Header 5 position 2mm Pitch 2A Right Angle -25\u2103~+85\u2103",
+  "desc": "Connector Header 5 position 2mm Pitch 2A Right Angle -25\u2103~+85\u2103",
+  "pkg": "Through Hole,Right Angle,P=2mm",
+  "cycle": "normal",
+  "stock": 58790,
+  "params": {
+   "Connector Type": "Right Angle",
+   "Reference Series": "PH",
+   "Voltage Rating (Max)": "100V",
+   "Contact Material": "Brass",
+   "Number of PINs Per Row": "5",
+   "Number of Rows": "1",
+   "Pitch": "2mm",
+   "Flame Retardant Rating": "UL94V-0",
+   "Current Rating": "2A",
+   "Supplementary Features": "K-foot",
+   "Operating Temperature": "-25\u2103~+85\u2103",
+   "Contact Plating": "Tin",
+   "Number of PINs": "5P",
+   "Plastic Material": "PA66",
+   "Color": "White",
+   "X-Length of Bottom Edge on Board (Spacing Line)": "11.9mm",
+   "Row Spacing": "-",
+   "Pin Structure": "1x5P"
+  },
+  "brand": "JST"
+ },
+ "C23018": {
+  "model": "0603WAF3901T5E",
+  "intro": "3.9k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "3.9k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 110600,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "3.9k\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C23212": {
+  "model": "0603WAF6801T5E",
+  "intro": "6.8k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "6.8k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 456700,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "6.8k\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C22790": {
+  "model": "0603WAF1202T5E",
+  "intro": "12k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "12k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 216700,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "12k\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C31850": {
+  "model": "0603WAF2202T5E",
+  "intro": "22k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "22k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 1644500,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "22k\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C25819": {
+  "model": "0603WAF4702T5E",
+  "intro": "47k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "47k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 307700,
+  "params": {
+   "Resistance": "47k\u03a9",
+   "Power(Watts)": "100mW",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
  }
 }

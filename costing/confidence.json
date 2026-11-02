@@ -411,11 +411,11 @@
   "name": "Wave 1 electronics toys",
   "path": "electronics-toys/wave1",
   "board": "ap1",
-  "order": "High",
-  "order_why": "all parts live-checked, none flagged",
+  "order": "Medium-High",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Low-Medium",
-  "works_why": "AP1 board added (ATmega328P, MP3 module socket, 4-digit display through two chained 74HC595s with a 7-LED ball lane, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.",
-  "first": "Bench-test one board per product: ladder readings, MP3 commands, display multiplexing."
+  "works_why": "AP1 board added (ATmega328P, MP3 module socket, bought-in 4-digit 74HC595 display module on a 5-way lead, 7-LED ball lane on a 74HC595, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.",
+  "first": "Bench-test one board per product: ladder readings, MP3 commands, display module polarity (one compile flag each)."
  },
  {
   "group": "Other projects",

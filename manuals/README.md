@@ -65,7 +65,7 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | Jal-Netra (engineering marvel) | [manual](../jal-netra/MANUFACTURING_MANUAL.md) | [ordering](../jal-netra/ORDERING.md) | **order-ready** | Medium-High | Low-Medium | **Gate 1 acoustic test first; not sellable** |
 | ASTRADAND gesture wand (sci-fi project) | [manual](../astradand/MANUFACTURING_MANUAL.md) | [ordering](../astradand/ORDERING.md) | **order-ready** | Medium | Medium | software-verified; never built; Hindi names unreviewed |
 | Gravity toys (5) | [manual](../gravity-toys/MANUFACTURING_MANUAL.md) | [ordering](../gravity-toys/ORDERING.md) | no PCB | Medium-High | Medium | all 5 drawn; Drop Quest has 60 verified levels |
-| Wave 1 electronics toys | [manual](../electronics-toys/wave1/MANUFACTURING_MANUAL.md) | [ordering](../electronics-toys/wave1/ORDERING.md) | no released board | High | Low-Medium | AP1 board designed; MP3 module, display and buttons are bought-in |
+| Wave 1 electronics toys | [manual](../electronics-toys/wave1/MANUFACTURING_MANUAL.md) | [ordering](../electronics-toys/wave1/ORDERING.md) | **order-ready** | Medium-High | Low-Medium | AP1 board order-ready; MP3 module and 4-digit display module are bought-in |
 | Prototype packs (10) | [manual](../prototypes/MANUFACTURING_MANUAL.md) | [ordering](../prototypes/ORDERING.md) | no PCB | Medium | Medium | bench prototypes |
 | DJ / party system | [manual](../dj-setup/MANUFACTURING_MANUAL.md) | [ordering](../dj-setup/ORDERING.md) | no PCB | Medium | Low-Medium | programme plan; phase-0 prototypes D1/D2 in prototypes/ |
 
