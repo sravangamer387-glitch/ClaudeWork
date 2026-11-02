@@ -28,3 +28,23 @@ Scope: all 20 released boards, the generated enclosures (`utility10/pcb/enclosur
 
 ## Checked and found correct
 Diode, TVS, Zener, LED, polarised-capacitor and transistor orientation on all boards; supply and ground pin names of every IC (0 errors, `pincheck.py`); ESP32 pin maps against the firmware headers; crystal-less ATmega boards have matching 8 MHz firmware builds; reverse-polarity PMOS on battery inputs; TVS on external inputs; ESP32 EN RC; I2C pull-ups; decoupling present within 16 mm of every IC (the ESP32 module within 25 mm); DRC 0, ERC 0, netlist match and the Gerber check on all 20 boards; ASTRADAND hilt: 12 screws, battery behind the screwed shell, fit-check PASS on the modelled volumes.
+
+
+---
+
+## Revision 2 (after the fix round): blocking issues closed
+
+| # | Blocking issue (revision 1) | Status |
+|---|---|---|
+| 1 | MITTI-NETRA TP4056 exposed pad unconnected | **Closed**: pad 9 on GND with three thermal vias; board re-routed, DRC 0, netlist match |
+| 2 | MITTI-NETRA charging outdoors without a temperature cut-off | **Closed**: R16 6.2 k + 10 k B3950 NTC on TEMP: charging only between about 6 and 44 C |
+| 3 | Friction-only lids | **Closed**: enclosure generator v2: 4 x M2.5 lid screws into corner columns on every box |
+| 4 | Unreachable buttons | **Closed**: printed captive plungers for every lid button, light pipes for every lid LED, wall sliders or a top stalk for every slide switch |
+| 5 | Toys without a battery bay | **Closed**: floor battery bay sized for Keystone 2480 / 2465 / 2469 holders with a 2-screw door (tool needed); arcade consoles with four 30 mm button holes |
+| 6 | KINETIC / MITTI enclosures ignoring modules and cell | **Closed**: KINETIC box sized for 26 mm driver modules with vents; MITTI-NETRA and BioTray get a printed plate for a bought IP65 box (cell, modem, glands inside) |
+| 7 | BioTray / Aquaponics not water-resistant | **Closed**: IP65 box with mounting plate |
+| 8 | Gas-Suraksha, Jal-Rakshak, AP1 without boards | **Gas-Suraksha and Jal-Rakshak closed** (order-ready, DRC 0, ERC 0, all parts LCSC); **AP1**: see SIGNOFF.md |
+
+Further fixes in this round: automata kerf compensation corrected; tilt-maze gimbal drawn; racer and cricket cut files kerf-compensated; Drop Quest v1 rules with 60 solver-verified levels and parts; gravity-toy drawings completed; paper rocket changed to a stomp launcher (no stored pressure); Katha Cubes word fixes; AP1 ball-lane hardware added and all three AP1 apps built for the board; active-buzzer flyback placed across the buzzer on Jal-Rakshak; +4V5 power symbol separated from +5V in schematics.
+
+Remaining conditions are production gates (native language review, lab tests, real calibration, ESP32 compile on target), listed per project in `costing/SIGNOFF.md`.
