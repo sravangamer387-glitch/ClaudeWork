@@ -35,32 +35,32 @@ Enclosure (prototype shell for 3D printing): outer 151.2 x 31.2 x 19.6 mm, colli
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
 | J1 | BATT 3xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | verified |
 | Q2 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
 | C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| D11 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C20 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D12 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C21 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D13 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C22 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D14 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C23 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D15 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C24 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D16 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-Mini 3535 (LCSC listing; confirm the variant suffix against the datasheet) | C114583 | verified |
-| C25 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| D11 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C20 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D12 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C21 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D13 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C22 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D14 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C23 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D15 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C24 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D16 | WS2812B-Mini | LED_WS2812B-Mini_PLCC4_3.5x3.5mm | Worldsemi WS2812B-MINI-V3/W SMD3535-4P (same footprint and pin order as the WS2812B-Mini C114583, which was out of stock) | C527089 | verified |
+| C25 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | U2 | MPU-6050 | InvenSense_QFN-24_4x4mm_P0.5mm | MPU-6050 | C24112 | verified |
-| C10 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C10 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C11 | 2.2n | C_0603_1608Metric | Samsung CL10B222KB8NNNC X7R | C16033 | verified |
-| C12 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C13 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C12 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C13 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R20 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | R21 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | U3 | AP2112K-3.3 | SOT-23-5 | Diodes AP2112K-3.3TRG1 (from the LCSC datasheet link) | C51118 | verified |

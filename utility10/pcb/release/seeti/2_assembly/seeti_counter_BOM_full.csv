@@ -4,7 +4,7 @@ U2,MCP6001,Package_TO_SOT_SMD:SOT-23-5,MCP6001T-I/OT,C116490,verified,SMT (JLC)
 J1,BATT 2xAAA,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
 SW1,Power,Button_Switch_SMD:SW_SPDT_PCM12,C&K PCM12SMTR,C221841,verified,SMT (JLC)
 Q2,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
-J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),C2894964,verified,hand/THT
 J3,MIC electret,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
 J4,UART,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,ZHOURI 2.54-1*4,C5116483,verified,hand/THT
 BZ1,Buzzer 3V,Buzzer_Beeper:Buzzer_12x9.5RM7.6,YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz),C781869,verified,hand/THT

@@ -4,7 +4,7 @@ parts = [
  dict(ref="U1", sym="Sensor_Motion:ADXL343", fp="Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y", value="ADXL345", x=8.5, y=12.5, rot=0, lcsc="C9667", lcsc_status="verified", mpn="ADXL345BCCZ-RL7",
       nets={"1": "+3V3", "2": "GND", "4": "GND", "5": "GND", "6": "+3V3", "7": "S_CS", "12": "S_MISO", "13": "S_MOSI", "14": "S_SCLK"}, nc=["3", "8", "9", "10", "11"]),
  C("C1", "100n", 6, 7.5, "+3V3", "GND", 90), C("C2", "100n", 12, 5.5, "+3V3", "GND", 90), C("C3", "10u", 8.5, 19.5, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="SPI to controller", x=19.5, y=8, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3",
+ dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="SPI to controller", x=19.5, y=8, rot=0, lcsc="C2894964", lcsc_status="verified", mpn="HCTL PZ254-2-03-Z-8.5",
       nets={"1": "+3V3", "2": "GND", "3": "S_SCLK", "4": "S_MOSI", "5": "S_MISO", "6": "S_CS"})]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]

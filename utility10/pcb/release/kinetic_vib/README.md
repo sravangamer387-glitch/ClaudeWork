@@ -33,10 +33,10 @@ Enclosure (prototype shell for 3D printing): outer 30.2 x 31.2 x 18.6 mm, collis
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ADXL345 | LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y | ADXL345BCCZ-RL7 | C9667 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
 

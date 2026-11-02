@@ -3,7 +3,7 @@ U1,ATmega328P-AU,Package_QFP:TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,C14877,verified,
 J1,USB-C 5V,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
 F1,PTC 500mA,Fuse:Fuse_1206_3216Metric,Littelfuse 1206L050YR (6 V),C163512,verified,SMT (JLC)
 D3,SMAJ5.0A,Diode_SMD:D_SMA,Littelfuse SMAJ5.0A,C83329,verified,SMT (JLC)
-J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),C2894964,verified,hand/THT
 J3,Sensor head,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
 J4,TM1637 display,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
 SW1,Reset bill,Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)

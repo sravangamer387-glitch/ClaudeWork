@@ -33,12 +33,12 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
-| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D1 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | J1 | 12 V DC in | BarrelJack_CUI_PJ-063AH_Horizontal | CUI/Same Sky PJ-063AH | C22434582 | verified |
 | F1 | PTC 1A 16V | Fuse_1812_4532Metric | Littelfuse 1812L110/16DR (1.1 A hold, 16 V) | C142746 | verified |
@@ -48,7 +48,7 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | U3 | AMS1117-5.0 | SOT-223-3_TabPin2 | AMS AMS1117-5.0 SOT-223 | C6187 | verified |
 | C6 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | C7 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C8 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | Q4 | AO3400A | SOT-23 | AOS AO3400A | C20917 | verified |
 | R16 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
 | R18 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
@@ -58,12 +58,12 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | J7 | Soil sensor 2 | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J8 | Rain sensor | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | R20 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C9 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C9 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R21 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C10 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C10 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R22 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R23 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| C11 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C11 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | SW2 | Hold | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |

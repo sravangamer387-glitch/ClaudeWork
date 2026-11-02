@@ -43,7 +43,7 @@ Enclosure (prototype shell for 3D printing): outer 117.2 x 85.2 x 20.6 mm, colli
 | C31 | 10u/50V | C_1210_3225Metric | Samsung CL32A106KBJNNNE | C380537 | verified |
 | U2 | AP63205WU-7 | TSOT-23-6 | AP63205WU-7 | C2071056 | verified |
 | R41 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
-| C32 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C32 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | L1 | 4.7u | L_Changjiang_FNR5040S | Changjiang FNR5040S4R7MT | C167963 | verified |
 | C33 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
 | C34 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
@@ -52,7 +52,7 @@ Enclosure (prototype shell for 3D printing): outer 117.2 x 85.2 x 20.6 mm, colli
 | C35 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | C36 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | U1 | ESP32-S3-WROOM-1-N8 | ESP32-S3-WROOM-1 | ESP32-S3-WROOM-1-N8 | C2913198 | verified |
-| C37 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C37 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C38 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | R42 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C39 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
@@ -61,22 +61,22 @@ Enclosure (prototype shell for 3D printing): outer 117.2 x 85.2 x 20.6 mm, colli
 | J1 | USB-C | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | verified |
 | R43 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
 | R44 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | verified |
-| D6 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D6 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R45 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R46 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R47 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| C40 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C40 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | J7 | Host UART (Pi/PC) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J3 | Vibration sensor SPI | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
 | J8 | Endstop X | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J9 | Endstop Y | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J10 | Endstop Z | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | R48 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C41 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C41 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R49 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C42 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C42 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R50 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C43 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C43 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP3 | TP | TestPoint_Pad_D1.5mm |  |  |  |

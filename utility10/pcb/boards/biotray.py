@@ -8,7 +8,7 @@ parts = [
  V(ref="Q5", sym="Device:Q_PMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3401A", x=26, y=16, rot=0, lcsc="C15127", mpn="AO3401A", nets={"1": "GATE", "2": "VM", "3": "VIN_F"}),
  V(ref="D4", sym="Device:D_Zener", fp="Diode_SMD:D_SOD-123", value="BZT52C12", x=26, y=22, rot=0, lcsc="C124196", mpn="DIODES BZT52C12-7-F", nets={"1": "VM", "2": "GATE"}),
  R("R40", "10k", 32, 22, "GATE", "GND", 90),
- V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=34, y=6, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VM", "2": "GND"}),
+ V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=34, y=6, rot=0, lcsc="C176683", mpn="Lelon VZH101M1VTR-0607", nets={"1": "VM", "2": "GND"}),
  V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=42, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
  V(ref="U2", sym="Regulator_Switching:AP63205WU", fp="Package_TO_SOT_SMD:TSOT-23-6", value="AP63205WU-7", x=46, y=14, rot=0, lcsc="C2071056", mpn="AP63205WU-7", nets={"1": "+5V", "2": "EN_B", "3": "VM", "4": "GND", "5": "SW", "6": "BST"}),
  R("R41", "100k", 41, 19, "VM", "EN_B", 90), C("C32", "100n", 50.6, 13.05, "BST", "SW", 0),

@@ -58,24 +58,24 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | R31 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
 | R32 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
 | R33 | 22 | R_0603_1608Metric | UNI-ROYAL 0603WAF220JT5E | C23345 | verified |
-| C20 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C20 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R35 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C21 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C21 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R36 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C22 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C23 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C24 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C22 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C23 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C24 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C25 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | R10 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R11 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C27 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
-| C28 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C28 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R12 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R13 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
 | R14 | 240 | R_0603_1608Metric | UNI-ROYAL 0603WAF2400T5E (JLCPCB listing) | C23350 | verified |
 | C29 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | R15 | 0 | R_0603_1608Metric | UNI-ROYAL 0603WAF0000T5E | C21189 | verified |
-| C30 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C30 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R16 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | R17 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | R18 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
@@ -83,17 +83,17 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | R19 | 0 | R_0603_1608Metric | UNI-ROYAL 0603WAF0000T5E | C21189 | verified |
 | R20 | 33 | R_0603_1608Metric | UNI-ROYAL 0603WAF330JT5E | C23140 | verified |
 | C32 | 22p | C_0603_1608Metric | Samsung CL10C220JB8NNNC C0G | C1653 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C4 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C33 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C4 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C33 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C34 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
 | C35 | 15p | C_0603_1608Metric | Samsung CL10C150JB8NNNC C0G | C1644 | verified |
 | C36 | 15p | C_0603_1608Metric | Samsung CL10C150JB8NNNC C0G | C1644 | verified |
 | R21 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | R22 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| C37 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C37 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C38 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | C39 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
 | J4 | OLED I2C | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
@@ -118,7 +118,7 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | Q1 | MMBT3904 | SOT-23 | MMBT3904 | C20526 | verified |
 | D2 | 1N4148WS | D_SOD-323 | 1N4148WS | C2128 | verified |
 | R7 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| D1 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D1 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.

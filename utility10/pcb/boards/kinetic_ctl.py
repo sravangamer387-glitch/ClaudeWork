@@ -7,7 +7,7 @@ parts = [
  V(ref="Q5", sym="Device:Q_PMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3401A", x=22, y=14, rot=0, lcsc="C15127", mpn="AO3401A", nets={"1": "GATE", "2": "VM", "3": "VIN24"}),
  V(ref="D4", sym="Device:D_Zener", fp="Diode_SMD:D_SOD-123", value="BZT52C12", x=22, y=20, rot=0, lcsc="C124196", mpn="DIODES BZT52C12-7-F", nets={"1": "VM", "2": "GATE"}),
  R("R40", "10k", 28, 20, "GATE", "GND", 90),
- V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=30, y=6, rot=0, lcsc="C7442639", mpn="Lelon VEJ101M1VTT-0607L", nets={"1": "VM", "2": "GND"}),
+ V(ref="C30", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=30, y=6, rot=0, lcsc="C176683", mpn="Lelon VZH101M1VTR-0607", nets={"1": "VM", "2": "GND"}),
  V(ref="C31", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=40, y=6, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
  V(ref="U2", sym="Regulator_Switching:AP63205WU", fp="Package_TO_SOT_SMD:TSOT-23-6", value="AP63205WU-7", x=44, y=12, rot=0, lcsc="C2071056", mpn="AP63205WU-7", nets={"1": "+5V", "2": "EN_B", "3": "VM", "4": "GND", "5": "SW", "6": "BST"}),
  R("R41", "100k", 40, 18, "VM", "EN_B", 90),
@@ -30,7 +30,7 @@ parts = [
  LED("D6", "Green", 20, 38, "GND", "LED_A"), R("R45", "1k", 20, 43, "LED", "LED_A", 90),
  R("R46", "100k", 28, 28, "VM", "VM_SENSE", 90), R("R47", "10k", 28, 33, "VM_SENSE", "GND", 90), C("C40", "100n", 33, 33, "VM_SENSE", "GND", 90),
  jst("J7", 3, 74, 70, ["GND", "UART_TX", "UART_RX"], "Host UART (Pi/PC)"),
- dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Vibration sensor SPI", x=74, y=58, rot=0, lcsc="C5116479", lcsc_status="verified", mpn="ZHOURI 2.54-2*3", nets={"1": "+3V3", "2": "GND", "3": "S_SCLK", "4": "S_MOSI", "5": "S_MISO", "6": "S_CS"}),
+ dict(ref="J3", sym="Connector_Generic:Conn_02x03_Odd_Even", fp="Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical", value="Vibration sensor SPI", x=74, y=58, rot=0, lcsc="C2894964", lcsc_status="verified", mpn="HCTL PZ254-2-03-Z-8.5", nets={"1": "+3V3", "2": "GND", "3": "S_SCLK", "4": "S_MOSI", "5": "S_MISO", "6": "S_CS"}),
  jst("J8", 3, 100, 54, ["+3V3", "ES_X_J", "GND"], "Endstop X"), jst("J9", 3, 100, 62, ["+3V3", "ES_Y_J", "GND"], "Endstop Y"), jst("J10", 3, 100, 70, ["+3V3", "ES_Z_J", "GND"], "Endstop Z"),
  R("R48", "1k", 90, 54, "ES_X_J", "ES_X", 90), C("C41", "100n", 85, 54, "ES_X", "GND", 90), R("R49", "1k", 90, 62, "ES_Y_J", "ES_Y", 90), C("C42", "100n", 85, 62, "ES_Y", "GND", 90), R("R50", "1k", 90, 70, "ES_Z_J", "ES_Z", 90), C("C43", "100n", 85, 70, "ES_Z", "GND", 90),
  TP("TP1", "VM", 6, 30), TP("TP2", "+5V", 6, 36), TP("TP3", "+3V3", 6, 42), TP("TP4", "GND", 6, 48)]

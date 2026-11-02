@@ -13,9 +13,12 @@ ROWS = [
 ]
 L = ["# Manufacturing manuals: index", "", "Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, SMT/THT assembly, soldering, programming, 3D printing, laser cutting, QA, packaging, compliance, troubleshooting) and the [templates](templates/). Each product has a `MANUFACTURING_MANUAL.md` with its bill of materials, build steps, calibration, end-of-line test and limits.", "",
      "**Honest status:** nothing in this repository has been built, assembled or tested as hardware. 'Order-ready' means the automatic checks pass (KiCad DRC 0 errors, schematic equals layout, every part has a verified LCSC number, Gerber/BOM/CPL consistent): it does **not** mean an engineer has reviewed the layout. Treat the first batch as a prototype run.", ""]
+CONF = {r["path"]: r for r in json.load(open(os.path.join(ROOT, "costing", "confidence.json")))} if os.path.exists(os.path.join(ROOT, "costing", "confidence.json")) else {}
 for grp, rows in ROWS:
-    L += [f"## {grp}", "", "| Project | Manual | Board | Main caveat |", "|---|---|---|---|"]
+    L += [f"## {grp}", "", "| Project | Manual | Ordering | Board | Order confidence | Works as intended | Main caveat |", "|---|---|---|---|---|---|---|"]
     for name, path, board, cav in rows:
-        L += [f"| {name} | [{path}/MANUFACTURING_MANUAL.md](../{path}/MANUFACTURING_MANUAL.md) | {pcb(board) if board else 'no PCB'} | {cav} |"]
+        c = CONF.get(path, {})
+        L += [f"| {name} | [manual](../{path}/MANUFACTURING_MANUAL.md) | [ordering](../{path}/ORDERING.md) | {pcb(board) if board else 'no PCB'} | {c.get('order', '')} | {c.get('works', '')} | {cav} |"]
     L += [""]
+L += ["", "**Confidence columns:** see [`costing/CONFIDENCE.md`](../costing/CONFIDENCE.md) for the rubric and the reason behind every rating. Ordering how-to for any project: [`ORDERING_GUIDE.md`](ORDERING_GUIDE.md). Priced bills of materials: [`costing/BOM_COSTS.md`](../costing/BOM_COSTS.md)."]
 open(os.path.join(ROOT, "manuals", "README.md"), "w").write("\n".join(L)); print("index written")

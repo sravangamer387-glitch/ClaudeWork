@@ -31,7 +31,7 @@ Waived DRC items (by design): solder_mask_bridge (intentional mask opening over 
 ## Bill of materials
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
-| J1 | Cable | PinHeader_1x02_P2.54mm_Vertical | ZHOURI 2.54-1*2 | C5116481 | verified |
+| J1 | Cable | PinHeader_1x02_P2.54mm_Vertical | XFCN PZ254V-11-02P (ZHOURI C5116481 was sold out) | C492401 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.
 

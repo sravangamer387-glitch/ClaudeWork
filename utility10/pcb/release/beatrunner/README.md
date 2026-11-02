@@ -34,9 +34,9 @@ Enclosure (prototype shell for 3D printing): outer 155.2 x 51.2 x 20.6 mm, colli
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ATmega328P-AU | TQFP-32_7x7mm_P0.8mm | ATMEGA328P-AU | C14877 | verified |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C3 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
 | J1 | BATT 3xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
@@ -49,42 +49,42 @@ Enclosure (prototype shell for 3D printing): outer 155.2 x 51.2 x 20.6 mm, colli
 | R6 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | U2 | 74HC595 | SOIC-16_3.9x9.9mm_P1.27mm | 74HC595D | C5947 | verified |
 | U3 | 74HC595 | SOIC-16_3.9x9.9mm_P1.27mm | 74HC595D | C5947 | verified |
-| C5 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C6 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C5 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C6 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | J3 | Arcade button | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |
-| D10 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D10 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R20 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D11 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D11 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R21 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D12 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D12 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R22 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D13 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D13 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R23 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D14 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D14 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R24 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D15 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D15 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R25 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D16 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D16 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R26 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D17 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D17 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R27 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D18 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D18 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R28 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D19 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D19 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R29 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D20 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D20 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R30 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D21 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D21 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R31 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D22 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D22 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R32 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D23 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D23 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R33 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D24 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D24 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R34 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
-| D25 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D25 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R35 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 | verified |
 
 `verified` = LCSC number confirmed by web search on 2026-10-31/11-01; `memory` = from my recollection, **check on lcsc.com before ordering**; empty = no number chosen (through-hole connectors, switches, buzzer, test points: hand-assembled or chosen by the buyer). `*_JLC_BOM.csv` / `*_JLC_CPL.csv` list only the parts with an LCSC number; JLCPCB rotation corrections (CPL) must be checked in their viewer.

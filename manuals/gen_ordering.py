@@ -73,7 +73,11 @@ def doc_for(name, path, board, cav):
     L += ["## 3. Bought-in and mechanical items", ""]
     b = section(txt, [r"bought"]) or section(txt, [r"bill of materials", r"materials", r"parts list", r"what you need", r"^#+ *\d*\.? *parts"])
     L += [b if b else "See the parts and materials section of the manual.", ""]
-    L += ["## 4. Where to buy and whom to approach", "", "| Item type | India (fast, GST invoice) | Overseas (cheaper, 1 to 3 weeks, customs) |", "|---|---|---|",
+    cj = os.path.join(COST, "confidence.json")
+    if os.path.exists(cj):
+        c = {r["path"]: r for r in json.load(open(cj))}.get(path)
+        if c: L += ["## 4. Confidence (read before you order)", "", f"- **Order confidence: {c['order']}**: {c['order_why']}.", f"- **Works-as-intended confidence: {c['works']}**: {c['works_why']}", f"- **First thing to do:** {c['first']}", "- Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.", ""]
+    L += ["## 5. Where to buy and whom to approach", "", "| Item type | India (fast, GST invoice) | Overseas (cheaper, 1 to 3 weeks, customs) |", "|---|---|---|",
           "| Printed circuit board and SMD assembly | JLCPCB is the practical choice for 5 to 100 boards; local PCB shops quote per project (ask for the Gerber ZIP price) | **JLCPCB** (jlcpcb.com), PCBWay (pcbway.com) |",
           "| Connectors, headers, passives, ICs by LCSC number | element14 India, Mouser India, DigiKey India (genuine, GST invoice, higher price); local electronics markets for common parts | **LCSC** (lcsc.com) with the same cart as JLCPCB |",
           "| Modules: ESP32 dev boards, SIM7080G, LoRa (RA-08 / RAK3172), pH / EC / DO modules, relay modules, load cells, ultrasonic sensors | Robu.in, Robocraze, ThinkRobotics, Sunrom Electronics, Amazon.in | AliExpress, Seeed Studio, Waveshare |",

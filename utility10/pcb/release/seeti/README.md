@@ -56,7 +56,7 @@ Enclosure (prototype shell for 3D printing): outer 69.2 x 49.2 x 20.6 mm, collis
 | J1 | BATT 2xAAA | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | SW1 | Power | SW_SPDT_PCM12 | C&K PCM12SMTR | C221841 | verified |
 | Q2 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock) | C2894964 | verified |
 | J3 | MIC electret | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | J4 | UART | PinHeader_1x04_P2.54mm_Vertical | ZHOURI 2.54-1*4 | C5116483 | verified |
 | BZ1 | Buzzer 3V | Buzzer_12x9.5RM7.6 | YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz) | C781869 | verified |
