@@ -1,7 +1,7 @@
 from .blocks import *
 W, H = 64, 44
 parts = (mcu("+3V0", {"13": "BUZ", "32": "BTN", "1": "REED", "11": "LED"}, 32, 21) + isp("+3V0", 51, 30) + batt_input("+3V0", 11, 37.5, "BATT 2xAAA") + buzzer("+3V0", "BUZ", 9.5, 11) + led("+3V0", "LED", 42, 38.5, "Green") +
-         [button("SW2", "BTN", 32, 6, "Silence"), jst("J3", 2, 50, 5, ["REED_J", "GND"], "Reed switch"), R("R8", "1k", 56, 10, "REED_J", "REED", 90), C("C9", "10n", 56, 14, "REED", "GND", 90, lcsc="C57112"), dict(ref="D4", sym="Device:D_TVS", fp="Diode_SMD:D_SOD-323", value="TVS 5V bidir", x=59, y=12, rot=90, nets={"1": "REED_J", "2": "GND"}),
+         [button("SW2", "BTN", 32, 6, "Silence"), jst("J3", 2, 50, 5, ["REED_J", "GND"], "Reed switch"), R("R8", "1k", 56, 10, "REED_J", "REED", 90), C("C9", "10n", 56, 14, "REED", "GND", 90, lcsc="C1589"), dict(ref="D4", sym="Device:D_TVS", fp="Diode_SMD:D_SOD-323", value="TVS 5V bidir", x=59, y=12, rot=90, nets={"1": "REED_J", "2": "GND"}),
           TP("TP1", "+3V0", 4, 20), TP("TP2", "GND", 4, 24), TP("TP3", "REED", 44, 24)])
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
