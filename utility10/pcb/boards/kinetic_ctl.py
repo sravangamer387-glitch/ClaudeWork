@@ -15,7 +15,7 @@ parts = [
  V(ref="L1", sym="Device:L", fp="Inductor_SMD:L_Changjiang_FNR5040S", value="4.7u", x=44, y=26, rot=90, lcsc="C167963", mpn="Changjiang FNR5040S4R7MT", nets={"1": "SW", "2": "+5V"}),
  V(ref="C33", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=50, y=28, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
  V(ref="C34", sym="Device:C", fp="Capacitor_SMD:C_0805_2012Metric", value="22u/10V", x=50, y=33, rot=0, lcsc="C29277", mpn="Samsung CL21A226MPQNNNE", nets={"1": "+5V", "2": "GND"}),
- V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=66, y=28, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "VBUS", "2": "+5V"}),
+ V(ref="D5", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=66, y=28, rot=180, lcsc="C84343", mpn="SS14", nets={"1": "+5V", "2": "VBUS"}),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=48, y=40, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "+5V", "2": "GND", "3": "+5V", "5": "+3V3"}, nc=["4"]),
  C("C35", "1u", 42, 41, "+5V", "GND", 90), C("C36", "10u", 54, 41, "+3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  V(ref="U1", sym="RF_Module:ESP32-S3-WROOM-1", fp="RF_Module:ESP32-S3-WROOM-1", value="ESP32-S3-WROOM-1-N8", x=92, y=26, rot=0, lcsc="C2913198", mpn="ESP32-S3-WROOM-1-N8", nc="rest",

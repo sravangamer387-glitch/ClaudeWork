@@ -200,12 +200,12 @@
   "drc_errors": 0,
   "drc_warnings": 0,
   "unconnected": 0,
-  "netlist": true,
+  "netlist": false,
   "erc_errors": 0,
   "failures": 0,
   "parts": 59,
   "nets": 53,
-  "order_ready": true
+  "order_ready": false
  },
  {
   "board": "kinetic_vib",
@@ -226,12 +226,12 @@
   "drc_errors": 0,
   "drc_warnings": 0,
   "unconnected": 0,
-  "netlist": true,
+  "netlist": false,
   "erc_errors": 0,
   "failures": 0,
   "parts": 67,
   "nets": 39,
-  "order_ready": true
+  "order_ready": false
  },
  {
   "board": "mitti_netra",
@@ -239,12 +239,12 @@
   "drc_errors": 0,
   "drc_warnings": 0,
   "unconnected": 0,
-  "netlist": true,
+  "netlist": false,
   "erc_errors": 0,
   "failures": 0,
   "parts": 62,
   "nets": 41,
-  "order_ready": true
+  "order_ready": false
  },
  {
   "board": "biowatt",
