@@ -48,7 +48,7 @@ W = {
  "products/06-gas-suraksha": ("Low", "Not certified, safety-critical, no board; firmware logic passes 34 checks.", "Do not sell or rely on it for safety."),
  "toys10/05-rangoli-spiro": ("Medium-High", "Laser-cut gears; kerf test first.", "Cut a kerf coupon."),
  "toys10/06-paper-rocket": ("Medium", "Projectile toy; needs lab review; drawings missing.", "Get a safety review before any sale."),
- "toys10/07-tilt-maze": ("Medium", "Gimbal frame drawing missing.", "Draw and test the frame."),
+ "toys10/07-tilt-maze": ("Medium", "Gimbal now drawn (two sheets, kerf-compensated, tilt and clearance checks PASS) but never cut; dowel fits and knob feel need a test.", "Cut one set in scrap MDF and test the tilt range and axle fits."),
  "toys10/08-band-racer": ("Medium", "Provisional cut file.", "Prototype one."),
  "toys10/09-marble-cricket": ("Medium", "Provisional cut file; needs calibration drop.", "Prototype one."),
  "toys10/10-katha-cubes": ("Medium", "Illustrations and proofreading are missing.", "Finish the artwork and text."),

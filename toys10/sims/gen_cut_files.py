@@ -4,11 +4,16 @@ Outputs ../out/racer_parts.{svg,dxf} and ../out/marble_cricket_parts.{svg,dxf}. 
 import os, math, sys
 import ezdxf
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "out"); os.makedirs(OUT, exist_ok=True)
+KERF = 0.2   # laser kerf (mm): outlines offset outward, holes and slots inward by half the kerf
+def kerf_poly(pts, d):
+    """offset an axis-aligned rectangle-like polygon by d (positive = outward)"""
+    xs = [p[0] for p in pts]; ys = [p[1] for p in pts]; cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
+    return [(x + (d if x > cx else -d), y + (d if y > cy else -d)) for x, y in pts]
 class Sheet:
     def __init__(s, w, h): s.w, s.h, s.items, s.labels = w, h, [], []
-    def poly(s, pts, name=None): s.items.append(("poly", pts)); name and s.labels.append((pts[0][0] + 1, pts[0][1] + 4, name))
-    def rect(s, x, y, w, h, name=None): s.poly([(x, y), (x + w, y), (x + w, y + h), (x, y + h)], name)
-    def circ(s, cx, cy, r): s.items.append(("circ", (cx, cy, r)))
+    def poly(s, pts, name=None, hole=False): s.items.append(("poly", kerf_poly(pts, -KERF / 2 if hole else KERF / 2))); name and s.labels.append((pts[0][0] + 1, pts[0][1] + 4, name))
+    def rect(s, x, y, w, h, name=None, hole=False): s.poly([(x, y), (x + w, y), (x + w, y + h), (x, y + h)], name, hole)
+    def circ(s, cx, cy, r, outer=False): s.items.append(("circ", (cx, cy, r + KERF / 2 if outer else r - KERF / 2)))   # kerf: outer discs grow, holes shrink, so parts keep nominal size
     def save(s, base):
         svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{s.w}mm" height="{s.h}mm" viewBox="0 0 {s.w} {s.h}"><g fill="none" stroke="red" stroke-width="0.2">']
         doc = ezdxf.new("R2010"); doc.layers.add("CUT", color=1); msp = doc.modelspace()
@@ -21,11 +26,11 @@ class Sheet:
 r = Sheet(300, 200)
 r.rect(5, 5, 150, 60, "chassis")
 for cx in (35, 125): r.circ(cx, 12, 2.1); r.circ(cx, 58, 2.1)                              # axle holes (4.2 mm for 4 mm dowel) near both long edges
-r.rect(70, 25, 12, 4); r.rect(70, 41, 12, 4)                                                 # band hook slots
+r.rect(70, 25, 12, 4, hole=True); r.rect(70, 41, 12, 4, hole=True)                                                 # band hook slots
 for i in range(4):
-    r.circ(30 + i * 56, 100, 25); r.circ(30 + i * 56, 100, 2.1)                              # outer wheel discs
-    r.circ(30 + i * 56, 160, 23); r.circ(30 + i * 56, 160, 2.1)                              # inner (groove) discs: glue between two outer discs
-r.circ(262, 40, 17.5); r.circ(262, 40, 2.1)
+    r.circ(30 + i * 56, 100, 25, outer=True); r.circ(30 + i * 56, 100, 2.1)                              # outer wheel discs
+    r.circ(30 + i * 56, 160, 23, outer=True); r.circ(30 + i * 56, 160, 2.1)                              # inner (groove) discs: glue between two outer discs
+r.circ(262, 40, 17.5, outer=True); r.circ(262, 40, 2.1)
 for a in range(4): r.circ(262 + 9 * math.cos(a * math.pi / 2), 40 + 9 * math.sin(a * math.pi / 2), 2.5)   # grip holes in the thumb wheel
 r.save(os.path.join(OUT, "racer_parts"))
 # ---------------- Marble Cricket: 300 x 400 back panel (6 mm MDF) with a Galton peg layout, pocket dividers ----------------

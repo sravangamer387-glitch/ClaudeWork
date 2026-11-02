@@ -3,7 +3,7 @@ Returns the readiness dict (also saved as 5_verification/readiness.json)."""
 import os, re, csv, json, shutil, zipfile
 FOLDERS = {"1_fabrication": ("_gerbers.zip", "_fab_notes.pdf", "_copper.pdf"), "2_assembly": ("_JLC_BOM.csv", "_JLC_CPL.csv", "_BOM_full.csv", "_pos.csv", "_assembly_top.pdf"),
            "3_design": (".kicad_pcb", ".kicad_sch", ".kicad_pro", ".net", ".step", "_schematic.pdf", "_top.png", "_bottom.png", "fp-lib-table", "sym-lib-table"),
-           "4_enclosure": ("_enclosure_base.stl", "_enclosure_lid.stl", "enclosure.json"), "5_verification": ("drc.rpt", "erc.txt", "verification.json")}
+           "4_enclosure": ("_enclosure_base.stl", "_enclosure_lid.stl", "_enclosure_battery_door.stl", "_enclosure_caps.stl", "_enclosure_plate.stl", "enclosure.json"), "5_verification": ("drc.rpt", "erc.txt", "verification.json")}
 NEED = ["F_Cu", "B_Cu", "F_Mask", "B_Mask", "F_Silkscreen", "Edge_Cuts"]
 def tidy(rel, name):
     for d, pats in FOLDERS.items():
@@ -29,7 +29,7 @@ def tidy(rel, name):
     json.dump(rd, open(os.path.join(rel, "5_verification", "readiness.json"), "w"), indent=1)
     rp = os.path.join(rel, "README.md"); t = open(rp).read()
     t = re.sub(r"## Files\n.*?(?=\n## |\Z)", "## Files\n" + "\n".join(["`1_fabrication/` Gerber + drill zip (upload to JLCPCB/any fab), fab notes, copper plot", "`2_assembly/` JLC BOM + CPL (SMD parts JLC assembles), full BOM with LCSC numbers for every part, pick-and-place, assembly drawing",
-          "`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders", "`4_enclosure/` printable base and lid STL", "`5_verification/` DRC, ERC, verification and readiness reports"]) + "\n", t, flags=re.S)
+          "`3_design/` KiCad 7 project (pcb, schematic, libs), netlist, STEP model, schematic PDF, renders", "`4_enclosure/` printable enclosure (base, screwed lid, battery door, plungers / light pipes / switch extensions) or a mounting plate for a bought IP65 box; dimensions and notes in enclosure.json", "`5_verification/` DRC, ERC, verification and readiness reports"]) + "\n", t, flags=re.S)
     chk = ["", "## Manufacturing readiness (automatic check)", "", "| Check | Result |", "|---|---|"] + [f"| {k.replace('_', ' ')} | {'PASS' if v else 'FAIL'} |" for k, v in rd.items() if isinstance(v, bool) and k != "order_ready"] + \
           [f"| KiCad DRC warnings | {rd['drc_warnings']} |", f"| **Order ready** | **{'YES' if rd['order_ready'] else 'NO - see lists below'}** |"]
     if nolcsc: chk += ["", f"Parts with no LCSC number: {', '.join(nolcsc)}"]

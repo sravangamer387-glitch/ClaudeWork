@@ -70,6 +70,20 @@ def doc_for(name, path, board, cav):
     bl = board_block(board) if board else None
     if bl: L += bl
     elif board: L += ["## 2. Circuit board", "", f"Board `{board}` has no release folder yet; see the manual for status.", ""]
+    if board:
+        ej = os.path.join(REL, board, "4_enclosure", "enclosure.json")
+        if os.path.exists(ej):
+            e = json.load(open(ej)); L += ["## 2b. Enclosure: printed parts and fasteners (generated from the board)", ""]
+            if e.get("mode", "").startswith("mounting plate"):
+                L += [f"- Print `4_enclosure/*_enclosure_plate.stl` ({e['plate'][0]:.0f} x {e['plate'][1]:.0f} x 3 mm, PETG or ABS). Buy an **IP65 ABS junction box** with at least {e['min_box_inside'][0]:.0f} x {e['min_box_inside'][1]:.0f} x {e['min_box_inside'][2]:.0f} mm inside, cable glands and a breather/vent membrane; fix the plate with 4 x M4 screws.", f"- Board to plate: 4 x M2.5 x 6 mm self-tapping screws. {e.get('note', '')}", ""]
+            else:
+                L += [f"- Print `4_enclosure/` base and lid (outer about {e['outer'][0]:.0f} x {e['outer'][1]:.0f} x {e['outer'][2]:.0f} mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws."]
+                if e.get("battery"): L += [f"- Battery: **{e['holder']}** in the floor bay ({e['bay'][0]} x {e['bay'][1]} x {e['bay'][2]} mm); print `*_enclosure_battery_door.stl`; the door closes with {e['door_screws']}. Route the holder lead through the hole in the bay ceiling to the battery connector."]
+                if e.get("caps"):
+                    kinds = sorted({c["kind"] for c in e["caps"]})
+                    L += [f"- Print `*_enclosure_caps.stl` ({', '.join(kinds)}): " + "; ".join(f"{c['kind']} for {c['ref']}" for c in e["caps"]) + ". Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid."]
+                if e.get("note"): L += [f"- {e['note']}"]
+                L += ["- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.", ""]
     L += ["## 3. Bought-in and mechanical items", ""]
     b = section(txt, [r"bought"]) or section(txt, [r"bill of materials", r"materials", r"parts list", r"what you need", r"^#+ *\d*\.? *parts"])
     L += [b if b else "See the parts and materials section of the manual.", ""]
