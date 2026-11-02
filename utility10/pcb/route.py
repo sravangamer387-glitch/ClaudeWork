@@ -81,10 +81,17 @@ class Router:
         dirs = [(1, 0, 1.0), (-1, 0, 1.0), (0, 1, 1.0), (0, -1, 1.0), (1, 1, 1.414), (1, -1, 1.414), (-1, 1, 1.414), (-1, -1, 1.414)]
         if goals:
             gxs = [g[1] for g in goals]; gys = [g[2] for g in goals]; bx0, bx1, by0, by1 = min(gxs), max(gxs), min(gys), max(gys)
+            # coarse distance-to-nearest-goal field (1 mm cells): a goal tree spread over the whole board makes the bounding box useless
+            CS = 20; cny, cnx = ny_ // CS + 1, nx_ // CS + 1
+            cg = np.array(sorted({(gy // CS, gx // CS) for gx, gy in zip(gxs, gys)}), dtype=float)
+            yy, xx = np.mgrid[0:cny, 0:cnx]; dist = np.full((cny, cnx), 1e9)
+            for i in range(0, len(cg), 256):
+                ch = cg[i:i + 256]; dist = np.minimum(dist, np.sqrt((yy[..., None] - ch[:, 0]) ** 2 + (xx[..., None] - ch[:, 1]) ** 2).min(axis=-1))
+            cdist = (np.maximum(dist - 1.5, 0) * CS).ravel().tolist()     # lower bound in fine cells (minus 1.5 coarse cells of slack)
         def h(c):
             if goal_via or not goals: return 0.0
             dx = max(bx0 - c[1], 0, c[1] - bx1); dy = max(by0 - c[2], 0, c[2] - by1)
-            return eps * math.hypot(dx, dy)                      # distance to the bounding box of the goal cells: cheap lower bound
+            return eps * max(math.hypot(dx, dy), cdist[(c[2] // CS) * cnx + c[1] // CS])   # distance to the nearest goal region: cheap lower bound
         x0, y0, x1, y1 = window if window else (0, 0, nx_, ny_)
         x0, y0, x1, y1 = max(x0, 0), max(y0, 0), min(x1, nx_ - 1), min(y1, ny_ - 1)
         def free(l, ix, iy):
