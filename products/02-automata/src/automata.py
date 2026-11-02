@@ -6,7 +6,7 @@ import math, sys
 from pathlib import Path
 
 G = 9.81
-KERF = 0.2                       # laser kerf (mm); profiles are offset by half the kerf so parts keep nominal size
+KERF = 0.2                       # laser kerf (mm): every outline is offset OUTWARD and every hole INWARD by half the kerf in part_poly(), so cut parts keep nominal size
 CUT, ENG = "#ff0000", "#0000ff"
 report, fails = [], []
 def note(s=""): report.append(s)
@@ -64,12 +64,12 @@ def solve_cam(name, lift, rise, d1, fall, d2, Rr=4.0, phi_lim=30.0, rpm=120):
     return Rb, Rr, pts
 
 def working_profile(pts, Rr):
-    """Inward offset of the pitch curve by the roller radius (the actual cam surface), kerf-compensated."""
+    """Inward offset of the pitch curve by the roller radius: the nominal cam surface (kerf compensation happens in part_poly)."""
     out, n = [], len(pts)
     for i in range(n):
         x0, y0 = pts[i - 1]; x2, y2 = pts[(i + 1) % n]; tx, ty = x2 - x0, y2 - y0; L = math.hypot(tx, ty)
         nx, ny = ty / L, -tx / L                                      # for clockwise travel the inward normal is (ty, -tx)/L
-        off = Rr + KERF / 2
+        off = Rr                                                      # nominal cam surface; kerf is added once, outward, in part_poly()
         px, py = pts[i]
         if px * nx + py * ny > 0: nx, ny = -nx, -ny                   # make sure it points toward the centre
         out.append((px + nx * off, py + ny * off))
@@ -77,11 +77,11 @@ def working_profile(pts, Rr):
 
 # ------------------------------------------------------------------ gears
 def involute_gear(z, m, alpha=20.0, backlash=0.15, steps=8):
-    """Closed polygon of a spur gear (tooth thickness reduced by backlash + kerf)."""
+    """Closed polygon of a spur gear, nominal size with the tooth thinned by the backlash only."""
     r = m * z / 2; rb = r * math.cos(math.radians(alpha)); ra = r + m; rf = r - 1.25 * m
     def inv(t): return math.tan(t) - t
     def pt(rad, ang): return rad * math.cos(ang), rad * math.sin(ang)
-    half_pitch_angle = math.pi / (2 * z) - (backlash + KERF) / (2 * r)        # half tooth angle at the pitch circle
+    half_pitch_angle = math.pi / (2 * z) - backlash / (2 * r)                  # half tooth angle at the pitch circle: nominal tooth minus backlash (kerf handled in part_poly)
     a_pitch = math.acos(rb / r); inv_pitch = inv(a_pitch)
     out = []
     for k in range(z):
@@ -121,10 +121,25 @@ def bbox(pts): xs = [p[0] for p in pts]; ys = [p[1] for p in pts]; return min(xs
 def shift(pts, dx, dy): return [(x + dx, y + dy) for x, y in pts]
 def perimeter(pts): return sum(math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]) for i in range(len(pts)))
 
+def kerf_outline(pts, d=None):
+    """Offset a closed outline outward by d (default half the kerf): the laser path that leaves a part of nominal size."""
+    d = KERF / 2 if d is None else d; n = len(pts)
+    area = sum(pts[i - 1][0] * pts[i][1] - pts[i][0] * pts[i - 1][1] for i in range(n)) / 2; sgn = 1.0 if area > 0 else -1.0
+    out = []
+    for i in range(n):
+        (x0, y0), (x1, y1), (x2, y2) = pts[i - 1], pts[i], pts[(i + 1) % n]
+        e1 = (x1 - x0, y1 - y0); e2 = (x2 - x1, y2 - y1); l1 = math.hypot(*e1) or 1e-9; l2 = math.hypot(*e2) or 1e-9
+        n1 = (sgn * e1[1] / l1, -sgn * e1[0] / l1); n2 = (sgn * e2[1] / l2, -sgn * e2[0] / l2)      # outward normals
+        bx_, by_ = n1[0] + n2[0], n1[1] + n2[1]; lb = math.hypot(bx_, by_)
+        if lb < 1e-9: bx_, by_, lb = n1[0], n1[1], 1.0
+        bx_, by_ = bx_ / lb, by_ / lb; c = max(bx_ * n1[0] + by_ * n1[1], 0.5)                     # miter limited to 2 x d
+        out.append((x1 + bx_ * d / c, y1 + by_ * d / c))
+    return out
 def part_poly(name, pts, holes=()):
-    return dict(name=name, outline=pts, holes=list(holes))
+    """Nominal outline and holes in; laser path out: outline offset outward, holes reduced, by half the kerf each."""
+    return dict(name=name, outline=kerf_outline(pts), holes=[(x, y, r - KERF / 2) for (x, y, r) in holes], nominal=pts)
 def part_rect(name, w, h, holes=(), r=2):
-    return dict(name=name, outline=[(0, 0), (w, 0), (w, h), (0, h)], holes=list(holes), rounded=r)
+    p = part_poly(name, [(0, 0), (w, 0), (w, h), (0, h)], holes); p["rounded"] = r; return p
 
 def sheet(kit, parts, W=400.0, gap=6.0):
     """Shelf-pack parts into a W-wide sheet; returns svg text, height, cut length."""
@@ -145,7 +160,7 @@ def sheet(kit, parts, W=400.0, gap=6.0):
 
 def cam_part(name, Rb, Rr, pts):
     prof = working_profile(pts, Rr)
-    return part_poly(name, prof, holes=[(0, 0, 2.0 + KERF / 2)])
+    return part_poly(name, prof, holes=[(0, 0, 2.1)])
 
 def main(out):
     out = Path(out); out.mkdir(parents=True, exist_ok=True)

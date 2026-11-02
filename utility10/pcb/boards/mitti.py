@@ -13,8 +13,9 @@ parts = [
  V(ref="D1", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=16, y=6, rot=180, lcsc="C84343", mpn="SS14", nets={"1": "VCC_CHG", "2": "SOLAR"}),
  V(ref="D2", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=16, y=12, rot=180, lcsc="C84343", mpn="SS14", nets={"1": "VCC_CHG", "2": "VBUS"}),
  C("C1", "10u", 24, 6, "VCC_CHG", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
- V(ref="U4", sym="KN:TP4056", fp="Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm", value="TP4056", x=16, y=24, rot=0, lcsc="C382139", mpn="TPOWER TP4056", nets={"1": "GND", "2": "PROG", "3": "GND", "4": "VCC_CHG", "5": "VBAT", "6": "STDBY_K", "7": "CHRG_K", "8": "VCC_CHG"}),
- R("R1", "2.2k", 6, 28, "PROG", "GND", 90), C("C2", "10u", 26, 28, "VBAT", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
+ V(ref="U4", sym="KN:TP4056", fp="Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm", value="TP4056", x=16, y=24, rot=0, lcsc="C382139", mpn="TPOWER TP4056", nets={"1": "TEMP", "9": "GND", "2": "PROG", "3": "GND", "4": "VCC_CHG", "5": "VBAT", "6": "STDBY_K", "7": "CHRG_K", "8": "VCC_CHG"}),
+ R("R1", "2.2k", 6, 28, "PROG", "GND", 90), R("R16", "6.2k", 9, 21, "VCC_CHG", "TEMP", 90, lcsc="C4260", lcsc_status="verified", mpn="UNI-ROYAL 0603WAF6201T5E"),
+ V(ref="TH1", sym="Device:Thermistor_NTC", fp="Resistor_SMD:R_0805_2012Metric", value="NTC 10k B3950", x=22, y=40, rot=90, lcsc="C51597", mpn="FH CMFB103F3950FANT", nets={"1": "TEMP", "2": "GND"}), C("C2", "10u", 26, 28, "VBAT", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"),
  LED("D3", "Red", 8, 34, "CHRG_K", "CHRG_A"), R("R2", "1k", 8, 39, "VCC_CHG", "CHRG_A", 90), LED("D4", "Green", 14, 34, "STDBY_K", "STDBY_A"), R("R3", "1k", 14, 39, "VCC_CHG", "STDBY_A", 90),
  jst("J3", 2, 28, 44, ["VBAT", "GND"], "Li-ion cell (protected!)"),
  V(ref="U3", sym="Regulator_Linear:AP2112K-3.3", fp="Package_TO_SOT_SMD:SOT-23-5", value="AP2112K-3.3", x=38, y=32, rot=0, lcsc="C51118", mpn="AP2112K-3.3TRG1", nets={"1": "VBAT", "2": "GND", "3": "VBAT", "5": "+3V3"}, nc=["4"]),
@@ -41,11 +42,11 @@ parts = [
  jst("J8", 3, 81, 44, ["GND", "UART_TX", "UART_RX"], "UART flash/debug (USB-serial adapter)"), TP("TP1", "VBAT", 4, 50), TP("TP2", "+3V3", 46, 38), TP("TP3", "GND", 4, 14)]
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
-S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
+S = sch_layout([("CHARGER: solar + USB, TP4056, Li-ion cell, 3.3 V LDO", ["J2", "D1", "D2", "C1", "U4", "R1", "R16", "TH1", "C2", "D3", "R2", "D4", "R3", "J3", "U3", "C3", "C4", "R4", "R5", "C5", "TP1", "TP2", "TP3"]),
                ("CONTROLLER: ESP32-S3 (deep sleep between reports), USB-C", ["U1", "C37", "C38", "R42", "C39", "SW2", "SW3", "D5", "R14", "J1", "R43", "R44", "J8"]),
                ("CELLULAR MODEM SOCKET: high-side switch, burst capacitors, UART", ["Q1", "R6", "Q2", "R7", "R8", "C6", "C7", "J6"]),
                ("SENSORS: tilt/vibration (ADXL345), strain bridge (HX711), soil probe, temperature", ["U5", "C8", "C9", "R9", "R10", "R15", "C16", "U2", "R11", "C10", "C11", "C12", "C13", "R12", "C14", "C15", "J4", "J5", "J7", "R13"])], big=("U1",))
-S["notes"] = [("MITTI-NETRA: solar/USB charge a protected 1S Li-ion cell through a TP4056 (charge current about 0.58 A with R1 = 2.2 k). The ESP32-S3 deep-sleeps and reports through a plug-in SIM7080G breakout (LTE-M / NB-IoT) that is powered through the high-side switch Q1 only while transmitting; the socket brings out VBAT, GND, UART and PWRKEY/STATUS: match your breakout's pinout. ADXL345 on I2C gives tilt and vibration; HX711 reads a strain-gauge bridge; capacitive soil probe on an ADC pin; DS18B20 temperature on 1-Wire. LDO cutoff: the node stops regulating below about 3.55 V on the cell.", 0, 0)]
+S["notes"] = [("MITTI-NETRA: solar/USB charge a protected 1S Li-ion cell through a TP4056 (charge current about 0.58 A with R1 = 2.2 k). The ESP32-S3 deep-sleeps and reports through a plug-in SIM7080G breakout (LTE-M / NB-IoT) that is powered through the high-side switch Q1 only while transmitting; the socket brings out VBAT, GND, UART and PWRKEY/STATUS: match your breakout's pinout. ADXL345 on I2C gives tilt and vibration; HX711 reads a strain-gauge bridge; capacitive soil probe on an ADC pin; DS18B20 temperature on 1-Wire. Charge temperature window: R16 6.2 k from VCC to TEMP and the 10 k B3950 NTC TH1 to GND hold TEMP between 45 % and 80 % of VCC only from about 6 C to 44 C (TP4056 suspends charging outside); keep TH1 near the cell. LDO cutoff: the node stops regulating below about 3.55 V on the cell.", 0, 0)]
 PRE = [dict(net="+3V3", layer=0, pts=[(66.0, 54.83), (66.0, 56.3)], w=0.25),
        dict(net="+3V3", layer=1, pts=[(66.0, 56.3), (46.0, 76.3), (46.0, 77.0)], w=0.25),
        dict(net="+3V3", layer=1, pts=[(52.0, 70.3), (30.0, 70.3), (30.0, 77.0)], w=0.25),
@@ -56,4 +57,4 @@ BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="mitti_netra", title="MITTI-
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VBAT": 0.4, "VBAT_M": 0.4, "VCC_CHG": 0.4, "SOLAR": 0.4},
  holes=[(3.5, 20), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, H - 3.5), (60, H - 3.5)], first=["CC1", "CC2", "VBUS", "VBAT", "VBAT_M", "VCC_CHG", "+3V3", "SDA", "SCL"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("MITTI-NETRA rev A", 10, 77, 1.1)], stitch=5.0)
-BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 6, 6, 4)], lid=[])
+BOARD["enc"] = dict(standoff=5.0, plate=True, battery=False, modules={"J6": 18.0}, note="field node: mount on this plate inside an IP65 ABS junction box with cable glands and a vent membrane; place the 18650 holder and the modem breakout in the same box; keep the NTC TH1 side of the board next to the cell; shade the box from direct sun")

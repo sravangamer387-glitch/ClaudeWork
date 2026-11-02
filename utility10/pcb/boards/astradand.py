@@ -43,4 +43,4 @@ PREV = [("SDA", 68.75, 5.6), ("SDA", 75.6, 4.175), ("SCL", 69.4, 6.2), ("SCL", 7
 BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="astradand_main", title="ASTRADAND gesture wand - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+4V5": "battery via Q2", "+3V3": "LDO U3", "VLED": "battery via Q3 and D20", "LED_SRC": "battery via Q3", "GND": "battery", "BAT_P": "battery"}, single_ok=("BAT_P", "BZ_A", "BZ_B", "HAPT_N", "LED_D6"),
  holes=[(3.5, 22.5), (W - 3.5, 22.5)], fids=[(14, 24), (W - 3.5, 3.5)], widths={"+4V5": 0.4, "VLED": 0.4}, first=["LED_DIN", "SDA", "SCL", "IMU_INT", "+3V3", "BAT_P", "BAT_SW"], gnd_pour_only=True,
  silk=[("ASTRADAND rev A", 76, 1.8, 0.9), ("TRIG", 58, 17.5, 0.7), ("MOTOR", 68, 18.8, 0.7)], stitch=4.0)
-BOARD["enc"] = dict(standoff=4.0, side=[("SW2", "top", 4, 3, 1.5), ("J1", "bottom", 9, 7, 3)], lid=[("round", "SW2", 5.0)])
+BOARD["enc"] = None

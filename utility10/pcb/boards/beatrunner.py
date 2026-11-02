@@ -20,4 +20,4 @@ S["notes"] = [("Beat Runner: 16 LEDs in a row on two cascaded 74HC595 (data on D
 BOARD = dict(name="beat_runner", title="Beat Runner - main board", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S, supply={"+4V5": "battery via Q2", "GND": "battery"}, single_ok=("BAT_P",),
  holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(44, 2.5), (W - 14, H - 2.5)], widths={}, first=["+4V5", "BAT_P", "BAT_SW", "MOSI", "SCK", "MISO"], clr=0.15,
  silk=[("BEAT RUNNER rev A", 60, H - 1.7, 0.9)], stitch=6.0)
-BOARD["enc"] = dict(standoff=4.0, side=[("J1", "left", 9, 7, 3), ("J3", "right", 9, 7, 3)], lid=[("grille", "BZ1", 5, 1.2, 7)])
+BOARD["enc"] = dict(standoff=4.0, inner_height=36, extend=(0, 0, 0, 45), side=[], stalk=[("SW1", 3.0, 8.0)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_round", 75, 70, 28.5), ("abs_rect", 68, 35, 126, 7)], note="power switch: printed stalk through a lid slot; one 30 mm arcade button and a window over the 16 LEDs (glue a 1 mm translucent acrylic strip inside); 3 x AAA bay with a screwed door")

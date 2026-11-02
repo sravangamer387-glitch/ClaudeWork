@@ -53,4 +53,4 @@ BOARD = dict(pre=PRE, pre_vias=PREV, clr=0.15, name="biotray", title="BioTray ve
  ws=(0.2, 0.4), widths={"VBUS": 0.4, "VM": 0.4, "+5V": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP1_D": 0.4, "PUMP2_D": 0.4, "LIGHT_D": 0.4, "FAN_D": 0.4},
  holes=[(3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, 48), (95, 52)], first=["CC1", "CC2", "VBUS", "VIN12", "VIN_F", "VM", "SW", "+5V"], edge_ok=("J1",), gnd_pour_only=True,
  silk=[("BioTray rev A", 40, 77, 1.2), ("12V IN", 10, 3.5, 0.9)], stitch=5.0)
-BOARD["enc"] = dict(standoff=5.0, side=[("J2", "left", 8, 10, 9)], lid=[])
+BOARD["enc"] = dict(standoff=5.0, plate=True, battery=False, note="wet environment: mount on this plate inside an IP65 ABS junction box with cable glands; keep the box above the water line; use a GFCI-protected 12 V adapter")

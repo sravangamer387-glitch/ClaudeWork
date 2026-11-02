@@ -18,8 +18,8 @@ def test_cam(name, lift, rise, d1, fall, d2):
     Rb, Rr, pts = A.solve_cam(name, lift, rise, d1, fall, d2)
     prof = A.working_profile(pts, Rr)
     ds = [dist_to_poly(p, prof) for p in pts[::6]]
-    err = max(abs(d - (Rr + A.KERF / 2)) for d in ds)
-    # follower roller centre must always stay at the pitch curve: distance to the working profile = roller radius (+half kerf)
+    err = max(abs(d - Rr) for d in ds)
+    # follower roller centre stays on the pitch curve: distance to the nominal cam surface = roller radius
     ok = err < 0.15
     print(f"{name}: worst deviation of roller-to-profile distance from roller radius = {err:.3f} mm ->", "PASS" if ok else "FAIL")
     # profile area positive and simple (winding)
