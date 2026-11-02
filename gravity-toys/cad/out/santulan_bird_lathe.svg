@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400mm" height="115mm" viewBox="0 0 400 115">
+<polygon points="20.00,58.50 26.00,55.50 40.00,47.00 60.00,42.00 80.00,40.00 100.00,40.00 120.00,41.00 140.00,44.00 160.00,49.00 175.00,54.00 180.00,57.00 180.00,63.00 175.00,66.00 160.00,71.00 140.00,76.00 120.00,79.00 100.00,80.00 80.00,80.00 60.00,78.00 40.00,73.00 26.00,64.50 20.00,61.50" fill="none" stroke="#000000" stroke-width="0.2"/>
+<line x1="15.00" y1="60.00" x2="190.00" y2="60.00" stroke="#888888" stroke-width="0.1"/>
+<line x1="20.00" y1="56.50" x2="20.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="18.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">3</text>
+<text x="18.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">0</text>
+<line x1="26.00" y1="53.50" x2="26.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="24.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">9</text>
+<text x="24.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">6</text>
+<line x1="40.00" y1="45.00" x2="40.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="38.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">26</text>
+<text x="38.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">20</text>
+<line x1="60.00" y1="40.00" x2="60.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="58.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">36</text>
+<text x="58.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">40</text>
+<line x1="80.00" y1="38.00" x2="80.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="78.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">40</text>
+<text x="78.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">60</text>
+<line x1="100.00" y1="38.00" x2="100.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="98.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">40</text>
+<text x="98.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">80</text>
+<line x1="120.00" y1="39.00" x2="120.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="118.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">38</text>
+<text x="118.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">100</text>
+<line x1="140.00" y1="42.00" x2="140.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="138.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">32</text>
+<text x="138.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">120</text>
+<line x1="160.00" y1="47.00" x2="160.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="158.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">22</text>
+<text x="158.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">140</text>
+<line x1="175.00" y1="52.00" x2="175.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="173.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">12</text>
+<text x="173.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">155</text>
+<line x1="180.00" y1="55.00" x2="180.00" y2="34.00" stroke="#888888" stroke-width="0.08"/>
+<text x="178.0" y="33.0" font-size="2.2" font-family="Arial" fill="#000000">6</text>
+<text x="178.0" y="90.0" font-size="2.2" font-family="Arial" fill="#000000">160</text>
+<text x="20.0" y="18.0" font-size="3.2" font-family="Arial" fill="#000000">SANTULAN bird body: turned rubber wood, length 160 mm. Diameters (top row) at stations from the beak tip (bottom row), mm.</text>
+<text x="20.0" y="23.0" font-size="3.0" font-family="Arial" fill="#000000">Beak: 6 mm cone, tip rounded R1.5 (not sharp). Wing slot: 3.2 x 24 mm through, centred at station 70 mm, 25 deg down-sweep jig.</text>
+<text x="20.0" y="100.0" font-size="3.0" font-family="Arial" fill="#000000">Wing-tip weights: 2 x 20 g lead-free (zinc/brass/steel) 90 mm below the beak line, about 95 mm forward of the beak tip (sim/verify_designs.py).</text>
+<text x="20.0" y="105.0" font-size="3.0" font-family="Arial" fill="#000000">Tolerance +-0.5 mm on diameters; sand 240 grit; food-safe, lead-free paint (IS 9873 Part 3 / EN 71-3 heavy-metal limits).</text>
+<polygon points="195.00,70.00 195.13,73.05 195.53,76.08 196.19,79.06 197.11,81.97 198.28,84.79 199.69,87.50 201.33,90.08 203.19,92.50 205.25,94.75 207.50,96.81 209.92,98.67 212.50,100.31 215.21,101.72 218.03,102.89 220.94,103.81 223.92,104.47 226.95,104.87 230.00,105.00 233.05,104.87 236.08,104.47 239.06,103.81 241.97,102.89 244.79,101.72 247.50,100.31 250.08,98.67 252.50,96.81 254.75,94.75 256.81,92.50 258.67,90.08 260.31,87.50 261.72,84.79 262.89,81.97 263.81,79.06 264.47,76.08 264.87,73.05 265.00,70.00 260.00,20.00 200.00,20.00" fill="none" stroke="#000000" stroke-width="0.2"/>
+<polygon points="218.00,87.00 242.00,87.00 242.00,97.00 218.00,97.00" fill="none" stroke="#0000ff" stroke-width="0.2"/>
+<text x="190.0" y="15.0" font-size="3.0" font-family="Arial" fill="#000000">Roly-poly base: hemisphere R35, body D60 x 50, steel slug D24 x 10 (60 g) in a pocket 8 mm above the floor</text>
+<text x="190.0" y="115.0" font-size="3.0" font-family="Arial" fill="#000000">CoG about 24 mm above the floor contact &lt; R35: self-righting (sim PASS). Glue and plug the pocket with a wood disc.</text>
+</svg>

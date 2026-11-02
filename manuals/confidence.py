@@ -36,7 +36,7 @@ W = {
  "agrover": ("Low-Medium", "Navigation and power core pass 19 simulated-field checks; dead-reckoning only; chassis plates untested with real motors; needs a safety review and an emergency stop.", "Drive on blocks first, then slowly in a clear area with the stop in hand."),
  "jal-netra": ("Low-Medium", "Clamp-on ultrasonic transit-time measurement has a hard analog front end; the manual itself says Gate 1 acoustic test comes first and it is not sellable.", "Run the Gate 1 acoustic test with the evaluation setup before any more boards."),
  "astradand": ("Medium", "IMU gesture recognition validated against a Python reference (46/46) and on synthetic gestures; hardware (haptics, six addressable LEDs) is new; the LED part was replaced with a pin-compatible one whose pads are unproven.", "Order 2 boards, check the LED footprint fit, then run the gesture self-test."),
- "gravity-toys": ("Medium", "Mechanical toys: designs are physical and need prototypes; drawings are partial.", "Print or cut one of each and test before batches."),
+ "gravity-toys": ("Medium", "All five toys now have prototype drawings (Santulan lathe drawing, marble-tower posts and groove spec, ramp-racer car and ladder stand, Galton assembly guide, Drop Quest v1 rules with 60 solver-verified levels and laser parts); physics checks PASS; none built or play-tested.", "Cut or turn one of each and play-test; measure ramp times and marble behaviour."),
  "electronics-toys/wave1": ('Low-Medium', 'AP1 board added (ATmega328P, MP3 module socket, 4-digit display through two chained 74HC595s with a 7-LED ball lane, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.', 'Bench-test one board per product: ladder readings, MP3 commands, display multiplexing.'),
  "prototypes": ("Medium", "Bench prototype packs on breadboards with 26 host checks; no PCB.", "Use as learning kits; do not sell."),
  "dj-setup": ("Low", "Plan only; not manufacturable.", "Treat as a concept."),
@@ -47,10 +47,10 @@ W = {
  "products/04-jal-rakshak": ('Medium', 'Low-voltage board reuses the Kheti-Mitra 12 V front end and pump driver; the firmware rules pass 20 simulated checks and an 8 MHz PCB build exists (3.2 kB); real probes, water, pump currents untested; the mains version is still out of scope.', 'Bench test with a 12 V pump and probes in a bucket; never connect mains.'),
  "products/06-gas-suraksha": ('Low-Medium', 'Prototype/logging board carries the tested alarm engine (34 checks) with an active buzzer and a UART log header; MQ-6 thresholds are placeholders and it is not a certified detector.', 'Log real sensor data for a week; never use or sell as a safety device.'),
  "toys10/05-rangoli-spiro": ("Medium-High", "Laser-cut gears; kerf test first.", "Cut a kerf coupon."),
- "toys10/06-paper-rocket": ("Medium", "Projectile toy; needs lab review; drawings missing.", "Get a safety review before any sale."),
+ "toys10/06-paper-rocket": ("Medium", "v1 changed to a stomp launcher (no pump, valve or stored pressure); laser-cut stand and parts list exist; range and energy are model estimates until measured.", "Build one, fire 20 rockets in an open area and measure the range; keep foam noses mandatory."),
  "toys10/07-tilt-maze": ("Medium", "Gimbal now drawn (two sheets, kerf-compensated, tilt and clearance checks PASS) but never cut; dowel fits and knob feel need a test.", "Cut one set in scrap MDF and test the tilt range and axle fits."),
- "toys10/08-band-racer": ("Medium", "Provisional cut file.", "Prototype one."),
- "toys10/09-marble-cricket": ("Medium", "Provisional cut file; needs calibration drop.", "Prototype one."),
+ "toys10/08-band-racer": ("Medium-High", "Cut file now kerf-compensated (wheels, axle holes, band slots at nominal size); simple mechanism.", "Cut one in cardboard or MDF and test the band drive."),
+ "toys10/09-marble-cricket": ("Medium", "Cut file now kerf-compensated (peg holes at 6.2 mm press fit); pocket scoring needs a calibration drop.", "Cut one, drop 200 marbles and check the pocket distribution."),
  "toys10/10-katha-cubes": ("Medium", "Illustrations and proofreading are missing.", "Finish the artwork and text."),
 }
 NOBOARD_ORDER = {"Medium-High": "No parts at risk: local laser-cutting or printing, no part numbers.", "Medium": "Local fabrication or module-based; quote before ordering.", "Low": "Nothing orderable yet."}

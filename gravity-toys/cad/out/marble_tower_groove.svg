@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360mm" height="160mm" viewBox="0 0 360 160">
+<text x="5.0" y="8.0" font-size="3.0" font-family="Arial" fill="#000000">CNC GROOVE SPEC: U-groove 28 mm wide, depth 12 mm at the high end, R3 bottom corners; floor falls 6-8 deg along the path</text>
+<text x="5.0" y="13.0" font-size="3.0" font-family="Arial" fill="#000000">(straight ramp: 100 mm, 10-14 mm drop -> use 6 mm thick blank plates stacked or a 10 mm plate with a sloped floor). Blue = groove centre line.</text>
+<text x="5.0" y="18.0" font-size="3.0" font-family="Arial" fill="#000000">Tool: 6 mm ball-nose or 6 mm flat end mill, 2 passes; finish 240 grit. Ball 25 mm: groove 28 mm leaves 1.5 mm each side.</text>
+<polygon points="10.00,30.00 110.00,30.00 110.00,130.00 10.00,130.00" fill="none" stroke="#000000" stroke-width="0.2"/>
+<polyline points="10.00,80.00 110.00,80.00" fill="none" stroke="#0000ff" stroke-width="0.2"/>
+<text x="10.0" y="138.0" font-size="3.0" font-family="Arial" fill="#000000">straight</text>
+<circle cx="20.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="100.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="20.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="100.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="125.00,30.00 225.00,30.00 225.00,130.00 125.00,130.00" fill="none" stroke="#000000" stroke-width="0.2"/>
+<polyline points="125.00,130.00 125.76,121.32 128.02,112.90 131.70,105.00 136.70,97.86 142.86,91.70 150.00,86.70 157.90,83.02 166.32,80.76 175.00,80.00" fill="none" stroke="#0000ff" stroke-width="0.2"/>
+<text x="125.0" y="138.0" font-size="3.0" font-family="Arial" fill="#000000">curve 90 deg</text>
+<circle cx="135.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="215.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="135.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="215.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="240.00,30.00 340.00,30.00 340.00,130.00 240.00,130.00" fill="none" stroke="#000000" stroke-width="0.2"/>
+<polyline points="340.00,80.00 339.24,88.68 336.98,97.10 333.30,105.00 328.30,112.14 322.14,118.30 315.00,123.30 307.10,126.98 298.68,129.24 290.00,130.00 281.32,129.24 272.90,126.98 265.00,123.30 257.86,118.30 251.70,112.14 246.70,105.00 243.02,97.10 240.76,88.68 240.00,80.00 240.76,71.32 243.02,62.90 246.70,55.00 251.70,47.86 257.86,41.70 265.00,36.70 272.90,33.02 281.32,30.76 290.00,30.00 298.68,30.76 307.10,33.02 315.00,36.70 322.14,41.70 328.30,47.86 333.30,55.00 336.98,62.90 339.24,71.32 340.00,80.00" fill="none" stroke="#0000ff" stroke-width="0.2"/>
+<text x="240.0" y="138.0" font-size="3.0" font-family="Arial" fill="#000000">spiral 1 turn, D100 centre line, 33 mm drop</text>
+<circle cx="250.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="330.00" cy="40.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="250.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="330.00" cy="120.00" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<text x="10.0" y="150.0" font-size="3.0" font-family="Arial" fill="#000000">Spiral slope 6.0 deg (target 6-8). Post pin holes at the plate corners: 6 mm for the 6 mm pins into the posts.</text>
+</svg>

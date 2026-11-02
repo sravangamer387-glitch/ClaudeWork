@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="600mm" viewBox="0 0 420 600">
+<text x="5.0" y="8.0" font-size="3.0" font-family="Arial" fill="#000000">RAMP RACER ladder stand (12 mm birch ply, cut x 2 uprights + 2 braces): notches 13 x 12 mm hold the ramp end; 6 mm lock-pin hole under each notch.</text>
+<text x="5.0" y="13.0" font-size="3.0" font-family="Arial" fill="#000000">Ramp end height = 1200 x sin(angle): 5 deg 105 mm, 10 deg 208 mm, 15 deg 311 mm, 20 deg 410 mm, 25 deg 507 mm. Rubber feet x 4; cork stop block at the floor end.</text>
+<polygon points="15.00,580.00 15.00,20.00 85.00,20.00 85.00,66.86 72.00,66.86 72.00,78.86 85.00,78.86 85.00,163.58 72.00,163.58 72.00,175.58 85.00,175.58 85.00,263.42 72.00,263.42 72.00,275.42 85.00,275.42 85.00,365.62 72.00,365.62 72.00,377.62 85.00,377.62 85.00,469.41 72.00,469.41 72.00,481.41 85.00,481.41 85.00,580.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="60.00" cy="86.86" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="60.00" cy="183.58" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="60.00" cy="283.42" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="60.00" cy="385.62" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="60.00" cy="489.41" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="43.80,140.00 56.20,140.00 56.20,152.40 43.80,152.40" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="43.80,440.00 56.20,440.00 56.20,452.40 43.80,452.40" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="115.00,580.00 115.00,20.00 185.00,20.00 185.00,66.86 172.00,66.86 172.00,78.86 185.00,78.86 185.00,163.58 172.00,163.58 172.00,175.58 185.00,175.58 185.00,263.42 172.00,263.42 172.00,275.42 185.00,275.42 185.00,365.62 172.00,365.62 172.00,377.62 185.00,377.62 185.00,469.41 172.00,469.41 172.00,481.41 185.00,481.41 185.00,580.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="160.00" cy="86.86" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="160.00" cy="183.58" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="160.00" cy="283.42" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="160.00" cy="385.62" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<circle cx="160.00" cy="489.41" r="3.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="143.80,140.00 156.20,140.00 156.20,152.40 143.80,152.40" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="143.80,440.00 156.20,440.00 156.20,452.40 143.80,452.40" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<polygon points="240.00,40.00 418.00,40.00 418.00,52.00 240.00,52.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<text x="240.0" y="37.0" font-size="3.0" font-family="Arial" fill="#000000">brace 12 x 12 x 178 mm (cut from 12 mm ply): passes through both uprights, 6 mm proud each side, glue; uprights stand 142 mm apart inside</text>
+<polygon points="240.00,80.00 418.00,80.00 418.00,92.00 240.00,92.00" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<text x="240.0" y="77.0" font-size="3.0" font-family="Arial" fill="#000000">brace 12 x 12 x 178 mm (cut from 12 mm ply): passes through both uprights, 6 mm proud each side, glue; uprights stand 142 mm apart inside</text>
+</svg>

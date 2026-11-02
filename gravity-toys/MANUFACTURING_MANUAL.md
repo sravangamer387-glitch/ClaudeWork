@@ -5,13 +5,13 @@
 ## 1. Launch order and status
 | # | Toy | Files that exist | Missing before production |
 |---|---|---|---|
-| 3 | Galton Board Plinko Lab (6+) | `gravity-toys/cad/out/galton_back_mdf.svg`, `galton_front_acrylic.svg` | assembly guide, teacher guide, 500-ball data sheet, test reports |
-| 4 | Santulan balance set (3+) | `cad/out/santulan_wing.svg` | CoG worksheet, **lathe drawings for the turned bird**, paint-pattern guide, artisan training sheet |
-| 1 | Timber Tower Marble Run (4+) | `cad/out/marble_tower_plate.svg` | CNC groove toolpath, lathe drawings (balls, posts), challenge cards, leaflet, dieline |
-| 5 | Ramp Racers Physics Lab (5+) | `cad/out/ramp_racer_ramp.svg` | car/wheel/axle drawings, ladder stand, experiment workbook, teacher guide |
-| 2 | Drop Quest (8+) | none (v0 build description only) | puzzle solver and 60 verified levels, tower/tube CAD, mould design (v2) |
+| 3 | Galton Board Plinko Lab (6+) | `cad/out/galton_back_mdf.svg`, `galton_front_acrylic.svg`, **`galton_assembly.md`** (assembly, jam check, drop test) | teacher guide, 500-ball data sheet, lab test reports |
+| 4 | Santulan balance set (3+) | `cad/out/santulan_wing.svg`, **`santulan_bird_lathe.svg`** (body profile with diameters at stations, beak R1.5, wing slot, roly-poly base with slug pocket) | CoG worksheet, paint-pattern guide, artisan training sheet |
+| 1 | Timber Tower Marble Run (4+) | `cad/out/marble_tower_plate.svg`, **`marble_tower_post.svg`** (posts, pin holes at 50 mm pitch), **`marble_tower_groove.svg`** (groove spec and centre lines for the CNC shop; spiral 6.0 deg checked) | CAM toolpath by the CNC shop from the spec, challenge cards, leaflet, dieline |
+| 5 | Ramp Racers Physics Lab (5+) | `cad/out/ramp_racer_ramp.svg`, **`ramp_racer_car.svg`** (body, weight pocket, wheels, axle and bush spec), **`ramp_racer_stand.svg`** (ladder uprights with 5/10/15/20/25 deg notches, lock-pin holes, braces) | experiment workbook, teacher guide |
+| 2 | Drop Quest (8+) | **`dropquest/`**: v1 rules, solver, **60 levels each verified to have exactly one solution** (`CARDS.md`), laser parts sheets (board, tower layers, deflector caps) | play-test with children, mould design (v2 only) |
 
-Regenerate cut files: `python3 -I gravity-toys/cad/generate_laser_svgs.py gravity-toys/cad/out` (asserts guard the ball-clearance rules). Physics checks: `gravity-toys/sim/verify_designs.py` (it corrected three designs: ramps 6-8 degrees not 8-12; balancing-bird weights about 95 mm forward of the beak; felt wheels need 10 degrees or more).
+Regenerate cut files: `python3 -I gravity-toys/cad/generate_laser_svgs.py gravity-toys/cad/out` and the added drawings with `python3 -I gravity-toys/cad/generate_drawings2.py gravity-toys/cad/out` (asserts guard the ball-clearance rules). Physics checks: `gravity-toys/sim/verify_designs.py` (it corrected three designs: ramps 6-8 degrees not 8-12; balancing-bird weights about 95 mm forward of the beak; felt wheels need 10 degrees or more).
 
 ## 2. Per-toy build specification
 **3. Galton Board:** back 300 x 400 class MDF panel and acrylic front per the SVGs; pegs and steel balls (warning label; the back gate must close so balls cannot fall out in use); sand and polish acrylic edges, sealed screw heads. Landed cost about Rs 480 (acrylic 160, MDF 70, pins/balls 90, laser 60, assembly 45, box 55). Test: 500-ball drop gives the binomial bell curve within sampling error; no jam (the design has a jam guard).
