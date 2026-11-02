@@ -16,6 +16,8 @@ def near(t):
 failed |= {x for x in os.environ.get("FREE", "").split(",") if x}   # FREE=net,..: also re-route nets that are split (e.g. a frozen stub not joined to the rest)
 free = set(failed) | {t.GetNetname() for t in b.GetTracks() if rad > 0 and near(t) and not t.GetNetname().startswith("+")}
 print("left free:", sorted(free))
+DROP = os.environ.get("DROP", "").split(",") if os.environ.get("DROP") else None   # DROP=x0,y0,x1,y1,net[,net]: drop those nets' segments with an end in the box (use only for leaf branches)
+if DROP: DROP = [float(v) for v in DROP[:4]] + DROP[4:]
 pre, vias, seen = [], [], set()
 for t in b.GetTracks():
     n = t.GetNetname()
@@ -25,6 +27,7 @@ for t in b.GetTracks():
         if v not in seen: seen.add(v); vias.append(v)
         continue
     s, e = t.GetStart(), t.GetEnd()
+    if DROP and n in DROP[4:] and any(DROP[0] <= mm(q.x) <= DROP[2] and DROP[1] <= mm(q.y) <= DROP[3] for q in (s, e)): continue   # local rip-up of a leaf branch
     key = (n, t.GetLayer(), frozenset([(round(mm(s.x), 4), round(mm(s.y), 4)), (round(mm(e.x), 4), round(mm(e.y), 4))]))
     if key in seen or s == e: continue
     seen.add(key)
