@@ -22,8 +22,14 @@ parts = (mcu("+4V5", {"30": "RXD", "31": "TXD", "32": "MP3_BUSY", "1": "PWM_R", 
     SOCK6("J11", 64, 8, ["DK1", "SEG_A", "SEG_F", "DK2", "DK3", "SEG_B"], "Display top row (pins 12 11 10 9 8 7)"),
     SOCK6("J12", 64, 23.24, ["SEG_E", "SEG_D", "SEG_DP", "SEG_C", "SEG_G", "DK4"], "Display bottom row (pins 1 2 3 4 5 6)"),
     dict(ref="U4", sym="74xx:74HC595", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="74HC595", x=84, y=34, rot=0,
-         nets=dict({QPIN[s]: "Q" + s for s in SEG}, **{"8": "GND", "16": "+4V5", "10": "+4V5", "13": "GND", "14": "MOSI", "11": "SCK", "12": "MISO"}), nc=["9"]),
-    C("C23", "100n", 90, 28, "+4V5", "GND", 90)] +
+         nets=dict({QPIN[s]: "Q" + s for s in SEG}, **{"8": "GND", "16": "+4V5", "10": "+4V5", "13": "GND", "14": "MOSI", "11": "SCK", "12": "MISO", "9": "QH1"})),
+    C("C23", "100n", 90, 28, "+4V5", "GND", 90),
+    # second 74HC595 daisy-chained from U4 QH': seven ball-lane LEDs for the cricket game (shift 16 bits: lane byte first, then segments)
+    dict(ref="U5", sym="74xx:74HC595", fp="Package_SO:SOIC-16_3.9x9.9mm_P1.27mm", value="74HC595", x=100, y=32, rot=0,
+         nets=dict({QPIN[s_]: f"LANE{i}" for i, s_ in enumerate(SEG[:7])}, **{"8": "GND", "16": "+4V5", "10": "+4V5", "13": "GND", "14": "QH1", "11": "SCK", "12": "MISO"}), nc=["7", "9"]),
+    C("C25", "100n", 106, 32, "+4V5", "GND", 90)] +
+    [R(f"R{60 + i}", "1k", 68 + 5 * i, 70.5, f"LANE{i}", f"LANE{i}_A", 90) for i in range(7)] +
+    [dict(ref=f"D{10 + i}", sym="Device:LED", fp="LED_SMD:LED_0603_1608Metric", value="Red", x=68 + 5 * i, y=74, rot=0, nets={"1": "GND", "2": f"LANE{i}_A"}) for i in range(7)] +
     [RV(f"R{20 + i}", "220", 58 + 3 * i, 29, "Q" + s, "SEG_" + s, "C22962", "UNI-ROYAL 0603WAF2200T5E") for i, s in enumerate(SEG)] +
     [NPN(f"Q{5 + k}", 68 + 6 * k, 56, f"DIG{k}_B", f"DK{k + 1}") for k in range(4)] + [R(f"R{28 + k}", "1k", 68 + 6 * k, 60, f"DIG{k}", f"DIG{k}_B", 90) for k in range(4)] +
     # seven buttons on one ADC input (resistor ladder, 10 k pull-up): single presses are decoded in the HAL
@@ -43,11 +49,11 @@ for p in parts:
 S = sch_layout([("POWER: 3xAA, switch, reverse-polarity PMOS", ["J1", "SW1", "Q2", "C4", "TP1", "TP2"]), ("MCU: ATmega328P-AU, 8 MHz internal", ["U1", "C1", "C2", "C3", "R7", "J2", "TP4", "R58", "R59", "C22"]),
                ("MP3 MODULE (DFPlayer Mini type) + SPEAKER", ["J8", "J9", "R10", "R11", "C20", "C21", "J10"]), ("4-DIGIT DISPLAY: 74HC595 segments, NPN digit drivers", ["U4", "C23", "J11", "J12"] + [f"R{20 + i}" for i in range(8)] + [f"Q{5 + k}" for k in range(4)] + [f"R{28 + k}" for k in range(4)]),
                ("SEVEN BUTTONS ON ONE ADC (resistor ladder)", [f"SW{2 + k}" for k in range(7)] + [f"R{40 + k}" for k in range(7)] + ["R47", "C24"]),
-               ("LAMP + MOTOR DRIVERS, BUZZER, LEDS", ["Q9", "Q10", "Q11", "Q12", "R50", "R51", "R52", "R53", "R54", "R55", "R56", "R57", "J13", "J14", "D8", "BZ1", "Q1", "D2", "R6", "D1", "R5", "D4", "R8"])], big=("U1",))
-S["notes"] = [("AP1 shared audio platform (rhymes player, star lamp, cricket game). ATmega328P at 8 MHz internal from 3xAA. MP3 module: 1 k series on both UART lines, BUSY on D2. Seven buttons share ADC6 through a ladder (10 k pull-up; 1 k ... 47 k to each button): decode one press at a time in the HAL. Display: 74HC595 drives segments a..g, dp from QA..QH (matches seg_write bit0..7), digits through MMBT3904 low-side; SER/SRCLK/RCLK share MOSI/SCK/MISO with the ISP header. Lamp: three AO3400A on PWM D3/D5/D6 to a common-anode LED; motor on D10 with SS14 flyback. Arduino tone() uses Timer2, which also drives D3: do not use the buzzer and red PWM together. Populate per product (see the manual).", 0, 0)]
+               ("BALL LANE (cricket): second 74HC595 + 7 LEDs", ["U5", "C25"] + [f"R{60 + i}" for i in range(7)] + [f"D{10 + i}" for i in range(7)]), ("LAMP + MOTOR DRIVERS, BUZZER, LEDS", ["Q9", "Q10", "Q11", "Q12", "R50", "R51", "R52", "R53", "R54", "R55", "R56", "R57", "J13", "J14", "D8", "BZ1", "Q1", "D2", "R6", "D1", "R5", "D4", "R8"])], big=("U1",))
+S["notes"] = [("AP1 shared audio platform (rhymes player, star lamp, cricket game). ATmega328P at 8 MHz internal from 3xAA. MP3 module: 1 k series on both UART lines, BUSY on D2. Seven buttons share ADC6 through a ladder (10 k pull-up; 1 k ... 47 k to each button): decode one press at a time in the HAL. Display: U4 74HC595 drives segments a..g, dp from QA..QH (matches seg_write bit0..7), digits through MMBT3904 low-side; U5 (chained from U4 QH') drives the seven ball-lane LEDs: shift the lane byte first, then the segment byte. SER/SRCLK/RCLK share MOSI/SCK/MISO with the ISP header. Lamp: three AO3400A on PWM D3/D5/D6 to a common-anode LED; motor on D10 with SS14 flyback. Arduino tone() uses Timer2, which also drives D3: do not use the buzzer and red PWM together. Populate per product (see the manual).", 0, 0)]
 BOARD = dict(name="ap1_audio", title="AP1 shared audio platform (rhymes player, star lamp, cricket game)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"+4V5": "3xAA via Q2", "GND": "battery", "BAT_P": "battery", "BAT_SW": "battery switch"}, single_ok=(),
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (100, 26)], widths={"+4V5": 0.4, "SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
+ holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (104, 24)], widths={"+4V5": 0.4, "SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
  first=["SPK1", "SPK2", "+4V5", "MOT_N", "BTN_ADC"], gnd_pour_only=True, silk=[("AP1 AUDIO PLATFORM rev A", 80, H - 1.7, 0.9), ("MP3", 18, 4.5, 0.7), ("DISPLAY", 70, 4.0, 0.7)], stitch=6.0)
-BOARD["enc"] = dict(standoff=4.0, inner_height=22, side=[("SW1", "bottom", 8, 5, 2.5)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_rect", 70.35, 15.6, 52, 20)] + [("round", f"SW{2 + k}", 5.0) for k in range(7)] + [("round", "D1", 2.2), ("round", "D4", 2.2)],
+BOARD["enc"] = dict(standoff=4.0, inner_height=22, side=[("SW1", "bottom", 8, 5, 2.5)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_rect", 70.35, 15.6, 52, 20), ("abs_rect", 83, 74, 36, 5)] + [("round", f"SW{2 + k}", 5.0) for k in range(7)] + [("round", "D1", 2.2), ("round", "D4", 2.2)],
                     note="shared platform box: display window over the 4-digit display (cover with tinted acrylic), seven button plungers, speaker grille to add for the chosen speaker; 3 x AA bay with a screwed door")
