@@ -39,7 +39,7 @@ Enclosure (prototype shell for 3D printing): outer 117.2 x 85.2 x 20.6 mm, colli
 | Q5 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
 | D4 | BZT52C12 | D_SOD-123 | DIODES BZT52C12-7-F | C124196 | verified |
 | R40 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| C30 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VEJ101M1VTT-0607L | C7442639 | verified |
+| C30 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VZH101M1VTR-0607 | C176683 | verified |
 | C31 | 10u/50V | C_1210_3225Metric | Samsung CL32A106KBJNNNE | C380537 | verified |
 | U2 | AP63205WU-7 | TSOT-23-6 | AP63205WU-7 | C2071056 | verified |
 | R41 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
@@ -67,7 +67,7 @@ Enclosure (prototype shell for 3D printing): outer 117.2 x 85.2 x 20.6 mm, colli
 | R47 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C40 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | J7 | Host UART (Pi/PC) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
-| J3 | Vibration sensor SPI | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | Vibration sensor SPI | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | verified |
 | J8 | Endstop X | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J9 | Endstop Y | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J10 | Endstop Z | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |

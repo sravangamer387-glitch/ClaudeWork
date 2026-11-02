@@ -100,7 +100,7 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 71.2 x 20.6 mm, collis
 | R23 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | R24 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | J5 | UART host / BLE | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
-| J3 | SWD | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J3 | SWD | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock) | C2894964 | verified |
 | SW2 | Test / zero | SW_SPST_B3U-1000P | Omron B3U-1000P | C231329 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |
 | TP2 | TP | TestPoint_Pad_D1.5mm |  |  |  |

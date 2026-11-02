@@ -40,11 +40,11 @@ Enclosure (prototype shell for 3D printing): outer 49.2 x 45.2 x 15.6 mm, collis
 | L1 | 22u | L_Coilcraft_LPS4018 | Coilcraft LPS4018-223MRC | C5278935 | verified |
 | L2 | 10u | L_Changjiang_FNR3015S | ZE ZENR3015T100M | C42427989 | verified |
 | C1 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 4.7u | C_0603_1608Metric | Samsung CL10A475KP8NNNC X5R 10V | C1705 | verified |
 | C4 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
 | C5 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
-| C6 | 10n | C_0603_1608Metric | 0603 10nF X7R | C57112 | verified |
+| C6 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 | verified |
 | R3 | 5.6M | R_0603_1608Metric | FOJAN FRC0603F5604TS | C2933237 | verified |
 | R2 | 1M | R_0603_1608Metric | UNI-ROYAL 0603WAF1004T5E | C22935 | verified |
 | R1 | 5.6M | R_0603_1608Metric | FOJAN FRC0603F5604TS | C2933237 | verified |

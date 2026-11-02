@@ -64,8 +64,12 @@ def order_conf(board, path, works):
     errs = [f for f in F if f[0] == "error"]; warns = [f for f in F if f[0] == "warn"]
     if errs: return "Low", "; ".join(f[2] for f in errs)[:140]
     if not warns: return "High", "all parts live-checked, none flagged"
-    low = [w for w in warns if w[1] in ("stock", "package")]
-    why = "; ".join(sorted({w[2].split(":")[0].split()[-1] + " " + w[2].split(":")[1].strip() for w in low if ":" in w[2]}))[:160]
+    import re
+    items = []
+    for w in warns:
+        m = re.match(r"^(\w+) (C\d+) (.*?): low stock (\d+)", w[2])
+        if m: items.append(f"{m.group(1)} {m.group(3)} (stock {m.group(4)})")
+    why = "; ".join(items)[:170]
     if board in ("astradand",): return "Medium", "substitute addressable LED whose pad geometry is unproven; other parts verified"
     if board in ("biowatt",): return "Medium-High", "all parts verified; the BQ25570 stock is limited (about 400) and the hold capacitor is a substitute grade"
     return "Medium-High", "limited stock on: " + why

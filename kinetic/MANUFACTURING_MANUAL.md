@@ -27,11 +27,11 @@ A 112 x 80 mm controller (ESP32-S3, three StepStick driver sockets, 24 V input, 
 | Q5 | AO3401A | SOT-23 | AO3401A | C15127 | SMT (JLC) |
 | D4 | BZT52C12 | D_SOD-123 | DIODES BZT52C12-7-F | C124196 | SMT (JLC) |
 | R40 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | SMT (JLC) |
-| C30 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VEJ101M1VTT-0607L | C7442639 | SMT (JLC) |
+| C30 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VZH101M1VTR-0607 | C176683 | SMT (JLC) |
 | C31 | 10u/50V | C_1210_3225Metric | Samsung CL32A106KBJNNNE | C380537 | SMT (JLC) |
 | U2 | AP63205WU-7 | TSOT-23-6 | AP63205WU-7 | C2071056 | SMT (JLC) |
 | R41 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | SMT (JLC) |
-| C32 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C32 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | L1 | 4.7u | L_Changjiang_FNR5040S | Changjiang FNR5040S4R7MT | C167963 | SMT (JLC) |
 | C33 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | SMT (JLC) |
 | C34 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | SMT (JLC) |
@@ -40,7 +40,7 @@ A 112 x 80 mm controller (ESP32-S3, three StepStick driver sockets, 24 V input, 
 | C35 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | SMT (JLC) |
 | C36 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
 | U1 | ESP32-S3-WROOM-1-N8 | ESP32-S3-WROOM-1 | ESP32-S3-WROOM-1-N8 | C2913198 | SMT (JLC) |
-| C37 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C37 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | C38 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
 | R42 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | SMT (JLC) |
 | C39 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | SMT (JLC) |
@@ -49,22 +49,22 @@ A 112 x 80 mm controller (ESP32-S3, three StepStick driver sockets, 24 V input, 
 | J1 | USB-C | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | SMT (JLC) |
 | R43 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | SMT (JLC) |
 | R44 | 5.1k | R_0603_1608Metric | 0603 5.1k 1% | C23186 | SMT (JLC) |
-| D6 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | SMT (JLC) |
+| D6 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | SMT (JLC) |
 | R45 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
 | R46 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | SMT (JLC) |
 | R47 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | SMT (JLC) |
-| C40 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C40 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | J7 | Host UART (Pi/PC) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
-| J3 | Vibration sensor SPI | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | hand/THT |
+| J3 | Vibration sensor SPI | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | hand/THT |
 | J8 | Endstop X | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
 | J9 | Endstop Y | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
 | J10 | Endstop Z | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | hand/THT |
 | R48 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
-| C41 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C41 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | R49 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
-| C42 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C42 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | R50 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |
-| C43 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C43 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | J11 | X driver logic | PinSocket_1x08_P2.54mm_Vertical | hanxia HX PM2.54-1x8P | C22438158 | hand/THT |
 | J12 | X driver power/motor | PinSocket_1x08_P2.54mm_Vertical | hanxia HX PM2.54-1x8P | C22438158 | hand/THT |
 | J20 | Motor X | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | hand/THT |
@@ -83,10 +83,10 @@ A 112 x 80 mm controller (ESP32-S3, three StepStick driver sockets, 24 V input, 
 | Ref | Value | Package | Part (manufacturer) | LCSC | Assembly |
 |---|---|---|---|---|---|
 | U1 | ADXL345 | LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y | ADXL345BCCZ-RL7 | C9667 | SMT (JLC) |
-| C1 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
-| C2 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | SMT (JLC) |
+| C1 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
+| C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | SMT (JLC) |
 | C3 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
-| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | hand/THT |
+| J3 | SPI to controller | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | hand/THT |
 
 ### Bought-in
 

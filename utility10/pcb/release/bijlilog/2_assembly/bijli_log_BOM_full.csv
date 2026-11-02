@@ -4,7 +4,7 @@ C1,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 5
 C2,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
 C3,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
 R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
-J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J2,ISP,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),C2894964,verified,hand/THT
 J1,USB-C 5V,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C-31-M-12,C165948,verified,SMT (JLC)
 F1,PTC 500mA,Fuse:Fuse_1206_3216Metric,Littelfuse 1206L050YR (6 V),C163512,verified,SMT (JLC)
 D3,SMAJ5.0A,Diode_SMD:D_SMA,Littelfuse SMAJ5.0A,C83329,verified,SMT (JLC)

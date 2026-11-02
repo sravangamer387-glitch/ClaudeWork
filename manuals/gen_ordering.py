@@ -48,7 +48,7 @@ def board_block(board):
         g = {}
         for r in hand: g.setdefault((r["Value"], r["Manufacturer part"], r["LCSC #"]), []).append(r["Ref"])
         for (v, m, c), rf in g.items(): L.append(f"| {', '.join(rf)} | {v} | {m} | {c} |")
-        L += ["", "Order these with the same LCSC order (add them to the cart so one shipment arrives) or buy locally in India (section 4).", ""]
+        L += ["", "Order these with the same LCSC order (add them to the cart so one shipment arrives) or buy locally in India (section 5).", ""]
     if pr:
         head, body, tot = pr
         L += ["### Parts cost and stock (live LCSC prices on the run date)", "", f"Total parts per board: **US${float(tot[5].split(': ')[1]):.2f} for 1 board**, **US${float(tot[6].split(': ')[1]):.2f} each for 10 boards**, **US${float(tot[7].split(': ')[1]):.2f} each for 100 boards** (about INR {float(tot[5].split(': ')[1])*INR:.0f} / {float(tot[6].split(': ')[1])*INR:.0f} / {float(tot[7].split(': ')[1])*INR:.0f} at {INR:.0f} INR/USD). The per-line break-up is in `costing/{board}_priced_BOM.csv`. This is parts only: PCB fabrication, assembly fees, shipping, customs and GST come on top (see `manuals/ORDERING_GUIDE.md`, section 6).", ""]
@@ -62,10 +62,10 @@ def board_block(board):
 def doc_for(name, path, board, cav):
     mp = os.path.join(ROOT, path, "MANUFACTURING_MANUAL.md"); txt = open(mp).read() if os.path.exists(mp) else ""
     L = [f"# {name}: ordering guide (what to buy, where, in what order)", "",
-         f"> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: {cav}. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../{'../' * (path.count('/'))}manuals/ORDERING_GUIDE.md).", "",
+         f"> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). {("Main caveat for this project: " + cav + ". ") if cav else ""}Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../{'../' * (path.count('/'))}manuals/ORDERING_GUIDE.md).", "",
          "## 1. Order of work", ""]
     steps = ["Read the manual and the caveat above.", "Order the circuit boards and SMD assembly (section 2)." if board else "No custom circuit board: nothing to order from JLCPCB for this project.",
-             "While the boards travel, order the other items (sections 3 and 4) and make the printed or laser-cut parts.", "Assemble, program and test only after everything has arrived; follow the manual."]
+             "While the boards travel, order the other items (sections 3 and 5) and make the printed or laser-cut parts.", "Assemble, program and test only after everything has arrived; follow the manual."]
     L += [f"{i + 1}. {s}" for i, s in enumerate(steps)] + [""]
     bl = board_block(board) if board else None
     if bl: L += bl

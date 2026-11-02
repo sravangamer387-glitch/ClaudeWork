@@ -37,7 +37,7 @@ Enclosure (prototype shell for 3D printing): outer 91.2 x 65.2 x 19.6 mm, collis
 | C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock) | C2894964 | verified |
 | D1 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R5 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | J1 | 12 V DC in | BarrelJack_CUI_PJ-063AH_Horizontal | CUI/Same Sky PJ-063AH | C22434582 | verified |

@@ -34,7 +34,7 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | Ref | Value | Footprint | Manufacturer part | LCSC # | LCSC status |
 |---|---|---|---|---|---|
 | U1 | ESP32-S3-WROOM-1-N8 | ESP32-S3-WROOM-1 | ESP32-S3-WROOM-1-N8 | C2913198 | verified |
-| C37 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C37 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C38 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | R42 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
 | C39 | 1u | C_0603_1608Metric | 0603 1uF X7R | C15849 | verified |
@@ -50,9 +50,9 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | U4 | TP4056 | HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm | TPOWER TP4056 | C382139 | verified |
 | R1 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | verified |
 | C2 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
-| D3 | Red | LED_0603_1608Metric | Everlight 19-217/R6C-AL1M2VY/3T (some distributors list it as discontinued: check) | C72044 | verified |
+| D3 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | verified |
 | R2 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| D4 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| D4 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R3 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | J3 | Li-ion cell (protected!) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 | verified |
 | U3 | AP2112K-3.3 | SOT-23-5 | AP2112K-3.3TRG1 | C51118 | verified |
@@ -60,36 +60,36 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | C4 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | R4 | 330k | R_0603_1608Metric | UNI-ROYAL 0603WAF3303T5E | C23137 | verified |
 | R5 | 330k | R_0603_1608Metric | UNI-ROYAL 0603WAF3303T5E | C23137 | verified |
-| C5 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C5 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | Q1 | AO3401A | SOT-23 | AO3401A | C15127 | verified |
 | R6 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
 | Q2 | AO3400A | SOT-23 | AO3400A | C20917 | verified |
 | R7 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
 | R8 | 100k | R_0603_1608Metric | 0603 100k 1% | C25803 | verified |
-| C6 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VEJ101M1VTT-0607L | C7442639 | verified |
+| C6 | 100u/35V | CP_Elec_6.3x7.7 | Lelon VZH101M1VTR-0607 | C176683 | verified |
 | C7 | 22u/10V | C_0805_2012Metric | Samsung CL21A226MPQNNNE | C29277 | verified |
-| J6 | Cellular modem (SIM7080G breakout) | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J6 | Cellular modem (SIM7080G breakout) | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 | C2894964 | verified |
 | U5 | ADXL345 | LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y | ADXL345BCCZ-RL7 | C9667 | verified |
-| C8 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C9 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C8 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C9 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R9 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | R10 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | U2 | HX711 | SOIC-16_3.9x9.9mm_P1.27mm | HX711 | C43656 | verified |
 | R11 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
-| C10 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C11 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C12 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C10 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C11 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C12 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C13 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | verified |
 | R12 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 | verified |
-| C14 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| C15 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
+| C14 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| C15 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | J4 | Strain-gauge bridge E+ E- A+ A- | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 | verified |
 | J5 | Soil probe (capacitive, 3.3 V) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | J7 | DS18B20 temp | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S | C131339 | verified |
 | R13 | 4.7k | R_0603_1608Metric | 0603 4.7k 1% | C23162 | verified |
 | R15 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
-| C16 | 100n | C_0603_1608Metric | 0603 100nF X7R | C14663 | verified |
-| D5 | Green | LED_0603_1608Metric | Everlight 19-217/GHC-YR1S2/3T (LCSC showed it out of stock on the search day: check) | C72043 | verified |
+| C16 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
+| D5 | Green | LED_0603_1608Metric | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | verified |
 | R14 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | verified |
 | J8 | UART flash/debug (USB-serial adapter) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 | verified |
 | TP1 | TP | TestPoint_Pad_D1.5mm |  |  |  |

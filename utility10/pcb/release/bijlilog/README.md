@@ -37,7 +37,7 @@ Enclosure (prototype shell for 3D printing): outer 73.2 x 57.2 x 19.6 mm, collis
 | C2 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | C3 | 100n | C_0603_1608Metric | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | verified |
 | R7 | 10k | R_0603_1608Metric | 0603 10k 1% | C25804 | verified |
-| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | ZHOURI 2.54-2*3 | C5116479 | verified |
+| J2 | ISP | PinHeader_2x03_P2.54mm_Vertical | HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock) | C2894964 | verified |
 | J1 | USB-C 5V | USB_C_Receptacle_HRO_TYPE-C-31-M-12 | TYPE-C-31-M-12 | C165948 | verified |
 | F1 | PTC 500mA | Fuse_1206_3216Metric | Littelfuse 1206L050YR (6 V) | C163512 | verified |
 | D3 | SMAJ5.0A | D_SMA | Littelfuse SMAJ5.0A | C83329 | verified |

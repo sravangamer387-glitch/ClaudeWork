@@ -1,4 +1,4 @@
 Refs,Qty/board,Value,Manufacturer part,LCSC #,Unit USD (1 board),Line USD (1 board),Unit USD (100 boards),LCSC stock,Note
-J1,1,Cable,ZHOURI 2.54-1*2,C5116481,0.0217,0.022,0.0217,0,OUT OF STOCK
+J1,1,Cable,XFCN PZ254V-11-02P (ZHOURI C5116481 was sold out),C492401,0.0189,0.019,0.0189,844800,
 
 "TOTAL parts per board, USD",,,,,1 board: 0.02,10 boards: 0.02,100 boards: 0.02

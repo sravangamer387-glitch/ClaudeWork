@@ -4,7 +4,7 @@ D3,SMBJ28A,Diode_SMD:D_SMB,Littelfuse SMBJ28A,C178227,verified,SMT (JLC)
 Q5,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
 D4,BZT52C12,Diode_SMD:D_SOD-123,DIODES BZT52C12-7-F,C124196,verified,SMT (JLC)
 R40,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
-C30,100u/35V,Capacitor_SMD:CP_Elec_6.3x7.7,Lelon VEJ101M1VTT-0607L,C7442639,verified,SMT (JLC)
+C30,100u/35V,Capacitor_SMD:CP_Elec_6.3x7.7,Lelon VZH101M1VTR-0607,C176683,verified,SMT (JLC)
 C31,10u/50V,Capacitor_SMD:C_1210_3225Metric,Samsung CL32A106KBJNNNE,C380537,verified,SMT (JLC)
 U2,AP63205WU-7,Package_TO_SOT_SMD:TSOT-23-6,AP63205WU-7,C2071056,verified,SMT (JLC)
 R41,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
@@ -32,7 +32,7 @@ R46,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
 R47,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
 C40,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
 J7,Host UART (Pi/PC),Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
-J3,Vibration sensor SPI,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J3,Vibration sensor SPI,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5,C2894964,verified,hand/THT
 J8,Endstop X,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
 J9,Endstop Y,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
 J10,Endstop Z,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT

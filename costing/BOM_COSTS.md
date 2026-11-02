@@ -8,76 +8,32 @@ Generated 2026-11-02 by `utility10/pcb/costing.py` from each board's `2_assembly
 
 | Board | Lines | Parts | 1 board USD | 1 board INR | 10 boards (each) USD | 100 boards (each) USD | 100 boards (each) INR | PCB fab planning (per order of 5) | Stock flags |
 |---|---|---|---|---|---|---|---|---|---|
-| arcade | 19 | 27 | 4.23 | 372 | 3.70 | 3.14 | 276 | US$8 | 1 |
-| astradand | 25 | 49 | 27.74 | 2441 | 24.69 | 21.39 | 1882 | US$2 | 2 |
-| beatrunner | 17 | 53 | 4.68 | 412 | 4.16 | 3.48 | 307 | US$8 | 2 |
-| bijli | 16 | 23 | 3.15 | 278 | 2.84 | 2.48 | 218 | US$2 | 2 |
-| bijlilog | 21 | 31 | 3.49 | 307 | 3.18 | 2.76 | 243 | US$2 | 2 |
-| biotray | 38 | 67 | 10.85 | 955 | 9.66 | 7.71 | 679 | US$8 | 3 |
-| biowatt | 14 | 29 | 5.96 | 525 | 5.11 | 4.17 | 367 | US$2 | 2 |
-| chulha | 18 | 22 | 4.85 | 426 | 4.32 | 3.62 | 318 | US$2 | 1 |
-| fridge | 18 | 24 | 4.38 | 385 | 3.86 | 3.27 | 288 | US$2 | 3 |
-| gastaraju | 21 | 35 | 5.10 | 449 | 4.46 | 3.68 | 324 | US$2 | 4 |
-| jalnetra | 39 | 78 | 10.10 | 888 | 9.01 | 7.66 | 674 | US$8 | 3 |
-| kheti | 22 | 37 | 6.55 | 576 | 5.83 | 4.80 | 422 | US$8 | 2 |
-| kinetic_ctl | 38 | 59 | 8.50 | 748 | 7.73 | 6.21 | 547 | US$8 | 3 |
-| kinetic_vib | 4 | 5 | 5.53 | 487 | 4.83 | 3.99 | 351 | US$2 | 1 |
-| mitti | 34 | 62 | 12.92 | 1137 | 11.43 | 9.25 | 814 | US$8 | 4 |
-| prayog | 26 | 34 | 4.17 | 367 | 3.76 | 3.20 | 282 | US$8 | 2 |
-| rain | 19 | 27 | 4.46 | 392 | 3.93 | 3.31 | 291 | US$2 | 3 |
-| rainplate | 1 | 1 | 0.02 | 2 | 0.02 | 0.02 | 2 | US$2 | 1 |
-| seeti | 24 | 36 | 4.74 | 417 | 4.22 | 3.56 | 313 | US$2 | 2 |
-| tap | 19 | 28 | 4.44 | 390 | 3.91 | 3.31 | 291 | US$2 | 2 |
+| arcade | 19 | 27 | 4.24 | 373 | 3.72 | 3.15 | 278 | US$8 | none |
+| astradand | 25 | 49 | 27.69 | 2437 | 24.66 | 21.36 | 1880 | US$2 | none |
+| beatrunner | 17 | 53 | 4.48 | 395 | 3.96 | 3.32 | 292 | US$8 | none |
+| bijli | 16 | 23 | 3.16 | 278 | 2.85 | 2.48 | 219 | US$2 | none |
+| bijlilog | 21 | 31 | 3.49 | 308 | 3.18 | 2.76 | 243 | US$2 | none |
+| biotray | 38 | 67 | 10.82 | 952 | 9.64 | 7.69 | 677 | US$8 | none |
+| biowatt | 14 | 29 | 5.96 | 525 | 5.10 | 4.17 | 367 | US$2 | none |
+| chulha | 18 | 22 | 4.86 | 428 | 4.34 | 3.63 | 320 | US$2 | none |
+| fridge | 18 | 24 | 4.38 | 386 | 3.86 | 3.27 | 287 | US$2 | none |
+| gastaraju | 21 | 35 | 5.08 | 447 | 4.44 | 3.66 | 322 | US$2 | none |
+| jalnetra | 39 | 78 | 10.10 | 888 | 9.01 | 7.66 | 674 | US$8 | none |
+| kheti | 22 | 37 | 6.56 | 577 | 5.83 | 4.80 | 423 | US$8 | none |
+| kinetic_ctl | 38 | 59 | 8.49 | 748 | 7.72 | 6.21 | 546 | US$8 | none |
+| kinetic_vib | 4 | 5 | 5.55 | 488 | 4.85 | 4.00 | 352 | US$2 | none |
+| mitti | 34 | 62 | 12.89 | 1134 | 11.40 | 9.22 | 811 | US$8 | none |
+| prayog | 26 | 34 | 4.17 | 367 | 3.77 | 3.21 | 282 | US$8 | none |
+| rain | 19 | 27 | 4.46 | 393 | 3.94 | 3.31 | 292 | US$2 | 1 |
+| rainplate | 1 | 1 | 0.02 | 2 | 0.02 | 0.02 | 2 | US$2 | none |
+| seeti | 24 | 36 | 4.75 | 418 | 4.22 | 3.56 | 313 | US$2 | none |
+| tap | 19 | 28 | 4.44 | 391 | 3.92 | 3.31 | 291 | US$2 | none |
 
 Per-board file: `costing/<board>_priced_BOM.csv` (every line with LCSC number, unit price, stock).
 
 ## Stock flags (fewer than 100 boards' worth in stock, or zero)
 
-- **arcade**: C14663 100n (out of stock, stock 0)
-- **astradand**: C14663 100n (out of stock, stock 0)
-- **astradand**: C114583 WS2812B-Mini (out of stock, stock 0)
-- **beatrunner**: C14663 100n (out of stock, stock 0)
-- **beatrunner**: C72044 Red (out of stock, stock 0)
-- **bijli**: C72043 Green (out of stock, stock 0)
-- **bijli**: C14663 100n (out of stock, stock 0)
-- **bijlilog**: C14663 100n (out of stock, stock 0)
-- **bijlilog**: C72043 Green (out of stock, stock 0)
-- **biotray**: C7442639 100u/35V (low stock, stock 85)
-- **biotray**: C14663 100n (out of stock, stock 0)
-- **biotray**: C72043 Green (out of stock, stock 0)
-- **biowatt**: C14663 100n (out of stock, stock 0)
-- **biowatt**: C57112 10n (out of stock, stock 0)
-- **chulha**: C14663 100n (out of stock, stock 0)
-- **fridge**: C14663 100n (out of stock, stock 0)
-- **fridge**: C72043 Green (out of stock, stock 0)
-- **fridge**: C57112 10n (out of stock, stock 0)
-- **gastaraju**: C14663 100n (out of stock, stock 0)
-- **gastaraju**: C72043 Green (out of stock, stock 0)
-- **gastaraju**: C72038 Amber (out of stock, stock 0)
-- **gastaraju**: C72044 Red (out of stock, stock 0)
-- **jalnetra**: C57112 10n (out of stock, stock 0)
-- **jalnetra**: C14663 100n (out of stock, stock 0)
-- **jalnetra**: C72043 Green (out of stock, stock 0)
-- **kheti**: C14663 100n (out of stock, stock 0)
-- **kheti**: C72043 Green (out of stock, stock 0)
-- **kinetic_ctl**: C7442639 100u/35V (low stock, stock 85)
-- **kinetic_ctl**: C14663 100n (out of stock, stock 0)
-- **kinetic_ctl**: C72043 Green (out of stock, stock 0)
-- **kinetic_vib**: C14663 100n (out of stock, stock 0)
-- **mitti**: C14663 100n (out of stock, stock 0)
-- **mitti**: C72044 Red (out of stock, stock 0)
-- **mitti**: C72043 Green (out of stock, stock 0)
-- **mitti**: C7442639 100u/35V (low stock, stock 85)
-- **prayog**: C14663 100n (out of stock, stock 0)
-- **prayog**: C72043 Green (out of stock, stock 0)
-- **rain**: C72044 Red (out of stock, stock 0)
 - **rain**: C19224 TVS 5V bidir (low stock, stock 175)
-- **rain**: C14663 100n (out of stock, stock 0)
-- **rainplate**: C5116481 Cable (out of stock, stock 0)
-- **seeti**: C72043 Green (out of stock, stock 0)
-- **seeti**: C14663 100n (out of stock, stock 0)
-- **tap**: C14663 100n (out of stock, stock 0)
-- **tap**: C72043 Green (out of stock, stock 0)
 
 ## Planning assumptions (not quotes)
 

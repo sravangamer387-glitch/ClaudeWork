@@ -5,7 +5,7 @@
   "path": "utility10/01-seeti-counter",
   "board": "seeti",
   "order": "Medium-High",
-  "order_why": "limited stock on: 3V low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer 3V (stock 140)",
   "works": "Medium",
   "works_why": "Mic front end and clap/whistle detector are analog and tuned on synthetic audio; the firmware itself passes 115 host checks; the documented limit is that quiet whistles are missed.",
   "first": "Bench-test the microphone gain with real claps before ordering more than 5 boards."
@@ -16,7 +16,7 @@
   "path": "utility10/02-gas-taraju",
   "board": "gastaraju",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium",
   "works_why": "HX711 load-cell chain is a standard circuit; accuracy depends on the cell, mounting and calibration, which only a build can show.",
   "first": "Calibrate with a known weight; check drift over a day."
@@ -27,7 +27,7 @@
   "path": "utility10/03-fridge-door-guard",
   "board": "fridge",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140; bidir low stock 175",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140); D4 TVS 5V bidir (stock 175)",
   "works": "Medium-High",
   "works_why": "Reed switch, timer and buzzer: simple circuit, simple firmware; TVS and input conditioning follow standard practice.",
   "first": "Test the reed gap and the 2-minute alarm on the bench."
@@ -60,7 +60,7 @@
   "path": "utility10/06-chulha-timers",
   "board": "chulha",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium-High",
   "works_why": "Multi-timer with buttons, LEDs and buzzer; simple circuit; firmware tested on the host.",
   "first": "Check button debounce and the buzzer volume on the first board."
@@ -71,7 +71,7 @@
   "path": "utility10/07-rain-alert",
   "board": "rain",
   "order": "Medium-High",
-  "order_why": "limited stock on: 85dB low stock 140; bidir low stock 175",
+  "order_why": "limited stock on: BZ1 Buzzer 85dB (stock 140); D3 TVS 5V bidir (stock 175); D4 TVS 5V bidir (stock 175)",
   "works": "Medium",
   "works_why": "Conductive rain plate corrodes and drifts; electronics are simple and protected with TVS.",
   "first": "Use the plate for a week outdoors before deciding on a coating."
@@ -82,7 +82,7 @@
   "path": "utility10/08-tap-litre-meter",
   "board": "tap",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140; bidir low stock 175",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140); D4 TVS 5V bidir (stock 175)",
   "works": "Medium",
   "works_why": "Hall/flow-pulse counting is standard; the litres-per-pulse constant depends on the flow sensor.",
   "first": "Calibrate against a measured bucket."
@@ -159,7 +159,7 @@
   "path": "products/05-kheti-mitra",
   "board": "kheti",
   "order": "Medium-High",
-  "order_why": "limited stock on: in low stock 321",
+  "order_why": "limited stock on: J1 12 V DC in (stock 321)",
   "works": "Medium",
   "works_why": "Irrigation controller with 12 V switching and soil sensing; 22 host checks pass; field conditions (water, sun, surge) are the risk.",
   "first": "Run with a lamp as the load for 48 hours before any valve or pump."
@@ -181,7 +181,7 @@
   "path": "toys10/01-reflex-raja",
   "board": "arcade",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium-High",
   "works_why": "Shares the Desi Arcade board; game logic tested with about 80,000 host checks.",
   "first": "Play-test the buttons and the buzzer."
@@ -192,7 +192,7 @@
   "path": "toys10/02-taal-memory",
   "board": "arcade",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium-High",
   "works_why": "Same board and test base as Reflex Raja.",
   "first": "Play-test the buttons and the buzzer."
@@ -203,7 +203,7 @@
   "path": "toys10/03-aloo-bomb",
   "board": "arcade",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium-High",
   "works_why": "Same board; game logic host-tested; the potato-clock mechanics are the unknown.",
   "first": "Test timing with a real potato."
@@ -214,7 +214,7 @@
   "path": "toys10/04-beat-runner",
   "board": "beatrunner",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Medium-High",
   "works_why": "Rhythm game on its own board; logic host-tested; LEDs and buzzer circuits are standard.",
   "first": "Check the LED brightness and button spacing."
@@ -313,7 +313,7 @@
   "path": "biotray",
   "board": "biotray",
   "order": "Medium-High",
-  "order_why": "limited stock on: in low stock 321",
+  "order_why": "limited stock on: J2 12 V DC in (stock 321)",
   "works": "Medium",
   "works_why": "12 V low-side drivers, ESP32 and sensors; 22 host checks; calibration constants are placeholders; wet environment.",
   "first": "Dummy loads on all outputs first; seal the enclosure before any water."
@@ -379,7 +379,7 @@
   "path": "jal-netra",
   "board": "jalnetra",
   "order": "Medium-High",
-  "order_why": "limited stock on: Buzzer low stock 140",
+  "order_why": "limited stock on: BZ1 Buzzer (stock 140)",
   "works": "Low-Medium",
   "works_why": "Clamp-on ultrasonic transit-time measurement has a hard analog front end; the manual itself says Gate 1 acoustic test comes first and it is not sellable.",
   "first": "Run the Gate 1 acoustic test with the evaluation setup before any more boards."

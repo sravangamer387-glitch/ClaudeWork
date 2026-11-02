@@ -57,7 +57,7 @@ J4,OLED I2C,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(L
 R23,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
 R24,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
 J5,UART host / BLE,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
-J3,SWD,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,ZHOURI 2.54-2*3,C5116479,verified,hand/THT
+J3,SWD,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),C2894964,verified,hand/THT
 SW2,Test / zero,Button_Switch_SMD:SW_SPST_B3U-1000P,Omron B3U-1000P,C231329,verified,SMT (JLC)
 TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
 TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
