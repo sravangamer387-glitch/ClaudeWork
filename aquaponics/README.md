@@ -10,7 +10,7 @@ Programme 5 (biotech + agriculture + electrical + AI). **Status: control and for
 - Hardware: **BioTray board** (see `biotray/`), channel map PUMP1 circulation, PUMP2 dosing, FAN output = aerator relay coil (flyback on board), LIGHT optional.
 
 ## Folders
-`firmware/lib/aq_core.[ch]` core; `firmware/test/` (`make test`); `firmware/src/main_aquaponics.cpp` skeleton (not compiled); `docs/`.
+`firmware/lib/aq_core.[ch]` core; `firmware/test/` (`make test`); `firmware/src/main_aquaponics.cpp` firmware (compiles for the ESP32-S3 with 0 warnings; binaries in `firmware/release/`); `docs/`.
 
 ## Honest limits
 No ammonia/nitrite/nitrate sensing (these kill fish before pH moves: test with a kit daily at first); forecasting uses straight-line trends and cannot foresee sudden events (pump failure, power cut, feeding spikes); the pH and DO scale factors in the skeleton are placeholders; mains aerators must be switched through a proper relay module with an enclosure rated for wet environments; a power-cut fail-safe (battery aerator) is strongly recommended; not tested on live animals.

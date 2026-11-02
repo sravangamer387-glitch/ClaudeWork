@@ -113,7 +113,7 @@ StepStick driver modules (1-3), NEMA17 motors, 12-28 V supply (24 V recommended)
 ## 4. Confidence (read before you order)
 
 - **Order confidence: High**: all parts live-checked, none flagged.
-- **Works-as-intended confidence: Medium**: ESP32-S3 controller with three StepStick sockets and a 24 V to 5 V buck. Motion library (370 checks) and protocol are host-tested; the ESP32 firmware has never been compiled; drivers and motors are bought in. The vibration model is trained on synthetic data only.
+- **Works-as-intended confidence: Medium**: ESP32-S3 controller with three StepStick sockets and a 24 V to 5 V buck. Motion library (370 checks) and protocol are host-tested; the ESP32 firmware now compiles for the ESP32-S3 with 0 warnings but has not run on hardware; drivers and motors are bought in. The vibration model is trained on synthetic data only.
 - **First thing to do:** Power with a current-limited supply and no drivers; then one driver and one motor at low current.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 

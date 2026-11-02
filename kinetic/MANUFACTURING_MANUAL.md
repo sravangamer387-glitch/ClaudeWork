@@ -1,6 +1,6 @@
 # KINETIC motion controller + vibration puck: manufacturing manual
 
-> **Status: design only; nothing built, powered or run on a motor.** Controller PCB: **order-ready: every automatic check passes**. Vibration puck PCB: **order-ready: every automatic check passes**. AI model: trained on synthetic data only. Firmware: motion/vibration core host-tested; ESP32 glue syntax-checked only.
+> **Status: design only; nothing built, powered or run on a motor.** Controller PCB: **order-ready: every automatic check passes**. Vibration puck PCB: **order-ready: every automatic check passes**. AI model: trained on synthetic data only. Firmware: motion/vibration core host-tested; ESP32 firmware compiles for the ESP32-S3 (arduino-cli, core 2.0.17, 0 warnings; `tools/esp32_build.sh`, binaries in `firmware/release/`), not yet run on hardware.
 
 ## 1. What is made
 
@@ -14,7 +14,7 @@ A 112 x 80 mm controller (ESP32-S3, three StepStick driver sockets, 24 V input, 
 | Vibration puck PCB | `utility10/pcb/release/kinetic_vib/` and `kinetic/hardware/kinetic_vib/` | **order-ready: every automatic check passes** |
 | Motion + protocol library and tests | `kinetic/firmware/lib/kn_motion.[ch]`, `kinetic/firmware/test/test_kn.c` | `make test` passes (370 checks) |
 | Vibration model | `kinetic/sim/vib.py`, `kinetic/firmware/lib/kn_vib*.{c,h}` | synthetic data; C matches Python |
-| ESP32 skeleton | `kinetic/firmware/src/main_kinetic.cpp` | syntax-checked, never compiled for ESP32 |
+| ESP32 skeleton | `kinetic/firmware/src/main_kinetic.cpp` | compiles for the ESP32-S3 (0 warnings), not run on hardware |
 | Enclosure STL (printed) | `utility10/pcb/release/kinetic_ctl/4_enclosure/` | generated from the board outline; unprototyped |
 | Docs | `kinetic/docs/` (CONCEPT, DESIGN, PROTOCOL, TEST_PLAN, economics, vib_results) | |
 
@@ -99,7 +99,7 @@ Repeat for `kinetic_vib` (1 oz is fine).
 
 ## 5. Program
 
-Build with Arduino-ESP32 core 2.x or PlatformIO (`esp32-s3-devkitc-1`): sources `kinetic/firmware/src/main_kinetic.cpp` plus `kinetic/firmware/lib/*.c`. First flash over USB-C (hold BOOT, tap RESET). **Review the skeleton on a bench first: it has never been compiled for the ESP32.**
+Build with Arduino-ESP32 core 2.x or PlatformIO (`esp32-s3-devkitc-1`): sources `kinetic/firmware/src/main_kinetic.cpp` plus `kinetic/firmware/lib/*.c`. First flash over USB-C (hold BOOT, tap RESET). **The firmware compiles for the ESP32-S3 (tools/esp32_build.sh, 0 warnings); bring it up on a bench first: it has not run on hardware.**
 
 ## 6. Commissioning (see `kinetic/docs/TEST_PLAN.md` for the full list)
 

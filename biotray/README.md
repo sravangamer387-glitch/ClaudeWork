@@ -13,7 +13,7 @@ Programme 2 (bio-electronics), tray controller. **Status: designed, control core
 |---|---|
 | `firmware/lib/bt_core.[ch]` | all control logic (portable C, host-tested) |
 | `firmware/test/` | `make test` |
-| `firmware/src/` | ESP32-S3 glue skeleton (not compiled) + pin map |
+| `firmware/src/` | ESP32-S3 firmware + pin map: compiles with 0 warnings (`tools/esp32_build.sh`; binaries in `firmware/release/`), not run on hardware |
 | `docs/` | DESIGN, TEST_PLAN, economics, MQTT topics |
 | `hardware/` | release folder of the `biotray` board |
 | `MANUFACTURING_MANUAL.md` | build, test, commissioning |

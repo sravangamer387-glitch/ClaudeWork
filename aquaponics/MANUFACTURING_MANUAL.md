@@ -8,7 +8,7 @@ BioTray board (see `biotray/MANUFACTURING_MANUAL.md`); DS18B20 waterproof probe;
 
 ## 2. Build
 
-1. Build and test the BioTray board first. 2. Wire PUMP1 = circulation, PUMP2 = dosing, FAN = aerator relay coil, sensors as in `aquaponics/docs/DESIGN.md`. 3. Compile `aquaponics/firmware/src/main_aquaponics.cpp` with `firmware/lib/aq_core.c` (Arduino-ESP32 2.x): **the skeleton has never been compiled for the ESP32; review it on a bench.** 4. Run `cd aquaponics/firmware && make test` on a PC (13 checks).
+1. Build and test the BioTray board first. 2. Wire PUMP1 = circulation, PUMP2 = dosing, FAN = aerator relay coil, sensors as in `aquaponics/docs/DESIGN.md`. 3. Compile `aquaponics/firmware/src/main_aquaponics.cpp` with `firmware/lib/aq_core.c` (Arduino-ESP32 2.x): **the firmware compiles for the ESP32-S3 (tools/esp32_build.sh, 0 warnings, binary in `aquaponics/firmware/release/`); bring it up on a bench.** 4. Run `cd aquaponics/firmware && make test` on a PC (13 checks).
 
 ## 3. Calibrate
 

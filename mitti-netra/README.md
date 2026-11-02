@@ -12,7 +12,7 @@ Use cases: field soil moisture for irrigation scheduling; retaining walls, bridg
 |---|---|
 | `firmware/lib/mn_core.[ch]` | soil calibration, tilt, strain conversion, alarm state machine, report scheduler, binary frame + CRC-16 (host-tested) |
 | `firmware/test/` | `make test` (23 checks, ASan/UBSan) |
-| `firmware/src/` | ESP32-S3 glue skeleton (not compiled) |
+| `firmware/src/` | ESP32-S3 firmware: compiles with 0 warnings (`tools/esp32_build.sh`; binaries in `firmware/release/`), not run on hardware |
 | `camera/crop_index.py` | edge vision baseline (ExG canopy cover) with a self-test |
 | `docs/` | CONCEPT, DESIGN, TEST_PLAN, economics |
 | `hardware/` | release folder of `mitti_netra` (copied from `utility10/pcb/release/`) |

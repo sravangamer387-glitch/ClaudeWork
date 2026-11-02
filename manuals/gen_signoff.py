@@ -19,9 +19,6 @@ GATES = {
  "geotech": "thresholds must be re-derived from a real baseline recording before any alarm is trusted",
  "dj-setup": "built from bought equipment: follow the plan; mains equipment wiring by a qualified electrician",
  "toys10/06-paper-rocket": "measure range and energy on the first unit; foam noses mandatory; toy-standard review before sale",
- "kinetic": "ESP32 firmware not yet compiled on target (toolchain install not permitted in this session)",
- "mitti-netra": "ESP32 firmware not yet compiled on target (toolchain install not permitted in this session)",
- "biotray": "ESP32 firmware not yet compiled on target (toolchain install not permitted in this session)",
 }
 def board_state(board):
     p = os.path.join(REL, board or "", "5_verification", "readiness.json")

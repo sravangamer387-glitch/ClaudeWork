@@ -102,7 +102,7 @@ SIM7080G (LTE-M/NB-IoT) breakout board with nano-SIM holder and antenna; protect
 ## 4. Confidence (read before you order)
 
 - **Order confidence: High**: all parts live-checked, none flagged.
-- **Works-as-intended confidence: Medium**: Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 skeleton has never been compiled.
+- **Works-as-intended confidence: Medium**: Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 firmware compiles for the ESP32-S3 with 0 warnings (not yet run on hardware).
 - **First thing to do:** Bring up power and charging first (check TEMP voltage at room temperature), then the modem last.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 

@@ -8,3 +8,4 @@ utility10/pcb/out/
 utility10/pcb/__pycache__/
 utility10/pcb/boards/__pycache__/
 manuals/html/
+build/esp32/

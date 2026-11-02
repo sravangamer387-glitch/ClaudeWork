@@ -1,6 +1,6 @@
 # MITTI-NETRA soil and structure telemetry node: manufacturing manual
 
-> **Status: design only; nothing built or connected to a mobile network.** PCB: **order-ready: every automatic check passes**. The cellular modem is a plug-in SIM7080G breakout (not on the board). Firmware core host-tested; ESP32 glue syntax-checked only.
+> **Status: design only; nothing built or connected to a mobile network.** PCB: **order-ready: every automatic check passes**. The cellular modem is a plug-in SIM7080G breakout (not on the board). Firmware core host-tested; ESP32 firmware compiles for the ESP32-S3 (arduino-cli, core 2.0.17, 0 warnings; `tools/esp32_build.sh`, binaries in `firmware/release/`), not yet run on hardware.
 
 ## 1. What is made
 
@@ -12,7 +12,7 @@ A 90 x 80 mm solar/USB-charged node: ESP32-S3, TP4056 charger for one protected 
 |---|---|---|
 | PCB | `utility10/pcb/release/mitti/` and `mitti-netra/hardware/` | **order-ready: every automatic check passes** |
 | Core library and tests | `mitti-netra/firmware/lib/mn_core.[ch]`, `test/test_mn.c` | `make test` passes (23 checks) |
-| ESP32 skeleton | `mitti-netra/firmware/src/` | syntax-checked only; cellular send is a TODO |
+| ESP32 skeleton | `mitti-netra/firmware/src/` | compiles for the ESP32-S3 (0 warnings); cellular send is a TODO |
 | Camera analysis | `mitti-netra/camera/crop_index.py` | self-test passes on synthetic scenes |
 
 ## 3. Bill of materials

@@ -1,6 +1,6 @@
 # BioTray vertical-farm tray controller: manufacturing manual
 
-> **Status: design only; nothing built.** PCB: **order-ready: every automatic check passes**. Firmware control core host-tested (22 checks); ESP32 glue never compiled. pH/EC calibration values are placeholders.
+> **Status: design only; nothing built.** PCB: **order-ready: every automatic check passes**. Firmware control core host-tested (22 checks); ESP32 firmware compiles for the ESP32-S3 (arduino-cli, core 2.0.17, 0 warnings; `tools/esp32_build.sh`, binaries in `firmware/release/`), not yet run on hardware. pH/EC calibration values are placeholders.
 
 ## 1. What is made
 
@@ -12,7 +12,7 @@ A 100 x 80 mm controller: 12 V in, ESP32-S3 (WiFi/MQTT), four low-side 12 V outp
 |---|---|---|
 | PCB | `utility10/pcb/release/biotray/` and `biotray/hardware/` | **order-ready: every automatic check passes** |
 | Control core + tests | `biotray/firmware/lib/bt_core.[ch]`, `test/test_bt.c` | passes |
-| ESP32 skeleton | `biotray/firmware/src/main_biotray.cpp` | not compiled |
+| ESP32 skeleton | `biotray/firmware/src/main_biotray.cpp` | compiles for the ESP32-S3 (0 warnings), not run on hardware |
 
 ## 3. Bill of materials
 

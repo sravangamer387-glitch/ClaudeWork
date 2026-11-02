@@ -1,0 +1,3 @@
+Sketch uses 312317 bytes (23%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 27300 bytes (8%) of dynamic memory, leaving 300380 bytes for local variables. Maximum is 327680 bytes.
+Built 2026-11-02 with arduino-cli, core esp32:esp32@2.0.17, FQBN esp32:esp32:esp32s3 (CDC on boot, 8 MB flash), --warnings all: 0 warnings in project code. Rebuild: tools/esp32_build.sh

@@ -293,7 +293,7 @@
   "order": "High",
   "order_why": "all parts live-checked, none flagged",
   "works": "Medium",
-  "works_why": "ESP32-S3 controller with three StepStick sockets and a 24 V to 5 V buck. Motion library (370 checks) and protocol are host-tested; the ESP32 firmware has never been compiled; drivers and motors are bought in. The vibration model is trained on synthetic data only.",
+  "works_why": "ESP32-S3 controller with three StepStick sockets and a 24 V to 5 V buck. Motion library (370 checks) and protocol are host-tested; the ESP32 firmware now compiles for the ESP32-S3 with 0 warnings but has not run on hardware; drivers and motors are bought in. The vibration model is trained on synthetic data only.",
   "first": "Power with a current-limited supply and no drivers; then one driver and one motor at low current."
  },
  {
@@ -304,7 +304,7 @@
   "order": "High",
   "order_why": "all parts live-checked, none flagged",
   "works": "Medium",
-  "works_why": "Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 skeleton has never been compiled.",
+  "works_why": "Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 firmware compiles for the ESP32-S3 with 0 warnings (not yet run on hardware).",
   "first": "Bring up power and charging first (check TEMP voltage at room temperature), then the modem last."
  },
  {
