@@ -128,8 +128,8 @@
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
   "works": "Medium",
-  "works_why": "Laser-cut automata; frame layouts are provisional.",
-  "first": "Cut one frame and test the motion."
+  "works_why": "Laser cut files regenerated with correct kerf compensation (outlines outward, holes inward, gear backlash only once); cam and gear checks PASS; frame layouts and figure artwork are still first-pass.",
+  "first": "Cut one kit in scrap MDF and run the mechanism."
  },
  {
   "group": "Products",
@@ -146,12 +146,12 @@
   "group": "Products",
   "name": "4 Jal-Rakshak tank controller",
   "path": "products/04-jal-rakshak",
-  "board": null,
-  "order": "Low",
-  "order_why": "no board and no verified part list yet",
-  "works": "Low",
-  "works_why": "No board; the mains version cannot be made; only a low-voltage prototype is sensible.",
-  "first": "Do not build a mains version."
+  "board": "jalrakshak",
+  "order": "High",
+  "order_why": "all parts live-checked, none flagged",
+  "works": "Medium",
+  "works_why": "Low-voltage board reuses the Kheti-Mitra 12 V front end and pump driver; the firmware rules pass 20 simulated checks and an 8 MHz PCB build exists (3.2 kB); real probes, water, pump currents untested; the mains version is still out of scope.",
+  "first": "Bench test with a 12 V pump and probes in a bucket; never connect mains."
  },
  {
   "group": "Products",
@@ -168,12 +168,12 @@
   "group": "Products",
   "name": "6 Gas-Suraksha leak alarm",
   "path": "products/06-gas-suraksha",
-  "board": null,
-  "order": "Low",
-  "order_why": "no board and no verified part list yet",
-  "works": "Low",
-  "works_why": "Not certified, safety-critical, no board; firmware logic passes 34 checks.",
-  "first": "Do not sell or rely on it for safety."
+  "board": "gassuraksha",
+  "order": "High",
+  "order_why": "all parts live-checked, none flagged",
+  "works": "Low-Medium",
+  "works_why": "Prototype/logging board carries the tested alarm engine (34 checks) with an active buzzer and a UART log header; MQ-6 thresholds are placeholders and it is not a certified detector.",
+  "first": "Log real sensor data for a week; never use or sell as a safety device."
  },
  {
   "group": "Toys (10)",
@@ -238,8 +238,8 @@
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
   "works": "Medium",
-  "works_why": "Projectile toy; needs lab review; drawings missing.",
-  "first": "Get a safety review before any sale."
+  "works_why": "v1 changed to a stomp launcher (no pump, valve or stored pressure); laser-cut stand and parts list exist; range and energy are model estimates until measured.",
+  "first": "Build one, fire 20 rockets in an open area and measure the range; keep foam noses mandatory."
  },
  {
   "group": "Toys (10)",
@@ -249,8 +249,8 @@
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
   "works": "Medium",
-  "works_why": "Gimbal frame drawing missing.",
-  "first": "Draw and test the frame."
+  "works_why": "Gimbal now drawn (two sheets, kerf-compensated, tilt and clearance checks PASS) but never cut; dowel fits and knob feel need a test.",
+  "first": "Cut one set in scrap MDF and test the tilt range and axle fits."
  },
  {
   "group": "Toys (10)",
@@ -259,9 +259,9 @@
   "board": null,
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
-  "works": "Medium",
-  "works_why": "Provisional cut file.",
-  "first": "Prototype one."
+  "works": "Medium-High",
+  "works_why": "Cut file now kerf-compensated (wheels, axle holes, band slots at nominal size); simple mechanism.",
+  "first": "Cut one in cardboard or MDF and test the band drive."
  },
  {
   "group": "Toys (10)",
@@ -271,8 +271,8 @@
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
   "works": "Medium",
-  "works_why": "Provisional cut file; needs calibration drop.",
-  "first": "Prototype one."
+  "works_why": "Cut file now kerf-compensated (peg holes at 6.2 mm press fit); pocket scoring needs a calibration drop.",
+  "first": "Cut one, drop 200 marbles and check the pocket distribution."
  },
  {
   "group": "Toys (10)",
@@ -281,9 +281,9 @@
   "board": null,
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
-  "works": "Medium",
-  "works_why": "Illustrations and proofreading are missing.",
-  "first": "Finish the artwork and text."
+  "works": "Medium-High",
+  "works_why": "Cube net and the 36 words ready; Hindi and Telugu checked for consistency (grandmother term aligned, gender-neutral problem phrases) but a native-speaker review is still required before print; icons are optional for the prototype.",
+  "first": "Print text-only cubes for the prototype; get the words reviewed by native speakers before the production print."
  },
  {
   "group": "Bio / agri / civil / robotics programmes",
@@ -304,8 +304,8 @@
   "order": "High",
   "order_why": "all parts live-checked, none flagged",
   "works": "Medium",
-  "works_why": "Charger, LDO, modem switch, ADXL345, HX711 and soil input on one board; firmware core (23 checks) and the pin map match; the cellular modem is a plug-in breakout whose pinout you must match; the ESP32 skeleton has never been compiled.",
-  "first": "Bring up power and charging first; add the modem last and check its pinout against J6."
+  "works_why": "Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 skeleton has never been compiled.",
+  "first": "Bring up power and charging first (check TEMP voltage at room temperature), then the modem last."
  },
  {
   "group": "Bio / agri / civil / robotics programmes",
@@ -403,19 +403,19 @@
   "order": "Medium-High",
   "order_why": "no electronic parts to source: local laser-cutting or printing",
   "works": "Medium",
-  "works_why": "Mechanical toys: designs are physical and need prototypes; drawings are partial.",
-  "first": "Print or cut one of each and test before batches."
+  "works_why": "All five toys now have prototype drawings (Santulan lathe drawing, marble-tower posts and groove spec, ramp-racer car and ladder stand, Galton assembly guide, Drop Quest v1 rules with 60 solver-verified levels and laser parts); physics checks PASS; none built or play-tested.",
+  "first": "Cut or turn one of each and play-test; measure ramp times and marble behaviour."
  },
  {
   "group": "Other projects",
   "name": "Wave 1 electronics toys",
   "path": "electronics-toys/wave1",
-  "board": null,
-  "order": "Low",
-  "order_why": "no board and no verified part list yet",
-  "works": "Low",
-  "works_why": "Firmware passes 76 host checks but there is no board and the MCU is an abstract placeholder.",
-  "first": "Wait for the audio platform board (task AP1) before ordering anything."
+  "board": "ap1",
+  "order": "High",
+  "order_why": "all parts live-checked, none flagged",
+  "works": "Low-Medium",
+  "works_why": "AP1 board added (ATmega328P, MP3 module socket, 4-digit display through two chained 74HC595s with a 7-LED ball lane, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.",
+  "first": "Bench-test one board per product: ladder readings, MP3 commands, display multiplexing."
  },
  {
   "group": "Other projects",
@@ -423,7 +423,7 @@
   "path": "prototypes",
   "board": null,
   "order": "Medium",
-  "order_why": "breadboard parts from local vendors",
+  "order_why": "breadboard parts and modules from local vendors (prototype budget lists them)",
   "works": "Medium",
   "works_why": "Bench prototype packs on breadboards with 26 host checks; no PCB.",
   "first": "Use as learning kits; do not sell."
@@ -433,10 +433,10 @@
   "name": "DJ / party system",
   "path": "dj-setup",
   "board": null,
-  "order": "Low",
-  "order_why": "no board and no verified part list yet",
-  "works": "Low",
-  "works_why": "Plan only; not manufacturable.",
-  "first": "Treat as a concept."
+  "order": "Medium",
+  "order_why": "breadboard parts and modules from local vendors (prototype budget lists them)",
+  "works": "Low-Medium",
+  "works_why": "The full product is a 12-18 month programme; its phase-0 prototypes exist in `prototypes/` (D1 beat-synced light controller, D2 DJ MIDI controller on Arduino Nano: firmware compiles, filter/encoder logic host-tested; Mixxx mapping well-formed with 17 valid controls and no MIDI clashes, not yet tried in Mixxx).",
+  "first": "Build D1 and D2 from the prototype guide and test with Mixxx and a speaker you already own."
  }
 ]

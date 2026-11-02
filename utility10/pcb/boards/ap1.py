@@ -1,5 +1,5 @@
 from .blocks import *
-W, H = 110, 78
+W, H = 128, 92
 V = lambda **k: dict(k, lcsc_status="verified")
 def RV(ref, val, x, y, n1, n2, lcsc, mpn, rot=90): return V(ref=ref, sym="Device:R", fp="Resistor_SMD:R_0603_1608Metric", value=val, x=x, y=y, rot=rot, lcsc=lcsc, mpn=mpn, nets={"1": n1, "2": n2})
 MOS = lambda ref, x, y, g, d: V(ref=ref, sym="Device:Q_NMOS_GSD", fp="Package_TO_SOT_SMD:SOT-23", value="AO3400A", x=x, y=y, rot=0, lcsc="C20917", mpn="AO3400A", nets={"1": g, "2": "GND", "3": d})
@@ -44,6 +44,9 @@ parts = (mcu("+4V5", {"30": "RXD", "31": "TXD", "32": "MP3_BUSY", "1": "PWM_R", 
      V(ref="D8", sym="Device:D_Schottky", fp="Diode_SMD:D_SMA", value="SS14", x=40, y=56, rot=0, lcsc="C84343", mpn="SS14", nets={"1": "+4V5", "2": "MOT_N"}),
      R("R58", "100k", 42, 44, "+4V5", "VBAT_ADC", 90), R("R59", "100k", 45, 44, "VBAT_ADC", "GND", 90), C("C22", "100n", 42, 40, "VBAT_ADC", "GND", 90),
      TP("TP1", "+4V5", 104, 10), TP("TP2", "GND", 104, 14), TP("TP4", "TEST", 104, 18)])
+for p in parts:                                     # spread the layout: right-hand cluster +16 mm in x, lower rows +10 mm in y
+    if p["x"] >= 47: p["x"] += 16
+    if p["y"] >= 50: p["y"] += 10
 for p in parts:
     if p.get("lcsc", 1) is None: del p["lcsc"]
 S = sch_layout([("POWER: 3xAA, switch, reverse-polarity PMOS", ["J1", "SW1", "Q2", "C4", "TP1", "TP2"]), ("MCU: ATmega328P-AU, 8 MHz internal", ["U1", "C1", "C2", "C3", "R7", "J2", "TP4", "R58", "R59", "C22"]),
@@ -53,7 +56,7 @@ S = sch_layout([("POWER: 3xAA, switch, reverse-polarity PMOS", ["J1", "SW1", "Q2
 S["notes"] = [("AP1 shared audio platform (rhymes player, star lamp, cricket game). ATmega328P at 8 MHz internal from 3xAA. MP3 module: 1 k series on both UART lines, BUSY on D2. Seven buttons share ADC6 through a ladder (10 k pull-up; 1 k ... 47 k to each button): decode one press at a time in the HAL. Display: U4 74HC595 drives segments a..g, dp from QA..QH (matches seg_write bit0..7), digits through MMBT3904 low-side; U5 (chained from U4 QH') drives the seven ball-lane LEDs: shift the lane byte first, then the segment byte. SER/SRCLK/RCLK share MOSI/SCK/MISO with the ISP header. Lamp: three AO3400A on PWM D3/D5/D6 to a common-anode LED; motor on D10 with SS14 flyback. Arduino tone() uses Timer2, which also drives D3: do not use the buzzer and red PWM together. Populate per product (see the manual).", 0, 0)]
 BOARD = dict(name="ap1_audio", title="AP1 shared audio platform (rhymes player, star lamp, cricket game)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"+4V5": "3xAA via Q2", "GND": "battery", "BAT_P": "battery", "BAT_SW": "battery switch"}, single_ok=(),
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (104, 24)], widths={"+4V5": 0.4, "SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
- first=["SPK1", "SPK2", "+4V5", "MOT_N", "BTN_ADC"], gnd_pour_only=True, silk=[("AP1 AUDIO PLATFORM rev A", 80, H - 1.7, 0.9), ("MP3", 18, 4.5, 0.7), ("DISPLAY", 70, 4.0, 0.7)], stitch=6.0)
-BOARD["enc"] = dict(standoff=4.0, inner_height=22, side=[("SW1", "bottom", 8, 5, 2.5)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_rect", 70.35, 15.6, 52, 20), ("abs_rect", 83, 74, 36, 5)] + [("round", f"SW{2 + k}", 5.0) for k in range(7)] + [("round", "D1", 2.2), ("round", "D4", 2.2)],
+ holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(46, H - 2.5), (120, 24)], widths={"+4V5": 0.4, "SPK1": 0.4, "SPK2": 0.4, "MOT_N": 0.4, "R_K": 0.4, "G_K": 0.4, "B_K": 0.4},
+ first=["SPK1", "SPK2", "+4V5", "MOT_N", "BTN_ADC"], gnd_pour_only=True, silk=[("AP1 AUDIO PLATFORM rev A", 90, H - 1.7, 0.9), ("MP3", 18, 4.5, 0.7), ("DISPLAY", 86, 4.0, 0.7)], stitch=6.0)
+BOARD["enc"] = dict(standoff=4.0, inner_height=22, side=[("SW1", "bottom", 8, 5, 2.5)], lid=[("grille", "BZ1", 5, 1.2, 7), ("abs_rect", 86.35, 15.6, 52, 20), ("abs_rect", 99, 84, 36, 5)] + [("round", f"SW{2 + k}", 5.0) for k in range(7)] + [("round", "D1", 2.2), ("round", "D4", 2.2)],
                     note="shared platform box: display window over the 4-digit display (cover with tinted acrylic), seven button plungers, speaker grille to add for the chosen speaker; 3 x AA bay with a screwed door")

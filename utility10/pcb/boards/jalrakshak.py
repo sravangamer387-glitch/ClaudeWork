@@ -4,6 +4,7 @@ bz = buzzer("+5V", "MISO", 12, 24)                 # BZ1, Q1, D2, R6: buzzer on 
 for p in bz:
     if p["ref"] == "BZ1":                          # ACTIVE buzzer: the firmware switches D12 on and off; 68 ohm sets about 3 V across it from 5 V
         p.update(value="Buzzer active 3V", lcsc="C3015483", lcsc_status="verified", mpn="S&S SUN-1275Y-0327-50P7.6", nets={"1": "BZ_P", "2": "BZ_N"})
+    if p["ref"] == "D2": p.update(x=24, y=31, rot=0, nets={"1": "BZ_P", "2": "BZ_N"})        # clamp directly across the buzzer
 parts = (mcu("+5V", {"11": "PROBE_DRV", "12": "SUMP", "13": "TANK_LOW", "14": "TANK_FULL", "10": "PUMP_G", "32": "BTN"}, 52, 33) + isp("+5V", 74, 48) + bz + led("+5V", "SCK", 70, 40, "Green") +
          [dict(ref="J1", sym="Connector:Barrel_Jack", fp="Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal", value="12 V DC in", x=14, y=2, rot=0, nets={"1": "VIN", "2": "GND"}),
           dict(ref="F1", sym="Device:Polyfuse", fp="Fuse:Fuse_1812_4532Metric", value="PTC 1A 16V", x=24, y=5, rot=0, nets={"1": "VIN", "2": "VIN_F"}),

@@ -271,5 +271,18 @@
   "parts": 45,
   "nets": 33,
   "order_ready": true
+ },
+ {
+  "board": "jal_rakshak",
+  "mod": "jalrakshak",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 40,
+  "nets": 26,
+  "order_ready": true
  }
 ]

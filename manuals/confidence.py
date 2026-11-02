@@ -39,7 +39,7 @@ W = {
  "gravity-toys": ("Medium", "All five toys now have prototype drawings (Santulan lathe drawing, marble-tower posts and groove spec, ramp-racer car and ladder stand, Galton assembly guide, Drop Quest v1 rules with 60 solver-verified levels and laser parts); physics checks PASS; none built or play-tested.", "Cut or turn one of each and play-test; measure ramp times and marble behaviour."),
  "electronics-toys/wave1": ('Low-Medium', 'AP1 board added (ATmega328P, MP3 module socket, 4-digit display through two chained 74HC595s with a 7-LED ball lane, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.', 'Bench-test one board per product: ladder readings, MP3 commands, display multiplexing.'),
  "prototypes": ("Medium", "Bench prototype packs on breadboards with 26 host checks; no PCB.", "Use as learning kits; do not sell."),
- "dj-setup": ("Low", "Plan only; not manufacturable.", "Treat as a concept."),
+ "dj-setup": ("Low-Medium", "The full product is a 12-18 month programme; its phase-0 prototypes exist in `prototypes/` (D1 beat-synced light controller, D2 DJ MIDI controller on Arduino Nano: firmware compiles, filter/encoder logic host-tested; Mixxx mapping well-formed with 17 valid controls and no MIDI clashes, not yet tried in Mixxx).", "Build D1 and D2 from the prototype guide and test with Mixxx and a speaker you already own."),
  "utility10/09-masala-rack": ("Medium-High", "Laser-cut rack: fit depends on kerf; stability limit stated.", "Cut a kerf coupon first."),
  "utility10/10-laptop-stand": ("Medium-High", "Laser-cut stand: fit depends on kerf; stability limit stated.", "Cut a kerf coupon and load-test."),
  "products/01-desi-games": ("Medium", "Printed game; needs language and fact review before print.", "Proofread with native speakers."),
@@ -56,9 +56,9 @@ W = {
 NOBOARD_ORDER = {"Medium-High": "No parts at risk: local laser-cutting or printing, no part numbers.", "Medium": "Local fabrication or module-based; quote before ordering.", "Low": "Nothing orderable yet."}
 def order_conf(board, path, works):
     if board is None:
-        if works == "Low" and path in ("electronics-toys/wave1", "dj-setup", "products/04-jal-rakshak", "products/06-gas-suraksha"): return "Low", "no board and no verified part list yet"
+        if works == "Low" and path in ("electronics-toys/wave1", "products/04-jal-rakshak", "products/06-gas-suraksha"): return "Low", "no board and no verified part list yet"
         if path in ("geotech", "aquaponics", "sorter", "agrover"): return "Medium", "uses other boards plus bought-in modules; each module's pinout must be checked against its datasheet"
-        if path in ("prototypes",): return "Medium", "breadboard parts from local vendors"
+        if path in ("prototypes", "dj-setup"): return "Medium", "breadboard parts and modules from local vendors (prototype budget lists them)"
         return "Medium-High", "no electronic parts to source: local laser-cutting or printing"
     F = FIND.get(board, [])
     errs = [f for f in F if f[0] == "error"]; warns = [f for f in F if f[0] == "warn"]
