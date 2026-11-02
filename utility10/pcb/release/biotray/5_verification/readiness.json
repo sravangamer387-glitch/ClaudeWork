@@ -2,7 +2,7 @@
  "gerber_layers_and_drill_present": true,
  "drc_errors_0": true,
  "unconnected_0": true,
- "netlist_matches_schematic": false,
+ "netlist_matches_schematic": true,
  "erc_errors_0": true,
  "independent_gerber_check_clean": true,
  "every_part_has_lcsc_number": true,
@@ -12,5 +12,5 @@
  "drc_warnings": 0,
  "parts_without_lcsc": [],
  "parts_with_unverified_lcsc": [],
- "order_ready": false
+ "order_ready": true
 }

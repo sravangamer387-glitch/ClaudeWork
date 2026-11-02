@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/user/ClaudeWork/utility10/pcb/out/biotray/biotray.kicad_sch</source>
-    <date>Mon Nov  2 02:01:47 2026</date>
+    <date>Mon Nov  2 02:03:51 2026</date>
     <tool>Eeschema 7.0.11+dfsg-1build4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,7 +33,7 @@
       <property name="ki_description" value="Polarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>59aa369f-1f61-46f2-96bf-7caeb2c13ae4</tstamps>
+      <tstamps>74d54af6-006d-4bf3-9e25-89b1f75ba3d4</tstamps>
     </comp>
     <comp ref="C31">
       <value>10u/50V</value>
@@ -44,7 +44,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>533873e7-94c0-4c20-8add-074e229cf181</tstamps>
+      <tstamps>97a8ace4-29ae-4d4b-aea7-5690a633d3bd</tstamps>
     </comp>
     <comp ref="C32">
       <value>100n</value>
@@ -55,7 +55,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e69d6029-a94d-4ddc-92f2-bf7bad159106</tstamps>
+      <tstamps>0d0838c2-e788-497e-bfb5-8ba73401a736</tstamps>
     </comp>
     <comp ref="C33">
       <value>22u/10V</value>
@@ -66,7 +66,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d89f3f53-4681-4d41-be25-739b7dfe7119</tstamps>
+      <tstamps>9074fd34-6c56-4da1-a55a-087eba99eb97</tstamps>
     </comp>
     <comp ref="C34">
       <value>22u/10V</value>
@@ -77,7 +77,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bbf0316c-c236-444f-b23a-ebe5eaf398ef</tstamps>
+      <tstamps>6767e489-0b13-44d7-957f-b8e4ea56f105</tstamps>
     </comp>
     <comp ref="C35">
       <value>1u</value>
@@ -88,7 +88,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9dbfa808-1683-4f5d-99ad-1cab58f87323</tstamps>
+      <tstamps>72741081-dafd-4413-bbd4-e89683d15918</tstamps>
     </comp>
     <comp ref="C36">
       <value>10u</value>
@@ -99,7 +99,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1b4c1b03-d553-4a3f-a300-be2af6bd8bbd</tstamps>
+      <tstamps>6a205968-9903-40f6-b0d2-fcc8c561f1f2</tstamps>
     </comp>
     <comp ref="C37">
       <value>100n</value>
@@ -110,7 +110,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>58db1c13-1e5c-423c-8b22-ac8165d6fe62</tstamps>
+      <tstamps>f6b68500-07ca-4f60-868b-ae1ab8451f0f</tstamps>
     </comp>
     <comp ref="C38">
       <value>10u</value>
@@ -121,7 +121,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9b4f109a-95ce-4269-8ab2-361365ea0508</tstamps>
+      <tstamps>1014ec52-56c2-4195-9229-88e01507dd70</tstamps>
     </comp>
     <comp ref="C39">
       <value>1u</value>
@@ -132,7 +132,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4d700605-c39b-4833-8469-1ce333d6aa27</tstamps>
+      <tstamps>159ec927-f8a5-470b-8c32-61b68d95c80d</tstamps>
     </comp>
     <comp ref="C40">
       <value>100n</value>
@@ -143,7 +143,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f84e1367-3083-4218-b8b4-963b46bff6ed</tstamps>
+      <tstamps>8fcaf60e-0c4b-4df4-9b92-94e90f90540c</tstamps>
     </comp>
     <comp ref="C41">
       <value>100n</value>
@@ -154,7 +154,7 @@
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ed290fdd-4549-4e20-ab3c-c81b6a7ce1ea</tstamps>
+      <tstamps>56f4878d-7e4f-471b-a259-88bf907ddb74</tstamps>
     </comp>
     <comp ref="D3">
       <value>SMBJ15A</value>
@@ -165,7 +165,7 @@
       <property name="ki_description" value="Bidirectional transient-voltage-suppression diode"/>
       <property name="ki_keywords" value="diode TVS thyrector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>48c27ec9-d326-40cc-8a39-0c50b86eb066</tstamps>
+      <tstamps>a050879b-effc-4425-9db5-51b8c8ac5ed8</tstamps>
     </comp>
     <comp ref="D4">
       <value>BZT52C12</value>
@@ -176,7 +176,7 @@
       <property name="ki_description" value="Zener diode"/>
       <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a90c708f-b5b2-46d1-911d-6b8a2faca541</tstamps>
+      <tstamps>e38f47b2-7a07-4603-a565-b2b9bdbaddad</tstamps>
     </comp>
     <comp ref="D5">
       <value>SS14</value>
@@ -187,7 +187,7 @@
       <property name="ki_description" value="Schottky diode"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f647bccd-a3ff-4d9e-b598-3d84581505f0</tstamps>
+      <tstamps>712f1938-6bdf-4ed5-8e45-db2720b432d8</tstamps>
     </comp>
     <comp ref="D6">
       <value>Green</value>
@@ -198,7 +198,7 @@
       <property name="ki_description" value="Light emitting diode"/>
       <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>30154406-e339-4863-b683-e9c9a71556ed</tstamps>
+      <tstamps>f312f42b-a4c9-4466-9ada-ff103e597949</tstamps>
     </comp>
     <comp ref="D10">
       <value>SS14</value>
@@ -209,7 +209,7 @@
       <property name="ki_description" value="Schottky diode"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>031fa5e1-79f6-43f0-a223-42558d704dda</tstamps>
+      <tstamps>7d598e5a-4bfc-4e3e-9de8-d31c7ac3ba15</tstamps>
     </comp>
     <comp ref="D11">
       <value>SS14</value>
@@ -220,7 +220,7 @@
       <property name="ki_description" value="Schottky diode"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4ba87449-7b43-4a78-9cf0-cad1f89ca206</tstamps>
+      <tstamps>28b1c977-8e61-49ec-97a5-a540cef966e5</tstamps>
     </comp>
     <comp ref="D13">
       <value>SS14</value>
@@ -231,7 +231,7 @@
       <property name="ki_description" value="Schottky diode"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ecb2f94d-05ea-423b-9c34-2cbf2445abfd</tstamps>
+      <tstamps>69441fdd-e50a-4f5a-9772-30522222498e</tstamps>
     </comp>
     <comp ref="F1">
       <value>PTC 1A 16V</value>
@@ -242,7 +242,7 @@
       <property name="ki_description" value="Resettable fuse, polymeric positive temperature coefficient"/>
       <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>302cfa56-7c87-4af2-b3d5-e8bfbf5385f4</tstamps>
+      <tstamps>a7d55338-ab4b-4205-b526-04a10a0920b6</tstamps>
     </comp>
     <comp ref="J1">
       <value>USB-C</value>
@@ -253,7 +253,7 @@
       <property name="ki_description" value="USB 2.0-only 16P Type-C Receptacle connector"/>
       <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>48cbc177-9fb3-4f5b-8a49-8cf1de3a4d9d</tstamps>
+      <tstamps>ef2ba0f9-0c6f-4bcc-84a0-8a36b2c5a0ef</tstamps>
     </comp>
     <comp ref="J2">
       <value>12 V DC in</value>
@@ -264,7 +264,7 @@
       <property name="ki_description" value="DC Barrel Jack"/>
       <property name="ki_keywords" value="DC power barrel jack connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6159ec81-bd12-4d52-86e8-be4cf78f8eb2</tstamps>
+      <tstamps>4700d785-5efb-4d43-b73a-063fddce2924</tstamps>
     </comp>
     <comp ref="J3">
       <value>Pump 1</value>
@@ -275,7 +275,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fbb6dab1-66f4-4197-b52e-da8211f0c65e</tstamps>
+      <tstamps>68ea934c-b138-4170-91df-6afa31c785af</tstamps>
     </comp>
     <comp ref="J4">
       <value>Pump 2</value>
@@ -286,7 +286,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f62f245e-c730-4b4b-9486-87c1f3e95664</tstamps>
+      <tstamps>bcb81f67-b75c-41c2-937a-dfeb60faa425</tstamps>
     </comp>
     <comp ref="J5">
       <value>Grow light (PWM)</value>
@@ -297,7 +297,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7ee1b06f-37c6-4d77-b4d1-5d0b89533750</tstamps>
+      <tstamps>7c1b9d6e-d49e-4dae-8149-bcc8ef6feb45</tstamps>
     </comp>
     <comp ref="J6">
       <value>Fan</value>
@@ -308,7 +308,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>83014f24-50e7-44fa-9dbb-7338084e712c</tstamps>
+      <tstamps>f1d7a91b-045d-475c-8eb7-18b7718dc789</tstamps>
     </comp>
     <comp ref="J7">
       <value>Water temp DS18B20</value>
@@ -319,7 +319,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>30ab5407-18b5-4c67-bab8-9db60f05f849</tstamps>
+      <tstamps>3be2d629-5067-43f1-92d1-d9da68783be7</tstamps>
     </comp>
     <comp ref="J8">
       <value>I2C (BH1750 / SHT31)</value>
@@ -330,7 +330,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ed25a1a6-3119-4008-9db1-d715384e8a26</tstamps>
+      <tstamps>ec26d376-e801-4ce0-b504-2885caeedf54</tstamps>
     </comp>
     <comp ref="J9">
       <value>Water-level float switch</value>
@@ -341,7 +341,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6bfb2cc7-9d3c-428d-9410-25230b4a7772</tstamps>
+      <tstamps>a3574ed2-e32f-46dd-906d-ab380e180194</tstamps>
     </comp>
     <comp ref="J10">
       <value>pH module (0-3 V analog)</value>
@@ -352,7 +352,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>86032c35-c58e-4554-aef3-506874570dce</tstamps>
+      <tstamps>25f25bcb-7c71-44c5-b9a8-3fdef9cdc3c8</tstamps>
     </comp>
     <comp ref="J11">
       <value>EC module (0-3 V analog)</value>
@@ -363,7 +363,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6b5c39d0-a04a-4fe9-a96c-1d790658601c</tstamps>
+      <tstamps>f770c52d-11ef-4c53-9918-96945bc222e4</tstamps>
     </comp>
     <comp ref="J12">
       <value>UART flash/debug (USB-serial adapter)</value>
@@ -374,7 +374,7 @@
       <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ca10bf03-9b49-4160-89d6-bd720aa766c9</tstamps>
+      <tstamps>3ff0f5e7-bd94-43b2-a438-d2b29e86f196</tstamps>
     </comp>
     <comp ref="L1">
       <value>4.7u</value>
@@ -385,7 +385,7 @@
       <property name="ki_description" value="Inductor"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eabfec42-9e94-45d3-87d6-be0d61442d65</tstamps>
+      <tstamps>eb626fa4-3d8d-48b3-bdf1-bcb990ecce47</tstamps>
     </comp>
     <comp ref="Q1">
       <value>AO3400A</value>
@@ -396,7 +396,7 @@
       <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
       <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>df83c37a-38ea-4fb2-aa97-a7328c583099</tstamps>
+      <tstamps>8e593f09-818e-493b-9afd-98f5cd179bac</tstamps>
     </comp>
     <comp ref="Q2">
       <value>AO3400A</value>
@@ -407,7 +407,7 @@
       <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
       <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a391162e-87df-43ad-8c3e-ff9a0c8d9224</tstamps>
+      <tstamps>fea3d78e-9ab0-4fd6-8c58-57b070ec8914</tstamps>
     </comp>
     <comp ref="Q3">
       <value>AO3400A</value>
@@ -418,7 +418,7 @@
       <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
       <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>db5fca3f-442e-4476-8640-628b055783a6</tstamps>
+      <tstamps>e20ca16c-eb35-4b35-b547-da89f2ae0429</tstamps>
     </comp>
     <comp ref="Q4">
       <value>AO3400A</value>
@@ -429,7 +429,7 @@
       <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
       <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2512034d-db9d-4db8-bd5b-c9642e113d1b</tstamps>
+      <tstamps>b6673de0-ac30-40ab-9da3-57c2302e3eb2</tstamps>
     </comp>
     <comp ref="Q5">
       <value>AO3401A</value>
@@ -440,7 +440,7 @@
       <property name="ki_description" value="P-MOSFET transistor, gate/source/drain"/>
       <property name="ki_keywords" value="transistor PMOS P-MOS P-MOSFET"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dcf4c379-547b-491e-8237-518807b1e730</tstamps>
+      <tstamps>bee5b252-7f7e-45ea-b9c3-accfe5ccb0e8</tstamps>
     </comp>
     <comp ref="R10">
       <value>100</value>
@@ -451,7 +451,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b6873e54-d98d-430d-8e06-f9e443406e82</tstamps>
+      <tstamps>aece7694-58cb-4045-afe3-a8b34b5acb72</tstamps>
     </comp>
     <comp ref="R11">
       <value>100</value>
@@ -462,7 +462,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9af29956-454f-40f5-ae69-eee24a454a04</tstamps>
+      <tstamps>94ee434e-c06c-4764-a9df-f76f93587582</tstamps>
     </comp>
     <comp ref="R12">
       <value>100</value>
@@ -473,7 +473,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cf385759-90c4-404e-92a5-d59f7e05b4d3</tstamps>
+      <tstamps>aab3c94b-52bf-4bb1-a967-9dcfaf4faa97</tstamps>
     </comp>
     <comp ref="R13">
       <value>100</value>
@@ -484,7 +484,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>19be0e2f-e45f-4e24-b61d-b35647021c20</tstamps>
+      <tstamps>dd49c82b-40ed-44f5-afcb-d19802b50f21</tstamps>
     </comp>
     <comp ref="R14">
       <value>100k</value>
@@ -495,7 +495,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>36dec4bc-f0c1-416c-92bc-5b5cdc44da9d</tstamps>
+      <tstamps>5d508eca-0b39-44b8-abbd-6fa60641e287</tstamps>
     </comp>
     <comp ref="R15">
       <value>100k</value>
@@ -506,7 +506,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>13f51769-04b7-46a0-b7ff-2786d501adcd</tstamps>
+      <tstamps>32d81d48-e469-4e9b-9f24-409dc8a2a479</tstamps>
     </comp>
     <comp ref="R16">
       <value>100k</value>
@@ -517,7 +517,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>217f5987-1ebb-4711-829b-ee27a9f246cd</tstamps>
+      <tstamps>f1b52b72-d804-4b39-8fc1-ae2074dc2bcf</tstamps>
     </comp>
     <comp ref="R17">
       <value>100k</value>
@@ -528,7 +528,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c4ffd334-d44d-41a0-ad3a-0f55afaa7823</tstamps>
+      <tstamps>ad1cca6e-7f8e-4a03-99dd-d37bf5d1d33c</tstamps>
     </comp>
     <comp ref="R40">
       <value>10k</value>
@@ -539,7 +539,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e1cd1ef6-a312-4cb4-81e2-bf1d1c7224da</tstamps>
+      <tstamps>6decfbc2-165e-4088-a3de-71d564e4a220</tstamps>
     </comp>
     <comp ref="R41">
       <value>100k</value>
@@ -550,7 +550,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dec5065e-ea44-4fdc-b6a1-1c4479cb2d57</tstamps>
+      <tstamps>ebf0c0ed-9c5a-4163-a905-9f3972d5eecd</tstamps>
     </comp>
     <comp ref="R42">
       <value>10k</value>
@@ -561,7 +561,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>613b3191-91b0-4deb-83e1-265698a5ae44</tstamps>
+      <tstamps>6b78426e-1877-4aa6-8dcc-fbe038527675</tstamps>
     </comp>
     <comp ref="R43">
       <value>5.1k</value>
@@ -572,7 +572,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5f42a562-afcf-4591-8b8b-c3100968a000</tstamps>
+      <tstamps>f4039f48-3991-46be-9c86-d4ad05f65ff5</tstamps>
     </comp>
     <comp ref="R44">
       <value>5.1k</value>
@@ -583,7 +583,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>751c14db-a2f6-4a71-8d0d-d98947c7fff4</tstamps>
+      <tstamps>a2b7261e-6f15-485d-a86a-a23d2bf56285</tstamps>
     </comp>
     <comp ref="R45">
       <value>1k</value>
@@ -594,7 +594,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9ad57585-cd45-4975-aebd-74344f95cbd2</tstamps>
+      <tstamps>6eeff286-7d98-4a58-9dbd-b25ba569fa14</tstamps>
     </comp>
     <comp ref="R46">
       <value>4.7k</value>
@@ -605,7 +605,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9adc9398-880b-470c-9df3-1948a9a90c77</tstamps>
+      <tstamps>1aa929e7-ab6e-4b89-b8fd-23b56462d669</tstamps>
     </comp>
     <comp ref="R47">
       <value>4.7k</value>
@@ -616,7 +616,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f1051cb0-c99e-4666-8a94-3987386dca29</tstamps>
+      <tstamps>af4529ec-ff0e-4438-9432-e3977c04f2cf</tstamps>
     </comp>
     <comp ref="R48">
       <value>4.7k</value>
@@ -627,7 +627,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b2147271-ee81-4263-8ab5-0603df76a9c3</tstamps>
+      <tstamps>347c0ec3-6fd6-4bb8-addb-e9ca679a25c0</tstamps>
     </comp>
     <comp ref="R49">
       <value>10k</value>
@@ -638,7 +638,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>119fedba-0fc3-41f0-8d6b-00d805ec9901</tstamps>
+      <tstamps>82dab590-3f64-4296-a23c-8c89bf76273e</tstamps>
     </comp>
     <comp ref="R50">
       <value>1k</value>
@@ -649,7 +649,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5b66c65d-4e7e-41f5-97f1-8c3703a57d1f</tstamps>
+      <tstamps>d3573a71-41d3-4d21-8b0d-cc6880bac197</tstamps>
     </comp>
     <comp ref="R51">
       <value>1k</value>
@@ -660,7 +660,7 @@
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bd8a1fa8-7f85-41ea-b68e-5e28fc876bf0</tstamps>
+      <tstamps>10ee400e-3f66-4f98-898c-4fd9fb1b5bb2</tstamps>
     </comp>
     <comp ref="SW2">
       <value>Reset (EN)</value>
@@ -671,7 +671,7 @@
       <property name="ki_description" value="Push button switch, generic, two pins"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>89c3ae6c-3040-42cf-bd7e-b80a325bfcb3</tstamps>
+      <tstamps>ea8891a6-d93b-4954-88cb-9e21d809b033</tstamps>
     </comp>
     <comp ref="SW3">
       <value>Boot (IO0)</value>
@@ -682,7 +682,7 @@
       <property name="ki_description" value="Push button switch, generic, two pins"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c30f4977-2f2d-4ec0-b4d8-ab4362c2ae6b</tstamps>
+      <tstamps>2517ffc5-7d89-4f27-918f-b177d0512418</tstamps>
     </comp>
     <comp ref="TP1">
       <value>TP</value>
@@ -693,7 +693,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>50e7fb10-bd44-4432-808a-190c087d1015</tstamps>
+      <tstamps>b5ceadcd-a607-40c4-8c24-e15a6066238d</tstamps>
     </comp>
     <comp ref="TP2">
       <value>TP</value>
@@ -704,7 +704,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b3bb53dd-a131-4c94-822a-684b89cba794</tstamps>
+      <tstamps>3f9e216a-b038-41d0-8e06-db6f169e842d</tstamps>
     </comp>
     <comp ref="TP3">
       <value>TP</value>
@@ -715,7 +715,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>96cec25a-f392-4ef8-b1b9-68d12238c33c</tstamps>
+      <tstamps>812fc3d6-07f1-416a-94d6-e49e6c12a39d</tstamps>
     </comp>
     <comp ref="TP4">
       <value>TP</value>
@@ -726,7 +726,7 @@
       <property name="ki_description" value="test point"/>
       <property name="ki_keywords" value="test point tp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5fb6606a-7ae5-4825-be8e-cf50465a21e9</tstamps>
+      <tstamps>9e4bd146-828b-40ff-81dd-e871f7a49665</tstamps>
     </comp>
     <comp ref="U1">
       <value>ESP32-S3-WROOM-1-N8</value>
@@ -737,7 +737,7 @@
       <property name="ki_description" value="RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"/>
       <property name="ki_keywords" value="RF Radio BT ESP ESP32-S3 Espressif onboard PCB antenna"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>601598d4-fb89-4d95-9d62-c679f520763a</tstamps>
+      <tstamps>0d28b4ea-c642-4845-8646-1e695d4d2a77</tstamps>
     </comp>
     <comp ref="U2">
       <value>AP63205WU-7</value>
@@ -748,7 +748,7 @@
       <property name="ki_description" value="2A, 1.1MHz Buck DC/DC Converter, fixed 5.0V output voltage, TSOT-23-6"/>
       <property name="ki_keywords" value="2A Buck DC/DC"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>17383028-47d7-426f-9909-da7ff4bea3c0</tstamps>
+      <tstamps>e82b9fa6-3da0-46c8-9a8f-cfdba9988950</tstamps>
     </comp>
     <comp ref="U3">
       <value>AP2112K-3.3</value>
@@ -759,7 +759,7 @@
       <property name="ki_description" value="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
       <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>adfc7c39-eafc-4690-9908-603b6a59d774</tstamps>
+      <tstamps>b285b368-6d72-4661-aa9d-aaad5900dce7</tstamps>
     </comp>
   </components>
   <libparts>
@@ -1218,7 +1218,7 @@
       <node ref="C33" pin="1" pintype="passive"/>
       <node ref="C34" pin="1" pintype="passive"/>
       <node ref="C35" pin="1" pintype="passive"/>
-      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
@@ -1444,7 +1444,7 @@
       <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
     </net>
     <net code="39" name="VBUS">
-      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J1" pin="A4" pinfunction="VBUS" pintype="passive"/>
       <node ref="J1" pin="A9" pinfunction="VBUS" pintype="passive"/>
       <node ref="J1" pin="B4" pinfunction="VBUS" pintype="passive"/>

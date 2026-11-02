@@ -23,7 +23,7 @@ Target under 100 uA in deep sleep with the modem off (not measured); modem burst
 |---|---|
 | Electrical rule check on the netlist (own ERC: unconnected pins, single-pin nets, output conflicts, unpowered supplies, symbol/footprint pin match) | 0 errors, 0 warnings |
 | KiCad DRC | 0 errors, 0 warnings; unconnected pads: 0 |
-| Schematic netlist equals PCB netlist | NO: {"[('D2', '2'), ('J1', 'A4'), ('J1', 'A9')]...": 'only in PCB', "[('D2', '1'), ('J1', 'A4'), ('J1', 'A9')]...": 'only in schematic', "[('C1', '1'), ('D1', '1'), ('D2', '1')]...": 'only in PCB', "[('D1', '1'), ('J2', '1')]...": 'only in schematic', "[('D1', '2'), ('J2', '1')]...": 'only in PCB', "[('C1', '1'), ('D1', '2'), ('D2', '2')]...": 'only in schematic'} |
+| Schematic netlist equals PCB netlist | yes |
 | Router failures | 0 |
 | 3D STEP export | yes |
 | Independent Gerber parse (gerbonara): layers parsed, outline size equals the design | 9 layers, outline [90.1, 80.1] mm, match |
@@ -128,7 +128,7 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | gerber layers and drill present | PASS |
 | drc errors 0 | PASS |
 | unconnected 0 | PASS |
-| netlist matches schematic | FAIL |
+| netlist matches schematic | PASS |
 | erc errors 0 | PASS |
 | independent gerber check clean | PASS |
 | every part has lcsc number | PASS |
@@ -136,7 +136,7 @@ Enclosure (prototype shell for 3D printing): outer 95.2 x 85.2 x 20.6 mm, collis
 | cpl rows equal jlc bom parts | PASS |
 | step model | PASS |
 | KiCad DRC warnings | 0 |
-| **Order ready** | **NO - see lists below** |
+| **Order ready** | **YES** |
 
 Order steps: (1) upload `1_fabrication/*_gerbers.zip`; (2) for assembly upload `2_assembly/*_JLC_BOM.csv` and `*_JLC_CPL.csv`, check the 3D/rotation preview for every polarised part (diodes, ICs, LEDs, electrolytics) because CPL rotations are generated, not hand-checked; (3) buy the through-hole parts listed in `*_BOM_full.csv` marked hand/THT and solder them; (4) re-check stock and the exact LCSC listing for every line before paying.
 

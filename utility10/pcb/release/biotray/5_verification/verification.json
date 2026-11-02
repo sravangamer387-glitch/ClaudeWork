@@ -19,16 +19,9 @@
  "drc_waived": {},
  "unconnected": 0,
  "step": true,
- "netlist_match": false,
- "net_names_not_in_schematic": [
-  "+5V",
-  "VBUS"
- ],
- "netlist_mismatch": {
-  "[('D5', '1'), ('J1', 'A4'), ('J1', 'A9')]...": "only in schematic",
-  "[('D5', '2'), ('J1', 'A4'), ('J1', 'A9')]...": "only in PCB",
-  "[('C33', '1'), ('C34', '1'), ('C35', '1')]...": "only in schematic"
- },
+ "netlist_match": true,
+ "net_names_not_in_schematic": [],
+ "netlist_mismatch": {},
  "nets": 39,
  "parts": 67,
  "gerber_independent_check": {
