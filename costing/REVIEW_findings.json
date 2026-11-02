@@ -85,6 +85,7 @@
    "D4 C19224 TVS 5V bidir: low stock 175"
   ]
  ],
+ "gassuraksha": [],
  "gastaraju": [
   [
    "warn",
@@ -97,6 +98,13 @@
    "warn",
    "stock",
    "BZ1 C781869 Buzzer: low stock 140"
+  ]
+ ],
+ "jalrakshak": [
+  [
+   "warn",
+   "stock",
+   "J1 C22434582 12 V DC in: low stock 321"
   ]
  ],
  "kheti": [

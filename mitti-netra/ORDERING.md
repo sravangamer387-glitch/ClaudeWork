@@ -44,7 +44,7 @@ Order these with the same LCSC order (add them to the cart so one shipment arriv
 
 ### Parts cost and stock (live LCSC prices on the run date)
 
-Total parts per board: **US$12.89 for 1 board**, **US$11.40 each for 10 boards**, **US$9.22 each for 100 boards** (about INR 1134 / 1003 / 811 at 88 INR/USD). The per-line break-up is in `costing/mitti_priced_BOM.csv`. This is parts only: PCB fabrication, assembly fees, shipping, customs and GST come on top (see `manuals/ORDERING_GUIDE.md`, section 6).
+Total parts per board: **US$12.97 for 1 board**, **US$11.48 each for 10 boards**, **US$9.29 each for 100 boards** (about INR 1141 / 1010 / 818 at 88 INR/USD). The per-line break-up is in `costing/mitti_priced_BOM.csv`. This is parts only: PCB fabrication, assembly fees, shipping, customs and GST come on top (see `manuals/ORDERING_GUIDE.md`, section 6).
 
 Stock warnings on the run date:
 
@@ -65,6 +65,8 @@ Stock warnings on the run date:
 | D1,D2 | 2 | SS14 | SS14 | C84343 | 0.0252 | 0.050 |
 | U4 | 1 | TP4056 | TPOWER TP4056 | C382139 | 0.1208 | 0.121 |
 | R1 | 1 | 2.2k | 0603 2.2k 1% | C4190 | 0.0018 | 0.002 |
+| R16 | 1 | 6.2k | UNI-ROYAL 0603WAF6201T5E | C4260 | 0.0023 | 0.002 |
+| TH1 | 1 | NTC 10k B3950 | FH CMFB103F3950FANT | C51597 | 0.0785 | 0.079 |
 | D3 | 1 | Red | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | 0.0077 | 0.008 |
 | R2,R3,R15,R14 | 4 | 1k | 0603 1k 1% | C21190 | 0.0017 | 0.007 |
 | D4,D5 | 2 | Green | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | 0.0105 | 0.021 |
@@ -87,6 +89,11 @@ Stock warnings on the run date:
 | J8 | 1 | UART flash/debug (USB-serial adapter) | JST B3B-PH-K-S(LF)(SN) | C131339 | 0.0420 | 0.042 |
 | TP1,TP2,TP3 | 3 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/*_enclosure_plate.stl` (106 x 96 x 3 mm, PETG or ABS). Buy an **IP65 ABS junction box** with at least 110 x 100 x 38 mm inside, cable glands and a breather/vent membrane; fix the plate with 4 x M4 screws.
+- Board to plate: 4 x M2.5 x 6 mm self-tapping screws. field node: mount on this plate inside an IP65 ABS junction box with cable glands and a vent membrane; place the 18650 holder and the modem breakout in the same box; keep the NTC TH1 side of the board next to the cell; shade the box from direct sun
+
 ## 3. Bought-in and mechanical items
 
 ### Bought-in
@@ -95,8 +102,8 @@ SIM7080G (LTE-M/NB-IoT) breakout board with nano-SIM holder and antenna; protect
 ## 4. Confidence (read before you order)
 
 - **Order confidence: High**: all parts live-checked, none flagged.
-- **Works-as-intended confidence: Medium**: Charger, LDO, modem switch, ADXL345, HX711 and soil input on one board; firmware core (23 checks) and the pin map match; the cellular modem is a plug-in breakout whose pinout you must match; the ESP32 skeleton has never been compiled.
-- **First thing to do:** Bring up power and charging first; add the modem last and check its pinout against J6.
+- **Works-as-intended confidence: Medium**: Charger thermal pad now grounded with thermal vias; NTC window stops Li-ion charging outside about 6 to 44 C; power diodes corrected; IP65 box with a printed mounting plate; firmware core 23 checks and the pin map match; the cellular modem is a plug-in breakout and the ESP32 skeleton has never been compiled.
+- **First thing to do:** Bring up power and charging first (check TEMP voltage at room temperature), then the modem last.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

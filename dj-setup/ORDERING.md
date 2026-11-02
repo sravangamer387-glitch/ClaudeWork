@@ -1,6 +1,6 @@
 # DJ / party system: ordering guide (what to buy, where, in what order)
 
-> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: plan only: not manufacturable. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../manuals/ORDERING_GUIDE.md).
+> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: programme plan; phase-0 prototypes D1/D2 in prototypes/. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../manuals/ORDERING_GUIDE.md).
 
 ## 1. Order of work
 
@@ -15,9 +15,9 @@ See the parts and materials section of the manual.
 
 ## 4. Confidence (read before you order)
 
-- **Order confidence: Low**: no board and no verified part list yet.
-- **Works-as-intended confidence: Low**: Plan only; not manufacturable.
-- **First thing to do:** Treat as a concept.
+- **Order confidence: Medium**: breadboard parts and modules from local vendors (prototype budget lists them).
+- **Works-as-intended confidence: Low-Medium**: The full product is a 12-18 month programme; its phase-0 prototypes exist in `prototypes/` (D1 beat-synced light controller, D2 DJ MIDI controller on Arduino Nano: firmware compiles, filter/encoder logic host-tested; Mixxx mapping well-formed with 17 valid controls and no MIDI clashes, not yet tried in Mixxx).
+- **First thing to do:** Build D1 and D2 from the prototype guide and test with Mixxx and a speaker you already own.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

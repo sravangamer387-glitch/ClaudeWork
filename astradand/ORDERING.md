@@ -74,6 +74,11 @@ Stock warnings on the run date:
 | J4 | 1 | Haptic motor | JST B2B-PH-K-S(LF)(SN) | C131337 | 0.0359 | 0.036 |
 | TP1,TP2 | 2 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 151 x 31 x 20 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### Bought-in and mechanical (estimates for 2,000 units)

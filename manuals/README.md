@@ -26,9 +26,9 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | 1 Desi Games Studio (print) | [manual](../products/01-desi-games/MANUFACTURING_MANUAL.md) | [ordering](../products/01-desi-games/ORDERING.md) | no PCB | Medium-High | Medium | language + fact review before print |
 | 2 Kalakriti Automata (laser) | [manual](../products/02-automata/MANUFACTURING_MANUAL.md) | [ordering](../products/02-automata/ORDERING.md) | no PCB | Medium-High | Medium | frame layouts provisional |
 | 3 Prayog STEM lab kit | [manual](../products/03-prayog/MANUFACTURING_MANUAL.md) | [ordering](../products/03-prayog/ORDERING.md) | **order-ready** | High | Medium-High | sensors uncalibrated |
-| 4 Jal-Rakshak tank controller | [manual](../products/04-jal-rakshak/MANUFACTURING_MANUAL.md) | [ordering](../products/04-jal-rakshak/ORDERING.md) | no PCB | Low | Low | **mains version cannot be made**: low-voltage prototype only |
+| 4 Jal-Rakshak tank controller | [manual](../products/04-jal-rakshak/MANUFACTURING_MANUAL.md) | [ordering](../products/04-jal-rakshak/ORDERING.md) | **order-ready** | Medium-High | Medium | **mains version cannot be made**: low-voltage prototype only |
 | 5 Kheti-Mitra irrigation | [manual](../products/05-kheti-mitra/MANUFACTURING_MANUAL.md) | [ordering](../products/05-kheti-mitra/ORDERING.md) | **order-ready** | Medium-High | Medium | field trial required |
-| 6 Gas-Suraksha leak alarm | [manual](../products/06-gas-suraksha/MANUFACTURING_MANUAL.md) | [ordering](../products/06-gas-suraksha/ORDERING.md) | no PCB | Low | Low | **not certified, not for sale** |
+| 6 Gas-Suraksha leak alarm | [manual](../products/06-gas-suraksha/MANUFACTURING_MANUAL.md) | [ordering](../products/06-gas-suraksha/ORDERING.md) | **order-ready** | High | Low-Medium | **not certified, not for sale** |
 
 ## Toys (10)
 
@@ -40,10 +40,10 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 | 04 Beat Runner | [manual](../toys10/04-beat-runner/MANUFACTURING_MANUAL.md) | [ordering](../toys10/04-beat-runner/ORDERING.md) | **order-ready** | Medium-High | Medium-High |  |
 | 05 Rangoli Spiro Gears | [manual](../toys10/05-rangoli-spiro/MANUFACTURING_MANUAL.md) | [ordering](../toys10/05-rangoli-spiro/ORDERING.md) | no PCB | Medium-High | Medium-High | kerf test first |
 | 06 Paper Rocket Launcher | [manual](../toys10/06-paper-rocket/MANUFACTURING_MANUAL.md) | [ordering](../toys10/06-paper-rocket/ORDERING.md) | no PCB | Medium-High | Medium | projectile toy: lab review before sale; no drawings |
-| 07 Tilt Maze | [manual](../toys10/07-tilt-maze/MANUFACTURING_MANUAL.md) | [ordering](../toys10/07-tilt-maze/ORDERING.md) | no PCB | Medium-High | Medium | gimbal frame drawing missing |
-| 08 Rubber-band Racer | [manual](../toys10/08-band-racer/MANUFACTURING_MANUAL.md) | [ordering](../toys10/08-band-racer/ORDERING.md) | no PCB | Medium-High | Medium | provisional cut file |
+| 07 Tilt Maze | [manual](../toys10/07-tilt-maze/MANUFACTURING_MANUAL.md) | [ordering](../toys10/07-tilt-maze/ORDERING.md) | no PCB | Medium-High | Medium | gimbal drawn and checked; cut one test set |
+| 08 Rubber-band Racer | [manual](../toys10/08-band-racer/MANUFACTURING_MANUAL.md) | [ordering](../toys10/08-band-racer/ORDERING.md) | no PCB | Medium-High | Medium-High | provisional cut file |
 | 09 Marble Cricket | [manual](../toys10/09-marble-cricket/MANUFACTURING_MANUAL.md) | [ordering](../toys10/09-marble-cricket/ORDERING.md) | no PCB | Medium-High | Medium | provisional cut file; calibration drop |
-| 10 Katha Cubes | [manual](../toys10/10-katha-cubes/MANUFACTURING_MANUAL.md) | [ordering](../toys10/10-katha-cubes/ORDERING.md) | no PCB | Medium-High | Medium | illustrations and proofreading missing |
+| 10 Katha Cubes | [manual](../toys10/10-katha-cubes/MANUFACTURING_MANUAL.md) | [ordering](../toys10/10-katha-cubes/ORDERING.md) | no PCB | Medium-High | Medium-High | illustrations and proofreading missing |
 
 ## Bio / agri / civil / robotics programmes
 
@@ -64,10 +64,10 @@ Start with **[STANDARD_PROCEDURES.md](STANDARD_PROCEDURES.md)** (PCB ordering, S
 |---|---|---|---|---|---|---|
 | Jal-Netra (engineering marvel) | [manual](../jal-netra/MANUFACTURING_MANUAL.md) | [ordering](../jal-netra/ORDERING.md) | **order-ready** | Medium-High | Low-Medium | **Gate 1 acoustic test first; not sellable** |
 | ASTRADAND gesture wand (sci-fi project) | [manual](../astradand/MANUFACTURING_MANUAL.md) | [ordering](../astradand/ORDERING.md) | **order-ready** | Medium | Medium | software-verified; never built; Hindi names unreviewed |
-| Gravity toys (5) | [manual](../gravity-toys/MANUFACTURING_MANUAL.md) | [ordering](../gravity-toys/ORDERING.md) | no PCB | Medium-High | Medium | drawings partial |
-| Wave 1 electronics toys | [manual](../electronics-toys/wave1/MANUFACTURING_MANUAL.md) | [ordering](../electronics-toys/wave1/ORDERING.md) | no PCB | Low | Low | no PCB: not manufacturable yet |
+| Gravity toys (5) | [manual](../gravity-toys/MANUFACTURING_MANUAL.md) | [ordering](../gravity-toys/ORDERING.md) | no PCB | Medium-High | Medium | all 5 drawn; Drop Quest has 60 verified levels |
+| Wave 1 electronics toys | [manual](../electronics-toys/wave1/MANUFACTURING_MANUAL.md) | [ordering](../electronics-toys/wave1/ORDERING.md) | no released board | High | Low-Medium | AP1 board designed; MP3 module, display and buttons are bought-in |
 | Prototype packs (10) | [manual](../prototypes/MANUFACTURING_MANUAL.md) | [ordering](../prototypes/ORDERING.md) | no PCB | Medium | Medium | bench prototypes |
-| DJ / party system | [manual](../dj-setup/MANUFACTURING_MANUAL.md) | [ordering](../dj-setup/ORDERING.md) | no PCB | Low | Low | plan only: not manufacturable |
+| DJ / party system | [manual](../dj-setup/MANUFACTURING_MANUAL.md) | [ordering](../dj-setup/ORDERING.md) | no PCB | Medium | Low-Medium | programme plan; phase-0 prototypes D1/D2 in prototypes/ |
 
 
 **Confidence columns:** see [`costing/CONFIDENCE.md`](../costing/CONFIDENCE.md) for the rubric and the reason behind every rating. Ordering how-to for any project: [`ORDERING_GUIDE.md`](ORDERING_GUIDE.md). Priced bills of materials: [`costing/BOM_COSTS.md`](../costing/BOM_COSTS.md).

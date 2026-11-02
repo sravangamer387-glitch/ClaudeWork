@@ -91,6 +91,13 @@ Stock warnings on the run date:
 | D2 | 1 | 1N4148WS | 1N4148WS | C2128 | 0.0120 | 0.012 |
 | D1 | 1 | Green | Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock) | C2289 | 0.0105 | 0.011 |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 101 x 81 x 22 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Print `*_enclosure_caps.stl` (light pipe, plunger): plunger for SW2; light pipe for D1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 See the parts and materials section of the manual.

@@ -23,8 +23,8 @@
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Illustrations and proofreading are missing.
-- **First thing to do:** Finish the artwork and text.
+- **Works-as-intended confidence: Medium-High**: Cube net and the 36 words ready; Hindi and Telugu checked for consistency (grandmother term aligned, gender-neutral problem phrases) but a native-speaker review is still required before print; icons are optional for the prototype.
+- **First thing to do:** Print text-only cubes for the prototype; get the words reviewed by native speakers before the production print.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

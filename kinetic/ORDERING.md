@@ -99,6 +99,12 @@ Stock warnings on the run date:
 | J16 | 1 | Z driver power/motor | hanxia HX PM2.54-1x8P | C22438158 | 0.1359 | 0.136 |
 | J22 | 1 | Motor Z | JST B4B-PH-K-S(LF)(SN) | C131334 | 0.0458 | 0.046 |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 127 x 95 x 39 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- driver modules with heatsinks are about 26 mm tall above the board; vents on both long walls; add a 40 mm fan on the lid if a driver runs above 1 A
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### Bought-in

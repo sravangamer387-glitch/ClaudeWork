@@ -15,7 +15,7 @@ See the parts and materials section of the manual.
 
 ## 4. Confidence (read before you order)
 
-- **Order confidence: Medium**: breadboard parts from local vendors.
+- **Order confidence: Medium**: breadboard parts and modules from local vendors (prototype budget lists them).
 - **Works-as-intended confidence: Medium**: Bench prototype packs on breadboards with 26 host checks; no PCB.
 - **First thing to do:** Use as learning kits; do not sell.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.

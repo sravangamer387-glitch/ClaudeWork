@@ -25,8 +25,8 @@
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Projectile toy; needs lab review; drawings missing.
-- **First thing to do:** Get a safety review before any sale.
+- **Works-as-intended confidence: Medium**: v1 changed to a stomp launcher (no pump, valve or stored pressure); laser-cut stand and parts list exist; range and energy are model estimates until measured.
+- **First thing to do:** Build one, fire 20 rockets in an open area and measure the range; keep foam noses mandatory.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

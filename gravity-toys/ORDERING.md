@@ -1,6 +1,6 @@
 # Gravity toys (5): ordering guide (what to buy, where, in what order)
 
-> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: drawings partial. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../manuals/ORDERING_GUIDE.md).
+> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: all 5 drawn; Drop Quest has 60 verified levels. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../manuals/ORDERING_GUIDE.md).
 
 ## 1. Order of work
 
@@ -16,8 +16,8 @@ See the parts and materials section of the manual.
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Mechanical toys: designs are physical and need prototypes; drawings are partial.
-- **First thing to do:** Print or cut one of each and test before batches.
+- **Works-as-intended confidence: Medium**: All five toys now have prototype drawings (Santulan lathe drawing, marble-tower posts and groove spec, ramp-racer car and ladder stand, Galton assembly guide, Drop Quest v1 rules with 60 solver-verified levels and laser parts); physics checks PASS; none built or play-tested.
+- **First thing to do:** Cut or turn one of each and play-test; measure ramp times and marble behaviour.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

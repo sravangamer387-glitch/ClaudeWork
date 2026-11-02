@@ -26,8 +26,8 @@ Cost per set (about 2,000 units, estimate):
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Provisional cut file.
-- **First thing to do:** Prototype one.
+- **Works-as-intended confidence: Medium-High**: Cut file now kerf-compensated (wheels, axle holes, band slots at nominal size); simple mechanism.
+- **First thing to do:** Cut one in cardboard or MDF and test the band drive.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

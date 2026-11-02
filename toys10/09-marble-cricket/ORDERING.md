@@ -28,8 +28,8 @@ Cost per set (about 2,000 units, estimate):
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Provisional cut file; needs calibration drop.
-- **First thing to do:** Prototype one.
+- **Works-as-intended confidence: Medium**: Cut file now kerf-compensated (peg holes at 6.2 mm press fit); pocket scoring needs a calibration drop.
+- **First thing to do:** Cut one, drop 200 marbles and check the pocket distribution.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

@@ -19,8 +19,8 @@
 ## 4. Confidence (read before you order)
 
 - **Order confidence: Medium-High**: no electronic parts to source: local laser-cutting or printing.
-- **Works-as-intended confidence: Medium**: Laser-cut automata; frame layouts are provisional.
-- **First thing to do:** Cut one frame and test the motion.
+- **Works-as-intended confidence: Medium**: Laser cut files regenerated with correct kerf compensation (outlines outward, holes inward, gear backlash only once); cam and gear checks PASS; frame layouts and figure artwork are still first-pass.
+- **First thing to do:** Cut one kit in scrap MDF and run the mechanism.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach

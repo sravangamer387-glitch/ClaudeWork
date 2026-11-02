@@ -74,6 +74,13 @@ Stock warnings on the run date:
 | SW2 | 1 | Hold | Omron B3U-1000P | C231329 | 0.1894 | 0.189 |
 | TP1,TP2,TP3,TP4 | 4 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 101 x 75 x 23 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Print `*_enclosure_caps.stl` (light pipe, plunger): plunger for SW2; light pipe for D1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ## 2. Bill of materials

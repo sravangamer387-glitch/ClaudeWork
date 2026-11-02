@@ -71,6 +71,14 @@ Stock warnings on the run date:
 | SW2 | 1 | Scroll / clear | Omron B3U-1000P | C231329 | 0.1894 | 0.189 |
 | TP1,TP2,TP3 | 3 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 83 x 67 x 35 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Battery: **Keystone 2469 (2 x AAA, wire leads)** in the floor bay (55.0 x 26.6 x 13.8 mm); print `*_enclosure_battery_door.stl`; the door closes with 2 x M2.5 x 6 mm self-tapping (tool needed to open). Route the holder lead through the hole in the bay ceiling to the battery connector.
+- Print `*_enclosure_caps.stl` (light pipe, plunger): plunger for SW2; light pipe for D1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### 3b. Bought-in and mechanical items (estimates for about 2,000 units; replace with quotes)

@@ -63,6 +63,12 @@ Stock warnings on the run date:
 | R4,R10 | 2 | 4.3M | FH RS-03L4304FT | C136595 | 0.0036 | 0.007 |
 | TP1,TP2,TP3,TP4 | 4 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 59 x 55 x 17 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### Bought-in

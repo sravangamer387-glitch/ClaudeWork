@@ -72,6 +72,14 @@ Stock warnings on the run date:
 | R14,R15 | 2 | 100k | 0603 100k 1% | C25803 | 0.0030 | 0.006 |
 | TP1,TP2,TP3 | 3 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 157 x 125 x 60 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Battery: **Keystone 2480 (3 x AAA, wire leads)** in the floor bay (54.7 x 39.5 x 13.8 mm); print `*_enclosure_battery_door.stl`; the door closes with 2 x M2.5 x 6 mm self-tapping (tool needed to open). Route the holder lead through the hole in the bay ceiling to the battery connector.
+- Print `*_enclosure_caps.stl` (slider): slider for SW1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- arcade console: four 30 mm arcade buttons in the lid (28.5 mm holes: check your button and open up if needed), 3 x AAA bay under the floor with a screwed door; print in PETG or ABS
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### 3b. Bought-in and mechanical (estimates, ~2,000 units)

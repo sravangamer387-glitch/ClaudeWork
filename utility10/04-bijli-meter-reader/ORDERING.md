@@ -65,6 +65,13 @@ Stock warnings on the run date:
 | C2,C3,C4,C5 | 4 | 100n | Samsung CL10B104KB8NNNC 0603 100nF X7R 50V | C1591 | 0.0075 | 0.030 |
 | TP1,TP2,TP3 | 3 | TP |  |  |  |  |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 67 x 53 x 21 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Print `*_enclosure_caps.stl` (light pipe, plunger): plunger for SW1; light pipe for D1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### 3b. Bought-in and mechanical items (estimates for about 2,000 units; replace with quotes)

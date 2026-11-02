@@ -95,6 +95,11 @@ Stock warnings on the run date:
 | J5 | 1 | Grow light (PWM) | JST B2B-PH-K-S(LF)(SN) | C131337 | 0.0359 | 0.036 |
 | J6 | 1 | Fan | JST B2B-PH-K-S(LF)(SN) | C131337 | 0.0359 | 0.036 |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/*_enclosure_plate.stl` (116 x 96 x 3 mm, PETG or ABS). Buy an **IP65 ABS junction box** with at least 120 x 100 x 31 mm inside, cable glands and a breather/vent membrane; fix the plate with 4 x M4 screws.
+- Board to plate: 4 x M2.5 x 6 mm self-tapping screws. wet environment: mount on this plate inside an IP65 ABS junction box with cable glands; keep the box above the water line; use a GFCI-protected 12 V adapter
+
 ## 3. Bought-in and mechanical items
 
 ### Bought-in

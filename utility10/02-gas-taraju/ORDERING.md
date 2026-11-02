@@ -72,6 +72,14 @@ Stock warnings on the run date:
 | D5 | 1 | Amber | Hubei KENTO KT-0603Y yellow (Everlight 19-213 was out of stock) | C2287 | 0.0105 | 0.011 |
 | D6 | 1 | Red | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | 0.0077 | 0.008 |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 91 x 74 x 40 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Battery: **Keystone 2465 (3 x AA, wire leads)** in the floor bay (60.0 x 50.3 x 17.8 mm); print `*_enclosure_battery_door.stl`; the door closes with 2 x M2.5 x 6 mm self-tapping (tool needed to open). Route the holder lead through the hole in the bay ceiling to the battery connector.
+- Print `*_enclosure_caps.stl` (light pipe, plunger, slider): plunger for SW2; light pipe for D1; light pipe for D5; light pipe for D6; slider for SW1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- indoor, dry use; print in PETG or ABS, 3 perimeters, 25 % infill
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### 3b. Bought-in and mechanical items (estimates for about 2,000 units; replace with quotes)

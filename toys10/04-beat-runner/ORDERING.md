@@ -67,6 +67,14 @@ Stock warnings on the run date:
 | D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25 | 16 | Red | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | 0.0077 | 0.123 |
 | R20,R21,R22,R23,R24,R25,R26,R27,R28,R29,R30,R31,R32,R33,R34,R35 | 16 | 330 | UNI-ROYAL 0603WAF3300T5E | C23138 | 0.0021 | 0.034 |
 
+## 2b. Enclosure: printed parts and fasteners (generated from the board)
+
+- Print `4_enclosure/` base and lid (outer about 165 x 108 x 60 mm) in PETG or ABS, 3 perimeters, 25 % infill; the lid closes with **4 x M2.5 x 10 mm self-tapping screws** into the corner columns; the board sits on its standoffs with 4 x M2.5 x 6 mm self-tapping screws.
+- Battery: **Keystone 2480 (3 x AAA, wire leads)** in the floor bay (54.7 x 39.5 x 13.8 mm); print `*_enclosure_battery_door.stl`; the door closes with 2 x M2.5 x 6 mm self-tapping (tool needed to open). Route the holder lead through the hole in the bay ceiling to the battery connector.
+- Print `*_enclosure_caps.stl` (stalk): stalk for SW1. Light pipes in clear PETG or resin; fit plungers and pipes from inside before closing the lid.
+- power switch: printed stalk through a lid slot; one 30 mm arcade button and a window over the 16 LEDs (glue a 1 mm translucent acrylic strip inside); 3 x AAA bay with a screwed door
+- Print one set first and test-fit the board, the holder and every cap; the dimensions are first-pass.
+
 ## 3. Bought-in and mechanical items
 
 ### 3b. Bought-in items

@@ -1808,5 +1808,124 @@
    "Row Spacing": "-"
   },
   "brand": "XFCN"
+ },
+ "C3015483": {
+  "model": "SUN-1275Y-0327-50P7.6",
+  "intro": "Buzzers Active Buzzer (Built-in Driving Circuit) Magnetic 3V 2.7kHz 85dB Through Hole,D=12mm",
+  "desc": "Buzzers Active Buzzer (Built-in Driving Circuit) Magnetic 3V 2.7kHz 85dB Through Hole,D=12mm",
+  "pkg": "Through Hole,D=12mm",
+  "cycle": "normal",
+  "stock": 905,
+  "params": {
+   "Operating Temperature": "-40\u2103~+85\u2103",
+   "Width": "-",
+   "Height": "7.5mm",
+   "Sound Pressure Level(SPL)": "85dB",
+   "Diameter(\u03c6D)": "12mm",
+   "Driver Circuitry": "Active Buzzer (Built-in Driving Circuit)",
+   "Length": "-",
+   "Mounting Type": "-",
+   "Resonant Frequency": "2.7kHz",
+   "Voltage Rating": "3V",
+   "Technology": "Electromagnetic",
+   "Voltage - Supply": "3V",
+   "Current Consumption": "30mA"
+  },
+  "brand": "S&S"
+ },
+ "C23182": {
+  "model": "0603WAF470JT5E",
+  "intro": "47\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "47\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 663600,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "47\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C22961": {
+  "model": "0603WAF2203T5E",
+  "intro": "220k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "220k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 772900,
+  "params": {
+   "Resistance": "220k\u03a9",
+   "Power(Watts)": "100mW",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C27592": {
+  "model": "0603WAF680JT5E",
+  "intro": "68\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "68\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 1500400,
+  "params": {
+   "Power(Watts)": "100mW",
+   "Resistance": "68\u03a9",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C4260": {
+  "model": "0603WAF6201T5E",
+  "intro": "6.2k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "desc": "6.2k\u03a9 \u00b11% 100mW 0603 Thick Film Resistor",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 426100,
+  "params": {
+   "Resistance": "6.2k\u03a9",
+   "Power(Watts)": "100mW",
+   "Voltage Rating": "75V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C51597": {
+  "model": "CMFB103F3950FANT",
+  "intro": "NTC Thermistor 10k\u03a9 Surface Mount 0805",
+  "desc": "NTC Thermistor 10k\u03a9 Surface Mount 0805",
+  "pkg": "0805",
+  "cycle": "normal",
+  "stock": 45390,
+  "params": {
+   "Height": "1.25mm",
+   "Resistance @ 25\u2103": "10k\u03a9",
+   "Width": "1.25mm",
+   "Power(Watts)": "-",
+   "Operating Temperature": "-40\u2103~+120\u2103",
+   "B Constant (25\u2103/100\u2103)": "-",
+   "Length": "2mm",
+   "Steady State Current (Max)": "-",
+   "B Constant (25\u2103/85\u2103)": "4021K",
+   "B Constant (25\u2103/75\u2103)": "-",
+   "B Constant (25\u2103/50\u2103)": "3950K",
+   "B Constant Tolerance": "\u00b11%"
+  },
+  "brand": "FH"
  }
 }

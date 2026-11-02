@@ -17,12 +17,14 @@ Generated 2026-11-02 by `utility10/pcb/costing.py` from each board's `2_assembly
 | biowatt | 14 | 29 | 5.96 | 525 | 5.10 | 4.17 | 367 | US$2 | none |
 | chulha | 18 | 22 | 4.86 | 428 | 4.34 | 3.63 | 320 | US$2 | none |
 | fridge | 18 | 24 | 4.38 | 386 | 3.86 | 3.27 | 287 | US$2 | none |
+| gassuraksha | 29 | 45 | 5.28 | 465 | 4.76 | 3.98 | 351 | US$2 | none |
 | gastaraju | 21 | 35 | 5.08 | 447 | 4.44 | 3.66 | 322 | US$2 | none |
 | jalnetra | 39 | 78 | 10.10 | 888 | 9.01 | 7.66 | 674 | US$8 | none |
+| jalrakshak | 24 | 40 | 6.73 | 592 | 6.01 | 4.94 | 434 | US$2 | none |
 | kheti | 22 | 37 | 6.56 | 577 | 5.83 | 4.80 | 423 | US$8 | none |
 | kinetic_ctl | 38 | 59 | 8.49 | 748 | 7.72 | 6.21 | 546 | US$8 | none |
 | kinetic_vib | 4 | 5 | 5.55 | 488 | 4.85 | 4.00 | 352 | US$2 | none |
-| mitti | 34 | 62 | 12.89 | 1134 | 11.40 | 9.22 | 811 | US$8 | none |
+| mitti | 36 | 64 | 12.97 | 1141 | 11.48 | 9.29 | 817 | US$8 | none |
 | prayog | 26 | 34 | 4.17 | 367 | 3.77 | 3.21 | 282 | US$8 | none |
 | rain | 19 | 27 | 4.46 | 393 | 3.94 | 3.31 | 292 | US$2 | 1 |
 | rainplate | 1 | 1 | 0.02 | 2 | 0.02 | 0.02 | 2 | US$2 | none |

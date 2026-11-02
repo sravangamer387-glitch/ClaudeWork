@@ -35,6 +35,8 @@ A 90 x 80 mm solar/USB-charged node: ESP32-S3, TP4056 charger for one protected 
 | C1 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
 | U4 | TP4056 | HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm | TPOWER TP4056 | C382139 | SMT (JLC) |
 | R1 | 2.2k | R_0603_1608Metric | 0603 2.2k 1% | C4190 | SMT (JLC) |
+| R16 | 6.2k | R_0603_1608Metric | UNI-ROYAL 0603WAF6201T5E | C4260 | SMT (JLC) |
+| TH1 | NTC 10k B3950 | R_0805_2012Metric | FH CMFB103F3950FANT | C51597 | SMT (JLC) |
 | C2 | 10u | C_0805_2012Metric | 0805 10uF X5R | C15850 | SMT (JLC) |
 | D3 | Red | LED_0603_1608Metric | Hubei KENTO KT-0603R red (Everlight 19-217 was out of stock) | C2286 | SMT (JLC) |
 | R2 | 1k | R_0603_1608Metric | 0603 1k 1% | C21190 | SMT (JLC) |

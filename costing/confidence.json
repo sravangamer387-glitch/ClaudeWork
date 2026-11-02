@@ -147,8 +147,8 @@
   "name": "4 Jal-Rakshak tank controller",
   "path": "products/04-jal-rakshak",
   "board": "jalrakshak",
-  "order": "High",
-  "order_why": "all parts live-checked, none flagged",
+  "order": "Medium-High",
+  "order_why": "limited stock on: J1 12 V DC in (stock 321)",
   "works": "Medium",
   "works_why": "Low-voltage board reuses the Kheti-Mitra 12 V front end and pump driver; the firmware rules pass 20 simulated checks and an 8 MHz PCB build exists (3.2 kB); real probes, water, pump currents untested; the mains version is still out of scope.",
   "first": "Bench test with a 12 V pump and probes in a bucket; never connect mains."

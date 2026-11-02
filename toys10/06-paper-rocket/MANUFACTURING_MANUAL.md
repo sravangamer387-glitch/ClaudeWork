@@ -1,5 +1,7 @@
 # Paper Rocket Air Launcher: manufacturing manual
 
+> **v1 prototype (2026-11-02 review): build the STOMP launcher instead of the pumped chamber.** No pump, no relief valve, no stored pressure: one foot stomp per launch. Stand cut file `toys10/out/rocket_stand.svg`/`.dxf` (3 mm MDF, angle stops 30/45/60 deg), full parts list, energy check and test steps in `toys10/out/rocket_v1_spec.md`. The pumped design below is kept for reference only and is NOT to be built without a pressure-vessel review.
+
 > **Status: design only; nothing built or pressure-tested. This is a pressurised projectile toy: do not sell before a design review against the toy standard and a lab test. The 0.3 bar limit below is a design limit, not a safety certification.**
 
 ## 1. What is made

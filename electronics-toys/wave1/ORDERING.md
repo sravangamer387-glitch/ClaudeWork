@@ -1,13 +1,17 @@
 # Wave 1 electronics toys: ordering guide (what to buy, where, in what order)
 
-> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: no PCB: not manufacturable yet. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../../manuals/ORDERING_GUIDE.md).
+> Companion to [`MANUFACTURING_MANUAL.md`](MANUFACTURING_MANUAL.md). Main caveat for this project: AP1 board designed; MP3 module, display and buttons are bought-in. Prices and stock are from LCSC on the run date; vendors, shipping and customs rules change: verify before paying. General rules and vendor list: [`manuals/ORDERING_GUIDE.md`](../../manuals/ORDERING_GUIDE.md).
 
 ## 1. Order of work
 
 1. Read the manual and the caveat above.
-2. No custom circuit board: nothing to order from JLCPCB for this project.
+2. Order the circuit boards and SMD assembly (section 2).
 3. While the boards travel, order the other items (sections 3 and 5) and make the printed or laser-cut parts.
 4. Assemble, program and test only after everything has arrived; follow the manual.
+
+## 2. Circuit board
+
+Board `ap1` has no release folder yet; see the manual for status.
 
 ## 3. Bought-in and mechanical items
 
@@ -15,9 +19,9 @@ See the parts and materials section of the manual.
 
 ## 4. Confidence (read before you order)
 
-- **Order confidence: Low**: no board and no verified part list yet.
-- **Works-as-intended confidence: Low**: Firmware passes 76 host checks but there is no board and the MCU is an abstract placeholder.
-- **First thing to do:** Wait for the audio platform board (task AP1) before ordering anything.
+- **Order confidence: High**: all parts live-checked, none flagged.
+- **Works-as-intended confidence: Low-Medium**: AP1 board added (ATmega328P, MP3 module socket, 4-digit display through two chained 74HC595s with a 7-LED ball lane, 7-button resistor ladder, lamp and motor drivers); all three apps now build for the board (about 6 kB each) and pass 76 host checks. The MP3 command codes are from memory and must be checked on the real module; the ladder thresholds are calculated, not measured.
+- **First thing to do:** Bench-test one board per product: ladder readings, MP3 commands, display multiplexing.
 - Rubric and the reasons for every project: `costing/CONFIDENCE.md`. These are judgements, not measurements: nothing here has been built.
 
 ## 5. Where to buy and whom to approach
