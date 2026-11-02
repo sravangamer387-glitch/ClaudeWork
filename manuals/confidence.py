@@ -51,7 +51,7 @@ W = {
  "toys10/07-tilt-maze": ("Medium", "Gimbal now drawn (two sheets, kerf-compensated, tilt and clearance checks PASS) but never cut; dowel fits and knob feel need a test.", "Cut one set in scrap MDF and test the tilt range and axle fits."),
  "toys10/08-band-racer": ("Medium-High", "Cut file now kerf-compensated (wheels, axle holes, band slots at nominal size); simple mechanism.", "Cut one in cardboard or MDF and test the band drive."),
  "toys10/09-marble-cricket": ("Medium", "Cut file now kerf-compensated (peg holes at 6.2 mm press fit); pocket scoring needs a calibration drop.", "Cut one, drop 200 marbles and check the pocket distribution."),
- "toys10/10-katha-cubes": ("Medium", "Illustrations and proofreading are missing.", "Finish the artwork and text."),
+ "toys10/10-katha-cubes": ("Medium-High", "Cube net and the 36 words ready; Hindi and Telugu checked for consistency (grandmother term aligned, gender-neutral problem phrases) but a native-speaker review is still required before print; icons are optional for the prototype.", "Print text-only cubes for the prototype; get the words reviewed by native speakers before the production print."),
 }
 NOBOARD_ORDER = {"Medium-High": "No parts at risk: local laser-cutting or printing, no part numbers.", "Medium": "Local fabrication or module-based; quote before ordering.", "Low": "Nothing orderable yet."}
 def order_conf(board, path, works):
