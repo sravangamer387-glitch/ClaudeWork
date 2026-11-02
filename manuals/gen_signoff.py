@@ -18,6 +18,7 @@ GATES = {
  "agrover": "hardware emergency stop and a safety review before outdoor driving",
  "geotech": "thresholds must be re-derived from a real baseline recording before any alarm is trusted",
  "dj-setup": "built from bought equipment: follow the plan; mains equipment wiring by a qualified electrician",
+ "electronics-toys/wave1": "check the MP3 command codes and the display-module polarity on the first board; toy-safety (IS 9873) testing before sale",
  "toys10/06-paper-rocket": "measure range and energy on the first unit; foam noses mandatory; toy-standard review before sale",
 }
 def board_state(board):
