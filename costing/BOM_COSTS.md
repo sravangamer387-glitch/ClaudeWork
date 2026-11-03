@@ -1,6 +1,6 @@
 # Priced bills of materials (parts, live LCSC list prices)
 
-Generated 2026-11-02 by `utility10/pcb/costing.py` from each board's `2_assembly/*_BOM_full.csv` and the LCSC product API. USD list prices, ladder price for the quantity bought; INR at an assumed **88 INR/USD**.
+Generated 2026-11-03 by `utility10/pcb/costing.py` from each board's `2_assembly/*_BOM_full.csv` and the LCSC product API. USD list prices, ladder price for the quantity bought; INR at an assumed **88 INR/USD**.
 
 **What is and is not in the numbers:** parts only. Not included: bare PCB fabrication, assembly fees (setup, extended-part fees, placement), stencil, shipping, import duty and GST, cell/battery, enclosure, bought-in modules and cables. Planning figures for PCB and assembly are shown separately and are assumptions, not quotes: get a JLC quote before you order. Stock is as returned by LCSC on the run date and changes daily.
 
@@ -31,6 +31,7 @@ Generated 2026-11-02 by `utility10/pcb/costing.py` from each board's `2_assembly
 | rainplate | 1 | 1 | 0.02 | 2 | 0.02 | 0.02 | 2 | US$2 | none |
 | seeti | 24 | 36 | 4.75 | 418 | 4.22 | 3.56 | 313 | US$2 | none |
 | tap | 19 | 28 | 4.44 | 391 | 3.92 | 3.31 | 291 | US$2 | none |
+| trishna | 44 | 88 | 9.16 | 806 | 8.23 | 6.45 | 568 | US$2 | none |
 
 Per-board file: `costing/<board>_priced_BOM.csv` (every line with LCSC number, unit price, stock).
 

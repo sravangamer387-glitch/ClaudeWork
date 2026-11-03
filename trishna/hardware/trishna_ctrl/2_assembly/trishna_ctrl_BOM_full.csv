@@ -1,0 +1,89 @@
+Ref,Value,Footprint,Manufacturer part,LCSC #,LCSC status,Assembly
+J1,12 V DC in (2 A),Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal,CUI/Same Sky PJ-063AH,C22434582,verified,hand/THT
+F1,PTC 2A 16V,Fuse:Fuse_1812_4532Metric,R+O SMD1812-200-16 (2 A hold),C46641167,verified,SMT (JLC)
+D3,SMBJ15A,Diode_SMD:D_SMB,Littelfuse SMBJ15A,C83846,verified,SMT (JLC)
+Q5,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,C15127,verified,SMT (JLC)
+D4,BZT52C12,Diode_SMD:D_SOD-123,DIODES BZT52C12-7-F,C124196,verified,SMT (JLC)
+R40,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C30,100u/35V,Capacitor_SMD:CP_Elec_6.3x7.7,Lelon VZH101M1VTR-0607,C176683,verified,SMT (JLC)
+C31,10u/50V,Capacitor_SMD:C_1210_3225Metric,Samsung CL32A106KBJNNNE,C380537,verified,SMT (JLC)
+U2,AP63203WU-7,Package_TO_SOT_SMD:TSOT-23-6,AP63203WU-7 (3.3 V fixed),C780769,verified,SMT (JLC)
+R41,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+C32,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+L1,4.7u,Inductor_SMD:L_Changjiang_FNR5040S,Changjiang FNR5040S4R7MT,C167963,verified,SMT (JLC)
+C33,22u/10V,Capacitor_SMD:C_0805_2012Metric,Samsung CL21A226MPQNNNE,C29277,verified,SMT (JLC)
+C34,22u/10V,Capacitor_SMD:C_0805_2012Metric,Samsung CL21A226MPQNNNE,C29277,verified,SMT (JLC)
+FB1,BLM18 600R,Inductor_SMD:L_0603_1608Metric,Murata BLM18AG601SN1D,C19330,verified,SMT (JLC)
+C36,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+C37,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+D6,Green,LED_SMD:LED_0603_1608Metric,"Hubei KENTO KT-0603YG yellow-green 570 nm, Vf about 2 V (lights well from 3.3 V with 1 k; the Everlight 19-217 green was out of stock)",C2289,verified,SMT (JLC)
+R45,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+R60,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R61,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C60,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+TP1,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP2,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP3,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+TP4,TP,TestPoint:TestPoint_Pad_D1.5mm,,,,hand/THT
+J4,DevKitC left: 3V3 EN 36 39 34 35 32 33 25 26 27 14 12 GND 13 D2 D3 CMD 5V,Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical,BOOMELE 2.54-1*19P female header,C319202,verified,hand/THT
+J5,DevKitC right: GND 23 22 TX RX 21 GND 19 18 5 17 16 4 0 2 15 D1 D0 CLK,Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical,BOOMELE 2.54-1*19P female header,C319202,verified,hand/THT
+JP1,3V3 link (remove for USB-only power),Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,XFCN PZ254V-11-02P + jumper,C492401,verified,hand/THT
+C38,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+C39,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+U3,DRV8871DDAR,Package_SO:HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm,TI DRV8871DDAR,C75864,verified,SMT (JLC)
+R62,47k,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF4702T5E,C25819,verified,SMT (JLC)
+C41,10u/50V,Capacitor_SMD:C_1210_3225Metric,Samsung CL32A106KBJNNNE,C380537,verified,SMT (JLC)
+C42,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+C40,100u/35V,Capacitor_SMD:CP_Elec_6.3x7.7,Lelon VZH101M1VTR-0607,C176683,verified,SMT (JLC)
+J6,Peristaltic pump 12 V (red = PUMP_O1),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+Q1,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R63,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R64,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+D10,M7 (1N4007),Diode_SMD:D_SMA,"MDD M7 (1N4007, 1 A 1000 V)",C95872,verified,SMT (JLC)
+J7,Solenoid valve 12 V NC,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+Q2,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R65,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R66,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R67,1k 1/4W,Resistor_SMD:R_1206_3216Metric,UNI-ROYAL 1206W4F1001T5E,C4410,verified,SMT (JLC)
+Q3,AO3400A,Package_TO_SOT_SMD:SOT-23,AO3400A,C20917,verified,SMT (JLC)
+R68,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R69,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,C25803,verified,SMT (JLC)
+R70,1k 1/4W,Resistor_SMD:R_1206_3216Metric,UNI-ROYAL 1206W4F1001T5E,C4410,verified,SMT (JLC)
+J8,"Sensor-block LEDs (450 nm blue, 850 nm IR)",Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
+U4,MCP6002T-I/SN,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,Microchip MCP6002T-I/SN,C7377,verified,SMT (JLC)
+R71,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C61,10n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B103KB8NNNC 0603 10nF X7R 50V,C1589,verified,SMT (JLC)
+R72,1M,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1004T5E,C22935,verified,SMT (JLC)
+C62,1n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B102KB8NNNC X7R 50V,C1588,verified,SMT (JLC)
+R73,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C63,10n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B103KB8NNNC 0603 10nF X7R 50V,C1589,verified,SMT (JLC)
+R74,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C64,10n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B103KB8NNNC 0603 10nF X7R 50V,C1589,verified,SMT (JLC)
+C65,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)
+J9,"Photodiodes BPW34: transmission, 90-degree scatter (anodes to GND)",Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+R75,330,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF3300T5E,C23138,verified,SMT (JLC)
+R76,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+R77,100,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF1000T5E,C22775,verified,SMT (JLC)
+C66,1n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B102KB8NNNC X7R 50V,C1588,verified,SMT (JLC)
+J10,"EC electrodes (titanium pins E1, E2)",Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+R78,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+R79,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C67,1n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B102KB8NNNC X7R 50V,C1588,verified,SMT (JLC)
+J11,Sump stream-detect probe,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+R80,47k,Resistor_SMD:R_0603_1608Metric,UNI-ROYAL 0603WAF4702T5E,C25819,verified,SMT (JLC)
+R81,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,C21190,verified,SMT (JLC)
+C68,1n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B102KB8NNNC X7R 50V,C1588,verified,SMT (JLC)
+J12,Chamber-B floor leak probe,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,JST B2B-PH-K-S(LF)(SN),C131337,verified,hand/THT
+J13,DS18B20 temperature probe,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+R82,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+J14,VL53L1X ToF presence sensor (I2C),Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,JST B4B-PH-K-S(LF)(SN),C131334,verified,hand/THT
+R83,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+R84,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,C23162,verified,SMT (JLC)
+J15,"Telemetry UART (ESP32 TX out, RX in) to USB-serial",Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,JST B3B-PH-K-S(LF)(SN),C131339,verified,hand/THT
+J16,microSD (SPI log),Connector_Card:microSD_HC_Molex_104031-0811,Molex 104031-0811,C585350,verified,SMT (JLC)
+R86,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+R87,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+R88,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+R89,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,C25804,verified,SMT (JLC)
+C69,10u,Capacitor_SMD:C_0805_2012Metric,0805 10uF X5R,C15850,verified,SMT (JLC)
+C70,100n,Capacitor_SMD:C_0603_1608Metric,Samsung CL10B104KB8NNNC 0603 100nF X7R 50V,C1591,verified,SMT (JLC)

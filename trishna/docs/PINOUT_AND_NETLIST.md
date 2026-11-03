@@ -136,8 +136,8 @@ VM: C30.1, C31.1, C40.1, C41.1, C42.1, D10.1, D4.1, J7.1, Q5.2, R41.1, R60.1, R6
 | J4 | 1 | DevKitC left: 3V3 EN 36 39 34 35 32 33 25 26 27 14 12 GND 13 D2 D3 CMD 5V | PinSocket_1x19_P2.54mm_Vertical | BOOMELE 2.54-1*19P female header | C319202 |
 | J5 | 1 | DevKitC right: GND 23 22 TX RX 21 GND 19 18 5 17 16 4 0 2 15 D1 D0 CLK | PinSocket_1x19_P2.54mm_Vertical | BOOMELE 2.54-1*19P female header | C319202 |
 | JP1 | 1 | 3V3 link (remove for USB-only power) | PinHeader_1x02_P2.54mm_Vertical | XFCN PZ254V-11-02P + jumper | C492401 |
-| U3 | 1 | DRV8871DDAR | Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias | TI DRV8871DDAR | C75864 |
-| R62, R80 | 2 | 47k | R_0603_1608Metric |  |  |
+| U3 | 1 | DRV8871DDAR | HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm | TI DRV8871DDAR | C75864 |
+| R62, R80 | 2 | 47k | R_0603_1608Metric | UNI-ROYAL 0603WAF4702T5E | C25819 |
 | J6 | 1 | Peristaltic pump 12 V (red = PUMP_O1) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 |
 | Q1, Q2, Q3 | 3 | AO3400A | SOT-23 | AO3400A | C20917 |
 | R63, R65, R68, R76, R77 | 5 | 100 | R_0603_1608Metric | UNI-ROYAL 0603WAF1000T5E | C22775 |
@@ -147,8 +147,8 @@ VM: C30.1, C31.1, C40.1, C41.1, C42.1, D10.1, D4.1, J7.1, Q5.2, R41.1, R60.1, R6
 | J8 | 1 | Sensor-block LEDs (450 nm blue, 850 nm IR) | JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical | JST B4B-PH-K-S(LF)(SN) | C131334 |
 | U4 | 1 | MCP6002T-I/SN | SOIC-8_3.9x4.9mm_P1.27mm | Microchip MCP6002T-I/SN | C7377 |
 | C61, C63, C64 | 3 | 10n | C_0603_1608Metric | Samsung CL10B103KB8NNNC 0603 10nF X7R 50V | C1589 |
-| R72 | 1 | 1M | R_0603_1608Metric |  |  |
-| C62, C66, C67, C68 | 4 | 1n | C_0603_1608Metric |  |  |
+| R72 | 1 | 1M | R_0603_1608Metric | UNI-ROYAL 0603WAF1004T5E | C22935 |
+| C62, C66, C67, C68 | 4 | 1n | C_0603_1608Metric | Samsung CL10B102KB8NNNC X7R 50V | C1588 |
 | J9 | 1 | Photodiodes BPW34: transmission, 90-degree scatter (anodes to GND) | JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical | JST B3B-PH-K-S(LF)(SN) | C131339 |
 | R75 | 1 | 330 | R_0603_1608Metric | UNI-ROYAL 0603WAF3300T5E | C23138 |
 | J10 | 1 | EC electrodes (titanium pins E1, E2) | JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | JST B2B-PH-K-S(LF)(SN) | C131337 |

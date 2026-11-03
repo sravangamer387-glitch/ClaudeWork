@@ -86,7 +86,8 @@ def review(mod):
     for sig in ("SDA", "SCL"):
         if sig in nets and len(nets[sig]) >= 2 and not any(q["ref"].startswith("R") for q in parts.values() if sig in (q.get("nets") or {}).values()):
             F.append(("warn", "i2c-pullup", f"{sig} has no pull-up resistor on the board"))
-    if any("ESP32" in (p.get("value") or "") for p in parts.values()):
+    # a bare ESP32 module needs its own EN RC; a plug-in DevKit carries it (EN left unconnected on the carrier)
+    if any("ESP32" in (p.get("value") or "") and not str(p.get("sym", "")).startswith("Connector") for p in parts.values()):
         if not any(q["ref"].startswith("R") and "EN" in q["nets"].values() for q in parts.values()): F.append(("error", "esp32-en", "EN has no pull-up resistor"))
         if not any(q["ref"].startswith("C") and "EN" in q["nets"].values() for q in parts.values()): F.append(("warn", "esp32-en", "EN has no capacitor (reset delay)"))
     # R8 single-pin nets

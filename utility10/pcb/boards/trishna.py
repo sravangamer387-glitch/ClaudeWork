@@ -106,4 +106,4 @@ BOARD = dict(pre=PRE, clr=0.15, name="trishna_ctrl", title="TRISHNA urinal hydra
  holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(24, 39), (116, 30)], first=["VIN12", "VIN_F", "VM", "SW", "+3V3", "PUMP_O1", "PUMP_O2"], gnd_pour_only=True,
  pour_keepout=[(DK_X - 4, 0.6, DK_X + 29.4, DK_Y - 3)],   # no copper under the DevKit's PCB antenna (it overhangs the sockets toward the top edge)
  silk=[("TRISHNA controller rev A", 96, 82.2, 1.0), ("12V IN 2A", 10, 3.2, 0.9), ("PUMP", 8, 54, 0.8), ("VALVE", 8, 64.5, 0.8), ("USB END", DK_X + 12.7, 70.5, 0.8), ("ANTENNA END", DK_X + 12.7, DK_Y - 4.5, 0.8)], stitch=5.0)
-BOARD["enc"] = dict(standoff=5.0, plate=True, battery=False, note="mounts in Chamber A of the TRISHNA split enclosure (see trishna/mechanical); never in the wet chamber")
+# no generated enclosure: TRISHNA has its own split-chamber enclosure in trishna/mechanical (chamber A holds this PCB on 4 x 6 mm standoffs)

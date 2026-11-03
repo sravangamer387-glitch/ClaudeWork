@@ -408,6 +408,17 @@
  },
  {
   "group": "Other projects",
+  "name": "TRISHNA urinal hydration monitor",
+  "path": "trishna",
+  "board": "trishna",
+  "order": "Medium-High",
+  "order_why": "limited stock on: J1 12 V DC in (2 A) (stock 321); U2 AP63203WU-7 (stock 195)",
+  "works": "Low-Medium",
+  "works_why": "Controller is a standard ESP32 carrier (buck, H-bridge, MOSFET + flyback, TIAs); firmware compiles for the ESP32 and 19 host tests cover the frame, filters, EC maths and every state-machine path; CAD solids give a 2.02 mL chamber. Unproven until built: the printed flow cell must be leak-free, the bipolar GPIO EC drive and the photodiode gains need tuning on the bench, and the SG estimate from conductivity + colour is only as good as the per-user refractometer fit.",
+  "first": "Print and pressure-test the sensor block, then run validation V1-V4 with the synthetic-urine fluids before any real use."
+ },
+ {
+  "group": "Other projects",
   "name": "Wave 1 electronics toys",
   "path": "electronics-toys/wave1",
   "board": "ap1",

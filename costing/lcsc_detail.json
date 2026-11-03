@@ -2046,5 +2046,193 @@
    "Operating Temperature": "-55\u2103~+155\u2103"
   },
   "brand": "UNI-ROYAL"
+ },
+ "C46641167": {
+  "model": "SMD1812-200-16",
+  "intro": "Polymeric PTC Resettable Fuse 16V 2A Surface Mount 1812",
+  "desc": "Polymeric PTC Resettable Fuse 16V 2A Surface Mount 1812",
+  "pkg": "1812",
+  "cycle": "normal",
+  "stock": 2450,
+  "params": {
+   "Operating Temperature": "-40\u2103~+85\u2103",
+   "Voltage - Max": "16V",
+   "Hold Current": "2A",
+   "Current - Max": "40A",
+   "Power Dissipation": "1W",
+   "Trip Current": "4A",
+   "Pitch": "-",
+   "Height": "-",
+   "Length": "4.73mm",
+   "Width": "3.41mm",
+   "Resistance @ 25\u2103": "20m\u03a9",
+   "Time to Trip(Max)": "2s",
+   "Resistance - Post Trip (R1) (Max)": "100m\u03a9"
+  },
+  "brand": "R+O"
+ },
+ "C780769": {
+  "model": "AP63203WU-7",
+  "intro": "1.1MHz Step-down type Fixed 2A 3.3V TSOT-23-6 Voltage Regulators - DC DC Switching Regulators RoHS",
+  "desc": null,
+  "pkg": "TSOT-23-6",
+  "cycle": "normal",
+  "stock": 195,
+  "params": {
+   "Operating Temperature": "-40\u2103~+85\u2103@(TA)",
+   "Frequency - Switching": "1.1MHz",
+   "Function": "Step-down type",
+   "Number of Outputs": "1",
+   "Features": "Cycle-by-cycle current limiting;Hiccup current limiting;EMI optimization (spread spectrum);Light load efficient mode;Overcurrent Protection",
+   "Topology": "Buck",
+   "Output Type": "Fixed",
+   "Operating Voltage": "3.8V~32V",
+   "Switch tube (built-in/external)": "Built-in",
+   "Output Current": "2A",
+   "Output Voltage": "3.3V",
+   "Quiescent Current": "22uA"
+  },
+  "brand": "DIODES"
+ },
+ "C319202": {
+  "model": "2.54-1*19P",
+  "intro": "Female Header 19 Position 2.54mm Pitch Single Row Through Hole",
+  "desc": "Female Header 19 Position 2.54mm Pitch Single Row Through Hole",
+  "pkg": "Through Hole,P=2.54mm",
+  "cycle": "normal",
+  "stock": 825,
+  "params": {
+   "Mounting Type": "Through Hole",
+   "Number of Pins": "19P",
+   "Insulation Height": "-",
+   "Holes Direction": "Top",
+   "Pitch": "2.54mm",
+   "Number of Rows": "1",
+   "Contact Plating": "-",
+   "Circular Hole / Square Hole": "Square Hole",
+   "Contact Material": "-",
+   "Row Spacing": "-"
+  },
+  "brand": "BOOMELE(Boom Precision Elec)"
+ },
+ "C75864": {
+  "model": "DRV8871DDAR",
+  "intro": "SO-8-EP Motor Drivers, Controllers RoHS",
+  "desc": null,
+  "pkg": "SO-8-EP",
+  "cycle": "normal",
+  "stock": 4106,
+  "params": {
+   "Number of H-bridges": "1",
+   "Features": "Interleaved conduction protection;Current sensing/regulation function;Active braking function",
+   "Voltage - Supply": "-",
+   "Technology": "Yes",
+   "Interface": "PWM",
+   "Operating Temperature": "-40\u2103~+125\u2103",
+   "Supply Current (Iq)": "10uA",
+   "Output Current": "-",
+   "Peak Current": "3.6A",
+   "RDS(on)": "565m\u03a9"
+  },
+  "brand": "TI"
+ },
+ "C95872": {
+  "model": "M7",
+  "intro": "Diode Independent 1kV 1A Surface Mount SMA(DO-214AC)",
+  "desc": "Diode Independent 1kV 1A Surface Mount SMA(DO-214AC)",
+  "pkg": "SMA(DO-214AC)",
+  "cycle": "normal",
+  "stock": 5900500,
+  "params": {
+   "Operating Junction Temperature Range": "-55\u2103~+150\u2103",
+   "Diode Configuration": "Standalone",
+   "Voltage - DC Reverse (Vr) (Max)": "1kV",
+   "Voltage - Forward(Vf@If)": "1.1V@1A",
+   "Reverse Leakage Current (Ir)": "5uA@1kV",
+   "Non-Repetitive Peak Forward Surge Current": "30A",
+   "Current - Rectified": "1A"
+  },
+  "brand": "MDD(Microdiode Semiconductor)"
+ },
+ "C4410": {
+  "model": "1206W4F1001T5E",
+  "intro": "1k\u03a9 \u00b11% 250mW 1206 Thick Film Resistor",
+  "desc": "1k\u03a9 \u00b11% 250mW 1206 Thick Film Resistor",
+  "pkg": "1206",
+  "cycle": "normal",
+  "stock": 517600,
+  "params": {
+   "Resistance": "1k\u03a9",
+   "Power(Watts)": "250mW",
+   "Voltage Rating": "200V",
+   "Type": "Thick Film Resistor",
+   "Temperature Coefficient": "\u00b1100ppm/\u2103",
+   "Tolerance": "\u00b11%",
+   "Operating Temperature": "-55\u2103~+155\u2103"
+  },
+  "brand": "UNI-ROYAL"
+ },
+ "C7377": {
+  "model": "MCP6002T-I/SN",
+  "intro": "23mA 2 4.5mV 600V/ms 76dB 1pA 1MHz 100uA Rail-to-Rail Input, Rail-to-Rail Output SOIC-8 Instrumentation, Op Amps, Buffer Amps RoHS",
+  "desc": null,
+  "pkg": "SOIC-8",
+  "cycle": "normal",
+  "stock": 51845,
+  "params": {
+   "Output Current": "23mA",
+   "Number of Channels": "2",
+   "Vos - Input Offset Voltage": "4.5mV",
+   "Slew Rate": "600V/ms",
+   "Input Offset Current(Ios)": "1pA",
+   "Operating Temperature": "-40\u2103~+125\u2103",
+   "Common Mode Rejection Ratio(CMRR)": "76dB",
+   "Ib - Input Bias Current": "1pA",
+   "Input Offset Voltage Drift(Vos TC)": "2uV/\u2103",
+   "Gain Bandwidth Product": "1MHz",
+   "Quiescent Current": "100uA",
+   "Features": "-",
+   "Input Voltage Noise Density": "28nV/\u221aHz@1kHz",
+   "Dual Supply": "-",
+   "Rail to Rail": "Rail-to-Rail Input, Rail-to-Rail Output",
+   "Single Supply": "1.8V~6V"
+  },
+  "brand": "MICROCHIP"
+ },
+ "C1588": {
+  "model": "CL10B102KB8NNNC",
+  "intro": "1nF \u00b110% 50V Ceramic Capacitor X7R 0603",
+  "desc": "1nF \u00b110% 50V Ceramic Capacitor X7R 0603",
+  "pkg": "0603",
+  "cycle": "normal",
+  "stock": 708650,
+  "params": {
+   "Capacitance": "1nF",
+   "Temperature Coefficient": "X7R",
+   "Tolerance": "\u00b110%",
+   "Operating Temperature": "-55\u2103~+125\u2103",
+   "Voltage Rating": "50V"
+  },
+  "brand": "Samsung Electro-Mechanics"
+ },
+ "C585350": {
+  "model": "1040310811",
+  "intro": "Micro SD card (TF card) Connector and Ejector Push-Pull Surface Mount",
+  "desc": "Micro SD card (TF card) Connector and Ejector Push-Pull Surface Mount",
+  "pkg": "SMD",
+  "cycle": "normal",
+  "stock": 48972,
+  "params": {
+   "Operating Temperature": "-25\u2103~+85\u2103",
+   "Card Connection Mode": "Push-Pull",
+   "Height Above Board": "1.42mm",
+   "Length": "11.4mm",
+   "Supplementary Features": "-",
+   "Card Detection": "No",
+   "Width": "11.95mm",
+   "Connector Type": "Connector and Ejector",
+   "Card Type": "MicroSD Card (TF Card)"
+  },
+  "brand": "MOLEX"
  }
 }

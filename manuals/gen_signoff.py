@@ -27,8 +27,9 @@ def board_state(board):
     if not board: return None
     if not os.path.exists(p): return "no release"
     r = json.load(open(p)); return "order-ready" if r.get("order_ready") else "NOT order-ready"
-def enc_state(board):
+def enc_state(board, path=None):
     p = os.path.join(REL, board or "", "4_enclosure", "enclosure.json")
+    if path and os.path.exists(os.path.join(ROOT, path, "mechanical", "out", "cad_report.json")): return f"custom CAD ({path}/mechanical)"
     if not board or not os.path.exists(p): return ""
     e = json.load(open(p))
     if e.get("version") != 2: return "old enclosure"
@@ -37,7 +38,7 @@ def enc_state(board):
 rows = []
 for c in CONF:
     path, board = c["path"], c["board"]
-    bs = board_state(board); es = enc_state(board); errs = [f for f in FIND.get(board or "", []) if f[0] == "error"]
+    bs = board_state(board); es = enc_state(board, path); errs = [f for f in FIND.get(board or "", []) if f[0] == "error"]
     if bs == "NOT order-ready" or bs == "no release" or errs or c["order"] == "Low": status = "HOLD"
     elif path in GATES or c["works"] in ("Low", "Low-Medium"): status = "APPROVED WITH CONDITIONS"
     else: status = "APPROVED FOR PROTOTYPING"

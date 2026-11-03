@@ -173,5 +173,22 @@
    "stock",
    "D4 C19224 TVS 5V bidir: low stock 175"
   ]
+ ],
+ "trishna": [
+  [
+   "warn",
+   "stock",
+   "J1 C22434582 12 V DC in (2 A): low stock 321"
+  ],
+  [
+   "warn",
+   "stock",
+   "U2 C780769 AP63203WU-7: low stock 195"
+  ],
+  [
+   "info",
+   "decoupling",
+   "U2: nearest +3V3 capacitor is 17 mm from the part centre"
+  ]
  ]
 }

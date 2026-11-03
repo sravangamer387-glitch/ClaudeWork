@@ -297,5 +297,18 @@
   "parts": 79,
   "nets": 60,
   "order_ready": true
+ },
+ {
+  "board": "trishna_ctrl",
+  "mod": "trishna",
+  "drc_errors": 0,
+  "drc_warnings": 0,
+  "unconnected": 0,
+  "netlist": true,
+  "erc_errors": 0,
+  "failures": 0,
+  "parts": 88,
+  "nets": 56,
+  "order_ready": true
  }
 ]
