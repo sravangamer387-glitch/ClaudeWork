@@ -14,7 +14,10 @@ def near(t):
     pts = [(mm(t.GetX()), mm(t.GetY()))] if t.GetClass() == "PCB_VIA" else [(mm(t.GetStart().x) + (mm(t.GetEnd().x) - mm(t.GetStart().x)) * k / 8, mm(t.GetStart().y) + (mm(t.GetEnd().y) - mm(t.GetStart().y)) * k / 8) for k in range(9)]
     return any(math.hypot(x - sx, y - sy) < rad for (x, y) in pts for (sx, sy) in spots)
 failed |= {x for x in os.environ.get("FREE", "").split(",") if x}   # FREE=net,..: also re-route nets that are split (e.g. a frozen stub not joined to the rest)
-free = set(failed) | {t.GetNetname() for t in b.GetTracks() if rad > 0 and near(t) and not t.GetNetname().startswith("+")}
+import importlib
+_spec = importlib.import_module("boards." + board).BOARD
+keep = {pr["net"] for pr in _spec.get("pre", [])} | set(_spec.get("supply", {}))      # never rip up hand pre-routes or supply rails
+free = set(failed) | {t.GetNetname() for t in b.GetTracks() if rad > 0 and near(t) and not t.GetNetname().startswith("+") and t.GetNetname() not in keep}
 print("left free:", sorted(free))
 DROP = os.environ.get("DROP", "").split(",") if os.environ.get("DROP") else None   # DROP=x0,y0,x1,y1,net[,net]: drop those nets' segments with an end in the box (use only for leaf branches)
 if DROP: DROP = [float(v) for v in DROP[:4]] + DROP[4:]
