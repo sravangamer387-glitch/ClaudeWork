@@ -10,3 +10,7 @@ utility10/pcb/boards/__pycache__/
 manuals/html/
 build/esp32/
 utility10/pcb/boards/*_done[0-9]*.py
+trishna/firmware/build/
+trishna/firmware/.pio/
+trishna/firmware/test/host/test_core
+trishna/firmware/test/host/golden_frames.bin

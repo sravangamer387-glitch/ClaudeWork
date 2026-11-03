@@ -1,0 +1,162 @@
+{
+ "trishna_sensor_block": {
+  "size_mm": [
+   36.0,
+   36.0,
+   38.0
+  ],
+  "volume_cm3": 43.53,
+  "watertight": true,
+  "est_mass_g_petg": 55.3,
+  "chamber_geometric_ml": 2.117,
+  "chamber_wetted_ml_with_probe": 2.018,
+  "bore": "12.0 mm dia x 17.0 mm + 2 mm cones top and bottom",
+  "optical_path_mm": 12.0,
+  "ports": {
+   "+X z13 (tilted 22.6 deg down-out)": "LED 450 nm aimed at the transmission PD",
+   "+X z23 (tilted 22.6 deg up-out)": "LED 850 nm aimed at the transmission PD",
+   "-X z18": "PD transmission (SFH 203, wide angle)",
+   "+Y z20.5": "PD 90-degree scatter (looks at the plain -Y wall; the IR beam crosses the axis at z 20.5)",
+   "+Y z11.5": "DS18B20 6 mm probe (tip 2 mm past axis)",
+   "+Y z25.5 x+-3.5": "Ti electrodes 1.0 mm",
+   "bottom": "M5 inlet",
+   "top": "M5 outlet"
+  }
+ },
+ "trishna_chamberA_base": {
+  "size_mm": [
+   137.0,
+   154.5,
+   39.0
+  ],
+  "volume_cm3": 109.28,
+  "watertight": true,
+  "est_mass_g_petg": 138.8,
+  "inner_mm": [
+   100.0,
+   136.0,
+   36.0
+  ],
+  "outer_mm": [
+   105.0,
+   141.0,
+   39.0
+  ],
+  "lid_screws": 10,
+  "bottom_wall": {
+   "J1 barrel jack hole 10.4 mm": 22.0,
+   "G1 (M16) pump+valve 4-core from chamber B": 46.0,
+   "G2 (M16) sensor 8-core from chamber B": 70.0,
+   "G3 (M12) optics shielded cable": 91.0
+  },
+  "left_wall_heights": {
+   "G4 (M12) DS18B20 cable": 30.0,
+   "G5 (M12) sump probe cable": 55.0,
+   "G6 (M12) ToF sensor cable": 80.0,
+   "G7 (M12) telemetry USB-serial": 105.0
+  },
+  "pcb_standoffs": "6 mm, M3 heat-set inserts; PCB x axis vertical, barrel jack down"
+ },
+ "trishna_chamberA_lid": {
+  "size_mm": [
+   124.0,
+   160.0,
+   4.5
+  ],
+  "volume_cm3": 57.54,
+  "watertight": true,
+  "est_mass_g_petg": 73.1
+ },
+ "trishna_chamberB_base": {
+  "size_mm": [
+   207.0,
+   168.5,
+   78.0
+  ],
+  "volume_cm3": 308.98,
+  "watertight": true,
+  "est_mass_g_petg": 392.4,
+  "inner_mm": [
+   170.0,
+   150.0,
+   75.0
+  ],
+  "outer_mm": [
+   175.0,
+   155.0,
+   78.0
+  ],
+  "lid_screws": 12,
+  "bottom_wall": {
+   "P1 sample in (M12 gland on 5 mm tube)": 40.0,
+   "P2 waste out (M12 gland)": 62.0,
+   "P4 leak drain (4 mm barb, glue)": 85.0,
+   "P3 fresh water in (M12 gland)": 128.0
+  },
+  "top_wall": {
+   "G1 (M16) to chamber A: pump+valve": 55.0,
+   "G2 (M16) to chamber A: sensors": 80.0,
+   "G3 (M12) optics": 102.0,
+   "G4 (M12) DS18B20": 122.0
+  },
+  "sensor_shelf": "top face y=32, block centre x=85, z=36 from the back face; block probe side (+Y) toward +X, LED side (+X) toward the lid; 4 x M3 x 45 screws + nuts through the block corners",
+  "leak_probe": "2 x M3 x 10 A2 stainless screws at x=73 and x=97 through the bottom wall"
+ },
+ "trishna_chamberB_lid": {
+  "size_mm": [
+   194.0,
+   174.0,
+   4.5
+  ],
+  "volume_cm3": 98.7,
+  "watertight": true,
+  "est_mass_g_petg": 125.3
+ },
+ "trishna_sump_insert": {
+  "size_mm": [
+   70.0,
+   70.0,
+   28.0
+  ],
+  "volume_cm3": 15.25,
+  "watertight": true,
+  "est_mass_g_petg": 19.4,
+  "cup_ml_to_overflow": 11.3,
+  "drain_diameter_param": 70.0
+ },
+ "trishna_pump_bracket": {
+  "size_mm": [
+   60.0,
+   60.0,
+   40.0
+  ],
+  "volume_cm3": 20.2,
+  "watertight": true,
+  "est_mass_g_petg": 25.6
+ },
+ "trishna_valve_saddle": {
+  "size_mm": [
+   40.0,
+   44.0,
+   12.0
+  ],
+  "volume_cm3": 15.29,
+  "watertight": true,
+  "est_mass_g_petg": 19.4
+ },
+ "trishna_port_retainer": {
+  "size_mm": [
+   12.0,
+   18.0,
+   3.0
+  ],
+  "volume_cm3": 0.55,
+  "watertight": true,
+  "est_mass_g_petg": 0.7
+ },
+ "checks": {
+  "sensor chamber wetted volume within 2.0 +/- 0.1 mL": true,
+  "all parts watertight meshes": true,
+  "every part fits a 220 x 220 mm bed": true
+ }
+}
