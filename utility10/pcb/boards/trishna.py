@@ -42,7 +42,7 @@ parts = [
    lcsc="C492401", mpn="XFCN PZ254V-11-02P + jumper", nets={"1": "+3V3", "2": "DK3V3"}),
  C("C38", "10u", 56, 28, "DK3V3", "GND", 90, "Capacitor_SMD:C_0805_2012Metric"), C("C39", "100n", 56, 33, "DK3V3", "GND", 90),
  # ---------------- reversible peristaltic pump: DRV8871 H-bridge (ILIM 47k -> about 1.4 A trip) ----------------
- V(ref="U3", sym="Driver_Motor:DRV8871DDA", fp="Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias", value="DRV8871DDAR", x=30, y=56, rot=0,
+ V(ref="U3", sym="Driver_Motor:DRV8871DDA", fp="Package_SO:HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm", value="DRV8871DDAR", x=30, y=56, rot=0,
    lcsc="C75864", mpn="TI DRV8871DDAR", nets={"1": "GND", "2": "PUMP_IN2", "3": "PUMP_IN1", "4": "ILIM", "5": "VM", "6": "PUMP_O1", "7": "GND", "8": "PUMP_O2", "9": "GND"}),
  R("R62", "47k", 24.0, 60.0, "ILIM", "GND", 180),
  V(ref="C41", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=38, y=50, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
@@ -103,7 +103,7 @@ BOARD = dict(pre=PRE, clr=0.15, name="trishna_ctrl", title="TRISHNA urinal hydra
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+3V3": "buck U2", "+3V3A": "+3V3 via ferrite FB1", "DK3V3": "+3V3 via JP1", "GND": "supply", "VIN_F": "12 V after PTC"},
  single_ok=("SD_DAT1", "SD_DAT2"), ws=(0.2, 0.4),
  widths={"VM": 0.4, "+3V3": 0.4, "SW": 0.4, "VIN12": 0.4, "VIN_F": 0.4, "PUMP_O1": 0.4, "PUMP_O2": 0.4, "VALVE_D": 0.4, "DK3V3": 0.4},
- holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(14, 36), (116, 30)], first=["VIN12", "VIN_F", "VM", "SW", "+3V3", "PUMP_O1", "PUMP_O2"], gnd_pour_only=True,
+ holes=[(3.5, 3.5), (W - 3.5, 3.5), (3.5, H - 3.5), (W - 3.5, H - 3.5)], fids=[(24, 39), (116, 30)], first=["VIN12", "VIN_F", "VM", "SW", "+3V3", "PUMP_O1", "PUMP_O2"], gnd_pour_only=True,
  pour_keepout=[(DK_X - 4, 0.6, DK_X + 29.4, DK_Y - 3)],   # no copper under the DevKit's PCB antenna (it overhangs the sockets toward the top edge)
  silk=[("TRISHNA controller rev A", 96, 82.2, 1.0), ("12V IN 2A", 10, 3.2, 0.9), ("PUMP", 8, 54, 0.8), ("VALVE", 8, 64.5, 0.8), ("USB END", DK_X + 12.7, 70.5, 0.8), ("ANTENNA END", DK_X + 12.7, DK_Y - 4.5, 0.8)], stitch=5.0)
 BOARD["enc"] = dict(standoff=5.0, plate=True, battery=False, note="mounts in Chamber A of the TRISHNA split enclosure (see trishna/mechanical); never in the wet chamber")
