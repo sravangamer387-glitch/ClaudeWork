@@ -44,7 +44,7 @@ parts = [
  # ---------------- reversible peristaltic pump: DRV8871 H-bridge (ILIM 47k -> about 1.4 A trip) ----------------
  V(ref="U3", sym="Driver_Motor:DRV8871DDA", fp="Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias", value="DRV8871DDAR", x=30, y=56, rot=0,
    lcsc="C75864", mpn="TI DRV8871DDAR", nets={"1": "GND", "2": "PUMP_IN2", "3": "PUMP_IN1", "4": "ILIM", "5": "VM", "6": "PUMP_O1", "7": "GND", "8": "PUMP_O2", "9": "GND"}),
- R("R62", "47k", 22, 62, "ILIM", "GND", 90),
+ R("R62", "47k", 24.0, 60.0, "ILIM", "GND", 180),
  V(ref="C41", sym="Device:C", fp="Capacitor_SMD:C_1210_3225Metric", value="10u/50V", x=38, y=50, rot=0, lcsc="C380537", mpn="Samsung CL32A106KBJNNNE", nets={"1": "VM", "2": "GND"}),
  C("C42", "100n", 38, 55, "VM", "GND", 90),
  V(ref="C40", sym="Device:C_Polarized", fp="Capacitor_SMD:CP_Elec_6.3x7.7", value="100u/35V", x=20, y=46, rot=0, lcsc="C176683", mpn="Lelon VZH101M1VTR-0607", nets={"1": "VM", "2": "GND"}),
@@ -65,8 +65,8 @@ parts = [
  R("R74", "1k", 110, 68, "SC_OUT", "OPT_SC_ADC", 90), C("C64", "10n", 113, 68, "OPT_SC_ADC", "GND", 90), C("C65", "100n", 104, 56.5, "+3V3A", "GND", 0),
  jst("J9", 3, 106, 76, ["PD_TX", "PD_SC", "GND"], "Photodiodes BPW34: transmission, 90-degree scatter (anodes to GND)"),
  # ---------------- EC cell: bipolar ratiometric drive from GPIO25/26, 330 R reference ----------------
- R("R75", "330", 92, 52, "EC_DRV_A", "EC_N1", 90), R("R76", "100", 92, 60, "EC_E2", "EC_DRV_B", 90), R("R77", "100", 92, 66, "EC_N1", "EC_ADC", 90), C("C66", "1n", 92, 71, "EC_ADC", "GND", 90),
- jst("J10", 2, 94, 78, ["EC_N1", "EC_E2"], "EC electrodes (titanium pins E1, E2)"),
+ R("R75", "330", 70, 44, "EC_DRV_A", "EC_N1", 0), R("R76", "100", 70, 48, "EC_E2", "EC_DRV_B", 0), R("R77", "100", 74, 40, "EC_N1", "EC_ADC", 90), C("C66", "1n", 77, 40, "EC_ADC", "GND", 90),   # under the DevKit, next to GPIO25/26/36
+ jst("J10", 2, 86, 78, ["EC_N1", "EC_E2"], "EC electrodes (titanium pins E1, E2)"),
  # ---------------- sump stream detect + chamber-B leak probe (pulsed from GPIO27) ----------------
  R("R78", "4.7k", 76, 74, "LVL_DRV", "SUMP_P", 90), R("R79", "1k", 79, 74, "SUMP_P", "SUMP_ADC", 90), C("C67", "1n", 82, 74, "SUMP_ADC", "GND", 90),
  jst("J11", 2, 76, 78, ["SUMP_P", "GND"], "Sump stream-detect probe"),
@@ -95,7 +95,10 @@ S["notes"] = [("TRISHNA controller. 12 V adapter (2 A) -> PTC -> TVS -> PMOS -> 
                "Pump: DRV8871 IN1/IN2 = GPIO13/GPIO12 (IN1 high = forward/sample, IN2 high = reverse/backwash; both low = coast). Valve: GPIO2 -> AO3400A, M7 flyback across the coil. "
                "EC: GPIO25 -> 330 R -> E1 ... E2 -> 100 R -> GPIO26; alternate polarity every 250 us, sample EC_N1 in each phase: (Rc + Rb) / (Rref + Ra) = V_A / V_B, independent of the 3.3 V level; both pins low when idle (no DC on the electrodes). "
                "Optics: LEDs from 12 V through 1 k (about 9-10 mA); TIA gains 10 k (transmission) and 1 M (scatter): tune so clear water reads 1.5-2.5 V. Sump/leak probes are pulsed from GPIO27 only while sampled.", 0, 0)]
-PRE = [dict(net="BST", layer=0, pts=[(47.14, 13.05), (48.34, 13.05), (49.83, 13.05)], w=0.2), dict(net="SW", layer=0, pts=[(47.14, 14.0), (48.34, 14.0), (51.37, 14.0), (51.37, 13.05)], w=0.4)]
+PRE = [dict(net="BST", layer=0, pts=[(47.14, 13.05), (48.34, 13.05), (49.83, 13.05)], w=0.2), dict(net="SW", layer=0, pts=[(47.14, 14.0), (48.34, 14.0), (51.37, 14.0), (51.37, 13.05)], w=0.4),
+       dict(net="EN_B", layer=0, pts=[(41.0, 18.18), (41.0, 17.2), (43.4, 14.8), (43.9, 14.0), (44.86, 14.0)], w=0.2),          # buck EN: R41 -> U2.2, fixed so VM/SW cannot wall it in
+       dict(net="VM", layer=0, pts=[(44.86, 14.95), (44.86, 16.6), (42.8, 18.66), (42.8, 19.82), (41.0, 19.82)], w=0.4),       # buck VIN: U2.3 -> R41.1
+       dict(net="ILIM", layer=0, pts=[(27.12, 57.91), (26.0, 57.91), (24.82, 59.09), (24.82, 60.0)], w=0.2)]                # DRV8871 ILIM -> R62
 BOARD = dict(pre=PRE, clr=0.15, name="trishna_ctrl", title="TRISHNA urinal hydration monitor - controller (ESP32-DevKitC carrier)", rev="A", size=(W, H), corner=2.5, parts=parts, sch=S,
  supply={"VIN12": "external 12 V adapter", "VM": "12 V via reverse-polarity PMOS Q5", "+3V3": "buck U2", "+3V3A": "+3V3 via ferrite FB1", "DK3V3": "+3V3 via JP1", "GND": "supply", "VIN_F": "12 V after PTC"},
  single_ok=("SD_DAT1", "SD_DAT2"), ws=(0.2, 0.4),
