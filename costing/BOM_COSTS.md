@@ -1,6 +1,6 @@
 # Priced bills of materials (parts, live LCSC list prices)
 
-Generated 2026-11-03 by `utility10/pcb/costing.py` from each board's `2_assembly/*_BOM_full.csv` and the LCSC product API. USD list prices, ladder price for the quantity bought; INR at an assumed **88 INR/USD**.
+Generated 2026-11-04 by `utility10/pcb/costing.py` from each board's `2_assembly/*_BOM_full.csv` and the LCSC product API. USD list prices, ladder price for the quantity bought; INR at an assumed **88 INR/USD**.
 
 **What is and is not in the numbers:** parts only. Not included: bare PCB fabrication, assembly fees (setup, extended-part fees, placement), stencil, shipping, import duty and GST, cell/battery, enclosure, bought-in modules and cables. Planning figures for PCB and assembly are shown separately and are assumptions, not quotes: get a JLC quote before you order. Stock is as returned by LCSC on the run date and changes daily.
 

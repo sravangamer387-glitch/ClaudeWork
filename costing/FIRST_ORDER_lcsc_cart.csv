@@ -1,0 +1,9 @@
+LCSC Part Number,Quantity,Manufacturer Part Number,Description
+C22434582,3,CUI/Same Sky PJ-063AH,12 V DC in (2 A)
+C319202,5,BOOMELE 2.54-1*19P female header,DevKitC left: 3V3 EN 36 39 34 35 32 33 25 26 27 14 12 GND 13 D2 D3 CMD 5V
+C492401,3,XFCN PZ254V-11-02P + jumper,3V3 link (remove for USB-only power)
+C131337,22,JST B2B-PH-K-S(LF)(SN),Peristaltic pump 12 V (red = PUMP_O1)
+C131334,10,JST B4B-PH-K-S(LF)(SN),"Sensor-block LEDs (450 nm blue, 850 nm IR)"
+C131339,39,JST B3B-PH-K-S(LF)(SN),"Photodiodes BPW34: transmission, 90-degree scatter (anodes to GND)"
+C2894964,10,HCTL PZ254-2-03-Z-8.5 (ZHOURI C5116479 had only 340 in stock),ISP
+C781869,8,YUEXIN KC1206 16 ohm passive magnetic 12x9.5 mm (2048 Hz),Buzzer
