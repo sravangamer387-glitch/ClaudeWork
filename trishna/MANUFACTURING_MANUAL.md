@@ -6,7 +6,7 @@
 >
 > **Status.**
 > - **Controller PCB: order-ready.** DRC 0, 0 unconnected, netlist matches the schematic, ERC 0, independent Gerber check clean, all 88 parts LCSC-verified. Parts about US$9.2 per board for 1 board, US$6.5 each for 100 (PCB fab, assembly and shipping extra). Low stock on the run date: AP63203WU-7 (195) and the PJ-063AH barrel jack (321) - enough for a prototype run; order early.
-> - **Firmware:** compiled for the ESP32 (842 kB, no warnings in project code); 19 host unit tests passing.
+> - **Firmware:** builds with PlatformIO (`pio run -e esp32dev`: 864 kB flash, 47 kB RAM, no warnings in project code) and with arduino-cli; `pio test -e native` passes all 19 unit tests (also `make -C test/host`).
 > - **Bridge:** Python decoder cross-checked against the C frame format.
 > - **CAD:** solids checked (2.02 mL wetted chamber, all meshes closed).
 > - **Nothing has been built yet.** Sections 8-10 are the build and test procedure.
