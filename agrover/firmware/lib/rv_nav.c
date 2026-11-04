@@ -33,4 +33,6 @@ float rv_soc_pct(float v, float load_a, float r) {
 rv_mode_t rv_power_mode(rv_mode_t m, float soc, bool sun) {
     if (m == RV_RUN) { if (soc < 15) return RV_SLEEP; if (soc < 30) return RV_RETURN; return RV_RUN; }
     if (m == RV_RETURN) { if (soc < 15) return RV_SLEEP; if (soc > 50 && sun) return RV_RUN; return RV_RETURN; }
-    if (soc > 40 && sun) return RV_RUN; return RV_SLEEP; }                                         /* sleep until 40 % and sunlight: hysteresis avoids chattering */
+    if (soc > 40 && sun) return RV_RUN;                                                             /* sleep until 40 % and sunlight: hysteresis avoids chattering */
+    return RV_SLEEP;
+}

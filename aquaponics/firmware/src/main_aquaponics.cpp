@@ -21,7 +21,8 @@ void setup() { Serial.begin(115200); pinMode(PIN_PUMP1, OUTPUT); pinMode(PIN_PUM
     aq_trend_init(&t_ph, 0.3f, 0.1f); aq_trend_init(&t_do, 0.3f, 0.1f); aq_trend_init(&t_temp, 0.3f, 0.1f); aq_dose_init(&dose); }
 void loop() {
     static uint32_t last = 0; uint32_t now = millis(); if (pulse_end_ms && (int32_t)(now - pulse_end_ms) >= 0) { digitalWrite(PIN_PUMP2, LOW); pulse_end_ms = 0; }
-    if (now - last < 10000) return; last = now;                                         // 10 s control tick; trend samples every 10 min (every 60th tick)
+    if (now - last < 10000) return;                                                     // 10 s control tick; trend samples every 10 min (every 60th tick)
+    last = now;
     ds.requestTemperatures(); float temp = ds.getTempCByIndex(0); float ph = ph_from_volts(analogReadMilliVolts(PIN_PH_ADC) / 1000.0f);
     float do_v = ads.computeVolts(ads.readADC_SingleEnded(0)); float do_mgl = do_v * 10.0f;                         // PLACEHOLDER scale: calibrate in air-saturated water
     bool ok_ph = aq_sensor_ok(&k_ph, ph, 3.0f, 11.0f, 360), ok_do = aq_sensor_ok(&k_do, do_mgl, 0.0f, 20.0f, 360), ok_t = aq_sensor_ok(&k_temp, temp, 2.0f, 40.0f, 720);

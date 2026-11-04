@@ -15,3 +15,4 @@ trishna/firmware/.pio/
 trishna/firmware/test/host/test_core
 trishna/firmware/test/host/golden_frames.bin
 trishna/firmware/golden_frames.bin
+**/.pio/

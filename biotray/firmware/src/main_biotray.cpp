@@ -25,7 +25,9 @@ static uint32_t last_pub = 0, last_tick = 0;
 static float adc_volts(int pin) { return analogReadMilliVolts(pin) / 1000.0f; }
 static void mqtt_connect() { if (mqtt.connected()) return; mqtt.connect(TRAY_ID, nullptr, nullptr, (String("farm/") + TRAY_ID + "/status").c_str(), 0, true, "offline"); }
 static void on_msg(char *topic, byte *pl, unsigned n) {            // farm/<tray>/cmd/pump_clear -> clear the dry-run latch
-    if (strstr(topic, "pump_clear")) bt_pump_clear_fault(&pump1); (void)pl; (void)n; }
+    (void)pl; (void)n;
+    if (strstr(topic, "pump_clear")) bt_pump_clear_fault(&pump1);
+}
 void setup() {
     Serial.begin(115200); pinMode(PIN_PUMP1, OUTPUT); pinMode(PIN_PUMP2, OUTPUT); pinMode(PIN_FAN, OUTPUT); pinMode(PIN_LEVEL, INPUT); ledcSetup(0, 5000, 8); ledcAttachPin(PIN_LIGHT, 0);
     ds.begin(); Wire.begin(PIN_SDA, PIN_SCL); lux.begin(); bt_pump_init(&pump1); bt_filter_init(&fph); bt_filter_init(&fec); bt_filter_init(&ftemp);

@@ -16,7 +16,11 @@ int aq_steps_to_breach(const aq_trend_t *t, float lo, float hi, float k, int max
     for (int h = 0; h <= max_steps; h++) { float f = aq_trend_forecast(t, h), s = k * aq_trend_sigma(t, h); if (f - s <= lo || f + s >= hi) { if (f <= lo + s || f >= hi - s) { if (f - s <= lo && t->trend < 0) return h; if (f + s >= hi && t->trend > 0) return h; } } }
     return -1; }
 bool aq_sensor_ok(aq_stuck_t *s, float x, float lo, float hi, int lim) {
-    if (!(x >= lo && x <= hi)) return false; if (x == s->last) s->same_count++; else { s->same_count = 0; s->last = x; } return s->same_count < lim; }
+    if (!(x >= lo && x <= hi)) return false;
+    if (x == s->last) s->same_count++;
+    else { s->same_count = 0; s->last = x; }
+    return s->same_count < lim;
+}
 void aq_dose_init(aq_dose_t *d) { memset(d, 0, sizeof *d); d->since_last_s = 1 << 20; }
 int aq_dose_step(aq_dose_t *d, const aq_dose_cfg_t *c, float ph, bool ok, bool down, int dt) {
     d->since_last_s += dt; d->day_s += dt; if (d->day_s >= 86400) { d->day_s = 0; d->dosed_today_s = 0; d->lockout = false; }
